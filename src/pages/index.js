@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 export default () => {
     return(
         <>
-            <Link to ="/contactus">Contactus</Link>
+            <Link to ="/aboutus">aboutus</Link>
         </>
     )
 }
