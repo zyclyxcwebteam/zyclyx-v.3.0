@@ -1,9 +1,10 @@
 import React from 'react'
 
-const careers = () =>{
+const careers = (props) =>{
+
     return(
     <>
-    <h1>careers</h1>
+    <h1>careers </h1>     
     </>
     )
 }
