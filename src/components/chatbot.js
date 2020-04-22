@@ -21,8 +21,10 @@ import '../styles/chatbot.css'
           
         ],
         id:'',
+        
         // response:[],
-        userinput:''
+        userinput:'',
+        typingstatus:false
     };
     this.handlechange=this.handlechange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -35,15 +37,20 @@ import '../styles/chatbot.css'
   handlechange(event){
     this.setState({userinput:event.target.value})
     console.log(event.target.value)
+    this.setState({typingstatus:true})
+    console.log(this.state.typingstatus+"typings status is")
     
 
     // this.setState({password:event.target.password})
 
 }
 handleSubmit(event) {
+  this.setState({typingstatus:!this.state.typingstatus})
+  console.log(this.state.typingstatus+"submit")
 
   // this.setState({messege:[...this.state.messege,this.state.userinput]})
-  console.log(event.target.value)
+  this.setState({messege:[...this.state.messege,{ user:this.state.userinput,bot:''}]})
+  // console.log(event.target.value)
   
 
   console.log("inside submit")
@@ -78,9 +85,15 @@ handleSubmit(event) {
   })
    .then((data)=>{    
      console.log(data);
-    console.log(data[0].text) 
-    this.setState({messege:[...this.state.messege,{ user:this.state.userinput,bot:data[0].text}]})
-    console.log(this.state.messege+"msg array")
+    console.log(data[0].text)
+    console.log(this.state.messege+"msh isss")
+    let length1=this.state.messege.length;
+    console.log(length1+"length is")
+    let newArr = this.state.messege[length1-1]
+    console.log(newArr)
+    
+    this.setState({messege:[...this.state.messege,{ user:'',bot:data[0].text}]})
+    console.log(this.state.messege)
     
     
     
@@ -124,13 +137,29 @@ handleSubmit(event) {
      {this.state.messege.length!=0&&this.state.messege.map(response=>{
        return(
          <>
+        
+      
+
+    <div>
+      {response.user!='' ? (
         <div className="message parker">
 
         {response.user}
       </div>
-      <div className="message stark">
+  
+      ) : (
+        <></>
+      )}
+       {response.bot!='' ? (
+        <div className="message stark">
 
-      {response.bot}
+        {response.bot} 
+     </div>
+  
+      ) : (
+        <></>
+      )}
+      
     </div>
     </>
        ) 
@@ -146,12 +175,20 @@ handleSubmit(event) {
      })} */}
       
       
+    
+      {this.state.typingstatus ? (
+    <div className="message stark">
+    <div className="typing typing-1"></div>
+    <div className="typing typing-2"></div>
+    <div className="typing typing-3"></div>
+  </div>
+      ) : (
+        <></>
+      )}
+    
+
+  
       
-      <div className="message stark">
-        <div className="typing typing-1"></div>
-        <div className="typing typing-2"></div>
-        <div className="typing typing-3"></div>
-      </div>
     </div>
 
         </div>
