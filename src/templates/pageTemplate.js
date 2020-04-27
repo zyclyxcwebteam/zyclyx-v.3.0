@@ -20,7 +20,7 @@ const PageTemplate = (props) =>{
         <>
         <div>
     <h1>{title}</h1>
-    <p>{caption}</p>
+    <b>{caption}</b>
     <p>{description}</p>
         </div>
         <hr />
