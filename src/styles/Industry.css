@@ -1,6 +1,5 @@
-#stats .title,
-#stats .text{
-    color: #fff;
+.green{
+    color: green;;
 }
 #industries .industry{
     border-right: 1px solid #ccc;
