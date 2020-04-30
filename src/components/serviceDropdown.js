@@ -1,13 +1,13 @@
-import React from 'react'
-import '../styles/serviceDropdown.css'
+import React from "react";
+import "../styles/serviceDropdown.css";
 // import { Link } from 'gatsby'
-
 
 const dropdown = () => {
   return (
-      <>
+    <>
       <ul className="hover:block">
-        <li>Services
+        <li>
+          Services
           {/* <ul className="">
             <li>New Age Technologies</li>
             <li>Security Services</li>
@@ -18,10 +18,8 @@ const dropdown = () => {
           </ul> */}
         </li>
       </ul>
-      </>
-    )
-}
-
-
+    </>
+  );
+};
 
 export default dropdown;

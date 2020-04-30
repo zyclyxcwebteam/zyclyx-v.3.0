@@ -29,5 +29,26 @@ module.exports = {
         path: `./src/data/`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    "gatsby-plugin-eslint",
+    {
+      resolve: "gatsby-plugin-eslint",
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ["develop"],
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
   ],
-}
+};
