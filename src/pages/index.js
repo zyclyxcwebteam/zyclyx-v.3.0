@@ -1,82 +1,80 @@
-import React from "react"
+import React from "react" 
 import newAgeImg from '../images/new-age.jpg' 
 import { Link }from 'gatsby'
 import Layout from '../components/layout'
 import Industry from "../components/industry"
 import Sectiontitle from "../components/sectiontitle"
 import Statcount from "../components/statcount"
-import { Container } from 'reactstrap'
-
+import { Container, Col, Row } from 'reactstrap'
+import Proof from "../components/Proof"
+import '../styles/Industry.css' 
 
 
 export default () => {
-    return(
+    return (
         <>
-     <Layout>
-        <Container fluid={true}>
-        <div className="services-wrapper">
-            <div className="service-menu">
-                <ul className="service-menu-list">
-                    <li className="service-menu-item">New Age Technologies</li>
-                    <li className="service-menu-item">Security Services</li>
-                    <li className="service-menu-item">Application Development</li>
-                    <li className="service-menu-item">Infrastructure Services</li>
-                    <li className="service-menu-item">BI Solutions</li>
-                    <li className="service-menu-item">Outsourcing Services</li>
-                </ul>
-            </div>
-        </div>
-        </Container>
-        <Container fluid="sm" id="stats">
-            
-            <Sectiontitle  title="STATISTICS" text="lorem ipusum it is a professional dummy text" color="green"/>
-            <div className="">
-                <Statcount />
-                <Statcount />
-                <Statcount />
-            </div>
-            </Container>
+ 
+            <Layout>
+                <Container fluid={true} id="stats">
+                    <Sectiontitle title="STATISTICS" text="lorem ipusum it is a professional dummy text" sectionStyles="green" />
+                    <Row className="m-0 mt-4">
+                        <Col className="mx-auto" md="8" sm="12">
+                            <Row>
+                                <Col sm="4" className="mx-auto"><Statcount /></Col>
+                                <Col sm="4" className="mx-auto"><Statcount /></Col>
+                                <Col sm="4" className="mx-auto"><Statcount /></Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
 
-        <Container fluid="sm">
-           
-           
-            <Sectiontitle title="INDUSTRIES" text="lorem ipusum it is a professional dummy text"/>
-            <div id="industries" className="">
-            <Industry number="01" title="Bancking" text="lorem ipusum it is a professional dummy text"/>
-            <Industry number="02" title="Telecom" text="lorem ipusum it is a professional dummy text"/>
-            <Industry number="03" title="Healthcare" text="lorem ipusum it is a professional dummy text"/>
-            <Industry number="04" title="Logistics" text="lorem ipusum it is a professional dummy text"/>
-            <Industry number="05" title="Retail" text="lorem ipusum it is a professional dummy text"/>
-            </div>
-        </Container>
+                <Container fluid={true} className="py-2 px-0">
 
 
-        <div className="">
-            <div className="flex justify-center items-center">
-            <Sectiontitle title="PROOF OF CONCEPT" text="With Proof of Concept, we offer you value added service in terms of advanced prototype creation which help in demonstrating our work potential. It also assists you to checkout its feasibility in your business process, hence optimizing the experience."/>
-                <div className="">
-                <Link to = "" className="">Get Started</Link>
-                </div>
-            </div>
+                    <Sectiontitle title="INDUSTRIES" text="lorem ipusum it is a professional dummy text" sectionStyles="industry-title" />
+                    <div id="industries" className="d-flex flex-md-row mt-mt-4">
+                        <Industry number="01" title="Bancking" text="lorem ipusum it is a professional dummy text" />
+                        <Industry number="02" title="Telecom" text="lorem ipusum it is a professional dummy text" />
+                        <Industry number="03" title="Healthcare" text="lorem ipusum it is a professional dummy text" />
+                        <Industry number="04" title="Logistics" text="lorem ipusum it is a professional dummy text" />
+                        <Industry number="05" title="Retail" text="lorem ipusum it is a professional dummy text" />
+                    </div>
+                </Container>
 
 
-            <div className="">
-                <div className="proof-1">
-                    <h1 className="text-lg pb-2 font-semibo?ld">Forecast</h1>
-                    <p className="md:text-sm">Act as a tool to forecast the feasibility of the projects.</p>
-                </div>
-                <div className="proof-1">
-                    <h1 className="text-lg pb-2 font-semibold">Report</h1>
-                    <p>Act as a tool to forecast the feasibility of the projects.</p>
-                </div>
-                <div className="proof-1 ">
-                    <h1 className="text-lg pb-2 font-semibold">Forecast</h1>
-                    <p>Act as a tool to forecast the feasibility of the projects.</p>
-                </div>
-            </div>
-        </div>
-        
-        </Layout>        
+                <Container fluid={true} className="py-4">
+                    <Row>
+                        <Col md="10">
+                            <Sectiontitle title="PROOF OF CONCEPT" text="With Proof of Concept, we offer you value added service in terms of advanced prototype creation which help in demonstrating our work potential. It also assists you to checkout its feasibility in your business process, hence optimizing the experience." sectionStyles="proof-title" />
+                        </Col>
+                        <Col md="" className="p-0 d-flex justify-content-center align-items-center">
+
+                            <Link to="" className="btn btn-primary">Get Started</Link>
+
+                        </Col>
+                    </Row>
+
+
+                    <Container>
+                        <Row>
+                            <Col sm="12" className="mx-auto">
+                                <Row className="py-4 mx-auto proof-row">
+                                    <Col md="4" sm="4" className="p-0">
+                                         <Proof title="Forecast" text="Act as a tool to forecast the feasibility of the projects."/>
+                                    </Col>
+                                    <Col md="4" sm="4" className="p-0">
+                                        <Proof title="Report" text="Provides a complete report on project evaluation"/>
+                                    </Col>
+                                    <Col md="4" sm="4" className="p-0">
+                                        <Proof title="Cost Effective" text="Saves your businesses time and money"/>
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Container>
+
+            </Layout> 
         </>
     )
 }
