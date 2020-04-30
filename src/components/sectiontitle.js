@@ -2,9 +2,9 @@ import React from 'react'
 
 function sectiontitle(props) {
     return (
-        <div className={` ${props.color}`}>
+        <div className={` ${props.sectionStyles} ml-5`}>
             <h2 className="">{props.title}</h2>
-            <p className="">{props.text}</p>
+            <p className="m-0">{props.text}</p>
         </div>
     )
 }
