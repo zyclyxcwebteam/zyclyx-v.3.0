@@ -1,0 +1,33 @@
+.hero-banner{
+    height: calc(100vh - 60px);
+}
+.hero-banner-title{ 
+background-color: #afdea2;
+position: relative;
+}
+.title-content{
+    font-size: 4rem;
+    position: absolute;
+    right: -54%;
+    z-index: 1;
+}
+
+.hero-banner-img{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-banner-img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* overview */
+.overview-title-card{
+    height: 350px;
+    background-color:#fadeab;
+}
+
+.overview-content{
+font-size: 1.2rem;
+}

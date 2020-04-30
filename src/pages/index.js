@@ -13,41 +13,20 @@ export default () => {
     return(
         <>
      <Layout>
-            <section className="">
-                {/* service navigation */}
-                <nav className="bg-gray-200">
-                    <ul className="flex justify-between py-4 px-5 text-xl">
-                    <li>New Age Technologies</li>
-                    <li>Security Services</li>
-                    <li>Application Development</li>
-                    <li>Infrastructure Services</li>
-                    <li>BI Solutions</li>
-                    <li>Outsourcing Services</li>
-                    </ul>
-                </nav>
-                {/* service inner */}
-                <div className="flex h-full">
-                    {/* image */}
-                    <div className="bg-blue-200 flex-grow h-100 w-3/4">
-                        <img src={newAgeImg} className="max-h-screen"/>
-                    </div>
-                    {/* service categories */}
-
-                    <div className="bg-green-200 w-3/12">
-                    <ul className="text-xl">
-                    <li>New Age Technologies</li>
-                    <li>Security Services</li>
-                    <li>Application Development</li>
-                    <li>Infrastructure Services</li>
-                    <li>BI Solutions</li>
-                    <li>Outsourcing Services</li>
-                    </ul>
-                    </div>
-                </div>
-
-            </section>
- 
-    
+        <Container fluid={true}>
+        <div className="services-wrapper">
+            <div className="service-menu">
+                <ul className="service-menu-list">
+                    <li className="service-menu-item">New Age Technologies</li>
+                    <li className="service-menu-item">Security Services</li>
+                    <li className="service-menu-item">Application Development</li>
+                    <li className="service-menu-item">Infrastructure Services</li>
+                    <li className="service-menu-item">BI Solutions</li>
+                    <li className="service-menu-item">Outsourcing Services</li>
+                </ul>
+            </div>
+        </div>
+        </Container>
         <Container fluid="sm" id="stats">
             
             <Sectiontitle  title="STATISTICS" text="lorem ipusum it is a professional dummy text" color="green"/>
