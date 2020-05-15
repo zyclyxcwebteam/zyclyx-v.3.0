@@ -7,6 +7,7 @@ import Sectiontitle from "../components/sectiontitle";
 import Statcount from "../components/statcount";
 import Proof from "../components/Proof";
 import "../styles/Industry.css";
+import Footer from "../components/Footer/footer";
 
 export default () => {
   return (
@@ -116,6 +117,7 @@ export default () => {
             </Row>
           </Container>
         </Container>
+        <Footer />
       </Layout>
     </>
   );
