@@ -1,0 +1,14 @@
+.logo {
+  max-width: 200px;
+}
+.navbar {
+  background-color: #111b33;
+}
+.nav-item a {
+  padding: 1rem;
+  color: #ffffff;
+}
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}

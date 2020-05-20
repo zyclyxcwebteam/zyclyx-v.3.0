@@ -1,5 +1,4 @@
 import React from "react";
-import Jobcard from "../components/jobcard";
 
 const careers = () => {
   return (
@@ -15,8 +14,6 @@ const careers = () => {
           </h1>
         </div>
       </div>
-      <Jobcard />
-      <Jobcard />
     </>
   );
 };
