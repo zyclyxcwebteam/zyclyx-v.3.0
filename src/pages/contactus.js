@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
@@ -24,6 +25,12 @@ import PhoneInput from "react-phone-number-input";
 import "react-telephone-input/css/default.css";
 import IntlTelInput from "react-intl-tel-input";
 import "react-intl-tel-input/dist/main.css";
+import Username from "../components/FormComponents/username";
+import Emailaddress from "../components/FormComponents/emailAddress";
+import PhoneNumber from "../components/FormComponents/phoneNumber";
+import Subject from "../components/FormComponents/Subject";
+import Messege from "../components/FormComponents/TextMessage";
+import Textinput from "../components/FormComponents/username1";
 
 class contactus extends Component {
   constructor() {
@@ -107,6 +114,7 @@ class contactus extends Component {
 
     if (!this.state.username) {
       usernameerror = "Name cannot be blank";
+      console.log(`${usernameerror}usernameerror`);
     }
 
     if (!this.state.email.includes("@")) {
@@ -185,7 +193,7 @@ class contactus extends Component {
       <>
         <div className="container">
           <form className="form" onSubmit={this.handleSubmit}>
-            <div className="row formrow">
+            {/* <div className="row formrow">
               <FloatingLabelInput
                 className=""
                 type="text"
@@ -200,7 +208,6 @@ class contactus extends Component {
                 <div style={{ color: "red" }}>{this.state.usernameerror}</div>
               ) : null}
             </div>
-
             <div className="row formrow">
               <FloatingLabelInput
                 className=""
@@ -215,11 +222,15 @@ class contactus extends Component {
                 <div style={{ color: "red" }}>{this.state.emailerror}</div>
               ) : null}
             </div>
-
             <div className="row formrow">
               <IntlTelInput
                 containerClassName="intl-tel-input"
-                inputClassName=""
+                // inputClassName=""
+                // value={this.state.country}
+                // onChange={this.selectcounty}
+                // selectcounty={onChange()}
+                value={this.state.country}
+                onChange={val => this.selectCountry(val)}
               />
 
               <FloatingLabelInput
@@ -236,7 +247,6 @@ class contactus extends Component {
                 <div style={{ color: "red" }}>{this.state.phoneerror}</div>
               ) : null}
             </div>
-
             <div className="row formrow">
               <FloatingLabelInput
                 className=""
@@ -251,7 +261,6 @@ class contactus extends Component {
                 <div style={{ color: "red" }}>{this.state.Subjecterror}</div>
               ) : null}
             </div>
-
             <div className="row formrow">
               <FloatingLabelInput
                 className=""
@@ -261,7 +270,65 @@ class contactus extends Component {
                 value={this.state.messege}
                 onChange={this.handlechange3}
                 rows="4"
-                placeholder="Typing...."
+                placeholder=""
+              />
+              {this.state.messegeerror ? (
+                <div style={{ color: "red" }}>{this.state.messegeerror}</div>
+              ) : null}
+            </div> */}
+            {/* <div>
+              <Username />
+            </div>
+
+           
+           
+            <div>
+              <Subject />
+            </div>
+            }
+            {/* <div>
+              <Messege />
+            </div> */}
+            <div>
+              <Username
+                value={this.state.username}
+                onChange={this.handlechange}
+              />
+              {this.state.usernameerror ? (
+                <div style={{ color: "red" }}>{this.state.usernameerror}</div>
+              ) : null}
+            </div>
+            <div>
+              <Emailaddress
+                value={this.state.email}
+                onChange={this.handlechange1}
+              />
+              {this.state.emailerror ? (
+                <div style={{ color: "red" }}>{this.state.emailerror}</div>
+              ) : null}
+            </div>
+            <div>
+              <PhoneNumber
+                value={this.state.phone}
+                onChange={this.handlechange2}
+              />
+              {this.state.phoneerror ? (
+                <div style={{ color: "red" }}>{this.state.phoneerror}</div>
+              ) : null}
+            </div>
+            <div>
+              <Subject
+                value={this.state.subject}
+                onChange={this.handlechange4}
+              />
+              {this.state.Subjecterror ? (
+                <div style={{ color: "red" }}>{this.state.Subjecterror}</div>
+              ) : null}
+            </div>
+            <div>
+              <Messege
+                value={this.state.messege}
+                onChange={this.handlechange3}
               />
               {this.state.messegeerror ? (
                 <div style={{ color: "red" }}>{this.state.messegeerror}</div>
@@ -276,6 +343,7 @@ class contactus extends Component {
                 <span id="btnText">Send message</span>
               </button>
             </div>
+            ;
           </form>
         </div>
       </>
