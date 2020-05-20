@@ -13,7 +13,7 @@ const username = props => {
     // </div>
     <div className="row formrow">
       <FloatingLabelInput
-        className=""
+        className="inputstyle"
         type="text"
         name="Name"
         id="username"

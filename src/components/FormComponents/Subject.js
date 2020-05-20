@@ -14,7 +14,7 @@ const subject = props => {
 
     <div className="row formrow">
       <FloatingLabelInput
-        className=""
+        className="inputstyle"
         type="textarea"
         name="Name"
         id="subject"

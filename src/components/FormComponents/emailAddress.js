@@ -13,7 +13,7 @@ const emailaddress = props => {
     // </div>
     <div className="row formrow">
       <FloatingLabelInput
-        className=""
+        className="inputstyle"
         type="email"
         name="Name"
         id="email"

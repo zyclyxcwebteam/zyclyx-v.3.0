@@ -14,8 +14,7 @@ const messege = props => {
 
     <div className="row formrow">
       <FloatingLabelInput
-        className=""
-        component="textarea"
+        className="inputstyle"
         name="Name"
         id="messege"
         label="Messege"

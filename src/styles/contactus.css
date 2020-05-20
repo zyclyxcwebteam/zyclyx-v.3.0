@@ -1,8 +1,126 @@
-.form {
-  padding: 120px;
-  width: 700px;
+.formrow {
+  margin-top: 10px;
+  padding: 4px;
+}
+.bannerimage {
+  background-image: url("../Images/cantactus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100vh;
 }
 
-.formrow {
-  margin-top: 20px;
+.Formaddress {
+  background: #80808052;
+  padding: 8px;
+  position: relative;
+}
+.mx-auto .row {
+  padding: 10px;
+}
+.iconscolor {
+  color: #2db32d;
+}
+.icons {
+  font-weight: 400;
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  text-align: center;
+  /* border: 2px solid #72757c; */
+  color: #2db32d;
+
+  background: #cce0d0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* line-height: 2;
+  transition: all 0.2s ease-in; */
+}
+.fa-facebook {
+  width: 100px;
+  height: 30px;
+}
+.btncolor {
+  background: #094c56;
+  color: white;
+}
+.inputstyle {
+  width: 400px;
+  height: 35px;
+  border-radius: 3px;
+}
+.headstyle {
+  padding: 30px 0px;
+  color: #2a942a;
+}
+.bannerimage .row h1 {
+  color: white;
+}
+.map {
+  padding: 0px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.btn-style {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 575.98px) {
+  .bannerimage .row h1 {
+    color: #16dc43;
+    font-size: 27px;
+  }
+
+  .icons {
+    font-weight: 400;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+
+    color: #2db32d;
+
+    background: #cce0d0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconscolor {
+    color: #2db32d;
+    font-size: 16px;
+  }
+  .ptagstyle {
+    font-size: 10px;
+  }
+  .btncolor {
+    background: #094c56;
+    color: white;
+    font-size: 10px;
+    width: 88px;
+    height: 27px;
+  }
+  .inputstyle {
+    width: 150px;
+    height: 30px;
+    border-radius: 3px;
+  }
+  .headstyle {
+    color: #2a942a;
+  }
+  .headstyle h4 {
+    font-size: 10px;
+  }
 }

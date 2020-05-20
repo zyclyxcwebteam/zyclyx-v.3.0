@@ -1,3 +1,8 @@
+/* eslint-disable react/style-prop-object */
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+/* eslint-disable jsx-a11y/iframe-has-title */
+/* eslint-disable react/no-access-state-in-setstate */
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-undef */
@@ -25,12 +30,26 @@ import PhoneInput from "react-phone-number-input";
 import "react-telephone-input/css/default.css";
 import IntlTelInput from "react-intl-tel-input";
 import "react-intl-tel-input/dist/main.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faFacebookMessenger,
+  faWindows,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faTimes,
+  faBriefcase,
+  faPhone,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 import Username from "../components/FormComponents/username";
 import Emailaddress from "../components/FormComponents/emailAddress";
 import PhoneNumber from "../components/FormComponents/phoneNumber";
 import Subject from "../components/FormComponents/Subject";
 import Messege from "../components/FormComponents/TextMessage";
-import Textinput from "../components/FormComponents/username1";
+import Bgimage from "../Images/cantactus.jpg";
+// eslint-disable-next-line import/order
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
 class contactus extends Component {
   constructor() {
@@ -48,6 +67,7 @@ class contactus extends Component {
       messegeerror: "",
       Subjecterror: "",
       country: "",
+      showForm: false,
     };
     this.handlechange = this.handlechange.bind(this);
     this.handlechange1 = this.handlechange1.bind(this);
@@ -56,9 +76,14 @@ class contactus extends Component {
     this.handlechange4 = this.handlechange4.bind(this);
     this.selectcounty = this.selectcounty.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   // onchange function...................
+
+  handleClick(event) {
+    this.setState({ showText: !this.state.showText });
+  }
 
   handlechange(event) {
     this.setState({ username: event.target.value });
@@ -191,164 +216,188 @@ class contactus extends Component {
   render() {
     return (
       <>
-        <div className="container">
-          <form className="form" onSubmit={this.handleSubmit}>
-            {/* <div className="row formrow">
-              <FloatingLabelInput
-                className=""
-                type="text"
-                name="Name"
-                id="username"
-                label="User Name"
-                value={this.state.username}
-                onChange={this.handlechange}
-                placeholder=""
-              />
-              {this.state.usernameerror ? (
-                <div style={{ color: "red" }}>{this.state.usernameerror}</div>
-              ) : null}
+        <div className="container-fluid bannerimage d-flex  justify-content-center align-items-center ">
+          {/* <div className="service-img">
+            <img src={Bgimage} alt="new age" />
+          </div> */}
+          <div className="row">
+            <div className="col-7 mx-auto">
+              <h1 className=" ">For better help and business development</h1>
             </div>
-            <div className="row formrow">
-              <FloatingLabelInput
-                className=""
-                name="Name"
-                id="Email"
-                label="Email Address"
-                value={this.state.email}
-                onChange={this.handlechange1}
-                placeholder=""
-              />
-              {this.state.emailerror ? (
-                <div style={{ color: "red" }}>{this.state.emailerror}</div>
-              ) : null}
-            </div>
-            <div className="row formrow">
-              <IntlTelInput
-                containerClassName="intl-tel-input"
-                // inputClassName=""
-                // value={this.state.country}
-                // onChange={this.selectcounty}
-                // selectcounty={onChange()}
-                value={this.state.country}
-                onChange={val => this.selectCountry(val)}
-              />
+          </div>
+        </div>
 
-              <FloatingLabelInput
-                className=""
-                name="Name"
-                id="phone"
-                label="Phone Number"
-                value={this.state.phone}
-                onChange={this.handlechange2}
-                placeholder=""
-              />
+        <div className="container-fluid">
+          <div className="row">
+            <div className=" col col-md-6 col-sm-12 Formaddress">
+              {!this.state.showText ? (
+                <div className="mt-5">
+                  <div className="row ">
+                    <div className="col-7 mx-auto">
+                      <div className="row">
+                        <div className="col-3">
+                          <p className="icons">
+                            <FontAwesomeIcon
+                              icon={faBriefcase}
+                              className="fonticon"
+                            />
+                          </p>
+                        </div>
+                        <div className="col-9 ">
+                          <h4 className="iconscolor">OFFICE</h4>
+                          <p className="ptagstyle">
+                            3rd Floor, Pearl Enclave, Green Valley Road No-5,
+                            Banjara Hills, Hyderabad, Telangana 500034
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row ">
+                    <div className="col-7 mx-auto">
+                      <div className="row">
+                        <div className="col-3">
+                          <p className="icons">
+                            <FontAwesomeIcon icon={faPhone} />
+                          </p>
+                        </div>
+                        <div className="col-9">
+                          <h4 className="iconscolor">CONTACT</h4>
+                          <p className="ptagstyle">(+91) 40 2354 9363</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row ">
+                    <div className="col-7 mx-auto">
+                      <div className="row p-10">
+                        <div className="col-3">
+                          <p className="icons">
+                            <FontAwesomeIcon icon={faEnvelope} />
+                          </p>
+                        </div>
+                        <div className="col-9">
+                          <h4 className="iconscolor">EMAIL</h4>
+                          <p className="ptagstyle">info@zyclyx.com</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center mt-3">
+                    <button
+                      type="submit"
+                      className="btn  btncolor text-center"
+                      id="contactBtn"
+                      onClick={this.handleClick}
+                    >
+                      <span id="btnText">Messege Us</span>
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="container">
+                  <div className=" headstyle">
+                    <h4 className="text-center">
+                      We are happy to assist you with your queries
+                    </h4>
+                  </div>
 
-              {this.state.phoneerror ? (
-                <div style={{ color: "red" }}>{this.state.phoneerror}</div>
-              ) : null}
-            </div>
-            <div className="row formrow">
-              <FloatingLabelInput
-                className=""
-                name="Name"
-                id="subject"
-                label="Subject"
-                value={this.state.subject}
-                onChange={this.handlechange4}
-                placeholder=""
-              />
-              {this.state.Subjecterror ? (
-                <div style={{ color: "red" }}>{this.state.Subjecterror}</div>
-              ) : null}
-            </div>
-            <div className="row formrow">
-              <FloatingLabelInput
-                className=""
-                name="Message"
-                id="message"
-                label="Text"
-                value={this.state.messege}
-                onChange={this.handlechange3}
-                rows="4"
-                placeholder=""
-              />
-              {this.state.messegeerror ? (
-                <div style={{ color: "red" }}>{this.state.messegeerror}</div>
-              ) : null}
-            </div> */}
-            {/* <div>
-              <Username />
+                  <button
+                    type="submit"
+                    className="btn form-close"
+                    id="contactBtn"
+                    onClick={this.handleClick}
+                  >
+                    <span id="btnText">
+                      {" "}
+                      <FontAwesomeIcon icon={faTimes} />
+                    </span>
+                  </button>
+
+                  <form onSubmit={this.handleSubmit}>
+                    <div className="main">
+                      <div>
+                        <Username
+                          value={this.state.username}
+                          onChange={this.handlechange}
+                        />
+                        {this.state.usernameerror ? (
+                          <div style={{ color: "red" }}>
+                            {this.state.usernameerror}
+                          </div>
+                        ) : null}
+                      </div>
+                      <div>
+                        <Emailaddress
+                          value={this.state.email}
+                          onChange={this.handlechange1}
+                        />
+                        {this.state.emailerror ? (
+                          <div style={{ color: "red" }}>
+                            {this.state.emailerror}
+                          </div>
+                        ) : null}
+                      </div>
+                      <div>
+                        <PhoneNumber
+                          value={this.state.phone}
+                          onChange={this.handlechange2}
+                        />
+                        {this.state.phoneerror ? (
+                          <div style={{ color: "red" }}>
+                            {this.state.phoneerror}
+                          </div>
+                        ) : null}
+                      </div>
+                      <div>
+                        <Subject
+                          value={this.state.subject}
+                          onChange={this.handlechange4}
+                        />
+                        {this.state.Subjecterror ? (
+                          <div style={{ color: "red" }}>
+                            {this.state.Subjecterror}
+                          </div>
+                        ) : null}
+                      </div>
+                      <div>
+                        <Messege
+                          value={this.state.messege}
+                          onChange={this.handlechange3}
+                        />
+                        {this.state.messegeerror ? (
+                          <div style={{ color: "red" }}>
+                            {this.state.messegeerror}
+                          </div>
+                        ) : null}
+                      </div>
+                    </div>
+                    <div className="btn-style mt-2">
+                      <button
+                        type="submit"
+                        className="btn btncolor text-center"
+                        id="contactBtn"
+                      >
+                        <span id="btnText">Submit</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              )}
             </div>
 
-           
-           
-            <div>
-              <Subject />
+            <div className=" col col-md-6 col-sm-12  p-0">
+              <Map google={this.props.google} zoom={14}>
+                <Marker onClick={this.onMarkerClick} name="Current location" />
+              </Map>
             </div>
-            }
-            {/* <div>
-              <Messege />
-            </div> */}
-            <div>
-              <Username
-                value={this.state.username}
-                onChange={this.handlechange}
-              />
-              {this.state.usernameerror ? (
-                <div style={{ color: "red" }}>{this.state.usernameerror}</div>
-              ) : null}
-            </div>
-            <div>
-              <Emailaddress
-                value={this.state.email}
-                onChange={this.handlechange1}
-              />
-              {this.state.emailerror ? (
-                <div style={{ color: "red" }}>{this.state.emailerror}</div>
-              ) : null}
-            </div>
-            <div>
-              <PhoneNumber
-                value={this.state.phone}
-                onChange={this.handlechange2}
-              />
-              {this.state.phoneerror ? (
-                <div style={{ color: "red" }}>{this.state.phoneerror}</div>
-              ) : null}
-            </div>
-            <div>
-              <Subject
-                value={this.state.subject}
-                onChange={this.handlechange4}
-              />
-              {this.state.Subjecterror ? (
-                <div style={{ color: "red" }}>{this.state.Subjecterror}</div>
-              ) : null}
-            </div>
-            <div>
-              <Messege
-                value={this.state.messege}
-                onChange={this.handlechange3}
-              />
-              {this.state.messegeerror ? (
-                <div style={{ color: "red" }}>{this.state.messegeerror}</div>
-              ) : null}
-            </div>
-            <div className="text-center mt-3">
-              <button
-                type="submit"
-                className="btn btn-primary btn-shadow-primary text-center"
-                id="contactBtn"
-              >
-                <span id="btnText">Send message</span>
-              </button>
-            </div>
-            ;
-          </form>
+          </div>
         </div>
       </>
     );
   }
 }
 
-export default contactus;
+export default GoogleApiWrapper({
+  apiKey: "AIzaSyBLPVg4nj6V7yUtCkCDrt0OwG_CGIGSsHA",
+})(contactus);

@@ -7,24 +7,23 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../styles/contactus.css";
 import FloatingLabelInput from "react-floating-label-input";
-import IntlTelInput from "react-intl-tel-input";
 
 const phone = props => {
   return (
     <>
-      <div className="row formrow">
+      {/* <div className="row formrow">
         <IntlTelInput
           containerClassName="intl-tel-input"
-          inputClassName=""
+          className="inputstyle"
           // value={this.state.country}
           // onChange={this.selectcounty}
           // selectcounty={onChange()}
           {...props}
         />
-      </div>
+      </div> */}
       <div className="row formrow">
         <FloatingLabelInput
-          className=""
+          className="inputstyle"
           type="text"
           name="Name"
           id="phone"
