@@ -229,7 +229,7 @@ class contactus extends Component {
 
         <div className="container-fluid">
           <div className="row">
-            <div className=" col col-md-6 col-sm-12 Formaddress">
+            <div className=" col col-md-6 col-12 Formaddress">
               {!this.state.showText ? (
                 <div className="mt-5">
                   <div className="row ">
@@ -298,7 +298,9 @@ class contactus extends Component {
                 <div className="container">
                   <div className=" headstyle">
                     <h4 className="text-center">
-                      We are happy to assist you with your queries
+                      We are happy to assist
+                      <br />
+                      you with your queries
                     </h4>
                   </div>
 
@@ -386,7 +388,7 @@ class contactus extends Component {
               )}
             </div>
 
-            <div className=" col col-md-6 col-sm-12  p-0">
+            <div className=" col col-md-6 col-12 mapstyle p-0">
               <Map google={this.props.google} zoom={14}>
                 <Marker onClick={this.onMarkerClick} name="Current location" />
               </Map>
