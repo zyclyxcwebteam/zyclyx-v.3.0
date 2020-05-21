@@ -11,16 +11,6 @@ import FloatingLabelInput from "react-floating-label-input";
 const phone = props => {
   return (
     <>
-      {/* <div className="row formrow">
-        <IntlTelInput
-          containerClassName="intl-tel-input"
-          className="inputstyle"
-          // value={this.state.country}
-          // onChange={this.selectcounty}
-          // selectcounty={onChange()}
-          {...props}
-        />
-      </div> */}
       <div className="row formrow">
         <FloatingLabelInput
           className="inputstyle"

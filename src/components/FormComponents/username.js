@@ -8,9 +8,6 @@ import FloatingLabelInput from "react-floating-label-input";
 
 const username = props => {
   return (
-    // <div className="form-group">
-    //   <input type="text" className="form-control" {...props} />
-    // </div>
     <div className="row formrow">
       <FloatingLabelInput
         className="inputstyle"
