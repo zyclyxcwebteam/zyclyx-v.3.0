@@ -41,6 +41,7 @@ import {
   faBriefcase,
   faPhone,
   faEnvelope,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Username from "../components/FormComponents/username";
 import Emailaddress from "../components/FormComponents/emailAddress";
@@ -290,7 +291,13 @@ class contactus extends Component {
                       id="contactBtn"
                       onClick={this.handleClick}
                     >
-                      <span id="btnText">Messege Us</span>
+                      <span id="btnText" className="mr-3">
+                        Messege Us
+                      </span>
+                      <span>
+                        {" "}
+                        <FontAwesomeIcon icon={faArrowRight} />
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -380,7 +387,13 @@ class contactus extends Component {
                         className="btn btncolor text-center"
                         id="contactBtn"
                       >
-                        <span id="btnText">Submit</span>
+                        <span id="btnText" className="mr-3">
+                          Submit
+                        </span>
+                        <span>
+                          {" "}
+                          <FontAwesomeIcon icon={faArrowRight} />
+                        </span>
                       </button>
                     </div>
                   </form>

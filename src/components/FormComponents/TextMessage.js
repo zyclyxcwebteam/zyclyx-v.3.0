@@ -16,9 +16,9 @@ const messege = props => {
       <FloatingLabelInput
         className="inputstyle"
         name="Name"
+        component="textarea"
         id="messege"
         label="Messege"
-        type="text"
         placeholder=""
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...props}
