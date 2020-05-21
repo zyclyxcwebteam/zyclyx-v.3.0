@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Button from "../Button/Button";
 import "./ContactBanner.css";
-import WorldMapSVG from "../../images/map.svg";
+import WorldMapSVG from "../../Images/map.svg";
 
 const ContactBanner = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "./HeroBanner.css";
-import RPABannerImage from "../../images/rpa.svg";
+import RPABannerImage from "../../Images/rpa.svg";
 
 const HeroBanner = ({ titleOne, titleTwo }) => {
   return (

@@ -1,17 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import Layout from "../components/layout";
+import Layout from "../components/Layout/Layout";
 import NewAge from "../Images/new-age.jpg";
-import "../styles/service-slide.css";
-import SectionTitle from "../components/SectionTitle/sectionTitle";
-import "../components/SectionTitle/sectionTitle.css";
 
 const ServiceSlide = () => {
   return (
     <Layout>
       <Container fluid>
-        <SectionTitle titleText="Services we offer" />
-        <sectionTitle titleText="" hello />
         <div className="services-wrapper">
           <div className="service-menu">
             <ul className="service-menu-list">
