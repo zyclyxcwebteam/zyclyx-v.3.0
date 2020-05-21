@@ -7,11 +7,13 @@ import Sectiontitle from "../components/sectiontitle";
 import Statcount from "../components/statcount";
 import Proof from "../components/Proof";
 import "../styles/Industry.css";
+import Homebanner from "../components/Home/banner";
 
 export default () => {
   return (
     <>
       <Layout>
+        <Homebanner />
         <Container fluid id="stats">
           <Sectiontitle
             title="STATISTICS"

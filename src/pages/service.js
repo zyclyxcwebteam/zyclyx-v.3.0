@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/layout";
-import InformationSecuritySVG from "../images/information_security.svg";
+import InformationSecuritySVG from "../Images/information_security.svg";
 import "../styles/service.css";
 
 const Service = () => {
