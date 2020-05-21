@@ -3,7 +3,7 @@ import "./Button.css";
 
 const Button = () => {
   return (
-    <button type="button" className="btn btn-3 btn-3e icon-arrow-right">
+    <button type="button" className="btn btn-success">
       Send message
     </button>
   );
