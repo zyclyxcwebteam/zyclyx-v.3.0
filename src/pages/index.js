@@ -1,18 +1,21 @@
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import { Container, Col, Row } from "reactstrap";
-import Layout from "../components/layout";
-import Industry from "../components/industry";
-import Sectiontitle from "../components/sectiontitle";
-import Statcount from "../components/statcount";
-import Proof from "../components/Proof";
+import Layout from "../components/Layout/Layout";
+import Industries from "../components/Homepage/Industries";
 import "../styles/Industry.css";
+
 import Homebanner from "../components/Home/banner";
+
+import "../css/home.css";
+// import newage from "../images/new-age.jpg";
+
 
 export default () => {
   return (
     <>
       <Layout>
+<<<<<<< HEAD
         <Homebanner />
         <Container fluid id="stats">
           <Sectiontitle
@@ -35,88 +38,93 @@ export default () => {
               </Row>
             </Col>
           </Row>
+=======
+        {/* banner */}
+        <Container className="home-banner">
+          <h1>
+            Real world solutions
+            <br />
+            for sustainable performance
+          </h1>
+>>>>>>> 942a5194cf1488ee8639d338915d15e96df6edf5
         </Container>
 
-        <Container fluid className="py-2 px-0">
-          <Sectiontitle
-            title="INDUSTRIES"
-            text="lorem ipusum it is a professional dummy text"
-            sectionStyles="industry-title"
-          />
-          <div id="industries" className="d-flex flex-md-row mt-mt-4">
-            <Industry
-              number="01"
-              title="Bancking"
-              text="lorem ipusum it is a professional dummy text"
-            />
-            <Industry
-              number="02"
-              title="Telecom"
-              text="lorem ipusum it is a professional dummy text"
-            />
-            <Industry
-              number="03"
-              title="Healthcare"
-              text="lorem ipusum it is a professional dummy text"
-            />
-            <Industry
-              number="04"
-              title="Logistics"
-              text="lorem ipusum it is a professional dummy text"
-            />
-            <Industry
-              number="05"
-              title="Retail"
-              text="lorem ipusum it is a professional dummy text"
-            />
-          </div>
-        </Container>
-
-        <Container fluid className="py-4">
-          <Row>
-            <Col md="10">
-              <Sectiontitle
-                title="PROOF OF CONCEPT"
-                text="With Proof of Concept, we offer you value added service in terms of advanced prototype creation which help in demonstrating our work potential. It also assists you to checkout its feasibility in your business process, hence optimizing the experience."
-                sectionStyles="proof-title"
-              />
-            </Col>
-            <Col
-              md=""
-              className="p-0 d-flex justify-content-center align-items-center"
-            >
-              <Link to="/" className="btn btn-primary">
-                Get Started
-              </Link>
-            </Col>
-          </Row>
-
+        <Container fluid className="overview py-5">
           <Container>
+            <Row>
+              <Col
+                md="4"
+                sm="12"
+                className="d-flex align-items-center text-center"
+              >
+                <h2>
+                  Welcome to the
+                  <br />
+                  <span>ZYCLYX</span>
+                </h2>
+              </Col>
+              <Col md="8" sm="12">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry&aposs
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </Container>
+        <Container fluid className="py-5 service-slider">
+          <h2>Our services</h2>
+        </Container>
+        <Container fluid />
+
+        <Industries />
+        <Container fluid className="py-5 poc-wrapper">
+          <Container>
+            <h2 className="text-center poc-title">
+              Fostering your trust in us with
+              <br />
+              <span className="poc-title-bg">Free Proof of Concept</span>
+            </h2>
+            <p className="text-center py-4">
+              With Proof of Concept, we offer you value added service in terms
+              of advanced prototype creation which help in demonstrating our
+              work potential.
+              <br />
+              It also assists you to checkout its feasibility in your business
+              process, hence optimizing the experience.
+            </p>
             <Row>
               <Col sm="12" className="mx-auto">
                 <Row className="py-4 mx-auto proof-row">
                   <Col md="4" sm="4" className="p-0">
-                    <Proof
-                      title="Forecast"
-                      text="Act as a tool to forecast the feasibility of the projects."
-                    />
+                    <h3>Forecast</h3>
+                    <p>
+                      Act as a tool to forecast the feasibility of the projects.
+                    </p>
                   </Col>
                   <Col md="4" sm="4" className="p-0">
-                    <Proof
-                      title="Report"
-                      text="Provides a complete report on project evaluation"
-                    />
+                    <h3>Report</h3>
+                    <p>Provides a complete report on project evaluation</p>
                   </Col>
                   <Col md="4" sm="4" className="p-0">
-                    <Proof
-                      title="Cost Effective"
-                      text="Saves your businesses time and money"
-                    />
+                    <h3>Cost Effective</h3>
+                    <p>Saves your businesses time and money</p>
                   </Col>
                 </Row>
               </Col>
             </Row>
           </Container>
+        </Container>
+        <Container className="clients">
+          <p />
         </Container>
       </Layout>
     </>

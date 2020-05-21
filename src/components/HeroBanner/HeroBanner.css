@@ -1,0 +1,22 @@
+.hero-banner {
+  height: 100vh;
+  background-color: #111b33;
+}
+
+.hero-banner .title-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.banner-title-one {
+  color: #ffffff;
+}
+.banner-title-two {
+  color: #fbbf12;
+}
