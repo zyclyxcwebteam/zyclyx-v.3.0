@@ -1,0 +1,21 @@
+{
+  "title": "Bigdata",
+  "path": "bigdata",
+  "caption": "Revolutionizing AI with tools for the next wave of transformation",
+  "overview": "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception. The work is underway to improve the process to benefit various industries, currently, it is being used in Finance, Logistics and Supply chain, Healthcare, Cybersecurity, HRM and Hospitality.",
+  "solTitle": "For the next generation of big businesses",
+  "services": [
+    {
+      "title": "Digital Assistance",
+      "content": "Our highly advanced AI-powered digital bots, are designed to understand and interpret human behavior, leading to extensive support and enriching customer experiences."
+    },
+    {
+      "title": "Knowledge Virtualization",
+      "content": "With the power of AI technology we create stable knowledge virtualization systems, which lead to reliable databases for taking the right business decisions."
+    },
+    {
+      "title": "Business Analytics",
+      "content": "Our custom AI solutions are designed to study your business so that you can make accurate decisions based on reliable algorithmic and predictive data."
+    }
+  ]
+}

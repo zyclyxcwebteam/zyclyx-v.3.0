@@ -9,10 +9,14 @@
   justify-content: center;
   align-items: center;
 }
-
+.hero-banner .title-box,
+.hero-banner .img-box {
+  height: 90vh;
+}
 .banner-title {
   font-size: 4rem;
   font-weight: 700;
+  text-align: center;
 }
 .banner-title-one {
   color: #ffffff;

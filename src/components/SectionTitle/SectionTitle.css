@@ -1,0 +1,15 @@
+.section-title {
+  font-size: 3rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100px;
+  background-color: #fbbf12;
+  left: 2px;
+  bottom: 2px;
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Digital Marketing",
+  "path": "digital-marketing",
+  "caption": "The most preferred company in the Middle East to have successfully implemented over 100+ processes in 3 years",
+  "description": "Robotic Process Automation (RPA) automates routine human tasks by creating an interaction with the existing IT architecture without any complex system integration. Our team helps you with Innovating, Inventing and Automating high-quality business processes to reduce operations cost and maximize performance. This can be used across different verticals like Finance, Telecom, HR, Sales & Marketing, Supply Chain, Customer Service and many more",
+
+  "services": [
+    {
+      "title": "Personalized Solutions",
+      "content": "RPA works the best when it is customized as per your needs. With our custom solutions that meet your business requirements and operational capacities, it is sure to produce improved results, thus enhancing the business value."
+    },
+    {
+      "title": "Cross-Platform Integrations",
+      "content": "RPA's brilliant integration capability makes them adept at cross-platform functions. Our developers configure the bots in a manner that triggers them to automatically move data between non-integrated applications"
+    },
+    {
+      "title": "Cross-Platform Integrations",
+      "content": "RPA's brilliant integration capability makes them adept at cross-platform functions. Our developers configure the bots in a manner that triggers them to automatically move data between non-integrated applications"
+    }
+  ]
+}
