@@ -2,20 +2,32 @@
   "title": "Identity & Access Management",
   "path": "identity-access-management",
   "caption": "Revolutionizing AI with tools for the next wave of transformation",
-  "overview": "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception. The work is underway to improve the process to benefit various industries, currently, it is being used in Finance, Logistics and Supply chain, Healthcare, Cybersecurity, HRM and Hospitality.",
+  "overview": "The excessive reliability of interconnected systems in our work environment means that access to business data and other information must be shared across to employees, clients, and other stakeholders. Our solutions are modeled to ensure that remote access is granted while maintaining accessibility and security, thus helping your organization be ready for tomorrow.",
   "solTitle": "For the next generation of big businesses",
   "services": [
     {
-      "title": "Digital Assistance",
-      "content": "Our highly advanced AI-powered digital bots, are designed to understand and interpret human behavior, leading to extensive support and enriching customer experiences."
+      "title": "Single Sign-On",
+      "content": "The team at ZYCLYX works to simplify your login issues with SSO, thus eliminating the need to remember login credentials for each application. It provides a single set of login credentials designed to grant access to all applications which have been integrated with SSO portal."
     },
     {
-      "title": "Knowledge Virtualization",
-      "content": "With the power of AI technology we create stable knowledge virtualization systems, which lead to reliable databases for taking the right business decisions."
+      "title": "Privileged IAM",
+      "content": "It involves the integrations of a transparent and unified platform that aligns with the business objective of your organizational strategy. We aim to manage, control, protect and monitor all privileged accounts along with the admin access for a more secure and compliant experience."
     },
     {
-      "title": "Business Analytics",
-      "content": "Our custom AI solutions are designed to study your business so that you can make accurate decisions based on reliable algorithmic and predictive data."
+      "title": "Security Directory",
+      "content": "We have designed a standard-based identity platform that helps to simplify identity and directory management. This leads to enhanced user experience while decreasing fragmentation and deployment complexity."
+    },
+    {
+      "title": "Integrated IAM",
+      "content": "There are multiple benefits associated with this like the ease of - modification, provision, and deprovision of user identities. Along with this it also allows you to control user access to network resources from a central console."
+    },
+    {
+      "title": "Multi-Factor Authentication",
+      "content": "We develop multiple secure layers that guarantee protection from Cyber-criminals. There are various factors required for the authentication of users at different levels."
+    },
+    {
+      "title": "DNS Security",
+      "content": "Our DNS security solutions are aimed to increase your protection against malicious attacks with a set of extensions. Any organization must secure the DNS as it generates a host of IP addresses."
     }
   ]
 }

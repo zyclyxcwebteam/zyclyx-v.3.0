@@ -2,20 +2,24 @@
   "title": "Cyber Security",
   "path": "cyber-security",
   "caption": "Revolutionizing AI with tools for the next wave of transformation",
-  "overview": "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception. The work is underway to improve the process to benefit various industries, currently, it is being used in Finance, Logistics and Supply chain, Healthcare, Cybersecurity, HRM and Hospitality.",
+  "overview": "In today’s internet-driven world, focussing on cyber defense is crucial for organizations. As with evolving threats, hackers may access or destroy sensitive data. Our team is dedicated to the process of securing networks, devices, and programs against any type of cyberattack. We want to ensure that our clients feel secure while browsing the web. The team of security experts at ZYCLYX  is equipped to tackle cyber threats like Phishing, Malware, Spamming, Hacking, Ransomware, etc.",
   "solTitle": "For the next generation of big businesses",
   "services": [
     {
-      "title": "Digital Assistance",
-      "content": "Our highly advanced AI-powered digital bots, are designed to understand and interpret human behavior, leading to extensive support and enriching customer experiences."
+      "title": "Web Protection",
+      "content": "The key motive here is to provide users everywhere with 24/7 quick access to data and cloud applications while ensuring its safety from inbound and outbound threats. We take care of complex issues, security and performance blocking any attacks."
     },
     {
-      "title": "Knowledge Virtualization",
-      "content": "With the power of AI technology we create stable knowledge virtualization systems, which lead to reliable databases for taking the right business decisions."
+      "title": "Log Management and Log Correlation",
+      "content": "We are here to help you manage a vast collection of logs with practical solutions. Our centralized system correlates data from different sources to enable faster data computation. This allows users to monitor and log data accurately leading to optimized system performance."
     },
     {
-      "title": "Business Analytics",
-      "content": "Our custom AI solutions are designed to study your business so that you can make accurate decisions based on reliable algorithmic and predictive data."
+      "title": "Endpoint Protection",
+      "content": "Our end-point solutions are designed to provide all-round protection. This process detects, prevents, responds and stops the threats of an attack at its initial stages. We have a complete suite of operations designed to support multiple use cases and users."
+    },
+    {
+      "title": "Vulnerability Assessment and Penetration Testing (VAPT)",
+      "content": "The VAPT suite has been developed by our experts to provide a comprehensive assessment of applications. It safeguards the organization’s data and systems from hostile attacks by providing a detailed report on approaching or ongoing threats. This is done by simulating an attack to test the network and systems’ resistance as part of Penetration Testing."
     }
   ]
 }

@@ -1,21 +1,21 @@
 {
-  "title": "Optical Character Recognition",
+  "title": "Optical character recognition",
   "path": "optical-character-recognition",
-  "caption": "The most preferred company in the Middle East to have successfully implemented over 100+ processes in 3 years",
-  "description": "Robotic Process Automation (RPA) automates routine human tasks by creating an interaction with the existing IT architecture without any complex system integration. Our team helps you with Innovating, Inventing and Automating high-quality business processes to reduce operations cost and maximize performance. This can be used across different verticals like Finance, Telecom, HR, Sales & Marketing, Supply Chain, Customer Service and many more",
-
+  "caption": "Revolutionizing AI with tools for the next wave of transformation",
+  "overview": "The OCR technology converts virtually any kind of documents, such as scanned paper documents, PDF files or images captured by a digital camera into machine-readable text data which is editable and searchable.  It saves you a lot of time and effort when creating, processing and repurposing various documents. We have developed this for various processes like Forms processing, Loan processing, Transcript processing, Invoice processing etc.",
+  "solTitle": "For the next generation of big businesses",
   "services": [
     {
-      "title": "Personalized Solutions",
-      "content": "RPA works the best when it is customized as per your needs. With our custom solutions that meet your business requirements and operational capacities, it is sure to produce improved results, thus enhancing the business value."
+      "title": "Digital Bots",
+      "content": "Our highly advanced digital bots powered by AI are designed to understand and perceive human behavior, resulting in robust support and enriching client experiences."
     },
     {
-      "title": "Cross-Platform Integrations",
-      "content": "RPA's brilliant integration capability makes them adept at cross-platform functions. Our developers configure the bots in a manner that triggers them to automatically move data between non-integrated applications"
+      "title": "Business Analytics:",
+      "content": "We customize AI solutions to analyze the business and make accurate and precise decisions based on predictive and accurate algorithmic data."
     },
     {
-      "title": "Cross-Platform Integrations",
-      "content": "RPA's brilliant integration capability makes them adept at cross-platform functions. Our developers configure the bots in a manner that triggers them to automatically move data between non-integrated applications"
+      "title": "Virtualization",
+      "content": "We build secure information virtualization systems with the power of AI technology, which leads to dependable databases for taking the right business decisions."
     }
   ]
 }

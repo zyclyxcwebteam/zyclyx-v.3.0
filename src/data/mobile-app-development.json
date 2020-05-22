@@ -2,20 +2,16 @@
   "title": "Mobile App Development",
   "path": "mobile-app-development",
   "caption": "Revolutionizing AI with tools for the next wave of transformation",
-  "overview": "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception. The work is underway to improve the process to benefit various industries, currently, it is being used in Finance, Logistics and Supply chain, Healthcare, Cybersecurity, HRM and Hospitality.",
+  "overview": "The mobile application development process that we follow involves developing installable packages of software (code, plugins, properties, etc.), integrating backend services such as data access with an API, and testing the app on target devices. For instance, these applications can cater to various verticals, Finance, Travel, Social Networking, Hospitality, eCommerce, Foodservice, Entertainment and media industries, etc.",
   "solTitle": "For the next generation of big businesses",
   "services": [
     {
-      "title": "Digital Assistance",
-      "content": "Our highly advanced AI-powered digital bots, are designed to understand and interpret human behavior, leading to extensive support and enriching customer experiences."
+      "title": "Native Applications:",
+      "content": "With Native apps, the possibilities are limitless, they can be configured specifically for the operating system of the user and are often favored for their high performance, responsiveness, accessibility, aspect ratios and more. We've built applications for consumers from various sectors and catered to specific needs."
     },
     {
-      "title": "Knowledge Virtualization",
-      "content": "With the power of AI technology we create stable knowledge virtualization systems, which lead to reliable databases for taking the right business decisions."
-    },
-    {
-      "title": "Business Analytics",
-      "content": "Our custom AI solutions are designed to study your business so that you can make accurate decisions based on reliable algorithmic and predictive data."
+      "title": "Hybrid Applications",
+      "content": "Whether one opts for React Native or Flutter technology, the demand for Hybrid apps is constantly growing due to shorter development time, cost-effectiveness and more. To exploit its ability in the true essence, our team guarantees top quality services. We have a team of experienced developers to fulfill your Hybrid App requirements. "
     }
   ]
 }

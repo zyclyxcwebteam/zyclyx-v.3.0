@@ -2,20 +2,20 @@
   "title": "Data Visulaization",
   "path": "data-visualization",
   "caption": "Revolutionizing AI with tools for the next wave of transformation",
-  "overview": "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception. The work is underway to improve the process to benefit various industries, currently, it is being used in Finance, Logistics and Supply chain, Healthcare, Cybersecurity, HRM and Hospitality.",
+  "overview": "This service is dedicated to visual representation of the data in the form of graphs, charts or other graphic representations. It enables users to view, search and understand the trends of Business Intelligence. We do the research of logical correlations of units, inclinations, behaviors, and trends, depending on the reason for which it is being done. Aside from data scientists and researchers, data visualization is often used in Accounting, Marketing, Engineering, etc",
   "solTitle": "For the next generation of big businesses",
   "services": [
     {
-      "title": "Digital Assistance",
-      "content": "Our highly advanced AI-powered digital bots, are designed to understand and interpret human behavior, leading to extensive support and enriching customer experiences."
+      "title": "Custom Solutions",
+      "content": " In order to identify the problem areas, we commence the process by assessing your business needs. On understanding, we create visualization solutions that are personalized to effectively solve your problems."
     },
     {
-      "title": "Knowledge Virtualization",
-      "content": "With the power of AI technology we create stable knowledge virtualization systems, which lead to reliable databases for taking the right business decisions."
+      "title": "Training",
+      "content": "We offer the end-users with initial training to have an understanding of the capabilities of the tool and its various applications, even if such solutions can seem simple to use."
     },
     {
-      "title": "Business Analytics",
-      "content": "Our custom AI solutions are designed to study your business so that you can make accurate decisions based on reliable algorithmic and predictive data."
+      "title": "Support",
+      "content": "We offer support and maintenance services which include performance improvement,, development to improve the current system, and migration from one analytical framework to another."
     }
   ]
 }

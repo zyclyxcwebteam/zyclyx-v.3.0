@@ -42,7 +42,7 @@ const PageTemplate = props => {
         <h3 className="solutions-title-text text-center">{solTitle}</h3>
       </Container>
       {/* solutions cards */}
-      <Container fluid className="solutions-wrapper">
+      <Container fluid className="solutions-wrapper py-5">
         <Row>
           <Col sm="12" md="6" className="sol-image">
             <img src={SolutionImage} alt="new age" />

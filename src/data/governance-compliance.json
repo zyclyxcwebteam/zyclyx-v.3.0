@@ -2,20 +2,28 @@
   "title": "Governance & Compliance",
   "path": "governance-and-compliance",
   "caption": "Revolutionizing AI with tools for the next wave of transformation",
-  "overview": "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception. The work is underway to improve the process to benefit various industries, currently, it is being used in Finance, Logistics and Supply chain, Healthcare, Cybersecurity, HRM and Hospitality.",
+  "overview": "At ZYCLYX, our services are dedicated to clients who need help in areas of corporate governance and effective compliance. Our team of experts will guide you to meet your unique business needs. The solutions are designed to help organizations identify, monitor, analyze and manage the issues while meeting the regulatory norms.",
   "solTitle": "For the next generation of big businesses",
   "services": [
     {
-      "title": "Digital Assistance",
-      "content": "Our highly advanced AI-powered digital bots, are designed to understand and interpret human behavior, leading to extensive support and enriching customer experiences."
+      "title": "SOC Automation",
+      "content": "Security Operation Centers (SOC) have become part of every major organization in today's vulnerable times. We understand the importance of SOCs to identify, evaluate, and respond to cyber-attacks. Our SOC Automation arms your organization with tools for much more streamlined and highly effective defense. It acts like a well-equipped army which is ready, round-the-clock, to detect and address potential breaches"
     },
     {
-      "title": "Knowledge Virtualization",
-      "content": "With the power of AI technology we create stable knowledge virtualization systems, which lead to reliable databases for taking the right business decisions."
+      "title": " Forensic Services / Incident Response",
+      "content": "We are here to support the Forensic services with the process of detecting, investigating, documenting, collecting, processing and analyzing any computer-related evidence of law enforcement investigations or criminal fraud. While our Incident response team comprises experts when it comes to managing the security breach or cyber attack. Our automation is aimed to limit the damage while reducing your time and cost of recovery."
     },
     {
-      "title": "Business Analytics",
-      "content": "Our custom AI solutions are designed to study your business so that you can make accurate decisions based on reliable algorithmic and predictive data."
+      "title": "Compliance Assessment",
+      "content": "Our team is here to analyze any discrepancies by studying the differences between your current control system and actual requirements. As it is not part of risk assessment, the identified gaps may or may not correlate with exposure to risk."
+    },
+    {
+      "title": "Implement (SIEM)",
+      "content": "We use the best network and hardware applications for our Security Information and Event Management (SIEM) services. These applications generate a real-time analysis of the threats and security warnings. It also provides a comparison between different events and warnings while managing the storage, processing, analysing and reporting of various security data."
+    },
+    {
+      "title": "Vulnerability Assessment / Pen Test / RED",
+      "content": "As part of Vulnerability assessment we define, detect, classify and prioritize the vulnerabilities encountered by the computer systems, software and network infrastructure. We make an effort to convey the required knowledge to help your organization to recognize and react appropriately to these threats. During penetration testing ( Pen test) our team of cyber analysts simulates a cyber attack on the computer systems to check for bugs that can be exploited."
     }
   ]
 }
