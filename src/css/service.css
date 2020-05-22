@@ -15,17 +15,13 @@
   font-weight: 600;
 }
 
-.solutions-wrapper {
-  height: 90vh;
-}
-
-.sol-image,
+/* .sol-image,
 .sol-cards {
   height: 90vh;
-}
+} */
 .sol-image {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   /* background-color: #111b33; */
 }
 .sol-image img {
