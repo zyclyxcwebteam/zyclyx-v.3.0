@@ -43,8 +43,7 @@ const aboutus = () => {
   return (
     <Layout>
       <HeroBanner
-        titleOne="A Fast-Growing"
-        titleTwo="Technology Leader"
+        title="A Fast-Growing Technology Leader"
         image={BannerImage}
       />
       <Container fluid className="py-5 overview-wrapper">
@@ -100,8 +99,8 @@ const aboutus = () => {
       </Container>
 
       {/* Core Values */}
-      <Container fluid className="py-5 core-values">
-        <Container className="py-5">
+      <Container fluid className="py-3 core-values">
+        <Container className="py-3">
           <Row>
             <Col sm="4">
               <CoreValueCard
@@ -159,8 +158,66 @@ const aboutus = () => {
           </Row>
         </Container>
       </Container>
-      <Container>
+      <Container className="py-5">
         <SectionTitle title="How we do it" />
+
+        <Row className="h-wrapper">
+          <Col className="px-0 h-card">
+            <div className="h-card-content h-bottom">
+              <h4>STEP 1</h4>
+              <p>
+                Strategize, document and decipher - goals, objectives,
+                information and financial forecasts for building the right
+                business plan.
+              </p>
+            </div>
+            <h3 className="h-title-dark plan">PLAN</h3>
+          </Col>
+          <Col className="px-0 h-card">
+            <h3 className="h-title-green">EXECUTE</h3>
+            <div className="h-card-content h-bottom">
+              <h4>STEP 2</h4>
+              <p>
+                Strategize, document and decipher - goals, objectives,
+                information and financial forecasts for building the right
+                business plan.
+              </p>
+            </div>
+          </Col>
+          <Col className="px-0 h-card">
+            <div className="h-card-content h-bottom">
+              <h4>STEP 3</h4>
+              <p>
+                Strategize, document and decipher - goals, objectives,
+                information and financial forecasts for building the right
+                business plan.
+              </p>
+            </div>
+            <h3 className="h-title-dark">RECTIFY</h3>
+          </Col>
+          <Col className="px-0 h-card">
+            <h3 className="h-title-green">ANALYZE</h3>
+            <div className="h-card-content h-bottom">
+              <h4>STEP 4</h4>
+              <p>
+                Strategize, document and decipher - goals, objectives,
+                information and financial forecasts for building the right
+                business plan.
+              </p>
+            </div>
+          </Col>
+          <Col className="px-0 h-card">
+            <div className="h-card-content h-bottom">
+              <h4>STEP 5</h4>
+              <p>
+                Strategize, document and decipher - goals, objectives,
+                information and financial forecasts for building the right
+                business plan.
+              </p>
+            </div>
+            <h3 className="h-title-dark feedback">FEEDBACK</h3>
+          </Col>
+        </Row>
       </Container>
     </Layout>
   );
