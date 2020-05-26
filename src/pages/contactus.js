@@ -1,10 +1,11 @@
 import React from "react";
+import Layout from "../components/Layout/Layout";
 
 const contactus = () => {
   return (
-    <>
-      <h2>contact us</h2>
-    </>
+    <Layout>
+      <h1>this is a contact us page</h1>
+    </Layout>
   );
 };
 
