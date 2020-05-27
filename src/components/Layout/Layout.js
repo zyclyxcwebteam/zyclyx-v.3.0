@@ -5,6 +5,7 @@ import {
   faAt,
   faPhoneAlt,
   faMapMarkerAlt,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../NavBar/Navbar";
 import ContactBanner from "../ContactBanner/ContactBanner";
@@ -12,7 +13,7 @@ import Footer from "../Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Layout.css";
 
-library.add(fab, faAt, faPhoneAlt, faMapMarkerAlt);
+library.add(fab, faAt, faPhoneAlt, faMapMarkerAlt, faArrowRight, faArrowRight);
 
 const layout = props => {
   const { children } = props;

@@ -5,8 +5,8 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer py-5">
-      <Container fluid className="footer-contact pt-3">
+    <footer className="footer py-3">
+      <Container fluid className="footer-contact pt-4">
         <ul className="contact-links">
           <li>
             <FontAwesomeIcon icon="phone-alt" />
