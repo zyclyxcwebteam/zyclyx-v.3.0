@@ -12,7 +12,6 @@ import Layout from "../components/Layout/Layout";
 import Industries from "../components/Homepage/Industries";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import "../styles/Industry.css";
-import Footer from "../components/Footer/footer";
 import "../css/home.css";
 import NewAgeBG from "../Images/new-age.jpg";
 import NetworkBG from "../Images/security.jpg";
