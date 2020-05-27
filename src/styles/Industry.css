@@ -1,0 +1,206 @@
+.green{
+    color: orange;
+}
+.industry-title{
+    padding: 2rem 0px;
+    color: rgb(3, 37, 82);
+}
+.proof-title{
+    padding: 2rem 0px;
+    color: rgb(3, 37, 82);
+}
+#stats{
+    background: rgb(3, 37, 82);
+    padding: 3rem 0px;
+}
+#stats .stat{
+    background: #00000046;
+}
+#stats h1{
+    font-size: 4rem;
+    color: white;
+}
+#stats .stat p{
+    color: rgb(199, 199, 199);
+}
+
+/* ------------------------- */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #stats .stat h1{
+        font-size: 2.5rem;
+    }
+}
+/* ------------------------- */
+
+#industries .industry{
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    height: 29rem !important;
+    position: relative;
+    z-index: 9;
+    transition: transform .2s;
+}
+#industries .industry h1{
+    color: deepskyblue;
+}
+#industries .industry:hover{
+    color: #fff !important;
+    background-image: url('../Images/image-1.jpg');
+    position: relative;
+    /* transform: scale(1.1);
+    border-right: none !important; */
+}
+#industries .industry:hover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: linear-gradient(145deg, #fff0, #2d3748);
+}
+#industries .industry:nth-child(5){
+    border-right: none;
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #industries .industry{
+        height: 29rem !important;
+        padding: 2rem;
+        border-right: 1px solid #ccc !important;
+    }
+    #industries .industry-sm{
+        display: flex;
+        flex-direction: column !important;
+        text-align: center;
+    }
+    #industries .industry h1{
+        font-size: 2.9rem !important;
+    }
+    #industries .industry h2{
+        font-size: 2rem !important;
+    }
+} 
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 767.98px) { 
+    #industries .industry{
+        /* height: 29rem !important; */
+        padding: 2rem;
+        border-right: 1px solid #ccc !important;
+    }
+    #industries .industry-sm{
+        display: flex;
+        flex-direction: column !important;
+        text-align: center;
+    }
+    #industries .industry h1{
+        font-size: 2.9rem !important;
+    }
+    #industries .industry h2{
+        font-size: 2rem !important;
+    }
+ }
+ /* // Medium devices (tablets, 576 and up) */
+@media (min-width: 576px) { 
+  
+    #industries .industry{
+        padding: 20px 9px;
+        height: 20rem  !important;
+        /* display: flex !important; */
+        border: none;
+        border-right: 1px solid #ccc;
+    }
+    #industries .industry .industry-text{
+        text-align: center;
+        margin: 0 !important;
+    }
+    #industries .industry h1{
+        font-size: 2.4rem;
+        /* border-right: 1px solid #ccc; */
+    }
+    #industries .industry h2{
+        font-size: 1.4rem !important;
+    }
+    #industries .industry p{
+        font-size: 14px;
+    }
+ }
+
+ @media (max-width: 575.98px) { 
+    #industries{
+        display: flex;
+        flex-direction: column;
+    }
+    #industries .industry{
+        padding: 20px 9px;
+        height: auto !important;
+        display: flex !important;
+        border-right: none;
+        border-bottom: 1px solid rgb(238, 238, 238);
+    }
+    #industries .industry-sm{
+        display: flex;
+    }
+    #industries .industry-sm .industry-text{
+        margin-left: 1.4rem;
+    }
+    #industries .industry h1{
+        font-size: 2.4rem;
+        border-right: 1px solid #ccc;
+        padding-right: 1.4rem;
+    }
+    #industries .industry h2{
+        font-size: 1.2rem !important;
+        padding: 0;
+        margin: 0;
+    }
+    #industries .industry p{
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+
+.proof-1{
+    position: relative;
+    min-height: 146px;
+}
+/* .proof-1::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -80px;
+    z-index: -1;
+    border: 1px dashed #ebecec;
+    width: 5rem;
+} */
+.proof-1:nth-child(3)::after{
+    border-right: none !important;
+}
+@media (min-width: 768px) {
+    .proof-1{
+        width: 100%;
+    }
+}
+@media (min-width: 425px) {
+    .poc{
+        display: flex !important;
+    }
+    .proof-1 .proof-row{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .proof-1{
+        width: 90%;
+        margin: .4rem 0px;
+    }
+    .proof-1 h4{
+        font-size: 19px;
+    }
+    .proof-1 p{
+        font-size: 15px;
+    }
+}

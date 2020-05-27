@@ -1,0 +1,108 @@
+.home-banner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-banner h1 {
+  font-size: 64px;
+  text-align: center;
+  font-weight: 700;
+}
+.overview {
+  background-color: #f8fbff;
+}
+.newage {
+  max-width: 775px;
+}
+.service-title {
+  color: #00a14b;
+  margin-bottom: 2.5rem;
+}
+.service-title-inner {
+  color: #111b33;
+  font-size: 48px;
+  font-weight: 700;
+}
+.service-text {
+  padding: 0.5rem 4rem;
+  font-size: 1.5rem;
+}
+
+.service-link {
+  margin-top: 4rem;
+  margin-left: 4rem;
+  font-size: 1.5rem;
+  position: relative;
+  text-align: center;
+  color: #111b33;
+  font-weight: 600;
+}
+.service-link::before {
+  position: absolute;
+  content: "";
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: hsl(148, 100%, 82%);
+  z-index: -1;
+  left: -20px;
+  top: -5px;
+}
+.arrow {
+  color: #111b33;
+  font-size: 2rem;
+  display: inline-block;
+  margin-top: 10px;
+}
+.service-link:hover {
+  text-decoration: none;
+}
+.service-link:hover .service-link::before {
+  width: 200px;
+}
+.service-slider {
+  position: relative;
+}
+.slide-index {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.slide-index-list {
+  padding: 0;
+  margin: 0;
+}
+.slide-index-list li {
+  list-style-type: none;
+  text-align: center;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 1rem 0.5rem;
+  border: 1px solid #00a14b;
+}
+.slide-index-list li.active {
+  font-weight: bold;
+  color: #111b33;
+  background-color: hsl(148, 100%, 42%);
+}
+.clients {
+  height: 30vh;
+}
+.poc-wrapper {
+  background-color: #f0f1f9;
+}
+.poc-title {
+  font-size: 1.5rem;
+  color: #00a14b;
+}
+.poc-title-bg {
+  color: #111b33;
+  font-size: 2.5rem;
+  font-weight: 700;
+}

@@ -1,0 +1,29 @@
+.overview-title {
+  color: #30b454;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.overview-text {
+  font-size: 1.2rem;
+}
+.solutions-title {
+  background-color: #111b33;
+}
+.solutions-title-text {
+  color: #30b454;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* .sol-image,
+.sol-cards {
+  height: 90vh;
+} */
+.sol-image {
+  display: flex;
+  /* align-items: center; */
+  /* background-color: #111b33; */
+}
+.sol-image img {
+  max-width: 750px;
+}
