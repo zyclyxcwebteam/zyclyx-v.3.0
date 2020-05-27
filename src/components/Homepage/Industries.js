@@ -21,7 +21,7 @@ const Industries = () => {
         <p>Some text here</p>
       </Container>
       {/* Industry Cards */}
-      <Container>
+      <Container className="ind-cards">
         <Row>
           <Col>
             <IndustryCard title="Banking" />
