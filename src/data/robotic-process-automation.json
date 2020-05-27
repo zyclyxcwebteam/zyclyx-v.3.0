@@ -1,0 +1,21 @@
+{
+  "title": "Robotic Process Automation",
+  "path": "robotic-process-automation",
+  "caption": "The most preferred company in the Middle East to have successfully implemented over 100+ processes in 3 years",
+  "overview": "Robotic Process Automation automates repetitive human tasks by developing an interface with current IT systems without any complex integrations. We assist you to minimize operating costs and optimize performance by innovating, inventing and automating high-quality business processes. This can be implemented across various verticals, such as Banking, Telecom, Customer Services, HR, Sales & Marketing and so.",
+  "solTitle": "Technology at the speed of light",
+  "services": [
+    {
+      "title": "Personalized Solutions",
+      "content": " RPA performs best when it is customised according to the requirement. With the execution of custom solutions that suits your business needs and capabilities, it is assured to deliver better results and enhance company value."
+    },
+    {
+      "title": "Cross-Platform Integrations",
+      "content": "RPA excels in its integration ability making them experts in cross-platform functions. Our team configures the bots in a way that activates them to transfer data automatically between unintegrated applications."
+    },
+    {
+      "title": "Highly Secure Solutions",
+      "content": "Using RPA technology, we might open the organization to the damaging effects of the data breach. Nevertheless, by offering built-in security features we ensure you can now take full advantage of RPA solutions."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Optical character recognition",
+  "path": "optical-character-recognition",
+  "caption": "Revolutionizing AI with tools for the next wave of transformation",
+  "overview": "The OCR technology converts virtually any kind of documents, such as scanned paper documents, PDF files or images captured by a digital camera into machine-readable text data which is editable and searchable.  It saves you a lot of time and effort when creating, processing and repurposing various documents. We have developed this for various processes like Forms processing, Loan processing, Transcript processing, Invoice processing etc.",
+  "solTitle": "For the next generation of big businesses",
+  "services": [
+    {
+      "title": "Digital Bots",
+      "content": "Our highly advanced digital bots powered by AI are designed to understand and perceive human behavior, resulting in robust support and enriching client experiences."
+    },
+    {
+      "title": "Business Analytics:",
+      "content": "We customize AI solutions to analyze the business and make accurate and precise decisions based on predictive and accurate algorithmic data."
+    },
+    {
+      "title": "Virtualization",
+      "content": "We build secure information virtualization systems with the power of AI technology, which leads to dependable databases for taking the right business decisions."
+    }
+  ]
+}

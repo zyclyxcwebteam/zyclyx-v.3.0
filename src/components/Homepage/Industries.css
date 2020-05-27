@@ -1,0 +1,5 @@
+.industry-wrapper {
+  height: 100vh;
+  background-image: url("../../images/healthcare.jpg");
+  background-size: contain;
+}
