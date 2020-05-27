@@ -2,8 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
-import RPABannerImage from "../images/rpa.svg";
-import SolutionImage from "../images/new-age.jpg";
+import RPABannerImage from "../Images/rpa.svg";
+import SolutionImage from "../Images/new-age.jpg";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import "../css/service.css";
 
