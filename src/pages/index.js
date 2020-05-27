@@ -1,14 +1,125 @@
-import React from "react";
-// import { Link } from "gatsby";
-import { Container, Col, Row } from "reactstrap";
+import React, { useState } from "react";
+import { Link } from "gatsby";
+import {
+  Container,
+  Col,
+  Row,
+  Carousel,
+  CarouselItem,
+  CarouselIndicators,
+} from "reactstrap";
 import Layout from "../components/Layout/Layout";
 import Industries from "../components/Homepage/Industries";
+import SectionTitle from "../components/SectionTitle/SectionTitle";
 import "../styles/Industry.css";
-
 import "../css/home.css";
-// import newage from "../images/new-age.jpg";
+import NewAgeBG from "../Images/new-age.jpg";
+import NetworkBG from "../Images/security.jpg";
+import RPABG from "../Images/rpa.jpg";
+import OCRBG from "../Images/ocr.jpg";
+
+const items = [
+  {
+    src: NewAgeBG,
+    serviceText:
+      "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
+    captionOne: "Building future with",
+    captionTwo: "Artificial Intelligence",
+    imgLeft: true,
+    key: 1,
+    linkTo: "/artificial-intelligence",
+  },
+  {
+    src: RPABG,
+    serviceText:
+      "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
+    captionOne: "Building future with",
+    captionTwo: "Robotic Process Automation",
+    imgLeft: false,
+    key: 2,
+    linkTo: "/robotic-process-automation",
+  },
+  {
+    src: OCRBG,
+    serviceText:
+      "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
+    captionOne: "Building future with",
+    captionTwo: "Optical Character Recognition",
+    imgLeft: true,
+    key: 3,
+    linkTo: "/optical-character-recognition",
+  },
+  {
+    src: NetworkBG,
+    serviceText:
+      "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
+    captionOne: "Building future with",
+    captionTwo: "Network Security",
+    imgLeft: false,
+    key: 4,
+    linkTo: "/network-security",
+  },
+];
 
 export default () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  const next = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);
+  };
+
+  const previous = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    setActiveIndex(nextIndex);
+  };
+
+  const goToIndex = newIndex => {
+    if (animating) return;
+    setActiveIndex(newIndex);
+  };
+
+  const slides = items.map(item => {
+    return (
+      <CarouselItem
+        onExiting={() => setAnimating(true)}
+        onExited={() => setAnimating(false)}
+        key={item.src}
+        className="service-item"
+      >
+        <Row>
+          {item.imgLeft && (
+            <Col className="service-img">
+              <img src={item.src} alt="new age" />
+            </Col>
+          )}
+          <Col className="p-5">
+            <div className="py-5">
+              <h2 className="service-title text-center">
+                <span>{item.captionOne}</span>
+                <br />
+                {item.captionTwo}
+              </h2>
+              <p className="px-5">{item.serviceText}</p>
+              <p className="text-center">
+                <Link to={item.linkTo} className="text-center">
+                  Read More
+                </Link>
+              </p>
+            </div>
+          </Col>
+          {!item.imgLeft && (
+            <Col className="service-img">
+              <img src={item.src} alt="new age" />
+            </Col>
+          )}
+        </Row>
+      </CarouselItem>
+    );
+  });
   return (
     <>
       <Layout>
@@ -37,24 +148,50 @@ export default () => {
                 <p className="text-justify">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry&apos;s
+                  typesetting industry. Lorem Ipsum has been the industry&apos;
                   standard dummy text ever since the 1500s, when an unknown
                   printer took a galley of type and scrambled it to make a type
                   specimen book. It has survived not only five centuries, but
                   also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  essentially unchanged.
                 </p>
               </Col>
             </Row>
           </Container>
         </Container>
-        <Container fluid className="py-5 service-slider">
-          <h2>Our services</h2>
+        <Container fluid className="service-slider">
+          <SectionTitle title="Core Services" />
+          <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+            <CarouselIndicators
+              items={items}
+              activeIndex={activeIndex}
+              onClickHandler={goToIndex}
+            />
+            {slides}
+          </Carousel>
         </Container>
         <Container fluid />
-
+        {/* Company stats */}
+        <Container fluid className="stats-wrapper py-5 mt-5">
+          <Container className="py-5">
+            <Row>
+              <Col>
+                <div>
+                  <h3 className="stat-title text-center">20 +</h3>
+                  <p className="stat-caption text-center">Clients Served</p>
+                </div>
+              </Col>
+              <Col>
+                <h3 className="stat-title text-center">40 +</h3>
+                <p className="stat-caption text-center">Projects Delivered</p>
+              </Col>
+              <Col>
+                <h3 className="stat-title text-center">350 +</h3>
+                <p className="stat-caption text-center">Processess Automated</p>
+              </Col>
+            </Row>
+          </Container>
+        </Container>
         <Industries />
         <Container fluid className="py-5 poc-wrapper">
           <Container>

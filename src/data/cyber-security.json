@@ -1,0 +1,25 @@
+{
+  "title": "Cyber Security",
+  "path": "cyber-security",
+  "caption": "Revolutionizing AI with tools for the next wave of transformation",
+  "overview": "In today’s internet-driven world, focussing on cyber defense is crucial for organizations. As with evolving threats, hackers may access or destroy sensitive data. Our team is dedicated to the process of securing networks, devices, and programs against any type of cyberattack. We want to ensure that our clients feel secure while browsing the web. The team of security experts at ZYCLYX  is equipped to tackle cyber threats like Phishing, Malware, Spamming, Hacking, Ransomware, etc.",
+  "solTitle": "For the next generation of big businesses",
+  "services": [
+    {
+      "title": "Web Protection",
+      "content": "The key motive here is to provide users everywhere with 24/7 quick access to data and cloud applications while ensuring its safety from inbound and outbound threats. We take care of complex issues, security and performance blocking any attacks."
+    },
+    {
+      "title": "Log Management and Log Correlation",
+      "content": "We are here to help you manage a vast collection of logs with practical solutions. Our centralized system correlates data from different sources to enable faster data computation. This allows users to monitor and log data accurately leading to optimized system performance."
+    },
+    {
+      "title": "Endpoint Protection",
+      "content": "Our end-point solutions are designed to provide all-round protection. This process detects, prevents, responds and stops the threats of an attack at its initial stages. We have a complete suite of operations designed to support multiple use cases and users."
+    },
+    {
+      "title": "Vulnerability Assessment and Penetration Testing (VAPT)",
+      "content": "The VAPT suite has been developed by our experts to provide a comprehensive assessment of applications. It safeguards the organization’s data and systems from hostile attacks by providing a detailed report on approaching or ongoing threats. This is done by simulating an attack to test the network and systems’ resistance as part of Penetration Testing."
+    }
+  ]
+}

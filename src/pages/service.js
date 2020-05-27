@@ -3,12 +3,17 @@ import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import SolutionImage from "../Images/new-age.jpg";
+import RPABannerImage from "../Images/rpa.svg";
 import "../css/service.css";
 
 const Service = () => {
   return (
     <Layout>
-      <HeroBanner titleOne="Robotic Process" titleTwo="Automation" />
+      <HeroBanner
+        titleOne="Robotic Process"
+        titleTwo="Automation"
+        image={RPABannerImage}
+      />
       <Container className="tech-partners">
         <Row className="py-5">
           <Col sm="12" md="3" className="py-5" />

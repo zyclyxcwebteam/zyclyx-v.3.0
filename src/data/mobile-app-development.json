@@ -1,0 +1,17 @@
+{
+  "title": "Mobile App Development",
+  "path": "mobile-app-development",
+  "caption": "Revolutionizing AI with tools for the next wave of transformation",
+  "overview": "The mobile application development process that we follow involves developing installable packages of software (code, plugins, properties, etc.), integrating backend services such as data access with an API, and testing the app on target devices. For instance, these applications can cater to various verticals, Finance, Travel, Social Networking, Hospitality, eCommerce, Foodservice, Entertainment and media industries, etc.",
+  "solTitle": "For the next generation of big businesses",
+  "services": [
+    {
+      "title": "Native Applications:",
+      "content": "With Native apps, the possibilities are limitless, they can be configured specifically for the operating system of the user and are often favored for their high performance, responsiveness, accessibility, aspect ratios and more. We've built applications for consumers from various sectors and catered to specific needs."
+    },
+    {
+      "title": "Hybrid Applications",
+      "content": "Whether one opts for React Native or Flutter technology, the demand for Hybrid apps is constantly growing due to shorter development time, cost-effectiveness and more. To exploit its ability in the true essence, our team guarantees top quality services. We have a team of experienced developers to fulfill your Hybrid App requirements. "
+    }
+  ]
+}

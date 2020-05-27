@@ -74,6 +74,10 @@
 }
 .service-slider {
   position: relative;
+  height: 90vh;
+}
+.service-item {
+  height: 72vh;
 }
 .slide-index {
   position: absolute;
@@ -117,6 +121,7 @@
   font-size: 2.5rem;
   font-weight: 700;
 }
+
 .poc-letter{
   font-size: 6.4rem;
   font-weight: 700;
@@ -133,4 +138,41 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+/* our services slider */
+.service-img img {
+  height: 500px;
+  width: 750px;
+}
+.service-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #00a14b;
+}
+.service-title span {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.carousel-indicators li {
+  height: 15px;
+  width: 15px;
+  margin: 0 0.5rem;
+  background-color: #00a14b;
+  border-radius: 50%;
+  bottom: -30px;
+}
+
+/* company stats */
+.stat-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00a14b;
+}
+.stat-caption {
+  font-size: 1.2rem;
+  color: #00a14b;
+}
+.stats-wrapper {
+  background-color: #f8fbff;
 }
