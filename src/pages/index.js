@@ -252,13 +252,9 @@ export default () => {
             </Row>
           </Container>
         </Container>
-<<<<<<< HEAD
-        <Footer />
-=======
         <Container className="clients">
           <p />
         </Container>
->>>>>>> 2b8cca2206b748b8250b3a4e2f3589e51d7c13bc
       </Layout>
     </>
   );
