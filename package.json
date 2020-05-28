@@ -29,6 +29,7 @@
     "pattern.css": "^1.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-floating-label-input": "^4.3.0",
     "react-icons": "^3.10.0",
     "reactstrap": "^8.4.1"
   },
