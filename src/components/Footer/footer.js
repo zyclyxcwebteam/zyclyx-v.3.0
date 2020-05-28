@@ -1,66 +1,81 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../../styles/footer.css";
+import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faTwitter,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import "./Footer.css";
 
-const footer1 = () => {
+const Footer = () => {
   return (
-    <footer className="container-fluid footer ">
-      <div className="  row footerstyle  ">
-        <div className="col-md-3 col-sm-12   zyclyx order order-sm-2  order-md-0   ">
-          <h1> ZYCLYX © 2018 -2020</h1>
-        </div>
-        <div className="col-md-6 col-sm-12  order order-sm-0   order-md-1 pages p-0 ">
-          <ul className="d-flex justify-content-center p-0 m-0 ">
-            <li className="title mr-md-4">
-              <a href="/">About Us</a>
-            </li>
-            <li className="title mr-md-4">
-              <a href="/"> Careers</a>
-            </li>
-            <li className="title mr-md-4">
-              <a href="/">Contact Us</a>
-            </li>
-            <li className="title mr-md-4">
-              <a href="/">Terms</a>
-            </li>
-            <li className="title">
-              <a href="/">Privacy</a>
-            </li>
-          </ul>
-        </div>
-        <div className="col-md-3 col-sm-12  order order-sm-1 order-md-2    ">
-          <ul className="d-flex  align-items-center justify-content-end   socialicons">
-            <li className="mr-3">
-              <a href="/">
-                <FontAwesomeIcon icon={faFacebook} />
-              </a>
-            </li>
-            <li className="mr-3">
-              <a href="/">
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
-            </li>
-            <li className="mr-3">
-              <a href="/">
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-            </li>
-            <li>
-              <a href="/">
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <footer className="footer py-3">
+      <Container fluid className="footer-contact pt-4">
+        <ul className="contact-links">
+          <li>
+            <FontAwesomeIcon icon="phone-alt" />
+            <a href="/">(+91) 40 23549363</a>
+          </li>
+          <li>
+            <FontAwesomeIcon icon="at" />
+            <a href="/">info@zyclyx.com</a>
+          </li>
+          <li>
+            <FontAwesomeIcon icon="map-marker-alt" />
+            <a href="/">Zyclyx is here</a>
+          </li>
+        </ul>
+      </Container>
+      <Container fluid className="pt-3">
+        <Row>
+          <Col className="social-media px-0">
+            <ul className="py-1">
+              <li>
+                <a href="/" title="facebook">
+                  <FontAwesomeIcon icon={["fab", "facebook"]} />
+                </a>
+              </li>
+              <li>
+                <a href="/" title="instagram">
+                  <FontAwesomeIcon icon={["fab", "instagram"]} />
+                </a>
+              </li>
+              <li>
+                <a href="/" title="twitter">
+                  <FontAwesomeIcon icon={["fab", "twitter"]} />
+                </a>
+              </li>
+              <li>
+                <a href="/" title="Linkedin">
+                  <FontAwesomeIcon icon={["fab", "linkedin"]} />
+                </a>
+              </li>
+            </ul>
+          </Col>
+          <Col>
+            <p className="m-0 text-center">
+              &copy;2018-2020 ZYCLYX. All rights reserved
+            </p>
+          </Col>
+          <Col className="privacy px-0">
+            <ul className="py-1 ml-auto">
+              <li>
+                <a href="/" title="Privacy">
+                  Privacy
+                </a>
+              </li>
+              <li>
+                <a href="/" title="Terms">
+                  Terms
+                </a>
+              </li>
+              <li>
+                <a href="/" title="sitemap">
+                  Sitemap
+                </a>
+              </li>
+            </ul>
+          </Col>
+        </Row>
+      </Container>
     </footer>
   );
 };
-export default footer1;
+
+export default Footer;
