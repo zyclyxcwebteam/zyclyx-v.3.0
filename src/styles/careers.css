@@ -1,0 +1,87 @@
+.Banner-image {
+  background: #111b33;
+  height: 500px;
+  color: white;
+}
+.Text-style {
+  background: #f0f1f9;
+
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: black;
+}
+.core-values {
+  background: rgba(228, 230, 244, 0.1);
+}
+.icon-style {
+  padding: 60px 0px;
+}
+.icon-style span {
+  font-size: 18px;
+}
+.icon-style li a {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+  background: #00a14b;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-style li span {
+  font-family: Maven Pro;
+
+  font-size: 18px;
+  line-height: 21px;
+  align-items: center;
+}
+.join-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.join-us h4 {
+  color: #1d335b;
+}
+.span {
+  width: 87px;
+  height: 2px;
+  background: #fbbf12;
+  display: block;
+}
+.joinus {
+  font-weight: 700;
+}
+.positions {
+  color: #1d335b;
+  font-weight: 600;
+  font-size: 28px;
+}
+.container1 {
+  padding: 25px 155px !important;
+}
+.card {
+  width: 430px;
+  padding: 30px 0px;
+  background: rgba(16, 27, 50, 0.02) !important;
+}
+
+.icon {
+  padding: 0px 75px;
+}
+.h6style h6 {
+  margin: 0px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.card h5 {
+  color: #00a14b;
+}
+.color {
+  color: #00a14b;
+}

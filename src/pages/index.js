@@ -60,7 +60,6 @@ const items = [
     linkTo: "/network-security",
   },
 ];
-
 export default () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
