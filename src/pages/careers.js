@@ -8,10 +8,11 @@ import {
   faBriefcase,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import Layout from "../components/Layout/Layout";
 
 const careers = () => {
   return (
-    <>
+    <Layout>
       <Container fluid className="Banner-image">
         <h1 className="text-center">Banner image</h1>
       </Container>
@@ -307,7 +308,7 @@ const careers = () => {
           </Row>
         </Container>
       </Container>
-    </>
+    </Layout>
   );
 };
 

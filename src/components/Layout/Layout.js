@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../NavBar/Navbar";
 import ContactBanner from "../ContactBanner/ContactBanner";
-import Footer from "../Footer/Footer";
+import Footer from "../Footer/footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Layout.css";
 

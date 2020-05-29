@@ -15,6 +15,7 @@ import {
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+import Layout from "../components/Layout/Layout";
 import Username from "../components/FormComponents/username";
 import Emailaddress from "../components/FormComponents/emailAddress";
 import PhoneNumber from "../components/FormComponents/phoneNumber";
@@ -44,7 +45,7 @@ class contactus extends Component {
     this.handlechange2 = this.handlechange2.bind(this);
     this.handlechange3 = this.handlechange3.bind(this);
     this.handlechange4 = this.handlechange4.bind(this);
-    this.selectcounty = this.selectcounty.bind(this);
+    // this.selectcounty = this.selectcounty.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
@@ -178,7 +179,7 @@ class contactus extends Component {
 
   render() {
     return (
-      <>
+      <Layout>
         <div className="container-fluid bannerimage d-flex  justify-content-center align-items-center ">
           {/* <div className="service-img">
             <img src={Bgimage} alt="new age" />
@@ -370,7 +371,7 @@ class contactus extends Component {
             </div>
           </div>
         </div>
-      </>
+      </Layout>
     );
   }
 }
