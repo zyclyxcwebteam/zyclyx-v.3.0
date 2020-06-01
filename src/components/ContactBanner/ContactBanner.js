@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Button from "../Button/Button";
 import "./ContactBanner.css";
-import WorldMapSVG from "../../images/map.svg";
+import WorldMapSVG from "../../Images/map.svg";
 
 const ContactBanner = () => {
   return (
@@ -12,7 +12,7 @@ const ContactBanner = () => {
         <Col className="d-flex justify-content-center flex-column align-items-center">
           <h2 className="contact-b-title">Get in touch with us</h2>
           {/* <Link to="/">Get in touch</Link> */}
-          <Button />
+          <Button btntext="Connect" />
         </Col>
         <Col className="d-flex justify-content-center">
           <img src={WorldMapSVG} alt="world map" />

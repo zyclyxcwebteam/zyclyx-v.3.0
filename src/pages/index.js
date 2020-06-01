@@ -134,7 +134,6 @@ export default () => {
   return (
     <>
       <Layout>
-        {/* banner */}
         <Container className="home-banner">
           <h1>
             Real world solutions
@@ -147,19 +146,19 @@ export default () => {
           <Container>
             <Row>
               <Col
-                md="4"
+                md="3"
                 sm="12"
                 className="d-flex align-items-center text-center"
               >
-                <h2>
-                  Welcome to
-                  <br />
-                  <span>ZYCLYX</span>
-                </h2>
+                <div>
+                  <h5 className="welcome-text">Welcome to</h5>
+                  <h2 className="brand">ZYCLYX</h2>
+                </div>
               </Col>
-              <Col md="8" sm="12">
-                <p>
+              <Col md="9" sm="12">
+                <p className="text-justify">
                   Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry&apos;s
                   typesetting industry. Lorem Ipsum has been the industry&apos;
                   standard dummy text ever since the 1500s, when an unknown
                   printer took a galley of type and scrambled it to make a type
@@ -223,19 +222,40 @@ export default () => {
             <Row>
               <Col sm="12" className="mx-auto">
                 <Row className="py-4 mx-auto proof-row">
-                  <Col md="4" sm="4" className="p-0">
-                    <h3>Forecast</h3>
-                    <p>
-                      Act as a tool to forecast the feasibility of the projects.
-                    </p>
+                  <Col md="4" sm="4" className="p-0 d-flex">
+                    <Row className="mx-auto">
+                      <Col sm="3" className="p-0">
+                        <h2 className="poc-letter">F</h2>
+                      </Col>
+                      <Col sm="8" className="poc-content p-0">
+                        <h3>forecast</h3>
+                        <p>
+                          Act as a tool to forecast the feasibility of projects.
+                        </p>
+                      </Col>
+                    </Row>
                   </Col>
                   <Col md="4" sm="4" className="p-0">
-                    <h3>Report</h3>
-                    <p>Provides a complete report on project evaluation</p>
+                    <Row className="mx-auto">
+                      <Col sm="3" className="p-0">
+                        <h1 className="poc-letter">R</h1>
+                      </Col>
+                      <Col sm="8" className="poc-content p-0">
+                        <h3>Report</h3>
+                        <p>Provides a complete report on project evaluation</p>
+                      </Col>
+                    </Row>
                   </Col>
                   <Col md="4" sm="4" className="p-0">
-                    <h3>Cost Effective</h3>
-                    <p>Saves your businesses time and money</p>
+                    <Row>
+                      <Col sm="3" className="p-0">
+                        <h1 className="poc-letter">C</h1>
+                      </Col>
+                      <Col sm="8" className="p-0 poc-content">
+                        <h3>Cost Effective</h3>
+                        <p>Saves your businesses time and money</p>
+                      </Col>
+                    </Row>
                   </Col>
                 </Row>
               </Col>

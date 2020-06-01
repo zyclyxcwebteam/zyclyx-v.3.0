@@ -13,7 +13,8 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import Logo from "../../images/nav-logo.png";
+import Logo from "../../Images/logo-white.png";
+// import Logo from "../../images/nav-logo.png";
 import "./Navbar.css";
 
 const Example = () => {
