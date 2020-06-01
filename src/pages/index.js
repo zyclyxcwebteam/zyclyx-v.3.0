@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
+import Slider from "react-slick";
 import {
   Container,
   Col,
@@ -17,7 +18,17 @@ import NewAgeBG from "../images/new-age.jpg";
 import NetworkBG from "../images/security.jpg";
 import RPABG from "../images/rpa.jpg";
 import OCRBG from "../images/ocr.jpg";
+import ClientAlibilad from "../images/albilad.png";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+};
 const items = [
   {
     src: NewAgeBG,
@@ -232,7 +243,27 @@ export default () => {
           </Container>
         </Container>
         <Container className="clients">
-          <p />
+          {/*  eslint-disable-next-line react/jsx-props-no-spreading */}
+          <Slider {...settings}>
+            <div>
+              <img src={ClientAlibilad} alt="albilad" />
+            </div>
+            <div>
+              <h3>2</h3>
+            </div>
+            <div>
+              <h3>3</h3>
+            </div>
+            <div>
+              <h3>4</h3>
+            </div>
+            <div>
+              <h3>5</h3>
+            </div>
+            <div>
+              <h3>6</h3>
+            </div>
+          </Slider>
         </Container>
       </Layout>
     </>
