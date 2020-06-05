@@ -1,0 +1,47 @@
+/* our clients */
+.clients {
+  padding: 3rem 0;
+  height: 250px;
+}
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slick-slide > div > div {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}
+.gatsby-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slick-dots {
+  bottom: -40px !important;
+}
+.t-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0rem 1rem;
+  font-size: 1.5rem;
+  color: #777;
+  outline: none;
+  box-shadow: none;
+}
+.btn-left {
+  border-right: 3px solid #00a14b;
+}
+.t-btn-active {
+  font-weight: 500;
+  color: #00a14b;
+  font-size: 1.8rem;
+}
+.t-btn:active {
+  outline: none;
+}
