@@ -3,11 +3,11 @@ import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
-import MissionImage from "../Images/mission.png";
+import MissionImage from "../images/mission.png";
 // import VisionImage from "../images/vision.png";
-import IconDeliver from "../Images/c-deliver.svg";
+import IconDeliver from "../images/c-deliver.svg";
 // import BannerImage from "../images/about.svg";
-import BannerImage from "../Images/rpa.svg";
+import BannerImage from "../images/rpa.svg";
 import "../styles/aboutus.css";
 
 // Core Values card

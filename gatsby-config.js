@@ -19,6 +19,7 @@ module.exports = {
       options: {
         name: `data`,
         path: `${__dirname}/src/data/`,
+        // eslint-disable-next-line no-useless-escape
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },

@@ -1,28 +1,11 @@
 .home-banner {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.home-banner h1 {
-  font-size: 64px;
-  text-align: center;
-  font-weight: 700;
+  height: 90vh;
+  width: 100%;
+  max-width: 99vw;
 }
 .overview {
   background-color: #f8fbff;
 }
-.overview .welcome-text{
-  color: #00a14b;
-  font-size: 25px;
-  /* font-family: roboto; */
-}
-.overview .brand{
-
-  font-family: neuropolitical;
-  color: #1187BA;
-}
-
 .newage {
   max-width: 775px;
 }
@@ -110,7 +93,7 @@
   height: 30vh;
 }
 .poc-wrapper {
-  background-color: #fafafa;
+  background-color: #f0f1f9;
 }
 .poc-title {
   font-size: 1.5rem;
@@ -120,24 +103,6 @@
   color: #111b33;
   font-size: 2.5rem;
   font-weight: 700;
-}
-
-.poc-letter{
-  font-size: 6.4rem;
-  font-weight: 700;
-  color: #111b3317;
-  font-family: roboto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.poc-content h3{
-  color: #00a14b;
-}
-.poc-content{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
 /* our services slider */
@@ -154,7 +119,7 @@
   font-size: 2rem;
   font-weight: 500;
 }
-.carousel-indicators li {
+.s-banner-indicators li {
   height: 15px;
   width: 15px;
   margin: 0 0.5rem;

@@ -1,24 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "gatsby";
+import React from "react";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import Slider from "react-slick";
-import {
-  Container,
-  Col,
-  Row,
-  Carousel,
-  CarouselItem,
-  CarouselIndicators,
-} from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
-import Industries from "../components/Homepage/Industries";
-import SectionTitle from "../components/SectionTitle/SectionTitle";
+import ImageCarousel from "../components/Homepage/ImageCarousel";
+// import Industries from "../components/Homepage/Industries";
+// import OurServices from "../components/Homepage/OurServices";
 import "../styles/Industry.css";
 import "../css/home.css";
-import NewAgeBG from "../images/new-age.jpg";
-import NetworkBG from "../images/security.jpg";
-import RPABG from "../images/rpa.jpg";
-import OCRBG from "../images/ocr.jpg";
-import ClientAlibilad from "../images/albilad.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -29,119 +19,12 @@ const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
 };
-const items = [
-  {
-    src: NewAgeBG,
-    serviceText:
-      "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
-    captionOne: "Building future with",
-    captionTwo: "Artificial Intelligence",
-    imgLeft: true,
-    key: 1,
-    linkTo: "/artificial-intelligence",
-  },
-  {
-    src: RPABG,
-    serviceText:
-      "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
-    captionOne: "Building future with",
-    captionTwo: "Robotic Process Automation",
-    imgLeft: false,
-    key: 2,
-    linkTo: "/robotic-process-automation",
-  },
-  {
-    src: OCRBG,
-    serviceText:
-      "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
-    captionOne: "Building future with",
-    captionTwo: "Optical Character Recognition",
-    imgLeft: true,
-    key: 3,
-    linkTo: "/optical-character-recognition",
-  },
-  {
-    src: NetworkBG,
-    serviceText:
-      "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
-    captionOne: "Building future with",
-    captionTwo: "Network Security",
-    imgLeft: false,
-    key: 4,
-    linkTo: "/network-security",
-  },
-];
 
-export default () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
-
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
-  };
-
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
-  };
-
-  const goToIndex = newIndex => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  };
-
-  const slides = items.map(item => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-        className="service-item"
-      >
-        <Row>
-          {item.imgLeft && (
-            <Col className="service-img">
-              <img src={item.src} alt="new age" />
-            </Col>
-          )}
-          <Col className="p-5">
-            <div className="py-5">
-              <h2 className="service-title text-center">
-                <span>{item.captionOne}</span>
-                <br />
-                {item.captionTwo}
-              </h2>
-              <p className="px-5">{item.serviceText}</p>
-              <p className="text-center">
-                <Link to={item.linkTo} className="text-center">
-                  Read More
-                </Link>
-              </p>
-            </div>
-          </Col>
-          {!item.imgLeft && (
-            <Col className="service-img">
-              <img src={item.src} alt="new age" />
-            </Col>
-          )}
-        </Row>
-      </CarouselItem>
-    );
-  });
+export default ({ data }) => {
   return (
     <>
       <Layout>
-        <Container className="home-banner">
-          <h1>
-            Real world solutions
-            <br />
-            for sustainable performance
-          </h1>
-        </Container>
-
+        <ImageCarousel />
         <Container fluid className="overview py-5">
           <Container>
             <Row>
@@ -170,17 +53,6 @@ export default () => {
             </Row>
           </Container>
         </Container>
-        <Container fluid className="service-slider">
-          <SectionTitle title="Core Services" />
-          <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-            <CarouselIndicators
-              items={items}
-              activeIndex={activeIndex}
-              onClickHandler={goToIndex}
-            />
-            {slides}
-          </Carousel>
-        </Container>
         <Container fluid />
         {/* Company stats */}
         <Container fluid className="stats-wrapper py-5 mt-5">
@@ -203,7 +75,6 @@ export default () => {
             </Row>
           </Container>
         </Container>
-        <Industries />
         <Container fluid className="py-5 poc-wrapper">
           <Container>
             <h2 className="text-center poc-title">
@@ -228,7 +99,7 @@ export default () => {
                         <h2 className="poc-letter">F</h2>
                       </Col>
                       <Col sm="8" className="poc-content p-0">
-                        <h3>forecast</h3>
+                        <h3>Forecast</h3>
                         <p>
                           Act as a tool to forecast the feasibility of projects.
                         </p>
@@ -265,27 +136,32 @@ export default () => {
         <Container className="clients">
           {/*  eslint-disable-next-line react/jsx-props-no-spreading */}
           <Slider {...settings}>
-            <div>
-              <img src={ClientAlibilad} alt="albilad" />
-            </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <h3>3</h3>
-            </div>
-            <div>
-              <h3>4</h3>
-            </div>
-            <div>
-              <h3>5</h3>
-            </div>
-            <div>
-              <h3>6</h3>
-            </div>
+            {data.allFile.edges.map(node => {
+              return (
+                <div>
+                  <Img fixed={node.node.childImageSharp.fixed} />
+                </div>
+              );
+            })}
           </Slider>
         </Container>
       </Layout>
     </>
   );
 };
+
+export const query = graphql`
+  query {
+    allFile(filter: { relativeDirectory: { eq: "clients" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(height: 80) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+  }
+`;

@@ -2,8 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
-import RPABannerImage from "../Images/rpa.svg";
-import SolutionImage from "../Images/new-age.jpg";
+import RPABannerImage from "../images/rpa.svg";
+// import SolutionImage from "../images/new-age.jpg";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import "../css/service.css";
 
@@ -45,7 +45,7 @@ const PageTemplate = props => {
       <Container fluid className="solutions-wrapper py-5">
         <Row>
           <Col sm="12" md="6" className="sol-image">
-            <img src={SolutionImage} alt="new age" />
+            <img src={RPABannerImage} alt="new age" />
           </Col>
           <Col
             sm="12"

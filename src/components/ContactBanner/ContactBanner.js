@@ -1,9 +1,10 @@
 import React from "react";
 // import { Link } from "gatsby";
+// import Img from "gatsby-image";
 import { Container, Row, Col } from "reactstrap";
 import Button from "../Button/Button";
 import "./ContactBanner.css";
-import WorldMapSVG from "../../Images/map.svg";
+import WorldMapSVG from "../../images/contact-banner/c-map.svg";
 
 const ContactBanner = () => {
   return (
@@ -12,7 +13,7 @@ const ContactBanner = () => {
         <Col className="d-flex justify-content-center flex-column align-items-center">
           <h2 className="contact-b-title">Get in touch with us</h2>
           {/* <Link to="/">Get in touch</Link> */}
-          <Button btntext="Connect" />
+          <Button btntext="Let's Connect" />
         </Col>
         <Col className="d-flex justify-content-center">
           <img src={WorldMapSVG} alt="world map" />
