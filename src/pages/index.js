@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import Slider from "react-slick";
 import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
-import ImageCarousel from "../components/Homepage/ImageCarousel";
+// import ImageCarousel from "../components/Homepage/ImageCarousel";
 // import Industries from "../components/Homepage/Industries";
 // import OurServices from "../components/Homepage/OurServices";
 import "../styles/Industry.css";
@@ -24,7 +24,7 @@ export default ({ data }) => {
   return (
     <>
       <Layout>
-        <ImageCarousel />
+        {/* <ImageCarousel /> */}
         <Container fluid className="overview py-5">
           <Container>
             <Row>
