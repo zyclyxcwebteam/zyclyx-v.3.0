@@ -89,9 +89,7 @@
   color: #111b33;
   background-color: hsl(148, 100%, 42%);
 }
-.clients {
-  height: 30vh;
-}
+
 .poc-wrapper {
   background-color: #f0f1f9;
 }
@@ -104,7 +102,16 @@
   font-size: 2.5rem;
   font-weight: 700;
 }
-
+.poc-letter-wrapper {
+  position: relative;
+}
+.poc-letter {
+  font-size: 6rem;
+  position: absolute;
+  top: -25px;
+  left: 15px;
+  color: #c5c5c5;
+}
 /* our services slider */
 .service-img img {
   height: 500px;

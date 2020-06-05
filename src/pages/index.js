@@ -1,26 +1,22 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Img from "gatsby-image";
-import Slider from "react-slick";
+import React, { useState } from "react";
+// import { graphql } from "gatsby";
+// import Img from "gatsby-image";
+// import Slider from "react-slick";
 import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
+import Clients from "../components/Homepage/Clients";
+import Partners from "../components/Homepage/Partners";
 // import ImageCarousel from "../components/Homepage/ImageCarousel";
 // import Industries from "../components/Homepage/Industries";
 // import OurServices from "../components/Homepage/OurServices";
 import "../styles/Industry.css";
 import "../css/home.css";
+import "../components/Homepage/Clients.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-};
-
-export default ({ data }) => {
+export default () => {
+  const [showClients, setShowClients] = useState(true);
   return (
     <>
       <Layout>
@@ -75,6 +71,7 @@ export default ({ data }) => {
             </Row>
           </Container>
         </Container>
+        {/* Proof of Concept */}
         <Container fluid className="py-5 poc-wrapper">
           <Container>
             <h2 className="text-center poc-title">
@@ -133,35 +130,29 @@ export default ({ data }) => {
             </Row>
           </Container>
         </Container>
+        {/* our clients */}
         <Container className="clients">
-          {/*  eslint-disable-next-line react/jsx-props-no-spreading */}
-          <Slider {...settings}>
-            {data.allFile.edges.map(node => {
-              return (
-                <div>
-                  <Img fixed={node.node.childImageSharp.fixed} />
-                </div>
-              );
-            })}
-          </Slider>
+          <div className="title-buttons d-flex justify-content-center align-items-center pb-5">
+            <button
+              type="button"
+              className={`t-btn btn-left ${!showClients && "t-btn-active"}`}
+              onClick={() => setShowClients(!showClients)}
+              disabled={!showClients}
+            >
+              Our Clients
+            </button>
+            <button
+              type="button"
+              className={`t-btn ${showClients && "t-btn-active"}`}
+              disabled={showClients}
+              onClick={() => setShowClients(!showClients)}
+            >
+              Technology Partners
+            </button>
+          </div>
+          {showClients ? <Partners /> : <Clients />}
         </Container>
       </Layout>
     </>
   );
 };
-
-export const query = graphql`
-  query {
-    allFile(filter: { relativeDirectory: { eq: "clients" } }) {
-      edges {
-        node {
-          childImageSharp {
-            fixed(height: 80) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    }
-  }
-`;
