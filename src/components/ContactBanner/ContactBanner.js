@@ -4,7 +4,8 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Button from "../Button/Button";
 import "./ContactBanner.css";
-import WorldMapSVG from "../../images/contact-banner/c-map.svg";
+// import WorldMapSVG from "../../images/contact-banner/c-map.svg";
+import MapImage from "../../../static/images/c-map.svg";
 
 const ContactBanner = () => {
   return (
@@ -16,7 +17,7 @@ const ContactBanner = () => {
           <Button btntext="Let's Connect" />
         </Col>
         <Col className="d-flex justify-content-center">
-          <img src={WorldMapSVG} alt="world map" />
+          <img src={MapImage} alt="world map" />
         </Col>
       </Row>
     </Container>
