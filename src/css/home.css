@@ -1,13 +1,7 @@
 .home-banner {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.home-banner h1 {
-  font-size: 64px;
-  text-align: center;
-  font-weight: 700;
+  height: 90vh;
+  width: 100%;
+  max-width: 99vw;
 }
 .overview {
   background-color: #f8fbff;
@@ -125,7 +119,7 @@
   font-size: 2rem;
   font-weight: 500;
 }
-.carousel-indicators li {
+.s-banner-indicators li {
   height: 15px;
   width: 15px;
   margin: 0 0.5rem;

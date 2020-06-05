@@ -1,0 +1,15 @@
+.res, .req{
+    font-size: 1.2rem;
+    /* padding: 1rem 0px; */
+    /* background: rgb(248, 248, 248); */
+}
+.res-icon{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 27px;
+    width: 30px;
+    border-radius: 50%;
+    background: #000;
+}

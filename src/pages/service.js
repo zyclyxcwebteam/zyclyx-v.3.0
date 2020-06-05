@@ -5,6 +5,7 @@ import HeroBanner from "../components/HeroBanner/HeroBanner";
 import SolutionImage from "../images/new-age.jpg";
 import RPABannerImage from "../images/rpa.svg";
 import "../css/service.css";
+import "../styles/service.css";
 
 const Service = () => {
   return (

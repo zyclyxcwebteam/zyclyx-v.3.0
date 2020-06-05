@@ -1,10 +1,13 @@
 import React from "react";
 import "./Button.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-const Button = () => {
+const Button = ({ btntext }) => {
   return (
-    <button type="button" className="btn btn-success">
-      Send message
+    <button type="button" className="button d-flex align-items-center">
+      {btntext}
+      <FontAwesomeIcon icon={faArrowRight} className="btn-icon" />
     </button>
   );
 };
