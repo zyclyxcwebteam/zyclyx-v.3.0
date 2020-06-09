@@ -21,6 +21,8 @@ import Emailaddress from "../components/FormComponents/emailAddress";
 import PhoneNumber from "../components/FormComponents/phoneNumber";
 import Subject from "../components/FormComponents/Subject";
 import Messege from "../components/FormComponents/TextMessage";
+import HeroBanner from "../components/HeroBanner/HeroBanner";
+import ContactBanner from "../../static/images/contact.svg";
 
 class contactus extends Component {
   constructor() {
@@ -180,17 +182,10 @@ class contactus extends Component {
   render() {
     return (
       <Layout>
-        <div className="container-fluid bannerimage d-flex  justify-content-center align-items-center ">
-          {/* <div className="service-img">
-            <img src={Bgimage} alt="new age" />
-          </div> */}
-          <div className="row">
-            <div className="col-7 mx-auto">
-              <h1 className=" ">For better help and business development</h1>
-            </div>
-          </div>
-        </div>
-
+        <HeroBanner
+          title="For better help and business development"
+          image={ContactBanner}
+        />
         <div className="container-fluid">
           <div className="row">
             <div className=" col col-md-6 col-12 Formaddress">
