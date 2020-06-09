@@ -7,7 +7,7 @@ import Layout from "../components/Layout/Layout";
 import Clients from "../components/Homepage/Clients";
 import Partners from "../components/Homepage/Partners";
 // import ImageCarousel from "../components/Homepage/ImageCarousel";
-// import Industries from "../components/Homepage/Industries";
+import Industries from "../components/Homepage/Industries";
 // import OurServices from "../components/Homepage/OurServices";
 import "../styles/Industry.css";
 import "../css/home.css";
@@ -49,8 +49,9 @@ export default () => {
             </Row>
           </Container>
         </Container>
-        <Container fluid />
+        {/* <OurServices /> */}
         {/* Company stats */}
+        <Industries />
         <Container fluid className="stats-wrapper py-5 mt-5">
           <Container className="py-5">
             <Row>

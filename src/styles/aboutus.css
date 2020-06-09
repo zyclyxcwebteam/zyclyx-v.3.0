@@ -108,3 +108,20 @@
 .h-bottom:nth-child(odd) {
   background-color: hsl(205, 72%, 87%);
 }
+.m-btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  font-weight: 500;
+  color: #00a14b;
+}
+.m-btn-active {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.m-btn:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}

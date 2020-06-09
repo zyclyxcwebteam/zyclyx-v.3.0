@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import MissionImage from "../../static/images/mission.png";
+import VisionImage from "../../static/images/vision.png";
 import IconDeliver from "../../static/images/c-deliver.svg";
-import BannerImage from "../../static/images/rpa.svg";
+import AboutBanner from "../../static/images/about.svg";
 import "../styles/aboutus.css";
 
 // Core Values card
@@ -38,11 +40,12 @@ const CoreValueCard = ({ title, text, icon, left }) => {
 };
 
 const aboutus = () => {
+  const [showMission, setShowMission] = useState(true);
   return (
     <Layout>
       <HeroBanner
         title="A Fast-Growing Technology Leader"
-        image={BannerImage}
+        image={AboutBanner}
       />
       <Container fluid className="py-5 overview-wrapper">
         <Container className="py-5">
@@ -78,19 +81,46 @@ const aboutus = () => {
               md="7"
               className="d-flex align-items-center flex-column justify-content-center px-5"
             >
-              <h2 className="mission-title">Mission</h2>
+              <h2 className="mission-title">
+                {showMission ? "Mission" : "Vision"}
+              </h2>
               <p className="px-5 py-3 text-center mission-text">
-                To offer custom solutions to Clients using unique combination of
+                {showMission
+                  ? `To offer custom solutions to Clients using unique combination of
                 data science, amazing design philosophy, software engineering,
-                and architecture.
+                and architecture.`
+                  : `To provide diverse solutions in the area of Futuristic IT development with a strong commitment towards corporate citizenship and sustainability.
+
+                  `}
               </p>
               <div className="mission-links d-flex justify-content-end w-100">
-                <button type="button">Mission</button>
-                <button type="button">Vision</button>
+                <button
+                  type="button"
+                  className={`m-btn d-flex align-items-center ${
+                    !showMission && "m-btn-active"
+                  }`}
+                  onClick={() => setShowMission(!showMission)}
+                >
+                  <FontAwesomeIcon icon="arrow-left" className="mr-2" />
+                  Mission
+                </button>
+                <button
+                  type="button"
+                  className={`m-btn d-flex align-items-center ${
+                    showMission && "m-btn-active"
+                  }`}
+                  onClick={() => setShowMission(!showMission)}
+                >
+                  Vision
+                  <FontAwesomeIcon icon="arrow-right" className="ml-2" />
+                </button>
               </div>
             </Col>
             <Col sm="12" md="5" className="d-flex justify-content-center">
-              <img src={MissionImage} alt="mission" />
+              <img
+                src={showMission ? MissionImage : VisionImage}
+                alt="mission"
+              />
             </Col>
           </Row>
         </Container>

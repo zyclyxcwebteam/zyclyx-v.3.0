@@ -11,7 +11,7 @@ const HeroBanner = ({ title, image }) => {
           <h2 className="banner-title banner-title-one">{title}</h2>
           {/* <h2 className="banner-title banner-title-two">{titleTwo}</h2> */}
         </Col>
-        <Col className="img-box">
+        <Col className="img-box d-flex justify-content-center">
           <img src={image} alt="robotic process automation" />
         </Col>
       </Row>

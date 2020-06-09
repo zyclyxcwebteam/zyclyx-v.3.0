@@ -8,14 +8,17 @@ import {
   faBriefcase,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import HeroBanner from "../components/HeroBanner/HeroBanner";
+import CareerBanner from "../../static/images/careers.svg";
 import Layout from "../components/Layout/Layout";
 
 const careers = () => {
   return (
     <Layout>
-      <Container fluid className="Banner-image">
-        <h1 className="text-center">Banner image</h1>
-      </Container>
+      <HeroBanner
+        title="Get your future started with us"
+        image={CareerBanner}
+      />
       <Container fluid className="Text-style">
         <p>
           ZYCLYX recruits, trains and assigns the best candidates in the field
