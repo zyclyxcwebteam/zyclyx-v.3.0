@@ -7,7 +7,7 @@ import SectionTitle from "../components/SectionTitle/SectionTitle";
 import MissionImage from "../../static/images/mission.png";
 import VisionImage from "../../static/images/vision.png";
 import IconDeliver from "../../static/images/c-deliver.svg";
-import AboutBanner from "../../static/images/about.svg";
+import AboutBanner from "../../static/images/about2.svg";
 import "../styles/aboutus.css";
 
 // Core Values card
@@ -42,7 +42,7 @@ const CoreValueCard = ({ title, text, icon, left }) => {
 const aboutus = () => {
   const [showMission, setShowMission] = useState(true);
   return (
-    <Layout>
+    <Layout showBanner>
       <HeroBanner
         title="A Fast-Growing Technology Leader"
         image={AboutBanner}

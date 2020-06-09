@@ -10,18 +10,13 @@ import "../styles/service.css";
 
 const Service = () => {
   return (
-    <Layout>
+    <Layout showBanner>
       <HeroBanner
         titleOne="Robotic Process"
         titleTwo="Automation"
         image={RPABannerImage}
       />
-      <Container className="tech-partners">
-        <Row className="py-5">
-          <Col sm="12" md="3" className="py-5" />
-          <Col sm="12" md="9" className="py-5" />
-        </Row>
-      </Container>
+
       {/* overview */}
       <Container className="overview-wrapper py-5">
         <h3 className="overview-title text-center py-4">

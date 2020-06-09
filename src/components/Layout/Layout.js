@@ -17,12 +17,12 @@ import "./Layout.css";
 library.add(fab, faAt, faPhoneAlt, faMapMarkerAlt, faArrowRight, faArrowLeft);
 
 const layout = props => {
-  const { children } = props;
+  const { children, showbanner } = props;
   return (
     <>
       <Navbar />
       {children}
-      <ContactBanner />
+      {showbanner && <ContactBanner />}
       <Footer />
     </>
   );

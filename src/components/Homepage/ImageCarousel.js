@@ -1,43 +1,28 @@
 import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
 import { Carousel, CarouselItem, CarouselIndicators } from "reactstrap";
 import "./ImageCarousel.css";
+import image1 from "../../../static/images/home-banner/img-1.jpg";
+import image2 from "../../../static/images/home-banner/img-2.jpg";
+import image3 from "../../../static/images/home-banner/img-3.jpg";
 
 // data.allFile.edges.node.childImageSharp.fluid
 const ImageCarousel = () => {
-  const data = useStaticQuery(graphql`
-    query bannerQuery {
-      allFile(filter: { relativeDirectory: { eq: "home-banner" } }) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
   const captions = [
     {
-      src: data.allFile.edges[0].node.childImageSharp.fluid,
+      src: image1,
       altText: "Slide 1",
       caption: "Slide 1",
     },
     {
-      src: data.allFile.edges[1].node.childImageSharp.fluid,
+      src: image2,
       altText: "Slide 2",
       caption: "Slide 2",
     },
     {
-      src: data.allFile.edges[2].node.childImageSharp.fluid,
+      src: image3,
       altText: "Slide 3",
       caption: "Slide 3",
     },
@@ -65,9 +50,9 @@ const ImageCarousel = () => {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
+        key={item.altText}
       >
-        <Img fluid={item.src} alt={item.altText} />
+        <img src={item.src} alt={item.altText} className="banner-img" />
       </CarouselItem>
     );
   });
@@ -85,16 +70,6 @@ const ImageCarousel = () => {
         className="h-banner-indicator"
       />
       {slides}
-      {/* <CarouselControl
-        direction="prev"
-        directionText="Previous"
-        onClickHandler={previousSlide}
-      />
-      <CarouselControl
-        direction="next"
-        directionText="Next"
-        onClickHandler={nextSlide}
-      /> */}
     </Carousel>
   );
 };

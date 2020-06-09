@@ -14,7 +14,7 @@ import Layout from "../components/Layout/Layout";
 
 const careers = () => {
   return (
-    <Layout>
+    <Layout showBanner>
       <HeroBanner
         title="Get your future started with us"
         image={CareerBanner}
@@ -29,7 +29,7 @@ const careers = () => {
           </span>
         </p>
       </Container>
-      <Container fluid className="core-values">
+      <Container fluid className="join-us-wrapper">
         <Row>
           <Col md="3" className="join-us">
             <div>

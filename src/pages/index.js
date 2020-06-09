@@ -6,9 +6,9 @@ import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
 import Clients from "../components/Homepage/Clients";
 import Partners from "../components/Homepage/Partners";
-// import ImageCarousel from "../components/Homepage/ImageCarousel";
+import ImageCarousel from "../components/Homepage/ImageCarousel";
+import OurServices from "../components/Homepage/OurServices";
 import Industries from "../components/Homepage/Industries";
-// import OurServices from "../components/Homepage/OurServices";
 import "../styles/Industry.css";
 import "../css/home.css";
 import "../components/Homepage/Clients.css";
@@ -19,8 +19,8 @@ export default () => {
   const [showClients, setShowClients] = useState(true);
   return (
     <>
-      <Layout>
-        {/* <ImageCarousel /> */}
+      <Layout showbanner>
+        <ImageCarousel />
         <Container fluid className="overview py-5">
           <Container>
             <Row>
@@ -34,8 +34,8 @@ export default () => {
                   <h2 className="brand">ZYCLYX</h2>
                 </div>
               </Col>
-              <Col md="9" sm="12">
-                <p className="text-justify">
+              <Col md="9" sm="12" className="d-flex align-items-center">
+                <p className="text-justify mb-0">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry&apos;s
                   typesetting industry. Lorem Ipsum has been the industry&apos;
@@ -49,7 +49,7 @@ export default () => {
             </Row>
           </Container>
         </Container>
-        {/* <OurServices /> */}
+        <OurServices />
         {/* Company stats */}
         <Industries />
         <Container fluid className="stats-wrapper py-5 mt-5">
@@ -57,16 +57,16 @@ export default () => {
             <Row>
               <Col>
                 <div>
-                  <h3 className="stat-title text-center">20 +</h3>
+                  <h3 className="stat-title text-center">20+</h3>
                   <p className="stat-caption text-center">Clients Served</p>
                 </div>
               </Col>
               <Col>
-                <h3 className="stat-title text-center">40 +</h3>
+                <h3 className="stat-title text-center">40+</h3>
                 <p className="stat-caption text-center">Projects Delivered</p>
               </Col>
               <Col>
-                <h3 className="stat-title text-center">350 +</h3>
+                <h3 className="stat-title text-center">350+</h3>
                 <p className="stat-caption text-center">Processess Automated</p>
               </Col>
             </Row>
