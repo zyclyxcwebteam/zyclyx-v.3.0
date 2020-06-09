@@ -16,21 +16,21 @@ const careers = () => {
         <h1 className="text-center">Banner image</h1>
       </Container>
       <Container fluid className="Text-style">
-        <p>
+        <p className="pstyle">
           ZYCLYX recruits, trains and assigns the best candidates in the field
           of IT
           <br />
-          <span className="">
+          <span className="spanstyle">
             to work on some of our biggest projects in the Middle East
           </span>
         </p>
       </Container>
       <Container fluid className="core-values">
-        <Row>
+        <Row className="rowclass">
           <Col md="3" className="join-us">
-            <div>
-              <h4>Come</h4>
-              <h4 className="joinus">JOIN US</h4>
+            <div className="comejoin ">
+              <h4 className="mt-5 ">Come JOIN US</h4>
+              {/* <h4 className="joinus"></h4> */}
               <span className="span" />
             </div>
           </Col>
@@ -38,10 +38,10 @@ const careers = () => {
             <ul>
               <li className="">
                 <a href className="">
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
                 </a>
 
-                <span className="ml-5">
+                <span className="">
                   As we believe a team of great minds will produce greater
                   results
                 </span>
@@ -49,10 +49,10 @@ const careers = () => {
 
               <li className="mt-3">
                 <a href>
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
                 </a>
 
-                <span className="ml-5">
+                <span className="">
                   We are a growing firm with enormous challenges and
                   opportunities to grow
                 </span>
@@ -60,38 +60,38 @@ const careers = () => {
 
               <li className="mt-3">
                 <a href>
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
                 </a>
 
-                <span className="ml-5">
+                <span className="">
                   To explore new challenges in VIRTECH, and learn new things
                 </span>
               </li>
               <li className="mt-3">
                 <a href>
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
                 </a>
 
-                <span className="ml-5">
+                <span className="">
                   To be a part of a place where imagination and out of the box
                   thinking is all you need
                 </span>
               </li>
               <li className="mt-3">
                 <a href>
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
                 </a>
 
-                <span className="ml-5">
+                <span className="">
                   If you’ve got a smarter way to get the job done
                 </span>
               </li>
               <li className="mt-3">
                 <a href>
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
                 </a>
 
-                <span className="ml-5">
+                <span className="">
                   To be a part of a great enthusiastic team
                 </span>
               </li>
@@ -100,9 +100,9 @@ const careers = () => {
         </Row>
       </Container>
       <Container fluid className="postions">
-        <h4 className="mt-3 ml-5">Opened Opsition</h4>
-        <span className="span mt-3 ml-5" />
-        <Container className="container1">
+        <h4 className="mt-3 opend">Opened Postions</h4>
+        <span className="span span1 mt-3 " />
+        <Container className="container1 mt-5">
           <Row className="card-row">
             <div className="card">
               <h4 className="text-center">Business Development Manager</h4>
@@ -111,26 +111,26 @@ const careers = () => {
                 <Row className="icon mt-4">
                   <Col>
                     <Row>
-                      <Col>
-                        <h6 className="color">
+                      <Col md="4">
+                        <h6 className="color styleicon">
                           <FontAwesomeIcon icon={faBriefcase} />
                         </h6>
                       </Col>
-                      <Col className="h6style">
-                        <h6>Experience</h6>
+                      <Col md="8" className="h6style">
+                        <h6 className="hoverstyle">Experience</h6>
                         <h6 className="color">2-3 years</h6>
                       </Col>
                     </Row>
                   </Col>
                   <Col>
                     <Row>
-                      <Col>
-                        <h6 className="color">
+                      <Col md="4">
+                        <h6 className="color styleicon">
                           <FontAwesomeIcon icon={faUser} />
                         </h6>
                       </Col>
-                      <Col className="h6style">
-                        <h6>Job-Type</h6>
+                      <Col md="8" className="h6style">
+                        <h6 className="hoverstyle">Job-Type</h6>
                         <h6 className="color">Full-Time</h6>
                       </Col>
                     </Row>
@@ -140,7 +140,7 @@ const careers = () => {
               <div className="btn-style mt-4">
                 <button
                   type="submit"
-                  className="btn btncolor text-center"
+                  className="btn btnbg text-center"
                   id="contactBtn"
                 >
                   <span id="btnText" className="mr-3">
@@ -148,7 +148,10 @@ const careers = () => {
                   </span>
                   <span>
                     {" "}
-                    <FontAwesomeIcon icon={faArrowRight} />
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="arrowcolor"
+                    />
                   </span>
                 </button>
               </div>
@@ -161,26 +164,26 @@ const careers = () => {
                 <Row className="icon mt-4">
                   <Col>
                     <Row>
-                      <Col>
-                        <h6 className="color">
+                      <Col md="4">
+                        <h6 className="color styleicon">
                           <FontAwesomeIcon icon={faBriefcase} />
                         </h6>
                       </Col>
-                      <Col className="h6style">
-                        <h6>Experience</h6>
+                      <Col md="8" className="h6style">
+                        <h6 className="hoverstyle">Experience</h6>
                         <h6 className="color">2-3 years</h6>
                       </Col>
                     </Row>
                   </Col>
                   <Col>
                     <Row>
-                      <Col>
-                        <h6 className="color">
+                      <Col md="4">
+                        <h6 className="color styleicon">
                           <FontAwesomeIcon icon={faUser} />
                         </h6>
                       </Col>
-                      <Col className="h6style">
-                        <h6>Job-Type</h6>
+                      <Col md="8" className="h6style">
+                        <h6 className="hoverstyle">Job-Type</h6>
                         <h6 className="color">Full-Time</h6>
                       </Col>
                     </Row>
@@ -190,7 +193,7 @@ const careers = () => {
               <div className="btn-style mt-4">
                 <button
                   type="submit"
-                  className="btn btncolor text-center"
+                  className="btn btnbg text-center"
                   id="contactBtn"
                 >
                   <span id="btnText" className="mr-3">
@@ -198,7 +201,10 @@ const careers = () => {
                   </span>
                   <span>
                     {" "}
-                    <FontAwesomeIcon icon={faArrowRight} />
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="arrowcolor"
+                    />
                   </span>
                 </button>
               </div>
@@ -212,26 +218,26 @@ const careers = () => {
                 <Row className="icon mt-4">
                   <Col>
                     <Row>
-                      <Col>
-                        <h6 className="color">
+                      <Col md="4">
+                        <h6 className="color styleicon">
                           <FontAwesomeIcon icon={faBriefcase} />
                         </h6>
                       </Col>
-                      <Col className="h6style">
-                        <h6>Experience</h6>
+                      <Col md="8" className="h6style">
+                        <h6 className="hoverstyle">Experience</h6>
                         <h6 className="color">2-3 years</h6>
                       </Col>
                     </Row>
                   </Col>
                   <Col>
                     <Row>
-                      <Col>
-                        <h6 className="color">
+                      <Col md="4">
+                        <h6 className="color styleicon">
                           <FontAwesomeIcon icon={faUser} />
                         </h6>
                       </Col>
-                      <Col className="h6style">
-                        <h6>Job-Type</h6>
+                      <Col md="8" className="h6style">
+                        <h6 className="hoverstyle">Job-Type</h6>
                         <h6 className="color">Full-Time</h6>
                       </Col>
                     </Row>
@@ -241,7 +247,7 @@ const careers = () => {
               <div className="btn-style mt-4">
                 <button
                   type="submit"
-                  className="btn btncolor text-center"
+                  className="btn btnbg text-center"
                   id="contactBtn"
                 >
                   <span id="btnText" className="mr-3">
@@ -249,7 +255,10 @@ const careers = () => {
                   </span>
                   <span>
                     {" "}
-                    <FontAwesomeIcon icon={faArrowRight} />
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="arrowcolor"
+                    />
                   </span>
                 </button>
               </div>
@@ -262,26 +271,26 @@ const careers = () => {
                 <Row className="icon mt-4">
                   <Col>
                     <Row>
-                      <Col>
-                        <h6 className="color">
+                      <Col md="4">
+                        <h6 className="color styleicon">
                           <FontAwesomeIcon icon={faBriefcase} />
                         </h6>
                       </Col>
-                      <Col className="h6style">
-                        <h6>Experience</h6>
+                      <Col md="8" className="h6style">
+                        <h6 className="hoverstyle">Experience</h6>
                         <h6 className="color">2-3 years</h6>
                       </Col>
                     </Row>
                   </Col>
                   <Col>
                     <Row>
-                      <Col>
-                        <h6 className="color">
+                      <Col md="4">
+                        <h6 className="color styleicon">
                           <FontAwesomeIcon icon={faUser} />
                         </h6>
                       </Col>
-                      <Col className="h6style">
-                        <h6>Job-Type</h6>
+                      <Col md="8" className="h6style">
+                        <h6 className="hoverstyle">Job-Type</h6>
                         <h6 className="color">Full-Time</h6>
                       </Col>
                     </Row>
@@ -291,7 +300,7 @@ const careers = () => {
               <div className="btn-style mt-4">
                 <button
                   type="submit"
-                  className="btn btncolor text-center"
+                  className="btn btnbg text-center"
                   id="contactBtn"
                 >
                   <span id="btnText" className="mr-3">
@@ -299,7 +308,10 @@ const careers = () => {
                   </span>
                   <span>
                     {" "}
-                    <FontAwesomeIcon icon={faArrowRight} />
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="arrowcolor"
+                    />
                   </span>
                 </button>
               </div>

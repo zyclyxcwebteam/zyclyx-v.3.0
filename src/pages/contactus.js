@@ -156,7 +156,7 @@ class contactus extends Component {
       phoneerror = "Enter Valid phone Number";
     }
     if (!this.state.phone) {
-      phoneerror = "phone Cannot be blank";
+      phoneerror = "Phone Cannot be blank";
     }
 
     if (!this.state.subject) {
