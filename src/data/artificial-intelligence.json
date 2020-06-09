@@ -1,0 +1,21 @@
+{
+  "title": "Artificial Intelligence",
+  "path": "artificial-intelligence",
+  "caption": "Revolutionizing AI with tools for the next wave of transformation",
+  "overview": "Artificial Intelligence is a unit enabling the development of smart machines based on the human intelligence concept. Our specialists work on machines to help them imitate and perform functions, from the easiest to the most complex. It addresses thinking, reasoning and understanding. The research is underway to advance the processes across sectors, mainly in Banking, Logistics, Cyber Security, Healthcare and Hospitality.",
+  "solTitle": "For the next generation of big businesses",
+  "services": [
+    {
+      "title": "Digital Bots",
+      "content": "Our highly advanced digital bots powered by AI are designed to understand and perceive human behavior, resulting in robust support and enriching client experiences."
+    },
+    {
+      "title": "Business Analytics:",
+      "content": "We customize AI solutions to analyze the business and make accurate and precise decisions based on predictive and accurate algorithmic data."
+    },
+    {
+      "title": "Virtualization",
+      "content": "We build secure information virtualization systems with the power of AI technology, which leads to dependable databases for taking the right business decisions."
+    }
+  ]
+}

@@ -8,13 +8,17 @@ import {
   faBriefcase,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import HeroBanner from "../components/HeroBanner/HeroBanner";
+import CareerBanner from "../../static/images/careers.svg";
+import Layout from "../components/Layout/Layout";
 
 const careers = () => {
   return (
-    <>
-      <Container fluid className="Banner-image">
-        <h1 className="text-center">Banner image</h1>
-      </Container>
+    <Layout showBanner>
+      <HeroBanner
+        title="Get your future started with us"
+        image={CareerBanner}
+      />
       <Container fluid className="Text-style">
         <p className="pstyle">
           ZYCLYX recruits, trains and assigns the best candidates in the field
@@ -25,8 +29,9 @@ const careers = () => {
           </span>
         </p>
       </Container>
-      <Container fluid className="core-values">
-        <Row className="rowclass">
+
+      <Container fluid className="join-us-wrapper">
+        <Row>
           <Col md="3" className="join-us">
             <div className="comejoin ">
               <h4 className="mt-5 ">Come JOIN US</h4>
@@ -319,7 +324,7 @@ const careers = () => {
           </Row>
         </Container>
       </Container>
-    </>
+    </Layout>
   );
 };
 

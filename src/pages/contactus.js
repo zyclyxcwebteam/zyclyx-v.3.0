@@ -1,41 +1,12 @@
-/* eslint-disable react/style-prop-object */
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint-disable jsx-a11y/iframe-has-title */
-/* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable react/jsx-no-duplicate-props */
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/no-access-state-in-setstate */
 /* eslint-disable react/sort-comp */
-/* eslint-disable no-dupe-class-members */
 /* eslint-disable no-console */
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/no-unused-state */
-/* eslint-disable prettier/prettier */
-/* eslint-disable react/prefer-stateless-function */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/contactus.css";
-import FloatingLabel from "floating-label-react";
-import FloatingLabelInput from "react-floating-label-input";
-import {
-  CountryDropdown,
-  RegionDropdown,
-  CountryRegionData,
-} from "react-country-region-selector";
-import PhoneInput from "react-phone-number-input";
-import "react-telephone-input/css/default.css";
-import IntlTelInput from "react-intl-tel-input";
-import "react-intl-tel-input/dist/main.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faFacebookMessenger,
-  faWindows,
-} from "@fortawesome/free-brands-svg-icons";
 import {
   faTimes,
   faBriefcase,
@@ -43,14 +14,15 @@ import {
   faEnvelope,
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+import Layout from "../components/Layout/Layout";
 import Username from "../components/FormComponents/username";
 import Emailaddress from "../components/FormComponents/emailAddress";
 import PhoneNumber from "../components/FormComponents/phoneNumber";
 import Subject from "../components/FormComponents/Subject";
 import Messege from "../components/FormComponents/TextMessage";
-import Bgimage from "../Images/cantactus.jpg";
-// eslint-disable-next-line import/order
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+import HeroBanner from "../components/HeroBanner/HeroBanner";
+import ContactBanner from "../../static/images/contact.svg";
 
 class contactus extends Component {
   constructor() {
@@ -75,7 +47,7 @@ class contactus extends Component {
     this.handlechange2 = this.handlechange2.bind(this);
     this.handlechange3 = this.handlechange3.bind(this);
     this.handlechange4 = this.handlechange4.bind(this);
-    this.selectcounty = this.selectcounty.bind(this);
+    // this.selectcounty = this.selectcounty.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
@@ -109,13 +81,6 @@ class contactus extends Component {
   handlechange3(event) {
     this.setState({ messege: event.target.value });
     console.log(this.state.messege);
-  }
-
-  selectcounty(event) {
-    console.log(event.target.value);
-    // this.setState({ country: event.target.value });
-    // console.log(this.state.country);
-    console.log("inside country");
   }
 
   selectCountry(val) {
@@ -216,18 +181,11 @@ class contactus extends Component {
 
   render() {
     return (
-      <>
-        <div className="container-fluid bannerimage d-flex  justify-content-center align-items-center ">
-          {/* <div className="service-img">
-            <img src={Bgimage} alt="new age" />
-          </div> */}
-          <div className="row">
-            <div className="col-7 mx-auto">
-              <h1 className=" ">For better help and business development</h1>
-            </div>
-          </div>
-        </div>
-
+      <Layout>
+        <HeroBanner
+          title="For better help and business development"
+          image={ContactBanner}
+        />
         <div className="container-fluid">
           <div className="row">
             <div className=" col col-md-6 col-12 Formaddress">
@@ -408,7 +366,7 @@ class contactus extends Component {
             </div>
           </div>
         </div>
-      </>
+      </Layout>
     );
   }
 }

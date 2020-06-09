@@ -1,123 +1,158 @@
-import React from "react";
-import { Link } from "gatsby";
-import { Container, Col, Row } from "reactstrap";
-import Layout from "../components/layout";
-import Industry from "../components/industry";
-import Sectiontitle from "../components/sectiontitle";
-import Statcount from "../components/statcount";
-import Proof from "../components/Proof";
+import React, { useState } from "react";
+// import { graphql } from "gatsby";
+// import Img from "gatsby-image";
+// import Slider from "react-slick";
+import { Container, Row, Col } from "reactstrap";
+import Layout from "../components/Layout/Layout";
+import Clients from "../components/Homepage/Clients";
+import Partners from "../components/Homepage/Partners";
+import ImageCarousel from "../components/Homepage/ImageCarousel";
+import OurServices from "../components/Homepage/OurServices";
+import Industries from "../components/Homepage/Industries";
 import "../styles/Industry.css";
-import Footer from "../components/Footer/footer";
+import "../css/home.css";
+import "../components/Homepage/Clients.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default () => {
+  const [showClients, setShowClients] = useState(true);
   return (
     <>
-      <Layout>
-        <Container fluid id="stats">
-          <Sectiontitle
-            title="STATISTICS"
-            text="lorem ipusum it is a professional dummy text"
-            sectionStyles="green"
-          />
-          <Row className="m-0 mt-4">
-            <Col className="mx-auto" md="8" sm="12">
-              <Row>
-                <Col sm="4" className="mx-auto">
-                  <Statcount />
-                </Col>
-                <Col sm="4" className="mx-auto">
-                  <Statcount />
-                </Col>
-                <Col sm="4" className="mx-auto">
-                  <Statcount />
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-
-        <Container fluid className="py-2 px-0">
-          <Sectiontitle
-            title="INDUSTRIES"
-            text="lorem ipusum it is a professional dummy text"
-            sectionStyles="industry-title"
-          />
-          <div id="industries" className="d-flex flex-md-row mt-mt-4">
-            <Industry
-              number="01"
-              title="Bancking"
-              text="lorem ipusum it is a professional dummy text"
-            />
-            <Industry
-              number="02"
-              title="Telecom"
-              text="lorem ipusum it is a professional dummy text"
-            />
-            <Industry
-              number="03"
-              title="Healthcare"
-              text="lorem ipusum it is a professional dummy text"
-            />
-            <Industry
-              number="04"
-              title="Logistics"
-              text="lorem ipusum it is a professional dummy text"
-            />
-            <Industry
-              number="05"
-              title="Retail"
-              text="lorem ipusum it is a professional dummy text"
-            />
-          </div>
-        </Container>
-
-        <Container fluid className="py-4">
-          <Row>
-            <Col md="10">
-              <Sectiontitle
-                title="PROOF OF CONCEPT"
-                text="With Proof of Concept, we offer you value added service in terms of advanced prototype creation which help in demonstrating our work potential. It also assists you to checkout its feasibility in your business process, hence optimizing the experience."
-                sectionStyles="proof-title"
-              />
-            </Col>
-            <Col
-              md=""
-              className="p-0 d-flex justify-content-center align-items-center"
-            >
-              <Link to="/" className="btn btn-primary">
-                Get Started
-              </Link>
-            </Col>
-          </Row>
-
+      <Layout showbanner>
+        <ImageCarousel />
+        <Container fluid className="overview py-5">
           <Container>
+            <Row>
+              <Col
+                md="3"
+                sm="12"
+                className="d-flex align-items-center text-center"
+              >
+                <div>
+                  <h5 className="welcome-text">Welcome to</h5>
+                  <h2 className="brand">ZYCLYX</h2>
+                </div>
+              </Col>
+              <Col md="9" sm="12" className="d-flex align-items-center">
+                <p className="text-justify mb-0">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry&apos;s
+                  typesetting industry. Lorem Ipsum has been the industry&apos;
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </Container>
+        <OurServices />
+        {/* Company stats */}
+        <Industries />
+        <Container fluid className="stats-wrapper py-5 mt-5">
+          <Container className="py-5">
+            <Row>
+              <Col>
+                <div>
+                  <h3 className="stat-title text-center">20+</h3>
+                  <p className="stat-caption text-center">Clients Served</p>
+                </div>
+              </Col>
+              <Col>
+                <h3 className="stat-title text-center">40+</h3>
+                <p className="stat-caption text-center">Projects Delivered</p>
+              </Col>
+              <Col>
+                <h3 className="stat-title text-center">350+</h3>
+                <p className="stat-caption text-center">Processess Automated</p>
+              </Col>
+            </Row>
+          </Container>
+        </Container>
+        {/* Proof of Concept */}
+        <Container fluid className="py-5 poc-wrapper">
+          <Container>
+            <h2 className="text-center poc-title">
+              Fostering your trust in us with
+              <br />
+              <span className="poc-title-bg">Free Proof of Concept</span>
+            </h2>
+            <p className="text-center py-4">
+              With Proof of Concept, we offer you value added service in terms
+              of advanced prototype creation which help in demonstrating our
+              work potential.
+              <br />
+              It also assists you to checkout its feasibility in your business
+              process, hence optimizing the experience.
+            </p>
             <Row>
               <Col sm="12" className="mx-auto">
                 <Row className="py-4 mx-auto proof-row">
-                  <Col md="4" sm="4" className="p-0">
-                    <Proof
-                      title="Forecast"
-                      text="Act as a tool to forecast the feasibility of the projects."
-                    />
+                  <Col md="4" sm="4" className="p-0 d-flex">
+                    <Row className="mx-auto">
+                      <Col sm="3" className="p-0">
+                        <h2 className="poc-letter">F</h2>
+                      </Col>
+                      <Col sm="8" className="poc-content p-0">
+                        <h3>Forecast</h3>
+                        <p>
+                          Act as a tool to forecast the feasibility of projects.
+                        </p>
+                      </Col>
+                    </Row>
                   </Col>
                   <Col md="4" sm="4" className="p-0">
-                    <Proof
-                      title="Report"
-                      text="Provides a complete report on project evaluation"
-                    />
+                    <Row className="mx-auto">
+                      <Col sm="3" className="p-0">
+                        <h1 className="poc-letter">R</h1>
+                      </Col>
+                      <Col sm="8" className="poc-content p-0">
+                        <h3>Report</h3>
+                        <p>Provides a complete report on project evaluation</p>
+                      </Col>
+                    </Row>
                   </Col>
                   <Col md="4" sm="4" className="p-0">
-                    <Proof
-                      title="Cost Effective"
-                      text="Saves your businesses time and money"
-                    />
+                    <Row>
+                      <Col sm="3" className="p-0">
+                        <h1 className="poc-letter">C</h1>
+                      </Col>
+                      <Col sm="8" className="p-0 poc-content">
+                        <h3>Cost Effective</h3>
+                        <p>Saves your businesses time and money</p>
+                      </Col>
+                    </Row>
                   </Col>
                 </Row>
               </Col>
             </Row>
           </Container>
         </Container>
-        <Footer />
+        {/* our clients */}
+        <Container className="clients">
+          <div className="title-buttons d-flex justify-content-center align-items-center pb-5">
+            <button
+              type="button"
+              className={`t-btn btn-left ${!showClients && "t-btn-active"}`}
+              onClick={() => setShowClients(!showClients)}
+              disabled={!showClients}
+            >
+              Our Clients
+            </button>
+            <button
+              type="button"
+              className={`t-btn ${showClients && "t-btn-active"}`}
+              disabled={showClients}
+              onClick={() => setShowClients(!showClients)}
+            >
+              Technology Partners
+            </button>
+          </div>
+          {showClients ? <Partners /> : <Clients />}
+        </Container>
       </Layout>
     </>
   );
