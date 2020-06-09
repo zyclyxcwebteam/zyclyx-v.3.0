@@ -11,6 +11,7 @@ import {
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import CareerBanner from "../../static/images/careers.svg";
 import Layout from "../components/Layout/Layout";
+import Comejoin from "../../static/images/comejoin.svg";
 
 const careers = () => {
   return (
@@ -31,16 +32,18 @@ const careers = () => {
       </Container>
 
       <Container fluid className="join-us-wrapper">
-        <Row>
+        <Row className="rowstyle">
           <Col md="3" className="join-us">
             <div className="comejoin ">
               <h4 className="mt-5 ">Come JOIN US</h4>
               {/* <h4 className="joinus"></h4> */}
               <span className="span" />
+
+              <img src={Comejoin} alt="new age" className="mt-4 imgstyle" />
             </div>
           </Col>
           <Col md="" className="icon-style">
-            <ul>
+            <ul className="ul">
               <li className="">
                 <a href className="">
                   <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
@@ -123,7 +126,7 @@ const careers = () => {
                       </Col>
                       <Col md="8" className="h6style">
                         <h6 className="hoverstyle">Experience</h6>
-                        <h6 className="color">2-3 years</h6>
+                        <h6 className="color mt-2">2-3 years</h6>
                       </Col>
                     </Row>
                   </Col>
@@ -136,29 +139,17 @@ const careers = () => {
                       </Col>
                       <Col md="8" className="h6style">
                         <h6 className="hoverstyle">Job-Type</h6>
-                        <h6 className="color">Full-Time</h6>
+                        <h6 className="color mt-2">Full-Time</h6>
                       </Col>
                     </Row>
                   </Col>
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <button
-                  type="submit"
-                  className="btn btnbg text-center"
-                  id="contactBtn"
-                >
-                  <span id="btnText" className="mr-3">
-                    Apply Now
-                  </span>
-                  <span>
-                    {" "}
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className="arrowcolor"
-                    />
-                  </span>
-                </button>
+                <a to="/contactus" className="button d-flex align-items-center">
+                  Apply Now
+                  <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
+                </a>
               </div>
             </div>
 
@@ -176,7 +167,7 @@ const careers = () => {
                       </Col>
                       <Col md="8" className="h6style">
                         <h6 className="hoverstyle">Experience</h6>
-                        <h6 className="color">2-3 years</h6>
+                        <h6 className="color mt-2">2-3 years</h6>
                       </Col>
                     </Row>
                   </Col>
@@ -189,29 +180,17 @@ const careers = () => {
                       </Col>
                       <Col md="8" className="h6style">
                         <h6 className="hoverstyle">Job-Type</h6>
-                        <h6 className="color">Full-Time</h6>
+                        <h6 className="color mt-2">Full-Time</h6>
                       </Col>
                     </Row>
                   </Col>
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <button
-                  type="submit"
-                  className="btn btnbg text-center"
-                  id="contactBtn"
-                >
-                  <span id="btnText" className="mr-3">
-                    Apply Now
-                  </span>
-                  <span>
-                    {" "}
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className="arrowcolor"
-                    />
-                  </span>
-                </button>
+                <a to="/contactus" className="button d-flex align-items-center">
+                  Apply Now
+                  <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
+                </a>
               </div>
             </div>
           </Row>
@@ -230,7 +209,7 @@ const careers = () => {
                       </Col>
                       <Col md="8" className="h6style">
                         <h6 className="hoverstyle">Experience</h6>
-                        <h6 className="color">2-3 years</h6>
+                        <h6 className="color mt-2">2-3 years</h6>
                       </Col>
                     </Row>
                   </Col>
@@ -243,29 +222,17 @@ const careers = () => {
                       </Col>
                       <Col md="8" className="h6style">
                         <h6 className="hoverstyle">Job-Type</h6>
-                        <h6 className="color">Full-Time</h6>
+                        <h6 className="color mt-2">Full-Time</h6>
                       </Col>
                     </Row>
                   </Col>
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <button
-                  type="submit"
-                  className="btn btnbg text-center"
-                  id="contactBtn"
-                >
-                  <span id="btnText" className="mr-3">
-                    Apply Now
-                  </span>
-                  <span>
-                    {" "}
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className="arrowcolor"
-                    />
-                  </span>
-                </button>
+                <a to="/contactus" className="button d-flex align-items-center">
+                  Apply Now
+                  <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
+                </a>
               </div>
             </div>
 
@@ -283,7 +250,7 @@ const careers = () => {
                       </Col>
                       <Col md="8" className="h6style">
                         <h6 className="hoverstyle">Experience</h6>
-                        <h6 className="color">2-3 years</h6>
+                        <h6 className="color mt-2">2-3 years</h6>
                       </Col>
                     </Row>
                   </Col>
@@ -296,29 +263,17 @@ const careers = () => {
                       </Col>
                       <Col md="8" className="h6style">
                         <h6 className="hoverstyle">Job-Type</h6>
-                        <h6 className="color">Full-Time</h6>
+                        <h6 className="color mt-2">Full-Time</h6>
                       </Col>
                     </Row>
                   </Col>
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <button
-                  type="submit"
-                  className="btn btnbg text-center"
-                  id="contactBtn"
-                >
-                  <span id="btnText" className="mr-3">
-                    Apply Now
-                  </span>
-                  <span>
-                    {" "}
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className="arrowcolor"
-                    />
-                  </span>
-                </button>
+                <a to="/contactus" className="button d-flex align-items-center">
+                  Apply Now
+                  <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
+                </a>
               </div>
             </div>
           </Row>
