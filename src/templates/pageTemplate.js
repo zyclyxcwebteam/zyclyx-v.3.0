@@ -22,7 +22,7 @@ const PageTemplate = props => {
   const { dataJson } = data;
   const { title, caption, overview, solTitle, services } = dataJson;
   return (
-    <Layout>
+    <Layout showbanner>
       <HeroBanner title={title} image={RPABannerImage} />
       <Container className="tech-partners">
         <Row className="py-5">

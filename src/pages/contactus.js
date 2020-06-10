@@ -181,7 +181,7 @@ class contactus extends Component {
 
   render() {
     return (
-      <Layout>
+      <Layout showbanner>
         <HeroBanner
           title="For better help and business development"
           image={ContactBanner}

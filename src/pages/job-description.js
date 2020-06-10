@@ -62,7 +62,7 @@ class jobDescription extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout showbanner>
         <HeroBanner />
         <Container>
           <Row className="py-5">

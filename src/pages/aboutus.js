@@ -190,7 +190,7 @@ const aboutus = () => {
         <SectionTitle title="How we do it" />
 
         <Row className="h-wrapper">
-          <Col className="px-0 h-card">
+          <Col className="px-0 hw-card">
             <div className="h-card-content h-bottom">
               <h4>STEP 1</h4>
               <p>
@@ -201,7 +201,7 @@ const aboutus = () => {
             </div>
             <h3 className="h-title-dark plan">PLAN</h3>
           </Col>
-          <Col className="px-0 h-card">
+          <Col className="px-0 hw-card">
             <h3 className="h-title-green">EXECUTE</h3>
             <div className="h-card-content h-bottom">
               <h4>STEP 2</h4>
@@ -212,7 +212,7 @@ const aboutus = () => {
               </p>
             </div>
           </Col>
-          <Col className="px-0 h-card">
+          <Col className="px-0 hw-card">
             <div className="h-card-content h-bottom">
               <h4>STEP 3</h4>
               <p>
@@ -223,7 +223,7 @@ const aboutus = () => {
             </div>
             <h3 className="h-title-dark">RECTIFY</h3>
           </Col>
-          <Col className="px-0 h-card">
+          <Col className="px-0 hw-card">
             <h3 className="h-title-green">ANALYZE</h3>
             <div className="h-card-content h-bottom">
               <h4>STEP 4</h4>
@@ -234,7 +234,7 @@ const aboutus = () => {
               </p>
             </div>
           </Col>
-          <Col className="px-0 h-card">
+          <Col className="px-0 hw-card">
             <div className="h-card-content h-bottom">
               <h4>STEP 5</h4>
               <p>
