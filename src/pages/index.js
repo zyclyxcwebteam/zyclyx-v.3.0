@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-// import { graphql } from "gatsby";
-// import Img from "gatsby-image";
-// import Slider from "react-slick";
 import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
 import Clients from "../components/Homepage/Clients";
@@ -30,12 +27,12 @@ export default () => {
                 className="d-flex align-items-center text-center"
               >
                 <div>
-                  <h5 className="welcome-text">Welcome to</h5>
+                  <h5 className="welcome-title">Welcome to</h5>
                   <h2 className="brand">ZYCLYX</h2>
                 </div>
               </Col>
               <Col md="9" sm="12" className="d-flex align-items-center">
-                <p className="text-justify mb-0">
+                <p className="mb-0 welcome-text">
                   A global automation technology provider leading the industry
                   with innovative ideas. With our agile collaborative approach
                   our team strives to provide custom solutions. These solutions
@@ -53,7 +50,7 @@ export default () => {
         <OurServices />
         {/* Company stats */}
         <Industries />
-        <Container fluid className="stats-wrapper py-5 mt-5">
+        <Container fluid className="stats-wrapper py-5">
           <Container className="py-5">
             <Row>
               <Col>

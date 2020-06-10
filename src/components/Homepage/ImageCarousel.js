@@ -15,16 +15,19 @@ const ImageCarousel = () => {
       src: image1,
       altText: "Slide 1",
       caption: "Slide 1",
+      index: 1,
     },
     {
       src: image2,
       altText: "Slide 2",
       caption: "Slide 2",
+      index: 2,
     },
     {
       src: image3,
       altText: "Slide 3",
       caption: "Slide 3",
+      index: 3,
     },
   ];
 
@@ -50,9 +53,10 @@ const ImageCarousel = () => {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.altText}
+        key={item.index}
+        className={`slide-${item.index}`}
       >
-        <img src={item.src} alt={item.altText} className="banner-img" />
+        {/* <img src={item.src} alt={item.altText} className="banner-img" /> */}
       </CarouselItem>
     );
   });
@@ -62,6 +66,7 @@ const ImageCarousel = () => {
       activeIndex={activeIndex}
       next={nextSlide}
       previous={previousSlide}
+      className="banner-carousel"
     >
       <CarouselIndicators
         items={captions}

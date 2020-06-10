@@ -10,3 +10,21 @@
 .h-banner-indicator.carousel-indicators .active {
   width: 50px !important;
 }
+.banner-carousel .carousel-item {
+  height: 90vh;
+}
+.slide-1 {
+  background-image: url("../../../static/images/home-banner/img-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.slide-2 {
+  background-image: url("../../../static/images/home-banner/img-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.slide-3 {
+  background-image: url("../../../static/images/home-banner/img-3.jpg");
+  background-size: cover;
+  background-position: center;
+}
