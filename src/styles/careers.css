@@ -25,26 +25,24 @@
 .icon-style li a {
   position: absolute;
 
-  width: 30px;
-  height: 30px;
+  width: 33px;
+  height: 33px;
   background: #00a14b;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -3px;
 }
 .icon-style li span {
   font-family: Maven Pro;
 
-  font-size: 18px;
+  font-size: 20px;
   line-height: 21px;
   align-items: center;
+  margin-left: 70px;
 }
-.join-us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .join-us h4 {
   color: #1d335b;
 }
@@ -62,11 +60,14 @@
   font-weight: 600;
   font-size: 28px;
 }
-.container1 {
-  padding: 25px 155px !important;
+
+.container {
+  padding: 0px;
+  margin-left: 107px !important;
+  margin-bottom: 75px;
 }
 .card {
-  width: 430px;
+  width: 520px;
   padding: 30px 0px;
   background: rgba(16, 27, 50, 0.02) !important;
 }
@@ -76,7 +77,7 @@
 }
 .h6style h6 {
   margin: 0px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
 }
 .card h5 {
@@ -84,4 +85,81 @@
 }
 .color {
   color: #00a14b;
+}
+.iconcolor {
+  color: white;
+}
+.spanstyle {
+  margin-left: 63px;
+}
+.pstyle {
+  font-family: roboto;
+  font-style: normal;
+  font-size: 24px;
+}
+.astyle {
+  margin-left: 30px;
+}
+.btnbg {
+  background: rgba(0, 161, 75, 0.1) !important;
+  border-radius: 5px;
+}
+.arrowcolor {
+  color: #00a14b;
+}
+.styleicon {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 161, 75, 0.1);
+}
+.card:hover {
+  background: #101b32 !important;
+}
+.card:hover h4 {
+  color: #f1f2f2;
+}
+.card:hover .button {
+  color: #00a14b !important;
+}
+.card:hover .hoverstyle {
+  color: rgba(255, 255, 255, 0.7);
+}
+.opend {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  margin-left: 110px;
+}
+.span1 {
+  margin-left: 110px;
+}
+.comejoin {
+  margin-left: 23px;
+}
+.rowclass {
+  margin-left: 120px !important;
+}
+.postions {
+  margin-left: 142px !important;
+}
+.comejoin {
+  margin-left: 125px;
+}
+.ul {
+  list-style-type: none;
+}
+.button {
+  color: white !important;
+}
+.imgstyle {
+  width: 190px;
+  height: 145px;
+}
+.rowstyle {
+  padding: 0px 122px !important;
 }

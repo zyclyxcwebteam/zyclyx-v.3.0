@@ -47,7 +47,8 @@
 }
 .inputstyle label {
   font-size: 17px;
-  padding: 5px;
+  padding: 7px;
+  margin-left: 10px;
 }
 .headstyle {
   padding: 30px 0px;
