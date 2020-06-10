@@ -170,3 +170,6 @@
 .stats-wrapper {
   background-color: #f8fbff;
 }
+.client {
+  max-height: 60px;
+}

@@ -1,7 +1,8 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
 import Slider from "react-slick";
+import Blueprism from "../../../static/images/clients/blue.png";
+import UIpath from "../../../static/images/clients/uipath.png";
+import Automation from "../../../static/images/clients/automation.jpg";
 
 const settings = {
   dots: true,
@@ -12,33 +13,22 @@ const settings = {
 };
 
 const Partners = () => {
-  const clients = useStaticQuery(graphql`
-    query partnersQuery {
-      allFile(filter: { relativeDirectory: { eq: "partners" } }) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fixed(height: 50) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
   return (
     <>
       {/*  eslint-disable-next-line react/jsx-props-no-spreading */}
       <Slider {...settings}>
-        {clients.allFile.edges.map(image => {
-          return (
-            <div key={image.node.base}>
-              <Img fixed={image.node.childImageSharp.fixed} />
-            </div>
-          );
-        })}
+        <div>
+          <img src={Blueprism} alt="" className="client" />
+        </div>
+        <div>
+          <img src={UIpath} alt="" className="client" />
+        </div>
+        <div>
+          <img src={Automation} alt="" className="client" />
+        </div>
+        <div>
+          <img src={UIpath} alt="" className="client" />
+        </div>
       </Slider>
     </>
   );
