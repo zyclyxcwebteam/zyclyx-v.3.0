@@ -16,7 +16,7 @@ export default () => {
   const [showClients, setShowClients] = useState(true);
   return (
     <>
-      <Layout showbanner>
+      <Layout showBanner>
         <ImageCarousel />
         <Container fluid className="overview py-5">
           <Container>
