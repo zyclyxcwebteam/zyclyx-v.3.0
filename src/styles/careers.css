@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -3px;
+  margin-top: -6px;
 }
 .icon-style li span {
   font-family: Maven Pro;
@@ -90,7 +90,7 @@
   color: white;
 }
 .spanstyle {
-  margin-left: 63px;
+  margin-left: 143px;
 }
 .pstyle {
   font-family: roboto;
@@ -118,7 +118,7 @@
   background: rgba(0, 161, 75, 0.1);
 }
 .card:hover {
-  background: #101b32 !important;
+  background: #3a465f !important;
 }
 .card:hover h4 {
   color: #f1f2f2;
@@ -134,6 +134,7 @@
   font-style: normal;
   font-weight: bold;
   margin-left: 110px;
+  color: #1d335b;
 }
 .span1 {
   margin-left: 110px;
@@ -149,6 +150,11 @@
 }
 .comejoin {
   margin-left: 125px;
+}
+.comejoinh4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
 }
 .ul {
   list-style-type: none;
