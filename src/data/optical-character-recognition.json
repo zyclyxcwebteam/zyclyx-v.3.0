@@ -2,20 +2,24 @@
   "title": "Optical character recognition",
   "path": "optical-character-recognition",
   "caption": "Revolutionizing AI with tools for the next wave of transformation",
-  "overview": "The OCR technology converts virtually any kind of documents, such as scanned paper documents, PDF files or images captured by a digital camera into machine-readable text data which is editable and searchable.  It saves you a lot of time and effort when creating, processing and repurposing various documents. We have developed this for various processes like Forms processing, Loan processing, Transcript processing, Invoice processing etc.",
+  "overview": "The OCR technology converts virtually any kind of documents, such as scanned paper documents, PDF files, or images captured by a digital camera into machine-readable text data which is editable and searchable. It saves you a lot of time and effort when creating, processing, and repurposing various documents. We have developed this for various processes like Forms processing, Loan processing, Transcript processing, Invoice processing, etc.",
   "solTitle": "For the next generation of big businesses",
   "services": [
     {
-      "title": "Digital Bots",
-      "content": "Our highly advanced digital bots powered by AI are designed to understand and perceive human behavior, resulting in robust support and enriching client experiences."
+      "title": "Auto Document Classification",
+      "content": "Our OCR Technology utilizes Artificial Intelligence (AI) to “read” documents like a human, to identify and classify the document into specific types and extract key data. These systems efficiently convert content from various sources into standard data types."
     },
     {
-      "title": "Business Analytics:",
-      "content": "We customize AI solutions to analyze the business and make accurate and precise decisions based on predictive and accurate algorithmic data."
+      "title": "Auto Data Capture:",
+      "content": "This allows users to identify and extract data from forms and documents by detecting characters and fields on forms. With our expertise, you can now quickly and accurately process the documents."
     },
     {
-      "title": "Virtualization",
-      "content": "We build secure information virtualization systems with the power of AI technology, which leads to dependable databases for taking the right business decisions."
+      "title": "Template Data Capture",
+      "content": " The solution is designed to ensure data capture solutions with the capability to classify and recognize documents with different layouts at the same accuracy rates as that of structured forms."
+    },
+    {
+      "title": "Intelligent Data Capture (IDC)",
+      "content": " Using our IDC solutions you get advanced AI capabilities like Machine Learning and NLP which allow scanning through documents to detect, analyze, and classify tables. This data is stored in a digital format for future business use. "
     }
   ]
 }
