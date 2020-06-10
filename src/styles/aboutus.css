@@ -125,3 +125,6 @@
   border: none;
   box-shadow: none;
 }
+.hero-banner img {
+  min-width: 600px;
+}
