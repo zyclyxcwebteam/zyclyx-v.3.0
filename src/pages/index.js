@@ -36,14 +36,15 @@ export default () => {
               </Col>
               <Col md="9" sm="12" className="d-flex align-items-center">
                 <p className="text-justify mb-0">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry&apos;s
-                  typesetting industry. Lorem Ipsum has been the industry&apos;
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged.
+                  A global automation technology provider leading the industry
+                  with innovative ideas. With our agile collaborative approach
+                  our team strives to provide custom solutions. These solutions
+                  together with our next-gen technologies enable the businesses
+                  to outperform their competition. Our deep expertise in the
+                  area of process automation, infrastructure and application
+                  management is our strategic asset. Whether you want to improve
+                  your business efficiency or accelerate revenue growth, ZYCLYX
+                  will go an extra mile to get you there.
                 </p>
               </Col>
             </Row>
@@ -81,12 +82,12 @@ export default () => {
               <span className="poc-title-bg">Free Proof of Concept</span>
             </h2>
             <p className="text-center py-4">
-              With Proof of Concept, we offer you value added service in terms
-              of advanced prototype creation which help in demonstrating our
-              work potential.
-              <br />
-              It also assists you to checkout its feasibility in your business
-              process, hence optimizing the experience.
+              We believe in developing a trusting partnership with our clients
+              by offering free proof of concept as part of our value added
+              services. With this we demonstrate our work potential by creating
+              an advanced prototype of the project. This allows you to checkout
+              its feasibility in your business process, hence optimizing the
+              experience.
             </p>
             <Row>
               <Col sm="12" className="mx-auto">
@@ -99,7 +100,8 @@ export default () => {
                       <Col sm="8" className="poc-content p-0">
                         <h3>Forecast</h3>
                         <p>
-                          Act as a tool to forecast the feasibility of projects.
+                          Act as a tool to forecast the feasibility of the
+                          projects.
                         </p>
                       </Col>
                     </Row>
