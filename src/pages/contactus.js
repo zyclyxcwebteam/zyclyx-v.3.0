@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-access-state-in-setstate */
 /* eslint-disable react/sort-comp */
@@ -112,23 +113,23 @@ class contactus extends Component {
       emailerror = "invalid email";
     }
     if (!this.state.email) {
-      emailerror = "Email Cannot be blank";
+      emailerror = "Email cannot be blank";
     }
     const phoneno = /^\d{10}$/;
     if (this.state.phone.match(phoneno)) {
       console.log("inside if phone error");
     } else {
-      phoneerror = "Enter Valid phone Number";
+      phoneerror = "Enter valid phone number";
     }
     if (!this.state.phone) {
-      phoneerror = "Phone Cannot be blank";
+      phoneerror = "Phone cannot be blank";
     }
 
     if (!this.state.subject) {
       Subjecterror = "Subject cannot be blank";
     }
     if (!this.state.messege) {
-      messegeerror = "Cannot be blank";
+      messegeerror = " Message cannot be blank";
     }
     if (
       emailerror ||
@@ -195,7 +196,7 @@ class contactus extends Component {
                     <div className="col-7 mx-auto">
                       <div className="row">
                         <div className="col-3">
-                          <p className="icons">
+                          <p className="icons mt-4">
                             <FontAwesomeIcon
                               icon={faBriefcase}
                               className="fonticon"
@@ -242,25 +243,25 @@ class contactus extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="text-center mt-3">
+                  <div className="text-center mt-4 btnstyle">
                     <button
                       type="submit"
-                      className="btn  btncolor text-center"
+                      className=" button d-flex align-items-center"
                       id="contactBtn"
                       onClick={this.handleClick}
                     >
                       <span id="btnText" className="mr-3">
-                        Messege Us
+                        Message Us
                       </span>
-                      <span>
-                        {" "}
-                        <FontAwesomeIcon icon={faArrowRight} />
-                      </span>
+                      <FontAwesomeIcon
+                        icon="arrow-right"
+                        className="btn-icon"
+                      />
                     </button>
                   </div>
                 </div>
               ) : (
-                <div className="container">
+                <div className="">
                   <div className=" headstyle">
                     <h4 className="text-center">
                       We are happy to assist
@@ -342,16 +343,16 @@ class contactus extends Component {
                     <div className="btn-style mt-2">
                       <button
                         type="submit"
-                        className="btn btncolor text-center"
+                        className=" button d-flex align-items-center"
                         id="contactBtn"
                       >
                         <span id="btnText" className="mr-3">
                           Submit
                         </span>
-                        <span>
-                          {" "}
-                          <FontAwesomeIcon icon={faArrowRight} />
-                        </span>
+                        <FontAwesomeIcon
+                          icon="arrow-right"
+                          className="btn-icon"
+                        />
                       </button>
                     </div>
                   </form>

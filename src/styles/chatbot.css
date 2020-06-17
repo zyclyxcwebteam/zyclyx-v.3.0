@@ -1,24 +1,27 @@
 .chatbtn {
   height: 58px;
   width: 64px;
+  background: #213565;
 }
 .iconstyle {
   width: 46px;
   height: 25px;
+  color: white;
 }
 .textbox {
   width: 370px;
   padding: 20px;
 }
 .closeicon {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 .card-header {
   display: flex;
   justify-content: space-between;
   color: #007bff;
   font-weight: bolder;
+  background: #213565;
 }
 .card-body {
   color: #232934;
@@ -106,4 +109,11 @@
 .card-footer {
   background-color: rgba(0, 0, 0, 0.03);
   padding: 5px;
+}
+.h6 {
+  color: white;
+  font-size: 18px;
+}
+.icone {
+  color: white;
 }

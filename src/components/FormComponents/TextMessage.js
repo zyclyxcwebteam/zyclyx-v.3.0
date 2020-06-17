@@ -13,8 +13,8 @@ const messege = props => {
         className="inputstyle"
         name="Name"
         component="textarea"
-        id="messege"
-        label="Messege"
+        id="message"
+        label="Message"
         placeholder=""
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...props}
