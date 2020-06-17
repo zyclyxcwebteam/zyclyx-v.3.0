@@ -21,7 +21,7 @@ const careers = () => {
         image={CareerBanner}
       />
       <Container fluid className="Text-style">
-        <p className="pstyle text-centers">
+        <p className="pstyle text-centers mt-4">
           ZYCLYX recruits, trains and assigns the best candidates in the field
           of IT
           <br />
@@ -144,7 +144,10 @@ const careers = () => {
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <a to="/contactus" className="button d-flex align-items-center">
+                <a
+                  href="/job-description"
+                  className="button d-flex align-items-center"
+                >
                   Apply Now
                   <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
                 </a>
@@ -185,7 +188,10 @@ const careers = () => {
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <a to="/contactus" className="button d-flex align-items-center">
+                <a
+                  href="/job-description"
+                  className="button d-flex align-items-center"
+                >
                   Apply Now
                   <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
                 </a>
@@ -227,7 +233,10 @@ const careers = () => {
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <a to="/contactus" className="button d-flex align-items-center">
+                <a
+                  href="/job-description"
+                  className="button d-flex align-items-center"
+                >
                   Apply Now
                   <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
                 </a>
@@ -268,7 +277,10 @@ const careers = () => {
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <a to="/contactus" className="button d-flex align-items-center">
+                <a
+                  href="/job-description"
+                  className="button d-flex align-items-center"
+                >
                   Apply Now
                   <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
                 </a>

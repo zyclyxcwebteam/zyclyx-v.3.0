@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-state */
 /* eslint-disable eqeqeq */
 /* eslint-disable no-shadow */
 /* eslint-disable func-names */
@@ -7,9 +8,11 @@
 /* eslint-disable no-console */
 /* eslint-disable react/button-has-type */
 import React, { Component } from "react";
-import { MdMessage, MdClose } from "react-icons/md";
+import { MdMessage } from "react-icons/md";
 
 import { FaPaperPlane } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/chatbot.css";
 
@@ -25,9 +28,11 @@ class chatbot extends Component {
       // response:[],
       userinput: "",
       typingstatus: false,
+      closebtn: false,
     };
     this.handlechange = this.handlechange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.opentextbox = this.opentextbox.bind(this);
   }
 
   handlechange(event) {
@@ -39,6 +44,11 @@ class chatbot extends Component {
     // this.setState({password:event.target.password})
   }
 
+  opentextbox() {
+    console.log("inside close btn");
+    this.setState({ closebtn: !this.state.closebtn });
+  }
+
   handleSubmit(event) {
     this.setState({ typingstatus: !this.state.typingstatus });
     console.log(`${this.state.typingstatus}submit`);
@@ -47,6 +57,7 @@ class chatbot extends Component {
     this.setState({
       messege: [...this.state.messege, { user: this.state.userinput, bot: "" }],
     });
+
     // console.log(event.target.value)
 
     console.log("inside submit");
@@ -102,45 +113,49 @@ class chatbot extends Component {
   render() {
     return (
       <>
-        <button className="bg-blue-700 chatbtn rounded-full px-2 py-2">
+        <button
+          className=" chatbtn rounded-full px-2 py-2"
+          onClick={this.opentextbox}
+        >
           <MdMessage className="iconstyle" />
         </button>
+        {this.state.closebtn ? (
+          <>
+            <div className="textbox">
+              <div className="card-header  ">
+                <h5 className="h6"> Chatbot</h5>
+                <span className="icone">
+                  <FontAwesomeIcon icon={faTimes} />
+                </span>
+              </div>
 
-        <div className="textbox">
-          <div className="card shadow">
-            <div className="card-header px-2 py-2 ">
-              Chatbot
-              <button>
-                <MdClose className="closeicon" />
-              </button>
-            </div>
-          </div>
+              <div className="card-body ">
+                <div className="messages" id="chat">
+                  {this.state.messege.length != 0 &&
+                    this.state.messege.map(response => {
+                      return (
+                        <>
+                          <div>
+                            {response.user != "" ? (
+                              <div className="message parker">
+                                {response.user}
+                              </div>
+                            ) : (
+                              <></>
+                            )}
+                            {response.bot != "" ? (
+                              <div className="message stark">
+                                {response.bot}
+                              </div>
+                            ) : (
+                              <></>
+                            )}
+                          </div>
+                        </>
+                      );
+                    })}
 
-          <div className="card-body ">
-            <div className="messages" id="chat">
-              <div className="time">Today at 11:41</div>
-
-              {this.state.messege.length != 0 &&
-                this.state.messege.map(response => {
-                  return (
-                    <>
-                      <div>
-                        {response.user != "" ? (
-                          <div className="message parker">{response.user}</div>
-                        ) : (
-                          <></>
-                        )}
-                        {response.bot != "" ? (
-                          <div className="message stark">{response.bot}</div>
-                        ) : (
-                          <></>
-                        )}
-                      </div>
-                    </>
-                  );
-                })}
-
-              {/* {this.state.response.map(response=>{
+                  {/* {this.state.response.map(response=>{
        return(
         <div className="message stark">
         {this.state.response}
@@ -148,43 +163,45 @@ class chatbot extends Component {
        )
      })} */}
 
-              {this.state.typingstatus ? (
-                <div className="message stark">
-                  <div className="typing typing-1" />
-                  <div className="typing typing-2" />
-                  <div className="typing typing-3" />
+                  {this.state.typingstatus ? (
+                    <div className="message stark">
+                      <div className="typing typing-1" />
+                      <div className="typing typing-2" />
+                      <div className="typing typing-3" />
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                 </div>
-              ) : (
-                <></>
-              )}
-            </div>
-          </div>
+              </div>
 
-          <div className="card-footer p-0 bottom-fixed">
-            {/* <form className>
+              <div className="card-footer p-0 bottom-fixed">
+                {/* <form className>
             <div>
                 
                 <input className=" bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder=""/>
             </div>
             </form> */}
-            <form onSubmit={this.handleSubmit}>
-              <div className="input">
-                <input
-                  placeholder="Type your message here!"
-                  type="text"
-                  name="userinput"
-                  value={this.state.userinput}
-                  onChange={this.handlechange}
-                />
-                <span>
-                  <button type="submit">
-                    <FaPaperPlane />
-                  </button>
-                </span>
+                <form onSubmit={this.handleSubmit}>
+                  <div className="input">
+                    <input
+                      placeholder="Type your message here!"
+                      type="text"
+                      name="userinput"
+                      value={this.state.userinput}
+                      onChange={this.handlechange}
+                    />
+                    <span>
+                      <button type="submit">
+                        <FaPaperPlane />
+                      </button>
+                    </span>
+                  </div>
+                </form>
               </div>
-            </form>
-          </div>
-        </div>
+            </div>
+          </>
+        ) : null}
       </>
     );
   }

@@ -4,7 +4,7 @@
 }
 .Formaddress {
   background: #f1f2f2;
-  padding: 8px;
+  padding: 0px 0px 41px 0px;
   position: relative;
 }
 .mx-auto .row {
@@ -76,7 +76,11 @@
 }
 .mapstyle {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
+}
+.btnstyle {
+  display: flex;
+  justify-content: center;
 }
 
 @media (min-width: 300px) and (max-width: 575.98px) {

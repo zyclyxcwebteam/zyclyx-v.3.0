@@ -19,7 +19,7 @@ const phone = props => {
           id="phone"
           label="Phone"
           placeholder=""
-          // eslint-disable-next-line react/jsx-props-no-spreading
+         
           {...props}
         />
       </div>

@@ -118,7 +118,7 @@
   background: rgba(0, 161, 75, 0.1);
 }
 .card:hover {
-  background: #3a465f !important;
+  background: #0f2148 !important;
 }
 .card:hover h4 {
   color: #f1f2f2;

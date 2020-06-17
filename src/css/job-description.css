@@ -1,15 +1,84 @@
-.res, .req{
-    font-size: 1.2rem;
-    /* padding: 1rem 0px; */
-    /* background: rgb(248, 248, 248); */
+.res,
+.req {
+  font-size: 1.2rem;
+  /* padding: 1rem 0px; */
+  /* background: rgb(248, 248, 248); */
 }
-.res-icon{
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 27px;
-    width: 30px;
-    border-radius: 50%;
-    background: #000;
+.res-icon {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 27px;
+  width: 30px;
+  border-radius: 50%;
+  background: #00a14b;
+}
+.data {
+  font-family: Maven Pro;
+  font-style: normal;
+
+  font-size: 16px;
+}
+
+.span {
+  width: 87px;
+  height: 2px;
+  background: #fbbf12;
+  display: block;
+}
+.inputstyle1 input {
+  width: 400px;
+  height: 35px;
+  border-radius: 3px;
+  padding: 20px;
+  background-color: rgba(16, 27, 50, 0.05);
+}
+.inputstyle1 label {
+  font-size: 17px;
+  padding: 7px;
+  margin-left: 10px;
+  color: #30b454;
+}
+.formrow {
+  width: 398px;
+}
+.inputalign {
+  margin-left: 93px;
+}
+.inputalign1 {
+  margin-right: 93px;
+}
+.req {
+  margin-left: 70px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+.req1 {
+  width: 130px;
+  margin-left: 70px;
+}
+.bgc {
+  background-color: rgba(29, 51, 91, 0.03);
+
+  height: 400px;
+  margin-right: 42px;
+}
+.formstyle1 {
+  margin-top: 4px;
+}
+.closebtn {
+  margin-left: 1019px;
+  height: 35px;
+  width: 44px;
+  border-radius: 22px 0px 0px 22px;
+  background: rgba(251, 191, 18, 0.1);
+  border: 2px solid white;
+}
+.svgicon {
+  color: #fbbf12;
+}
+.sbtn {
+  width: 130px;
 }
