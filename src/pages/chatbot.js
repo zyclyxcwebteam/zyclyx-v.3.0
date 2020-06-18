@@ -1,3 +1,5 @@
+/* eslint-disable no-unreachable */
+/* eslint-disable class-methods-use-this */
 /* eslint-disable react/no-unused-state */
 /* eslint-disable eqeqeq */
 /* eslint-disable no-shadow */
@@ -29,10 +31,12 @@ class chatbot extends Component {
       userinput: "",
       typingstatus: false,
       closebtn: false,
+      msgicon: true,
     };
     this.handlechange = this.handlechange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.opentextbox = this.opentextbox.bind(this);
+    this.msgicon = this.msgicon.bind(this);
   }
 
   handlechange(event) {
@@ -47,6 +51,13 @@ class chatbot extends Component {
   opentextbox() {
     console.log("inside close btn");
     this.setState({ closebtn: !this.state.closebtn });
+    this.setState({ msgicon: !this.state.msgicon });
+  }
+
+  msgicon() {
+    console.log("inside msgicon ");
+    this.setState({ closebtn: !this.state.closebtn });
+    this.setState({ msgicon: !this.state.msgicon });
   }
 
   handleSubmit(event) {
@@ -61,6 +72,8 @@ class chatbot extends Component {
     // console.log(event.target.value)
 
     console.log("inside submit");
+    this.setState({ userinput: "" });
+
     console.log(`${this.state.messege}username is`);
     event.preventDefault();
     fetch("https://stark-crag-70246.herokuapp.com/session")
@@ -105,7 +118,7 @@ class chatbot extends Component {
             console.log(this.state.messege);
           })
           .then(() => {
-            this.setState({ userinput: "" });
+            // this.setState({ userinput: "" });
           });
       });
   }
@@ -113,19 +126,22 @@ class chatbot extends Component {
   render() {
     return (
       <>
-        <button
-          className=" chatbtn rounded-full px-2 py-2"
-          onClick={this.opentextbox}
-        >
-          <MdMessage className="iconstyle" />
-        </button>
+        {this.state.msgicon ? (
+          <button
+            className=" chatbtn rounded-full px-2 py-2"
+            onClick={this.opentextbox}
+          >
+            <MdMessage className="iconstyle" />
+          </button>
+        ) : null}
+
         {this.state.closebtn ? (
           <>
             <div className="textbox">
               <div className="card-header  ">
-                <h5 className="h6"> Chatbot</h5>
-                <span className="icone">
-                  <FontAwesomeIcon icon={faTimes} />
+                <h5 className="h6 mt-1"> Chatbot</h5>
+                <span className="icone mt-1">
+                  <FontAwesomeIcon icon={faTimes} onClick={this.msgicon} />
                 </span>
               </div>
 
@@ -182,7 +198,7 @@ class chatbot extends Component {
                 <input className=" bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder=""/>
             </div>
             </form> */}
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className="form1">
                   <div className="input">
                     <input
                       placeholder="Type your message here!"
@@ -191,10 +207,8 @@ class chatbot extends Component {
                       value={this.state.userinput}
                       onChange={this.handlechange}
                     />
-                    <span>
-                      <button type="submit">
-                        <FaPaperPlane />
-                      </button>
+                    <span className="iconcolor">
+                      <FaPaperPlane />
                     </span>
                   </div>
                 </form>

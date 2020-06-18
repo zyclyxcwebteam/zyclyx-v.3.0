@@ -25,16 +25,16 @@
 }
 .card-body {
   color: #232934;
-  background: #eaeef3;
+  background: white;
   padding: 5px;
   font-size: 14px;
-  overflow: auto;
+  overflow: auto !important;
 }
 .messages {
   padding: 1rem;
-  background: #f7f7f7;
+  background: white;
   flex-shrink: 2;
-  overflow-y: auto;
+  overflow-y: auto !important;
   box-shadow: inset 0 2rem 2rem -2rem rgba(0, 0, 0, 0.05),
     inset 0 -2rem 2rem -2rem rgba(0, 0, 0, 0.05);
 }
@@ -53,7 +53,7 @@
   box-sizing: border-box;
   padding: 0.5rem 1rem;
   margin: 1rem;
-  background: #fff;
+  background: #f1f2f2;
   border-radius: 1.125rem 1.125rem 1.125rem 0;
   min-height: 2.25rem;
   width: -webkit-fit-content;
@@ -66,7 +66,7 @@
 .messages .message.parker {
   margin: 1rem 1rem 1rem auto;
   border-radius: 1.125rem 1.125rem 0 1.125rem;
-  background: #333;
+  background: #5d5dff;
   color: white;
 }
 .messages .message .typing {
@@ -116,4 +116,10 @@
 }
 .icone {
   color: white;
+}
+.form1 {
+  background: white;
+}
+.iconcolor {
+  color: #213565;
 }
