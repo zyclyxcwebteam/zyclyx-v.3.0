@@ -1,4 +1,4 @@
-.chatbtn {
+ HEAD.chatbtn {
   height: 58px;
   width: 64px;
   background: #213565;
@@ -123,3 +123,4 @@
 .iconcolor {
   color: #213565;
 }
+

@@ -30,6 +30,7 @@ module.exports = {
         path: `./src/data/`,
       },
     },
+<<<<<<< HEAD
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -51,5 +52,15 @@ module.exports = {
         },
       },
     },
+=======
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    }
+>>>>>>> d3810fa07b66650a45ee71dcfcb50de2d6e09f94
   ],
 };
