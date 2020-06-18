@@ -21,11 +21,13 @@ const careers = () => {
         image={CareerBanner}
       />
       <Container fluid className="Text-style">
-        <p className="pstyle text-centers mt-4">
+        <p className="pstyle">
           ZYCLYX recruits, trains and assigns the best candidates in the field
           of IT
           <br />
-          <p className="spanstyle">to work on some of our biggest projects</p>
+          <span className="spanstyle">
+            to work on some of our biggest projects in the Middle East
+          </span>
         </p>
       </Container>
 
@@ -33,7 +35,7 @@ const careers = () => {
         <Row className="rowstyle">
           <Col md="3" className="join-us">
             <div className="comejoin ">
-              <h4 className="mt-5 comejoinh4">Come Join us</h4>
+              <h4 className="mt-5 ">Come JOIN US</h4>
               {/* <h4 className="joinus"></h4> */}
               <span className="span" />
 
@@ -70,7 +72,7 @@ const careers = () => {
                 </a>
 
                 <span className="">
-                  To explore new challenges in ZYCLYX, and learn new things
+                  To explore new challenges in VIRTECH, and learn new things
                 </span>
               </li>
               <li className="mt-3">
@@ -106,7 +108,7 @@ const careers = () => {
         </Row>
       </Container>
       <Container fluid className="postions">
-        <h4 className="mt-3 opend">Opened Positions</h4>
+        <h4 className="mt-3 opend">Opened Postions</h4>
         <span className="span span1 mt-3 " />
         <Container className="container1 mt-5">
           <Row className="card-row">
@@ -144,10 +146,7 @@ const careers = () => {
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <a
-                  href="/job-description"
-                  className="button d-flex align-items-center"
-                >
+                <a to="/contactus" className="button d-flex align-items-center">
                   Apply Now
                   <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
                 </a>
@@ -188,10 +187,7 @@ const careers = () => {
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <a
-                  href="/job-description"
-                  className="button d-flex align-items-center"
-                >
+                <a to="/contactus" className="button d-flex align-items-center">
                   Apply Now
                   <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
                 </a>
@@ -233,10 +229,7 @@ const careers = () => {
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <a
-                  href="/job-description"
-                  className="button d-flex align-items-center"
-                >
+                <a to="/contactus" className="button d-flex align-items-center">
                   Apply Now
                   <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
                 </a>
@@ -277,10 +270,7 @@ const careers = () => {
                 </Row>
               </div>
               <div className="btn-style mt-4">
-                <a
-                  href="/job-description"
-                  className="button d-flex align-items-center"
-                >
+                <a to="/contactus" className="button d-flex align-items-center">
                   Apply Now
                   <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
                 </a>

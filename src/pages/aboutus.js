@@ -50,25 +50,25 @@ const aboutus = () => {
       <Container fluid className="py-5 overview-wrapper">
         <Container className="py-5">
           <p>
-            Zyclyx is a leading quality and automotive IT solution provider. We
-            provide a robust and innovative portfolio of Products & Solutions to
-            enhance operational efficiency. Our team expertise includes areas
-            such as New-Age Technologies, Security Services, BI Solutions,
-            Infrastructure, Application Development
+            ZYCLYX is the world&apos;s leading automated IT solution provider
+            with a diverse range of solutions aimed to enhance your operating
+            performance. Our expertise includes Robotic Process Automation, AI,
+            OCR, Network Security, Cyber Security, Outsourcing, and other
+            services.
           </p>
           <p>
-            We were established in 2018 to share values, a core competence in
-            technology and automation, and an unending spirit of innovation in
-            all aspects of corporate life. Our purpose is to deliver functional
-            and automated processes in which we operate. We offer services in
-            segments like Banking, Retail, Logistics, Telecom, Hospitality,
-            Healthcare for the fulfillment of requirements of enterprises.
+            In 2018, we were established to share our innovative solutions and
+            core technology expertise to optimize the customer experience. The
+            team at ZYCLYX provides efficient integrated systems after
+            meticulous evaluation of risks and opportunities which address both
+            short and long term challenges.
           </p>
           <p>
-            In partnership with globally recognized IT solution providers, we
-            have successfully delivered projects for some of the renowned brands
-            in the kingdom like Aricscooper, ELM, Bank Albilad, Al Rajhi Bank,
-            Alinma Bank, STC.
+            In collaboration with internationally recognized IT solution
+            providers, we have catered to some of the leading brands in
+            industries like Banking, Finance, Telecom, and more. We provide
+            complete project management support right from conceptualization to
+            implementation and assessment.
           </p>
         </Container>
       </Container>
