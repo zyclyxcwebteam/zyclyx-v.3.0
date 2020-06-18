@@ -89,7 +89,7 @@
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
 }
-.h-card {
+.hw-card {
   position: relative;
 }
 .h-card-content {
@@ -124,4 +124,7 @@
   outline: none;
   border: none;
   box-shadow: none;
+}
+.hero-banner img {
+  min-width: 600px;
 }

@@ -1,7 +1,11 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+// import { useStaticQuery, graphql } from "gatsby";
+// import Img from "gatsby-image";
 import Slider from "react-slick";
+import albilad from "../../../static/images/clients/albilad.png";
+import alinma from "../../../static/images/clients/alinma.png";
+import bayancb from "../../../static/images/clients/bayancb.png";
+import elm from "../../../static/images/clients/elm.png";
 
 const settings = {
   dots: true,
@@ -12,33 +16,22 @@ const settings = {
 };
 
 const Clients = () => {
-  const clients = useStaticQuery(graphql`
-    query clientsQuery {
-      allFile(filter: { relativeDirectory: { eq: "clients" } }) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fixed(height: 70) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
   return (
     <>
       {/*  eslint-disable-next-line react/jsx-props-no-spreading */}
       <Slider {...settings}>
-        {clients.allFile.edges.map(image => {
-          return (
-            <div key={image.node.base}>
-              <Img fixed={image.node.childImageSharp.fixed} />
-            </div>
-          );
-        })}
+        <div>
+          <img src={albilad} alt="" className="client" />
+        </div>
+        <div>
+          <img src={alinma} alt="" className="client" />
+        </div>
+        <div>
+          <img src={bayancb} alt="" className="client" />
+        </div>
+        <div>
+          <img src={elm} alt="" className="client" />
+        </div>
       </Slider>
     </>
   );

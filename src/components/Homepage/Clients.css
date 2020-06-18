@@ -29,7 +29,7 @@
   background-color: transparent;
   border: none;
   padding: 0rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #777;
   outline: none;
   box-shadow: none;
@@ -40,7 +40,6 @@
 .t-btn-active {
   font-weight: 500;
   color: #00a14b;
-  font-size: 1.8rem;
 }
 .t-btn:active {
   outline: none;

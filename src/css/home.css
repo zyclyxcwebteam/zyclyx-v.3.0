@@ -14,13 +14,16 @@
   font-family: "NeuropoliticalRg-Regular";
   src: url("../fonts/NeuropoliticalRg-Regular.ttf");
 }
-.welcome-text {
+.welcome-title {
   color: #00a14b;
   font-size: 2rem;
 }
 .brand {
   font-family: "NeuropoliticalRg-Regular", sans-serif;
   font-size: 3rem;
+}
+.welcome-text {
+  font-size: 1.2rem;
 }
 .newage {
   max-width: 775px;
@@ -166,4 +169,7 @@
 }
 .stats-wrapper {
   background-color: #f8fbff;
+}
+.client {
+  max-height: 60px;
 }

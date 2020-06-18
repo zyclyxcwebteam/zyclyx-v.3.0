@@ -1,3 +1,6 @@
+.contact-icon {
+  font-size: 1.5rem;
+}
 .formrow {
   margin-top: 10px;
   padding: 10px 0px;
@@ -10,16 +13,14 @@
 .mx-auto .row {
   padding: 10px;
 }
-.iconscolor {
-  color: #00a14b;
+.contact-title {
+  color: #2db32d;
 }
 .icons {
-  font-weight: 400;
   height: 60px;
   width: 60px;
   margin: 0 5px;
   text-align: center;
-  /* border: 2px solid #72757c; */
   color: #2db32d;
 
   background: #cce0d0;
@@ -31,14 +32,7 @@
   /* line-height: 2;
   transition: all 0.2s ease-in; */
 }
-.fa-facebook {
-  width: 100px;
-  height: 30px;
-}
-.btncolor {
-  background: #094c56;
-  color: white;
-}
+
 .inputstyle input {
   width: 400px;
   height: 35px;

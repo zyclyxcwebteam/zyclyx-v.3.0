@@ -1,20 +1,7 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable react/sort-comp */
-/* eslint-disable no-console */
-/* eslint-disable react/destructuring-assignment */
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/contactus.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTimes,
-  faBriefcase,
-  faPhone,
-  faEnvelope,
-  faArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 import Layout from "../components/Layout/Layout";
 import Username from "../components/FormComponents/username";
@@ -34,14 +21,12 @@ class contactus extends Component {
       email: "",
       phone: "",
       subject: "",
-      messege: "",
+      message: "",
       usernameerror: "",
       emailerror: "",
       phoneerror: "",
       messegeerror: "",
       Subjecterror: "",
-      country: "",
-      showForm: false,
     };
     this.handlechange = this.handlechange.bind(this);
     this.handlechange1 = this.handlechange1.bind(this);
@@ -55,46 +40,6 @@ class contactus extends Component {
 
   // onchange function...................
 
-  handleClick(event) {
-    this.setState({ showText: !this.state.showText });
-  }
-
-  handlechange(event) {
-    this.setState({ username: event.target.value });
-    console.log(this.state.username);
-  }
-
-  handlechange1(event) {
-    this.setState({ email: event.target.value });
-    console.log(this.state.email);
-  }
-
-  handlechange2(event) {
-    this.setState({ phone: event.target.value });
-    console.log(this.state.phone);
-  }
-
-  handlechange4(event) {
-    this.setState({ subject: event.target.value });
-    console.log(this.state.subject);
-  }
-
-  handlechange3(event) {
-    this.setState({ messege: event.target.value });
-    console.log(this.state.messege);
-  }
-
-  selectCountry(val) {
-    this.setState({ country: val });
-    console.log(`${val}valueis`);
-    console.log(`${this.state.country}is`);
-    console.log(this.state);
-  }
-
-  selectRegion(val) {
-    this.setState({ region: val });
-  }
-
   // validate function..............
 
   validate = () => {
@@ -103,32 +48,30 @@ class contactus extends Component {
     let phoneerror = "";
     let messegeerror = "";
     let Subjecterror = "";
+    const { username, email, phone, subject, message } = this.state;
 
-    if (!this.state.username) {
+    if (!username) {
       usernameerror = "Name cannot be blank";
-      console.log(`${usernameerror}usernameerror`);
     }
 
-    if (!this.state.email.includes("@")) {
+    if (!email.includes("@")) {
       emailerror = "invalid email";
     }
-    if (!this.state.email) {
+    if (!email) {
       emailerror = "Email cannot be blank";
     }
     const phoneno = /^\d{10}$/;
-    if (this.state.phone.match(phoneno)) {
-      console.log("inside if phone error");
-    } else {
+    if (!phone.match(phoneno)) {
       phoneerror = "Enter valid phone number";
     }
-    if (!this.state.phone) {
+    if (!phone) {
       phoneerror = "Phone cannot be blank";
     }
 
-    if (!this.state.subject) {
+    if (!subject) {
       Subjecterror = "Subject cannot be blank";
     }
-    if (!this.state.messege) {
+    if (!message) {
       messegeerror = " Message cannot be blank";
     }
     if (
@@ -150,22 +93,43 @@ class contactus extends Component {
     return true;
   };
 
+  handleClick() {
+    const { showText } = this.state;
+    this.setState({ showText: !showText });
+  }
+
+  handlechange(event) {
+    this.setState({ username: event.target.value });
+  }
+
+  handlechange1(event) {
+    this.setState({ email: event.target.value });
+  }
+
+  handlechange2(event) {
+    this.setState({ phone: event.target.value });
+  }
+
+  handlechange4(event) {
+    this.setState({ subject: event.target.value });
+  }
+
+  handlechange3(event) {
+    this.setState({ message: event.target.value });
+  }
+
   // Submition function................
 
   handleSubmit(event) {
     event.preventDefault();
-
-    console.log(`${this.state.username}username is`);
-
     const isvalid = this.validate();
 
     if (isvalid) {
-      console.log(this.state);
       this.setState({
         username: "",
         phone: "",
         email: "",
-        messege: "",
+        message: "",
         subject: "",
         usernameerror: "",
         emailerror: "",
@@ -173,16 +137,27 @@ class contactus extends Component {
         messegeerror: "",
         Subjecterror: "",
       });
-      console.log(this.state.messege, this.state.email);
-    } else {
-      console.log("inside else");
-      console.log(`${this.state.phoneerror}phoneerror`);
     }
   }
 
   render() {
+    const {
+      showText,
+      username,
+      email,
+      phone,
+      message,
+      subject,
+      usernameerror,
+      emailerror,
+      phoneerror,
+      messegeerror,
+      Subjecterror,
+    } = this.state;
+
+    const { google } = this.props;
     return (
-      <Layout>
+      <Layout showBanner={false}>
         <HeroBanner
           title="For better help and business development"
           image={ContactBanner}
@@ -190,7 +165,7 @@ class contactus extends Component {
         <div className="container-fluid">
           <div className="row">
             <div className=" col col-md-6 col-12 Formaddress">
-              {!this.state.showText ? (
+              {!showText ? (
                 <div className="mt-5">
                   <div className="row ">
                     <div className="col-7 mx-auto">
@@ -198,14 +173,14 @@ class contactus extends Component {
                         <div className="col-3">
                           <p className="icons mt-4">
                             <FontAwesomeIcon
-                              icon={faBriefcase}
-                              className="fonticon"
+                              icon="map-marked-alt"
+                              className="contact-icon"
                             />
                           </p>
                         </div>
                         <div className="col-9 ">
-                          <h4 className="iconscolor">OFFICE</h4>
-                          <p className="ptagstyle">
+                          <h4 className="contact-title">OFFICE</h4>
+                          <p className="contact-text">
                             3rd Floor, Pearl Enclave, Green Valley Road No-5,
                             Banjara Hills, Hyderabad, Telangana 500034
                           </p>
@@ -218,7 +193,10 @@ class contactus extends Component {
                       <div className="row">
                         <div className="col-3">
                           <p className="icons">
-                            <FontAwesomeIcon icon={faPhone} />
+                            <FontAwesomeIcon
+                              icon="phone"
+                              className="contact-icon"
+                            />
                           </p>
                         </div>
                         <div className="col-9">
@@ -233,7 +211,10 @@ class contactus extends Component {
                       <div className="row p-10">
                         <div className="col-3">
                           <p className="icons">
-                            <FontAwesomeIcon icon={faEnvelope} />
+                            <FontAwesomeIcon
+                              icon="envelope"
+                              className="contact-icon"
+                            />
                           </p>
                         </div>
                         <div className="col-9">
@@ -278,7 +259,7 @@ class contactus extends Component {
                   >
                     <span id="btnText">
                       {" "}
-                      <FontAwesomeIcon icon={faTimes} />
+                      <FontAwesomeIcon icon="fa-times" />
                     </span>
                   </button>
 
@@ -286,57 +267,47 @@ class contactus extends Component {
                     <div className="main">
                       <div>
                         <Username
-                          value={this.state.username}
+                          value={username}
                           onChange={this.handlechange}
                         />
-                        {this.state.usernameerror ? (
-                          <div style={{ color: "red" }}>
-                            {this.state.usernameerror}
-                          </div>
+                        {usernameerror ? (
+                          <div style={{ color: "red" }}>{usernameerror}</div>
                         ) : null}
                       </div>
                       <div>
                         <Emailaddress
-                          value={this.state.email}
+                          value={email}
                           onChange={this.handlechange1}
                         />
-                        {this.state.emailerror ? (
-                          <div style={{ color: "red" }}>
-                            {this.state.emailerror}
-                          </div>
+                        {emailerror ? (
+                          <div style={{ color: "red" }}>{emailerror}</div>
                         ) : null}
                       </div>
                       <div>
                         <PhoneNumber
-                          value={this.state.phone}
+                          value={phone}
                           onChange={this.handlechange2}
                         />
-                        {this.state.phoneerror ? (
-                          <div style={{ color: "red" }}>
-                            {this.state.phoneerror}
-                          </div>
+                        {phoneerror ? (
+                          <div style={{ color: "red" }}>{phoneerror}</div>
                         ) : null}
                       </div>
                       <div>
                         <Subject
-                          value={this.state.subject}
+                          value={subject}
                           onChange={this.handlechange4}
                         />
-                        {this.state.Subjecterror ? (
-                          <div style={{ color: "red" }}>
-                            {this.state.Subjecterror}
-                          </div>
+                        {Subjecterror ? (
+                          <div style={{ color: "red" }}>{Subjecterror}</div>
                         ) : null}
                       </div>
                       <div>
                         <Messege
-                          value={this.state.messege}
+                          value={message}
                           onChange={this.handlechange3}
                         />
-                        {this.state.messegeerror ? (
-                          <div style={{ color: "red" }}>
-                            {this.state.messegeerror}
-                          </div>
+                        {messegeerror ? (
+                          <div style={{ color: "red" }}>{messegeerror}</div>
                         ) : null}
                       </div>
                     </div>
@@ -361,7 +332,7 @@ class contactus extends Component {
             </div>
 
             <div className=" col col-md-6 col-12 mapstyle p-0">
-              <Map google={this.props.google} zoom={14}>
+              <Map google={google} zoom={14}>
                 <Marker onClick={this.onMarkerClick} name="Current location" />
               </Map>
             </div>

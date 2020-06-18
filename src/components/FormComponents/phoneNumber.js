@@ -19,7 +19,6 @@ const phone = props => {
           id="phone"
           label="Phone"
           placeholder=""
-         
           {...props}
         />
       </div>
