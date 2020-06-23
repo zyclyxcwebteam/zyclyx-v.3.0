@@ -171,7 +171,7 @@ class jobDescription extends React.Component {
               {this.state.showReq ? (
                 <>
                   <div className="mt-5">
-                    {this.state.jobData.requirements &&
+                    {this.state.jobData &&
                       this.state.jobData.requirements.map(data => {
                         return <Requirement item={data} />;
                       })}
@@ -182,7 +182,7 @@ class jobDescription extends React.Component {
               {this.state.showRes ? (
                 <>
                   <div className="mt-5">
-                    {this.state.jobData.responsibilities &&
+                    {this.state.jobData &&
                       this.state.jobData.responsibilities.map(data => {
                         return <Responsibility item={data} />;
                       })}
