@@ -24,12 +24,6 @@ const PageTemplate = props => {
   return (
     <Layout showBanner>
       <HeroBanner title={title} image={RPABannerImage} />
-      <Container className="tech-partners">
-        <Row className="py-5">
-          <Col sm="12" md="3" className="py-5" />
-          <Col sm="12" md="9" className="py-5" />
-        </Row>
-      </Container>
       {/* overview */}
       <Container fluid className="overview-wrapper py-5">
         <Container>

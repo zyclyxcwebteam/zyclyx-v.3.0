@@ -1,14 +1,7 @@
 .hero-banner {
-  height: 100vh;
   background-color: #111b33;
 }
-
-.hero-banner .title-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+.hero-banner,
 .hero-banner .title-box,
 .hero-banner .img-box {
   height: 90vh;
@@ -17,10 +10,8 @@
   font-size: 4rem;
   font-weight: 700;
   text-align: center;
-}
-.banner-title-one {
   color: #ffffff;
 }
-.banner-title-two {
-  color: #fbbf12;
+.hero-banner .img-box img {
+  max-width: 100%;
 }

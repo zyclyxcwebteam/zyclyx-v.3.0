@@ -29,7 +29,7 @@ const items = [
     src: RPABG,
     serviceText:
       "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
-    captionOne: "Building future with",
+    captionOne: "Improve business efficiency with",
     captionTwo: "Robotic Process Automation",
     imgLeft: false,
     key: 2,
@@ -39,7 +39,7 @@ const items = [
     src: OCRBG,
     serviceText:
       "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
-    captionOne: "Building future with",
+    captionOne: "Adopt smart solutions with",
     captionTwo: "Optical Character Recognition",
     imgLeft: true,
     key: 3,
@@ -49,7 +49,7 @@ const items = [
     src: NetworkBG,
     serviceText:
       "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
-    captionOne: "Building future with",
+    captionOne: "Protect your Data with",
     captionTwo: "Network Security",
     imgLeft: false,
     key: 4,

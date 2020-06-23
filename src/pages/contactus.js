@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/contactus.css";
+import { Container } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 import Layout from "../components/Layout/Layout";
@@ -11,6 +10,7 @@ import Subject from "../components/FormComponents/Subject";
 import Messege from "../components/FormComponents/TextMessage";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import ContactBanner from "../../static/images/contact.svg";
+import "../styles/contactus.css";
 
 class contactus extends Component {
   constructor() {
@@ -159,7 +159,7 @@ class contactus extends Component {
     return (
       <Layout showBanner={false}>
         <HeroBanner
-          title="For better help and business development"
+          title="We are happy to assist you with your queries"
           image={ContactBanner}
         />
         <div className="container-fluid">
@@ -338,6 +338,8 @@ class contactus extends Component {
             </div>
           </div>
         </div>
+        {/* spacer */}
+        <Container fluid className="py-4 spacer" />
       </Layout>
     );
   }

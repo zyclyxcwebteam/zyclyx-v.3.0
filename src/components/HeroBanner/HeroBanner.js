@@ -1,18 +1,24 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-// import image from "../../Images/rpa.svg";
 import "./HeroBanner.css";
 
 const HeroBanner = ({ title, image }) => {
   return (
     <Container fluid className="hero-banner">
       <Row className="">
-        <Col className="title-box">
-          <h2 className="banner-title banner-title-one">{title}</h2>
-          {/* <h2 className="banner-title banner-title-two">{titleTwo}</h2> */}
+        <Col
+          sm="12"
+          md="6"
+          className="title-box d-flex flex-column justify-content-center align-items-center"
+        >
+          <h2 className="banner-title">{title}</h2>
         </Col>
-        <Col className="img-box d-flex justify-content-center">
-          <img src={image} alt="robotic process automation" />
+        <Col
+          sm="12"
+          md="6"
+          className="img-box d-flex justify-content-center align-items-center"
+        >
+          <img src={image} alt={title} />
         </Col>
       </Row>
     </Container>

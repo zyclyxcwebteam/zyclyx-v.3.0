@@ -11,6 +11,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faTimes } from "@fortawesome/free-solid-svg-icons";
+// import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import FloatingLabelInput from "react-floating-label-input";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
@@ -18,9 +19,30 @@ import HeroBanner from "../components/HeroBanner/HeroBanner";
 
 import "../css/job-description.css";
 
+const Requirement = props => {
+  return (
+    <div className="d-flex">
+      <span className="res-icon">
+        <FontAwesomeIcon icon={faArrowRight} className="" />
+      </span>
+      <p className="ml-4 data">{props.item}</p>
+    </div>
+  );
+};
+
+const Responsibility = props => {
+  return (
+    <div className="d-flex mt-3">
+      <span className="res-icon">
+        <FontAwesomeIcon icon={faArrowRight} className="" />
+      </span>
+      <p className="ml-4 data">{props.item}</p>
+    </div>
+  );
+};
 class jobDescription extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       showReq: true,
       showRes: false,
@@ -35,6 +57,19 @@ class jobDescription extends React.Component {
     this.handlechange = this.handlechange.bind(this);
 
     this.closebtnClick = this.closebtnClick.bind(this);
+  }
+
+  componentDidMount() {
+    console.log(this.props.location.state.id);
+    fetch(
+      `https://agile-plateau-09650.herokuapp.com/jobopenings/${this.props.location.state.id}`
+    )
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        this.setState({ jobData: data });
+      });
   }
 
   handleReqClick() {
@@ -91,6 +126,7 @@ class jobDescription extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <Layout showBanner>
         <HeroBanner />
@@ -134,104 +170,19 @@ class jobDescription extends React.Component {
               {this.state.showReq ? (
                 <>
                   <div className="mt-5">
-                    <div className="d-flex">
-                      <span className="res-icon">
-                        <FontAwesomeIcon icon={faArrowRight} className="" />
-                      </span>
-                      <p className="ml-4 data">
-                        6-9 years of experience in B2B & B2C Solution Sales in
-                        client acquisition in India. exposure to Middle East
-                        markets would be added advantage
-                      </p>
-                    </div>
-                    <div className="d-flex mt-3">
-                      <span className="res-icon">
-                        <FontAwesomeIcon icon={faArrowRight} className="" />
-                      </span>
-                      <p className="ml-4 data">
-                        Strongly emphasis on a consultative sales approach over
-                        cold calling approach. Degree in Business and Marketing
-                        is preferred
-                      </p>
-                    </div>
-                    <div className="d-flex mt-3">
-                      <span className="res-icon">
-                        <FontAwesomeIcon icon={faArrowRight} className="" />
-                      </span>
-                      <p className="ml-4 data">
-                        Must have worked in a Start-up environment
-                      </p>
-                    </div>
-                    <div className="d-flex mt-3">
-                      <span className="res-icon">
-                        <FontAwesomeIcon icon={faArrowRight} className="" />
-                      </span>
-                      <p className="ml-4 data">
-                        An understanding of the offshore Business, preferably
-                        hands on experience in an Indian IT services
-                        organization.
-                      </p>
-                    </div>
+                    {this.state.jobData.requirements.map(data => {
+                      return <Requirement item={data} />;
+                    })}
                   </div>
                 </>
               ) : null}
 
               {this.state.showRes ? (
                 <>
-                  <div className="d-flex mt-3">
-                    <span className="res-icon">
-                      <FontAwesomeIcon icon={faArrowRight} className="" />
-                    </span>
-                    <p className="ml-4 data">
-                      Proven success in client orientation. Ability to build
-                      strong relationships.
-                    </p>
-                  </div>
-                  <div className="d-flex mt-3">
-                    <span className="res-icon">
-                      <FontAwesomeIcon icon={faArrowRight} className="" />
-                    </span>
-                    <p className="ml-4 data">
-                      6-9 years of experience in B2B & B2C Solution Sales in
-                      client acquisition in India. exposure to Middle East
-                      markets would be an added advantage
-                    </p>
-                  </div>
-                  <div className="d-flex mt-3">
-                    <span className="res-icon">
-                      <FontAwesomeIcon icon={faArrowRight} className="" />
-                    </span>
-                    <p className="ml-4 data">
-                      Strongly emphasis on a consultative sales approach over
-                      cold calling approach. Degree in Business and Marketing is
-                      preferred
-                    </p>
-                  </div>
-                  <div className="d-flex mt-3">
-                    <span className="res-icon">
-                      <FontAwesomeIcon icon={faArrowRight} className="" />
-                    </span>
-                    <p className="ml-4 data">
-                      Must have worked in a Start-up environment
-                    </p>
-                  </div>
-                  <div className="d-flex mt-3">
-                    <span className="res-icon">
-                      <FontAwesomeIcon icon={faArrowRight} className="" />
-                    </span>
-                    <p className="ml-4 data">
-                      An understanding of the offshore Business, preferably
-                      hands on experience in an Indian IT services organization.
-                    </p>
-                  </div>
-                  <div className="d-flex mt-3">
-                    <span className="res-icon">
-                      <FontAwesomeIcon icon={faArrowRight} className="" />
-                    </span>
-                    <p className="ml-4 data">
-                      Proven success in client orientation. Ability to build
-                      strong relationships.
-                    </p>
+                  <div className="mt-5">
+                    {this.state.jobData.responsibilities.map(data => {
+                      return <Responsibility item={data} />;
+                    })}
                   </div>
                 </>
               ) : null}

@@ -19,7 +19,9 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "bootstrap": "^4.4.1",
+    "email-validator": "^2.0.4",
     "floating-label-react": "^1.0.2",
+    "formik": "^2.1.4",
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.4.0",
     "gatsby-plugin-sharp": "^2.6.0",
@@ -28,6 +30,7 @@
     "gatsby-transformer-sharp": "^2.5.0",
     "google-maps-react": "^2.0.6",
     "imagesloaded": "^4.1.4",
+    "isomorphic-fetch": "^2.2.1",
     "pattern.css": "^1.0.0",
     "react": "^16.12.0",
     "react-country-region-selector": "^2.1.0",
@@ -43,7 +46,8 @@
     "reactstrap": "^8.4.1",
     "scroll-out": "^2.2.11",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "yup": "^0.29.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

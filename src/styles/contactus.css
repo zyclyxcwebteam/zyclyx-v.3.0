@@ -169,3 +169,14 @@
     font-size: 16px;
   }
 }
+
+/* New Contact us page */
+
+.contact-info-wrapper,
+.google-map-wrapper {
+  height: 90vh;
+  border: 2px solid red;
+}
+.spacer {
+  background: #f1f2f2;
+}

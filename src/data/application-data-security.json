@@ -1,9 +1,9 @@
 {
   "title": "Application & Data Security",
   "path": "application-data-security",
-  "caption": "Revolutionizing AI with tools for the next wave of transformation",
+  "caption": "Minimize the risk of possible exploitation of essential data",
   "overview": "With numerous apps launched in the market every day, it has become crucial to ensure safety from vulnerabilities in the market. Application and Data security involve the use of security measures at the application level to prevent the data and code within the app from being hacked. We use multiple resources like accidental risk assessments, encryption testing, access rights and more to ensure user and developer data protection during the development phase and also after the deployment.",
-  "solTitle": "For the next generation of big businesses",
+  "solTitle": "Securing your most valuable assets ",
   "services": [
     {
       "title": "Source Code Review",

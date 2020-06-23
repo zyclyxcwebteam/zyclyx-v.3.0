@@ -1,284 +1,203 @@
-/* eslint-disable react/jsx-one-expression-per-line */
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "gatsby";
+import fetch from "isomorphic-fetch";
 import { Container, Row, Col } from "reactstrap";
 import "../styles/careers.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
   faBriefcase,
-  faUser,
+  faUserAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import CareerBanner from "../../static/images/careers.svg";
 import Layout from "../components/Layout/Layout";
+import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Comejoin from "../../static/images/comejoin.svg";
 
+const JobCard = props => {
+  const { active, title, location, id } = props;
+  return (
+    <Col md="6" sm="12" className={`py-4 job-card ${active && "active"}`}>
+      <h2 className="text-center job-title">{title}</h2>
+      <h5 className="text-center job-location">{location}</h5>
+      <div className="job-info d-flex justify-content-center py-3">
+        <div className="d-flex align-items-center">
+          <div className="job-icon mx-3">
+            <FontAwesomeIcon icon={faBriefcase} />
+          </div>
+          <div>
+            <p className="m-0 info-title">Experience</p>
+            <p className="m-0 info-text">2-3 Years</p>
+          </div>
+        </div>
+
+        <div className="d-flex align-items-center">
+          <div className="job-icon mx-3">
+            <FontAwesomeIcon icon={faUserAlt} />
+          </div>
+          <div>
+            <p className="m-0 info-title">Job Type</p>
+            <p className="m-0 info-text">Full Time</p>
+          </div>
+        </div>
+      </div>
+      <p className="d-flex justify-content-center py-3 m-0">
+        <Link
+          to="/job-description/"
+          state={{ id }}
+          className="button d-flex align-items-center"
+        >
+          Apply Now
+          <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
+        </Link>
+      </p>
+    </Col>
+  );
+};
+
 const careers = () => {
+  const [openings, setOpenings] = useState([]);
+  useEffect(() => {
+    fetch("https://agile-plateau-09650.herokuapp.com/jobopenings")
+      .then(response => {
+        return response.json();
+      })
+      .then(jsonData => {
+        setOpenings(jsonData);
+      });
+  });
+
   return (
     <Layout showBanner>
-      <HeroBanner
-        title="Get your future started with us"
-        image={CareerBanner}
-      />
-      <Container fluid className="Text-style">
-        <p className="pstyle">
-          ZYCLYX recruits, trains and assigns the best candidates in the field
-          of IT
-          <br />
-          <span className="spanstyle">
-            to work on some of our biggest projects in the Middle East
-          </span>
-        </p>
+      <HeroBanner title="Build your future with us" image={CareerBanner} />
+      <Container fluid className="c-overview-wrapper py-5">
+        <Container>
+          <h3 className="c-overview-text mb-0">
+            If you have a desire to excel, we have the potential to help you
+            prosper. In ZYCLYX, we empower employees to explore their talents
+            and abilities in tandem with their careers.
+          </h3>
+        </Container>
       </Container>
 
-      <Container fluid className="join-us-wrapper">
-        <Row className="rowstyle">
-          <Col md="3" className="join-us">
-            <div className="comejoin ">
-              <h4 className="mt-5 ">Come JOIN US</h4>
-              {/* <h4 className="joinus"></h4> */}
-              <span className="span" />
-
-              <img src={Comejoin} alt="new age" className="mt-4 imgstyle" />
-            </div>
-          </Col>
-          <Col md="" className="icon-style">
-            <ul className="ul">
-              <li className="">
-                <a href className="">
-                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
-                </a>
-
-                <span className="">
-                  As we believe a team of great minds will produce greater
-                  results
-                </span>
-              </li>
-
-              <li className="mt-3">
-                <a href>
-                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
-                </a>
-
-                <span className="">
-                  We are a growing firm with enormous challenges and
-                  opportunities to grow
-                </span>
-              </li>
-
-              <li className="mt-3">
-                <a href>
-                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
-                </a>
-
-                <span className="">
-                  To explore new challenges in VIRTECH, and learn new things
-                </span>
-              </li>
-              <li className="mt-3">
-                <a href>
-                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
-                </a>
-
-                <span className="">
-                  To be a part of a place where imagination and out of the box
-                  thinking is all you need
-                </span>
-              </li>
-              <li className="mt-3">
-                <a href>
-                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
-                </a>
-
-                <span className="">
-                  If you’ve got a smarter way to get the job done
-                </span>
-              </li>
-              <li className="mt-3">
-                <a href>
-                  <FontAwesomeIcon icon={faArrowRight} className="iconcolor" />
-                </a>
-
-                <span className="">
-                  To be a part of a great enthusiastic team
-                </span>
-              </li>
-            </ul>
-          </Col>
-        </Row>
-      </Container>
-      <Container fluid className="postions">
-        <h4 className="mt-3 opend">Opened Postions</h4>
-        <span className="span span1 mt-3 " />
-        <Container className="container1 mt-5">
-          <Row className="card-row">
-            <div className="card">
-              <h4 className="text-center">Business Development Manager</h4>
-              <h5 className="text-center mt-3">Riyadh, Saudi Arabia</h5>
-              <div>
-                <Row className="icon mt-4">
-                  <Col>
-                    <Row>
-                      <Col md="4">
-                        <h6 className="color styleicon">
-                          <FontAwesomeIcon icon={faBriefcase} />
-                        </h6>
-                      </Col>
-                      <Col md="8" className="h6style">
-                        <h6 className="hoverstyle">Experience</h6>
-                        <h6 className="color mt-2">2-3 years</h6>
-                      </Col>
-                    </Row>
-                  </Col>
-                  <Col>
-                    <Row>
-                      <Col md="4">
-                        <h6 className="color styleicon">
-                          <FontAwesomeIcon icon={faUser} />
-                        </h6>
-                      </Col>
-                      <Col md="8" className="h6style">
-                        <h6 className="hoverstyle">Job-Type</h6>
-                        <h6 className="color mt-2">Full-Time</h6>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
+      <Container fluid className="join-us-wrapper py-5">
+        <Container>
+          <Row>
+            <Col md="4" className="c-title-border">
+              <SectionTitle title="Come Join Us" />
+              <div className="d-flex justify-content-center align-items-center">
+                <img src={Comejoin} alt="new age" className="mt-4 imgstyle" />
               </div>
-              <div className="btn-style mt-4">
-                <a to="/contactus" className="button d-flex align-items-center">
-                  Apply Now
-                  <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
-                </a>
-              </div>
-            </div>
+            </Col>
+            <Col
+              md="8"
+              className="d-flex justify-content-center align-items-center"
+            >
+              <ul className="join-us-points">
+                <li className="d-flex align-items-center">
+                  <span className="arrow-wrapper d-flex justify-content-center align-items-center">
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="arrow-right"
+                    />
+                  </span>
 
-            <div className="card">
-              <h4 className="text-center">RPA Developer</h4>
-              <h5 className="text-center mt-3">Riyadh, Saudi Arabia</h5>
-              <div>
-                <Row className="icon mt-4">
-                  <Col>
-                    <Row>
-                      <Col md="4">
-                        <h6 className="color styleicon">
-                          <FontAwesomeIcon icon={faBriefcase} />
-                        </h6>
-                      </Col>
-                      <Col md="8" className="h6style">
-                        <h6 className="hoverstyle">Experience</h6>
-                        <h6 className="color mt-2">2-3 years</h6>
-                      </Col>
-                    </Row>
-                  </Col>
-                  <Col>
-                    <Row>
-                      <Col md="4">
-                        <h6 className="color styleicon">
-                          <FontAwesomeIcon icon={faUser} />
-                        </h6>
-                      </Col>
-                      <Col md="8" className="h6style">
-                        <h6 className="hoverstyle">Job-Type</h6>
-                        <h6 className="color mt-2">Full-Time</h6>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
-              </div>
-              <div className="btn-style mt-4">
-                <a to="/contactus" className="button d-flex align-items-center">
-                  Apply Now
-                  <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
-                </a>
-              </div>
-            </div>
-          </Row>
-          <Row className="card-row">
-            <div className="card">
-              <h4 className="text-center">Machine Learning Engineer</h4>
-              <h5 className="text-center mt-3">Riyadh, Saudi Arabia</h5>
-              <div>
-                <Row className="icon mt-4">
-                  <Col>
-                    <Row>
-                      <Col md="4">
-                        <h6 className="color styleicon">
-                          <FontAwesomeIcon icon={faBriefcase} />
-                        </h6>
-                      </Col>
-                      <Col md="8" className="h6style">
-                        <h6 className="hoverstyle">Experience</h6>
-                        <h6 className="color mt-2">2-3 years</h6>
-                      </Col>
-                    </Row>
-                  </Col>
-                  <Col>
-                    <Row>
-                      <Col md="4">
-                        <h6 className="color styleicon">
-                          <FontAwesomeIcon icon={faUser} />
-                        </h6>
-                      </Col>
-                      <Col md="8" className="h6style">
-                        <h6 className="hoverstyle">Job-Type</h6>
-                        <h6 className="color mt-2">Full-Time</h6>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
-              </div>
-              <div className="btn-style mt-4">
-                <a to="/contactus" className="button d-flex align-items-center">
-                  Apply Now
-                  <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
-                </a>
-              </div>
-            </div>
+                  <span className="ml-3 join-us-text">
+                    As we believe a team of great minds will produce greater
+                    results
+                  </span>
+                </li>
 
-            <div className="card">
-              <h4 className="text-center">Client Relationship Manager</h4>
-              <h5 className="text-center mt-3">Riyadh, Saudi Arabia</h5>
-              <div>
-                <Row className="icon mt-4">
-                  <Col>
-                    <Row>
-                      <Col md="4">
-                        <h6 className="color styleicon">
-                          <FontAwesomeIcon icon={faBriefcase} />
-                        </h6>
-                      </Col>
-                      <Col md="8" className="h6style">
-                        <h6 className="hoverstyle">Experience</h6>
-                        <h6 className="color mt-2">2-3 years</h6>
-                      </Col>
-                    </Row>
-                  </Col>
-                  <Col>
-                    <Row>
-                      <Col md="4">
-                        <h6 className="color styleicon">
-                          <FontAwesomeIcon icon={faUser} />
-                        </h6>
-                      </Col>
-                      <Col md="8" className="h6style">
-                        <h6 className="hoverstyle">Job-Type</h6>
-                        <h6 className="color mt-2">Full-Time</h6>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
-              </div>
-              <div className="btn-style mt-4">
-                <a to="/contactus" className="button d-flex align-items-center">
-                  Apply Now
-                  <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
-                </a>
-              </div>
-            </div>
+                <li className="d-flex align-items-center">
+                  <span className="arrow-wrapper d-flex justify-content-center align-items-center">
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="arrow-right"
+                    />
+                  </span>
+
+                  <span className="ml-3 join-us-text">
+                    Explore numerous opportunities to grow and innovate
+                  </span>
+                </li>
+
+                <li className="d-flex align-items-center">
+                  <span className="arrow-wrapper d-flex justify-content-center align-items-center">
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="arrow-right"
+                    />
+                  </span>
+
+                  <span className="ml-3 join-us-text">
+                    Be a part of the team that encourages imaginative and out of
+                    box thinking
+                  </span>
+                </li>
+                <li className="d-flex align-items-center">
+                  <span className="arrow-wrapper d-flex justify-content-center align-items-center">
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="arrow-right"
+                    />
+                  </span>
+
+                  <span className="ml-3 join-us-text">
+                    Excel in your career with our training and development
+                    programmes
+                  </span>
+                </li>
+                <li className="d-flex align-items-center">
+                  <span className="arrow-wrapper d-flex justify-content-center align-items-center">
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="arrow-right"
+                    />
+                  </span>
+
+                  <span className="ml-3 join-us-text">
+                    If you’ve got a smarter way to get the job done.
+                  </span>
+                </li>
+                <li className="d-flex align-items-center">
+                  <span className="arrow-wrapper d-flex justify-content-center align-items-center">
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="arrow-right"
+                    />
+                  </span>
+
+                  <span className="ml-3 join-us-text">
+                    Experience working with a supportive and enthusiastic team
+                  </span>
+                </li>
+              </ul>
+            </Col>
           </Row>
         </Container>
       </Container>
+
+      <Container fluid>
+        <Container>
+          <SectionTitle title="Open Positions" />
+        </Container>
+        <Container>
+          <Row className="">
+            {openings.map(opening => {
+              return (
+                <JobCard
+                  title={opening.title}
+                  location={opening.location}
+                  id={opening.id}
+                />
+              );
+            })}
+          </Row>
+        </Container>
+      </Container>
+      {/* Spacer */}
+      <Container fluid className="py-4" />
     </Layout>
   );
 };
