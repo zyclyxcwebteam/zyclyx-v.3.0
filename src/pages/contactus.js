@@ -200,7 +200,7 @@ class contactus extends Component {
                           </p>
                         </div>
                         <div className="col-9">
-                          <h4 className="iconscolor">CONTACT</h4>
+                          <h4 className="contact-title">CONTACT</h4>
                           <p className="ptagstyle">(+91) 40 2354 9363</p>
                         </div>
                       </div>
@@ -218,7 +218,7 @@ class contactus extends Component {
                           </p>
                         </div>
                         <div className="col-9">
-                          <h4 className="iconscolor">EMAIL</h4>
+                          <h4 className="contact-title">EMAIL</h4>
                           <p className="ptagstyle">info@zyclyx.com</p>
                         </div>
                       </div>
