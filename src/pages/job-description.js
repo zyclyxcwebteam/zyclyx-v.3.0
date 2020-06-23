@@ -49,6 +49,7 @@ class jobDescription extends React.Component {
       showForm: false,
       btnState: true,
       closebtn: true,
+      loading: true,
     };
     this.handleReqClick = this.handleReqClick.bind(this);
     this.handleResClick = this.handleResClick.bind(this);
@@ -68,7 +69,7 @@ class jobDescription extends React.Component {
         return response.json();
       })
       .then(data => {
-        this.setState({ jobData: data });
+        this.setState({ jobData: data, loading: false });
       });
   }
 
@@ -170,9 +171,10 @@ class jobDescription extends React.Component {
               {this.state.showReq ? (
                 <>
                   <div className="mt-5">
-                    {this.state.jobData.requirements.map(data => {
-                      return <Requirement item={data} />;
-                    })}
+                    {this.state.jobData.requirements &&
+                      this.state.jobData.requirements.map(data => {
+                        return <Requirement item={data} />;
+                      })}
                   </div>
                 </>
               ) : null}
@@ -180,9 +182,10 @@ class jobDescription extends React.Component {
               {this.state.showRes ? (
                 <>
                   <div className="mt-5">
-                    {this.state.jobData.responsibilities.map(data => {
-                      return <Responsibility item={data} />;
-                    })}
+                    {this.state.jobData.responsibilities &&
+                      this.state.jobData.responsibilities.map(data => {
+                        return <Responsibility item={data} />;
+                      })}
                   </div>
                 </>
               ) : null}
