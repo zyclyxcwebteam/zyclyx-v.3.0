@@ -27,22 +27,25 @@ const Footer = () => {
           <Col className="social-media px-0">
             <ul className="py-1">
               <li>
-                <a href="/" title="facebook">
+                <a href="https://www.facebook.com/Zyclyx.IT" title="facebook">
                   <FontAwesomeIcon icon={["fab", "facebook"]} />
                 </a>
               </li>
               <li>
-                <a href="/" title="instagram">
+                <a href="https://www.instagram.com/zyclyx_it" title="instagram">
                   <FontAwesomeIcon icon={["fab", "instagram"]} />
                 </a>
               </li>
               <li>
-                <a href="/" title="twitter">
+                <a href="https://twitter.com/Zyclyx_IT" title="twitter">
                   <FontAwesomeIcon icon={["fab", "twitter"]} />
                 </a>
               </li>
               <li>
-                <a href="/" title="Linkedin">
+                <a
+                  href="https://www.linkedin.com/company/zyclyx-consulting-pvt-ltd"
+                  title="Linkedin"
+                >
                   <FontAwesomeIcon icon={["fab", "linkedin"]} />
                 </a>
               </li>
