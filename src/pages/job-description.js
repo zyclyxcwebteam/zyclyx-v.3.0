@@ -182,7 +182,7 @@ class jobDescription extends React.Component {
 
               {showForm ? (
                 <>
-                  <div className="formstyle1">
+                  <div className="formstyle1 py-4">
                     <button
                       type="button"
                       className="closebtn"
