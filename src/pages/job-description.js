@@ -1,42 +1,36 @@
-/* eslint-disable react/no-unused-state */
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable no-console */
-/* eslint-disable no-undef */
-/* eslint-disable class-methods-use-this */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/destructuring-assignment */
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
+import fetch from "isomorphic-fetch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faTimes } from "@fortawesome/free-solid-svg-icons";
-// import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import FloatingLabelInput from "react-floating-label-input";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
-// import Button from "../components/Button/Button";
+import JobBanner from "../../static/images/job-details.svg";
 
 import "../css/job-description.css";
 
 const Requirement = props => {
+  const { item } = props;
   return (
-    <div className="d-flex">
-      <span className="res-icon">
-        <FontAwesomeIcon icon={faArrowRight} className="" />
+    <div className="d-flex align-items-center py-2">
+      <span className="c-arrow-circle">
+        <FontAwesomeIcon icon={faArrowRight} />
       </span>
-      <p className="ml-4 data">{props.item}</p>
+      <p className="ml-3 m-0 c-point-text">{item}</p>
     </div>
   );
 };
 
 const Responsibility = props => {
+  const { item } = props;
   return (
-    <div className="d-flex mt-3">
-      <span className="res-icon">
-        <FontAwesomeIcon icon={faArrowRight} className="" />
+    <div className="d-flex align-items-center py-2">
+      <span className="c-arrow-circle">
+        <FontAwesomeIcon icon={faArrowRight} />
       </span>
-      <p className="ml-4 data">{props.item}</p>
+      <p className="ml-3 m-0 c-point-text">{item}</p>
     </div>
   );
 };
@@ -48,56 +42,46 @@ class jobDescription extends React.Component {
       showRes: false,
       showForm: false,
       btnState: true,
-      closebtn: true,
-      loading: true,
     };
     this.handleReqClick = this.handleReqClick.bind(this);
     this.handleResClick = this.handleResClick.bind(this);
     this.handleFormClick = this.handleFormClick.bind(this);
-    this.handlechange = this.handlechange.bind(this);
     this.handlechange = this.handlechange.bind(this);
 
     this.closebtnClick = this.closebtnClick.bind(this);
   }
 
   componentDidMount() {
-    console.log(this.props.location.state.id);
-    fetch(
-      `https://agile-plateau-09650.herokuapp.com/jobopenings/${this.props.location.state.id}`
-    )
+    const { location } = this.props;
+    const { id } = location.state;
+    fetch(`https://agile-plateau-09650.herokuapp.com/jobopenings/${id}`)
       .then(response => {
         return response.json();
       })
       .then(data => {
-        this.setState({ jobData: data, loading: false });
+        this.setState({ jobData: data });
       });
   }
 
   handleReqClick() {
-    console.log("Req");
     this.setState({
       showReq: true,
       showRes: false,
       showForm: false,
       btnState: true,
-      username: "",
     });
   }
 
   handleResClick() {
-    console.log("Res");
     this.setState({
       showRes: true,
       showReq: false,
       showForm: false,
       btnState: true,
-      // showForm: !this.State.showForm,
     });
-    console.log(this.state.showRes);
   }
 
   handleFormClick() {
-    console.log("Form");
     this.setState({
       showForm: true,
       showRes: false,
@@ -106,18 +90,16 @@ class jobDescription extends React.Component {
     });
   }
 
-  handlechange(event) {
-    this.setState({ username: event.target.value });
-    console.log(this.state.username);
+  handlechange() {
+    this.setState({});
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log("inside submit function");
+    this.setState({});
   }
 
   closebtnClick() {
-    console.log("inside close btn");
     this.setState({
       showForm: false,
       showRes: true,
@@ -127,33 +109,41 @@ class jobDescription extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    const { btnState, showReq, showRes, showForm, jobData } = this.state;
     return (
       <Layout showBanner>
-        <HeroBanner />
+        <HeroBanner
+          title={jobData && this.state.jobData.title}
+          image={JobBanner}
+        />
         <Container fluid>
-          <Row className="py-5">
-            <Col md="3" className="p-0 d-flex flex-column align-items-center ">
-              <div className="bgc">
-                <div className="">
-                  <div
-                    className="btn pl-0 req mb-5 mt-5 req"
+          <Row className="d-flex job-container">
+            <Col md="3" className="p-0 d-flex flex-column align-items-center">
+              <div className="d-flex flex-column side-menu-wrapper py-4 w-100">
+                <div className={`px-5 ${showReq && "c-btn-active"}`}>
+                  <button
+                    type="button"
+                    className="c-btn my-4"
                     onClick={this.handleReqClick}
                   >
-                    Requirement
-                    <span className="span" />
-                  </div>
-                  <div
-                    className="btn pl-0 res mb-5   req "
+                    Requirements
+                  </button>
+                </div>
+                <div className={`px-5 ${showRes && "c-btn-active"}`}>
+                  <button
+                    type="button"
+                    className="c-btn my-4"
                     onClick={this.handleResClick}
                   >
                     Responsibilities
-                    <span className="span" />
-                  </div>
-                  {this.state.btnState ? (
-                    <>
-                      <div
-                        className="button d-flex align-items-center btn-style mt-4 req1  "
+                  </button>
+                </div>
+                {btnState ? (
+                  <>
+                    <div className="px-5">
+                      <button
+                        type="button"
+                        className="button d-flex align-items-center btn-style my-4 req1"
                         onClick={this.handleFormClick}
                       >
                         Apply Now
@@ -161,17 +151,17 @@ class jobDescription extends React.Component {
                           icon="arrow-right"
                           className="btn-icon"
                         />
-                      </div>
-                    </>
-                  ) : null}
-                </div>
+                      </button>
+                    </div>
+                  </>
+                ) : null}
               </div>
             </Col>
-            <Col md="8" className="ml-5 ">
-              {this.state.showReq ? (
+            <Col md="9" className="job-content-wrapper px-5">
+              {showReq ? (
                 <>
-                  <div className="mt-5">
-                    {this.state.jobData &&
+                  <div className="py-4">
+                    {jobData &&
                       this.state.jobData.requirements.map(data => {
                         return <Requirement item={data} />;
                       })}
@@ -179,10 +169,10 @@ class jobDescription extends React.Component {
                 </>
               ) : null}
 
-              {this.state.showRes ? (
+              {showRes ? (
                 <>
-                  <div className="mt-5">
-                    {this.state.jobData &&
+                  <div className="py-4">
+                    {jobData &&
                       this.state.jobData.responsibilities.map(data => {
                         return <Responsibility item={data} />;
                       })}
@@ -190,11 +180,15 @@ class jobDescription extends React.Component {
                 </>
               ) : null}
 
-              {this.state.showForm ? (
+              {showForm ? (
                 <>
                   <div className="formstyle1">
-                    <button className="closebtn" onClick={this.closebtnClick}>
-                      <FontAwesomeIcon icon={faTimes} className="svgicon" />
+                    <button
+                      type="button"
+                      className="closebtn"
+                      onClick={this.closebtnClick}
+                    >
+                      <FontAwesomeIcon icon={faTimes} className="close-icon" />
                     </button>
 
                     <form onSubmit={this.handleSubmit} className="">
@@ -295,7 +289,7 @@ class jobDescription extends React.Component {
                           id="contactBtn"
                         >
                           <span id="btnText" className="mr-3">
-                            Submit
+                            Apply Now
                           </span>
                           <FontAwesomeIcon
                             icon="arrow-right"
