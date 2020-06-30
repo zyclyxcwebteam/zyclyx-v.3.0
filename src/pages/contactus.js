@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 import Layout from "../components/Layout/Layout";
 import Username from "../components/FormComponents/username";
 import Emailaddress from "../components/FormComponents/emailAddress";
@@ -375,9 +374,5 @@ class contactus extends Component {
     );
   }
 }
-
-// export default GoogleApiWrapper({
-//   apiKey: "AIzaSyBLPVg4nj6V7yUtCkCDrt0OwG_CGIGSsHA",
-// })(contactus);
 
 export default contactus;
