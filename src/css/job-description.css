@@ -1,36 +1,19 @@
-.inputstyle1 input {
-  width: 400px;
-  height: 35px;
-  border-radius: 3px;
-  padding: 20px;
-  background-color: rgba(16, 27, 50, 0.05);
+.app-form {
+  position: relative;
 }
-.inputstyle1 label {
-  font-size: 17px;
-  padding: 7px;
-  margin-left: 10px;
-  color: #30b454;
+.form-close-btn {
+  position: absolute;
+  right: -15px;
+  top: 10px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 25px 0px 0px 25px;
+  background: rgba(0, 161, 75, 0.2);
+  border: none;
+  padding: 10px 25px;
 }
-.formrow {
-  width: 398px;
-}
-.inputalign {
-  margin-left: 93px;
-}
-.inputalign1 {
-  margin-right: 93px;
-}
-
-.formstyle1 {
-  margin-top: 4px;
-}
-.closebtn {
-  margin-left: 1019px;
-  height: 35px;
-  width: 44px;
-  border-radius: 22px 0px 0px 22px;
-  background: rgba(251, 191, 18, 0.1);
-  border: 2px solid white;
+.form-close-btn:hover {
+  background: #00a14b;
 }
 .svgicon {
   color: #fbbf12;
@@ -41,6 +24,7 @@
 .c-arrow-circle {
   height: 40px;
   width: 40px;
+  min-width: 40px;
   background-color: #00a14b;
   border-radius: 50%;
   color: #fff;
@@ -49,8 +33,7 @@
   align-items: center;
 }
 .c-point-text {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1rem;
 }
 .job-container {
   background-color: rgba(29, 51, 91, 0.03);
@@ -81,4 +64,7 @@
 .c-btn-active {
   background-color: #30b454;
   border-right: 4px solid #fbbf12;
+}
+.c-btn-active .c-btn {
+  color: #fff;
 }

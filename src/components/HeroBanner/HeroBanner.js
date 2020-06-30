@@ -5,7 +5,7 @@ import "./HeroBanner.css";
 const HeroBanner = ({ title, image }) => {
   return (
     <Container fluid className="hero-banner">
-      <Row className="">
+      <Row className="h-100">
         <Col
           sm="12"
           md="6"

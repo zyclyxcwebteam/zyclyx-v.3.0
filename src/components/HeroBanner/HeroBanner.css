@@ -13,5 +13,21 @@
   color: #ffffff;
 }
 .hero-banner .img-box img {
-  max-width: 100%;
+  max-width: 90%;
+}
+
+@media (max-width: 576px) {
+  .hero-banner .title-box {
+    height: 30vh;
+  }
+
+  .hero-banner .img-box {
+    height: 60vh;
+  }
+  .hero-banner .img-box {
+    max-width: 100%;
+  }
+  .banner-title {
+    font-size: 2rem;
+  }
 }

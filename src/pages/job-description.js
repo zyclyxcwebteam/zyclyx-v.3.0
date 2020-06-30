@@ -1,10 +1,12 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/destructuring-assignment */
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import fetch from "isomorphic-fetch";
+// import { useFormik } from "formik";
+// import * as Yup from "yup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faTimes } from "@fortawesome/free-solid-svg-icons";
-import FloatingLabelInput from "react-floating-label-input";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import JobBanner from "../../static/images/job-details.svg";
@@ -154,10 +156,20 @@ class jobDescription extends React.Component {
                       </button>
                     </div>
                   </>
-                ) : null}
+                ) : (
+                  <div className={`px-5 ${!btnState && "c-btn-active"}`}>
+                    <button
+                      type="button"
+                      className="c-btn my-4"
+                      onClick={this.handleResClick}
+                    >
+                      Application Form
+                    </button>
+                  </div>
+                )}
               </div>
             </Col>
-            <Col md="9" className="job-content-wrapper px-5">
+            <Col md="9" className="job-content-wrapper pl-5">
               {showReq ? (
                 <>
                   <div className="py-4">
@@ -182,122 +194,179 @@ class jobDescription extends React.Component {
 
               {showForm ? (
                 <>
-                  <div className="formstyle1 py-4">
+                  <div className="app-form py-5">
                     <button
                       type="button"
-                      className="closebtn"
+                      className="form-close-btn"
                       onClick={this.closebtnClick}
                     >
                       <FontAwesomeIcon icon={faTimes} className="close-icon" />
                     </button>
 
-                    <form onSubmit={this.handleSubmit} className="">
-                      <Row>
-                        <Col className="inputalign">
-                          <div className="row formrow">
-                            <FloatingLabelInput
-                              className="inputstyle1"
-                              type="text"
-                              name="Name"
-                              id="First Name"
-                              label="First Name"
-                              placeholder=""
-                            />
+                    <section className="appWrapper py-4">
+                      <div className="container">
+                        <h3 className="py-md-4 py-2 title-3 title-dark text-center">
+                          Application Form
+                        </h3>
+                        <div className="row mx-auto d-flex justify-content-center">
+                          <div className="col-md-6 col-12">
+                            <form
+                              id="jobApplication"
+                              className="app-form needs-validation"
+                              noValidate
+                            >
+                              <div className="row d-flex justify-content-center">
+                                <div className="col-md-6 col-12">
+                                  <div className="form-group ">
+                                    <label htmlFor="firstname">
+                                      First Name
+                                      <span>*</span>
+                                    </label>
+                                    <input
+                                      type="text"
+                                      className="form-control py-md-4 py-3"
+                                      name="firstname"
+                                      id="firstname"
+                                      pattern="[a-zA-Z\s]{2,30}"
+                                      placeholder="Enter your name"
+                                      autoComplete="off"
+                                      required
+                                    />
+                                    <div className="invalid-feedback">
+                                      Please enter firstname
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="col-md-6 col-12">
+                                  <div className="form-group">
+                                    <label htmlFor="lastname">
+                                      {" "}
+                                      Last Name
+                                      <span>*</span>
+                                    </label>
+                                    <input
+                                      type="text"
+                                      className="form-control py-md-4 py-3"
+                                      name="lastname"
+                                      pattern="[a-zA-Z\s]{2,30}"
+                                      id="lastname"
+                                      placeholder="Enter your last name"
+                                      autoComplete="off"
+                                      required
+                                    />
+                                    <div className="invalid-feedback">
+                                      Please enter your lastname
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="col-12">
+                                  <div className="form-group">
+                                    <label htmlFor="email">
+                                      {" "}
+                                      Email-ID
+                                      <span>*</span>
+                                    </label>
+                                    <input
+                                      type="email"
+                                      className="form-control py-md-4 py-3"
+                                      name="email"
+                                      autoComplete="off"
+                                      placeholder="Enter your email-ID"
+                                      id="email"
+                                      pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                                      required
+                                    />
+
+                                    <div className="invalid-feedback">
+                                      Please enter a valid email
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="col-12">
+                                  <div className="form-group">
+                                    <label>
+                                      {" "}
+                                      Contact Number
+                                      <span>*</span>
+                                    </label>
+                                    <input
+                                      type="text"
+                                      className="form-control py-md-4 py-3"
+                                      name="phone"
+                                      id="jobPhone"
+                                      placeholder="Enter your contact number"
+                                      pattern="^[0-9]{3,12}$"
+                                      required
+                                    />
+                                    <div className="invalid-feedback">
+                                      Please enter your phone number
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="col-12">
+                                  <div className="form-group py-md-2 py-1">
+                                    <label htmlFor="resume">
+                                      Upload Resume
+                                      <span>*</span>
+                                    </label>
+
+                                    <input
+                                      type="file"
+                                      name="resume"
+                                      id="resume"
+                                      className="form-control-file"
+                                      aria-describedby="inputGroupFileAddon01"
+                                      accept=".doc,.docx,.pdf"
+                                      required
+                                    />
+                                    <div className="invalid-feedback">
+                                      Please upload your resume.
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="col-12">
+                                  <div className="form-group">
+                                    <label htmlFor="message">
+                                      Subject
+                                      <span>*</span>
+                                    </label>
+                                    <textarea
+                                      className="form-control"
+                                      name="message"
+                                      id="message"
+                                      placeholder="Your message here.."
+                                      required
+                                    />
+                                    <div className="invalid-feedback">
+                                      Please Write a message
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="col-12 order-md-1 order-sm-0 mx-auto d-flex justify-content-center">
+                                  <button
+                                    type="button"
+                                    className="button d-flex align-items-center btn-style my-4 req1"
+                                    onClick={this.handleFormClick}
+                                  >
+                                    Apply Now
+                                    <FontAwesomeIcon
+                                      icon="arrow-right"
+                                      className="btn-icon"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                            </form>
                           </div>
-                        </Col>
-                        <Col className="inputalign1">
-                          {/* <Username
-                            value={this.state.username}
-                            onChange={this.handlechange}
-                          /> */}
-                          <div className="row formrow">
-                            <FloatingLabelInput
-                              className="inputstyle1"
-                              type="text"
-                              name="Name"
-                              id="Last Name"
-                              label="Last Name"
-                              placeholder=""
-                            />
-                          </div>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col className="inputalign">
-                          <div className="row formrow">
-                            <FloatingLabelInput
-                              className="inputstyle1"
-                              type="text"
-                              name="Name"
-                              id="username"
-                              label="Email"
-                              placeholder=""
-                            />
-                          </div>
-                        </Col>
-                        <Col className="inputalign1">
-                          {/* <Username
-                            value={this.state.username}
-                            onChange={this.handlechange}
-                          /> */}
-                          <div className="row formrow">
-                            <FloatingLabelInput
-                              className="inputstyle1"
-                              type="text"
-                              name="Name"
-                              id="Phone"
-                              label="Phone"
-                              placeholder=""
-                            />
-                          </div>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col className="inputalign">
-                          <div className="row formrow">
-                            <FloatingLabelInput
-                              className="inputstyle1"
-                              type="text"
-                              name="Name"
-                              id="Resume"
-                              label="Resume"
-                              placeholder=""
-                            />
-                          </div>
-                        </Col>
-                        <Col className="inputalign1">
-                          {/* <Username
-                            value={this.state.username}
-                            onChange={this.handlechange}
-                          /> */}
-                          <div className="row formrow">
-                            <FloatingLabelInput
-                              className="inputstyle1"
-                              type="text"
-                              name="Name"
-                              id="Message"
-                              label="Message"
-                              placeholder=""
-                            />
-                          </div>
-                        </Col>
-                      </Row>
-                      <div className="btn-style mt-2">
-                        <button
-                          type="submit"
-                          className=" button sbtn d-flex align-items-center"
-                          id="contactBtn"
-                        >
-                          <span id="btnText" className="mr-3">
-                            Apply Now
-                          </span>
-                          <FontAwesomeIcon
-                            icon="arrow-right"
-                            className="btn-icon"
-                          />
-                        </button>
+                        </div>
                       </div>
-                    </form>
+                    </section>
                   </div>
                 </>
               ) : null}
