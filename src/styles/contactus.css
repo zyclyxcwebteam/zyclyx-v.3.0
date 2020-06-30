@@ -1,10 +1,7 @@
 .contact-icon {
   font-size: 1.5rem;
 }
-.formrow {
-  margin-top: 10px;
-  padding: 10px 0px;
-}
+
 .Formaddress {
   background: #f1f2f2;
   padding: 0px 0px 41px 0px;
@@ -15,6 +12,9 @@
 }
 .contact-title {
   color: #2db32d;
+}
+.contact-text {
+  margin: 0;
 }
 .icons {
   height: 60px;
@@ -33,21 +33,6 @@
   transition: all 0.2s ease-in; */
 }
 
-.inputstyle input {
-  width: 400px;
-  height: 35px;
-  border-radius: 6px;
-  padding: 20px;
-}
-.inputstyle label {
-  font-size: 17px;
-  padding: 7px;
-  margin-left: 10px;
-}
-.headstyle {
-  padding: 30px 0px;
-  color: #2a942a;
-}
 .bannerimage .row h1 {
   color: white;
 }
@@ -61,9 +46,21 @@
 }
 .form-close {
   position: absolute;
-  top: 0px;
+  top: 10px;
   right: 10px;
   font-size: 1.5rem;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 0 5px 1px #a0a0a0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2db32d;
+  border-radius: 0.5rem;
+}
+.form-close:hover {
+  background-color: #2db32d;
+  color: #ffffff;
 }
 .btn-style {
   display: flex;
@@ -142,7 +139,8 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
   .headstyle h4 {
     color: #2a942a;
-    font-size: 16px;
+    font-size: 1.2rem;
+    font-weight: 500;
   }
   .inputstyle input {
     width: 300px;
@@ -172,11 +170,16 @@
 }
 
 /* New Contact us page */
+.c-wrapper-left,
+.c-wrapper-right {
+  height: 70vh;
+  background: #f1f2f2;
+}
 
-.contact-info-wrapper,
-.google-map-wrapper {
-  height: 90vh;
-  border: 2px solid red;
+.c-info-title {
+  color: #2a942a;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .spacer {
   background: #f1f2f2;
@@ -184,7 +187,7 @@
 .form-control {
   border: none;
   color: #333333;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   border-radius: 0.5rem;
   padding: 1.8rem 0.8rem;
 }
@@ -221,18 +224,10 @@
   margin-left: 0.4rem;
   padding: 0 0.4rem;
 }
-.show-label {
-  background-image: linear-gradient(
-    to top,
-    #ffffff 50%,
-    transparent,
-    transparent,
-    transparent 100%
-  );
-  transform: translate(0, -50%) !important;
-  opacity: 1 !important;
-  color: #333333;
-  margin: 0;
-  margin-left: 0.4rem;
-  padding: 0 0.4rem;
+.required {
+  color: #ff0000;
+}
+
+.floating-label label {
+  color: #2db32d !important;
 }
