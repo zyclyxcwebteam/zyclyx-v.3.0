@@ -62,7 +62,8 @@
 .form-close {
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: 10px;
+  font-size: 1.5rem;
 }
 .btn-style {
   display: flex;
@@ -179,4 +180,59 @@
 }
 .spacer {
   background: #f1f2f2;
+}
+.form-control {
+  border: none;
+  color: #333333;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  padding: 1.8rem 0.8rem;
+}
+
+.floating-label {
+  position: relative !important;
+}
+
+.floating-label label {
+  left: 8px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.floating-label input:not(:placeholder-shown) {
+  border: 1px solid rgba(249, 249, 249, 0.5);
+}
+
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+  background-image: linear-gradient(
+    to top,
+    #ffffff 50%,
+    transparent,
+    transparent,
+    transparent 100%
+  );
+  transform: translate(0, -50%) !important;
+  opacity: 1 !important;
+  color: #333333;
+  margin: 0;
+  margin-left: 0.4rem;
+  padding: 0 0.4rem;
+}
+.show-label {
+  background-image: linear-gradient(
+    to top,
+    #ffffff 50%,
+    transparent,
+    transparent,
+    transparent 100%
+  );
+  transform: translate(0, -50%) !important;
+  opacity: 1 !important;
+  color: #333333;
+  margin: 0;
+  margin-left: 0.4rem;
+  padding: 0 0.4rem;
 }

@@ -1,12 +1,13 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from "react";
 import { Container } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../components/Layout/Layout";
-import Username from "../components/FormComponents/username";
-import Emailaddress from "../components/FormComponents/emailAddress";
-import PhoneNumber from "../components/FormComponents/phoneNumber";
-import Subject from "../components/FormComponents/Subject";
-import Messege from "../components/FormComponents/TextMessage";
+// import Username from "../components/FormComponents/username";
+// import Emailaddress from "../components/FormComponents/emailAddress";
+// import PhoneNumber from "../components/FormComponents/phoneNumber";
+// import Subject from "../components/FormComponents/Subject";
+// import Messege from "../components/FormComponents/TextMessage";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import ContactBanner from "../../static/images/contact.svg";
 import "../styles/contactus.css";
@@ -21,11 +22,6 @@ class contactus extends Component {
       phone: "",
       subject: "",
       message: "",
-      usernameerror: "",
-      emailerror: "",
-      phoneerror: "",
-      messegeerror: "",
-      Subjecterror: "",
     };
     this.handlechange = this.handlechange.bind(this);
     this.handlechange1 = this.handlechange1.bind(this);
@@ -80,13 +76,7 @@ class contactus extends Component {
       messegeerror ||
       Subjecterror
     ) {
-      this.setState({
-        emailerror,
-        usernameerror,
-        phoneerror,
-        messegeerror,
-        Subjecterror,
-      });
+      this.setState({});
       return false;
     }
     return true;
@@ -130,29 +120,12 @@ class contactus extends Component {
         email: "",
         message: "",
         subject: "",
-        usernameerror: "",
-        emailerror: "",
-        phoneerror: "",
-        messegeerror: "",
-        Subjecterror: "",
       });
     }
   }
 
   render() {
-    const {
-      showText,
-      username,
-      email,
-      phone,
-      message,
-      subject,
-      usernameerror,
-      emailerror,
-      phoneerror,
-      messegeerror,
-      Subjecterror,
-    } = this.state;
+    const { showText } = this.state;
 
     // const { google } = this.props;
 
@@ -259,67 +232,107 @@ class contactus extends Component {
                   >
                     <span id="btnText">
                       {" "}
-                      <FontAwesomeIcon icon="fa-times" />
+                      <FontAwesomeIcon icon="times" />
                     </span>
                   </button>
 
-                  <form onSubmit={this.handleSubmit}>
-                    <div className="main">
-                      <div>
-                        <Username
-                          value={username}
-                          onChange={this.handlechange}
-                        />
-                        {usernameerror ? (
-                          <div style={{ color: "red" }}>{usernameerror}</div>
-                        ) : null}
+                  <form
+                    id="contactForm"
+                    className="needs-validation"
+                    noValidate
+                  >
+                    <div className="row py-md-2 d-flex justify-content-center">
+                      <div className="col-md-7 col-12">
+                        <div className="form-group floating-label">
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="firstname"
+                            id="username"
+                            pattern="[a-zA-Z\s]{2,30}"
+                            maxLength="30"
+                            placeholder="Full Name"
+                            autoComplete="off"
+                            required
+                          />
+                          <label htmlFor="username">
+                            Full Name
+                            <span className="required">*</span>
+                          </label>
+                          <div className="invalid-feedback">
+                            Please enter valid name
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <Emailaddress
-                          value={email}
-                          onChange={this.handlechange1}
-                        />
-                        {emailerror ? (
-                          <div style={{ color: "red" }}>{emailerror}</div>
-                        ) : null}
+                      <div className="col-md-7 col-12">
+                        <div className="form-group floating-label">
+                          <input
+                            type="email"
+                            className="form-control"
+                            name="email"
+                            autoComplete="off"
+                            placeholder="Email"
+                            id="email"
+                            pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                            required
+                          />
+                          <label htmlFor="email">
+                            Email
+                            <span className="required">*</span>
+                          </label>
+                          <div className="invalid-feedback">
+                            Please enter valid email
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <PhoneNumber
-                          value={phone}
-                          onChange={this.handlechange2}
-                        />
-                        {phoneerror ? (
-                          <div style={{ color: "red" }}>{phoneerror}</div>
-                        ) : null}
+                      <div className="col-md-7 col-12">
+                        <div className="form-group floating-label">
+                          <input
+                            type="tel"
+                            className="form-control"
+                            name="phone"
+                            id="phone"
+                            pattern="^[0-9]{3,12}$"
+                            maxLength="16"
+                            autoComplete="off"
+                            required
+                            placeholder="Phone"
+                          />
+                          <label htmlFor="phone" id="phoneLabel">
+                            Phone
+                            <span className="required">*</span>
+                          </label>
+                          <div className="invalid-feedback" id="phoneInvalid">
+                            Please enter valid phone number
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <Subject
-                          value={subject}
-                          onChange={this.handlechange4}
-                        />
-                        {Subjecterror ? (
-                          <div style={{ color: "red" }}>{Subjecterror}</div>
-                        ) : null}
+                      <div className="col-md-7 col-12">
+                        <div className="form-group floating-label">
+                          <textarea
+                            className="form-control pt-3 pb-4"
+                            name="message"
+                            id="message"
+                            maxLength="300"
+                            placeholder="Message"
+                            required
+                          />
+                          <label htmlFor="message">
+                            Message
+                            <span className="required">*</span>
+                          </label>
+                          <div className="invalid-feedback">
+                            Please write a message
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <Messege
-                          value={message}
-                          onChange={this.handlechange3}
-                        />
-                        {messegeerror ? (
-                          <div style={{ color: "red" }}>{messegeerror}</div>
-                        ) : null}
-                      </div>
-                    </div>
-                    <div className="btn-style mt-2">
+                      <div className="col-12" />
                       <button
-                        type="submit"
-                        className=" button d-flex align-items-center"
-                        id="contactBtn"
+                        type="button"
+                        className="button d-flex align-items-center btn-style my-4 req1"
+                        onClick={this.handleFormClick}
                       >
-                        <span id="btnText" className="mr-3">
-                          Submit
-                        </span>
+                        Submit
                         <FontAwesomeIcon
                           icon="arrow-right"
                           className="btn-icon"
@@ -332,10 +345,6 @@ class contactus extends Component {
             </div>
 
             <div className=" col col-md-6 col-12 mapstyle p-0">
-              {/* <Map google={google} zoom={14}>
-                <Marker onClick={this.onMarkerClick} name="Current location" />
-              </Map> */}
-
               <div
                 style={{
                   textDecoration: "none",
