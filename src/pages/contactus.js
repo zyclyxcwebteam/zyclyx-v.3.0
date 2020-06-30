@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+// import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 import Layout from "../components/Layout/Layout";
 import Username from "../components/FormComponents/username";
 import Emailaddress from "../components/FormComponents/emailAddress";
@@ -155,7 +155,8 @@ class contactus extends Component {
       Subjecterror,
     } = this.state;
 
-    const { google } = this.props;
+    // const { google } = this.props;
+
     return (
       <Layout showBanner={false}>
         <HeroBanner
@@ -332,9 +333,39 @@ class contactus extends Component {
             </div>
 
             <div className=" col col-md-6 col-12 mapstyle p-0">
-              <Map google={google} zoom={14}>
+              {/* <Map google={google} zoom={14}>
                 <Marker onClick={this.onMarkerClick} name="Current location" />
-              </Map>
+              </Map> */}
+
+              <div
+                style={{
+                  textDecoration: "none",
+                  overflow: "hidden",
+                  maxWidth: "100%",
+                  width: "100%",
+                  height: "530px",
+                }}
+              >
+                <div
+                  id="mymap-display"
+                  style={{ height: "100%", width: "100%", maxWidth: "100%" }}
+                >
+                  <iframe
+                    style={{ height: "100%", width: "100%", border: 0 }}
+                    title="zyclyx"
+                    frameBorder="0"
+                    src="https://www.google.com/maps/embed/v1/place?q=zyclyx+&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                  />
+                </div>
+                <a
+                  className="googlemaps-code"
+                  rel="nofollow"
+                  href="https://www.embed-map.com"
+                  id="grabmap-authorization"
+                >
+                  https://www.embed-map.com
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -345,6 +376,8 @@ class contactus extends Component {
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyBLPVg4nj6V7yUtCkCDrt0OwG_CGIGSsHA",
-})(contactus);
+// export default GoogleApiWrapper({
+//   apiKey: "AIzaSyBLPVg4nj6V7yUtCkCDrt0OwG_CGIGSsHA",
+// })(contactus);
+
+export default contactus;
