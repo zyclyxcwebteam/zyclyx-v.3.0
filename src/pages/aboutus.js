@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import RotatingText from "react-rotating-text";
 import Layout from "../components/Layout/Layout";
-import HeroBanner from "../components/HeroBanner/HeroBanner";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import MissionImage from "../../static/images/mission.png";
 import VisionImage from "../../static/images/vision.png";
@@ -43,12 +43,39 @@ const aboutus = () => {
   const [showMission, setShowMission] = useState(true);
   return (
     <Layout showBanner>
-      <HeroBanner
-        title="A Fast-Growing Technology Leader"
-        image={AboutBanner}
-      />
+      <Container fluid className="hero-banner">
+        <Row className="h-100">
+          <Col
+            sm="12"
+            md="6"
+            className="title-box d-flex flex-column justify-content-center align-items-center"
+          >
+            <h2 className="banner-title">A Fast-Growing Technology Leader</h2>
+            <h2 className="text-white m-0 py-2">in</h2>
+            <h2 className="banner-title title-green">
+              <RotatingText
+                items={[
+                  "Artificial Intelligence",
+                  "Automation",
+                  "BigData",
+                  "Cyber Security",
+                  "Blockchain",
+                  "Internet of Things",
+                ]}
+              />
+            </h2>
+          </Col>
+          <Col
+            sm="12"
+            md="6"
+            className="img-box d-flex justify-content-center align-items-center"
+          >
+            <img src={AboutBanner} alt="zyclyx" />
+          </Col>
+        </Row>
+      </Container>
       <Container fluid className="py-5 overview-wrapper">
-        <Container className="py-5">
+        <Container className="py-4">
           <p>
             ZYCLYX is the world&apos;s leading automated IT solution provider
             with a diverse range of solutions aimed to enhance your operating

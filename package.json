@@ -40,6 +40,7 @@
     "react-intl-tel-input": "^8.0.2",
     "react-intl-tel-input-v2": "^1.0.8",
     "react-phone-number-input": "^3.0.22",
+    "react-rotating-text": "^1.4.1",
     "react-scrollmagic": "^2.2.0",
     "react-slick": "^0.26.1",
     "react-telephone-input": "^5.0.0",
