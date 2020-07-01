@@ -217,21 +217,21 @@ class jobDescription extends React.Component {
                             >
                               <div className="row d-flex justify-content-center">
                                 <div className="col-md-6 col-12">
-                                  <div className="form-group ">
-                                    <label htmlFor="firstname">
-                                      First Name
-                                      <span>*</span>
-                                    </label>
+                                  <div className="form-group floating-label">
                                     <input
                                       type="text"
                                       className="form-control py-md-4 py-3"
                                       name="firstname"
                                       id="firstname"
                                       pattern="[a-zA-Z\s]{2,30}"
-                                      placeholder="Enter your name"
+                                      placeholder="Firstname"
                                       autoComplete="off"
                                       required
                                     />
+                                    <label htmlFor="firstname">
+                                      First Name
+                                      <span>*</span>
+                                    </label>
                                     <div className="invalid-feedback">
                                       Please enter firstname
                                     </div>
@@ -239,22 +239,21 @@ class jobDescription extends React.Component {
                                 </div>
 
                                 <div className="col-md-6 col-12">
-                                  <div className="form-group">
-                                    <label htmlFor="lastname">
-                                      {" "}
-                                      Last Name
-                                      <span>*</span>
-                                    </label>
+                                  <div className="form-group floating-label">
                                     <input
                                       type="text"
                                       className="form-control py-md-4 py-3"
                                       name="lastname"
                                       pattern="[a-zA-Z\s]{2,30}"
                                       id="lastname"
-                                      placeholder="Enter your last name"
+                                      placeholder="Lastname"
                                       autoComplete="off"
                                       required
                                     />
+                                    <label htmlFor="lastname">
+                                      Last Name
+                                      <span>*</span>
+                                    </label>
                                     <div className="invalid-feedback">
                                       Please enter your lastname
                                     </div>
@@ -262,23 +261,21 @@ class jobDescription extends React.Component {
                                 </div>
 
                                 <div className="col-12">
-                                  <div className="form-group">
-                                    <label htmlFor="email">
-                                      {" "}
-                                      Email-ID
-                                      <span>*</span>
-                                    </label>
+                                  <div className="form-group floating-label">
                                     <input
                                       type="email"
                                       className="form-control py-md-4 py-3"
                                       name="email"
                                       autoComplete="off"
-                                      placeholder="Enter your email-ID"
+                                      placeholder="email"
                                       id="email"
                                       pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                                       required
                                     />
-
+                                    <label htmlFor="email">
+                                      Email-ID
+                                      <span>*</span>
+                                    </label>
                                     <div className="invalid-feedback">
                                       Please enter a valid email
                                     </div>
@@ -286,21 +283,20 @@ class jobDescription extends React.Component {
                                 </div>
 
                                 <div className="col-12">
-                                  <div className="form-group">
-                                    <label>
-                                      {" "}
-                                      Contact Number
-                                      <span>*</span>
-                                    </label>
+                                  <div className="form-group floating-label">
                                     <input
                                       type="text"
                                       className="form-control py-md-4 py-3"
                                       name="phone"
                                       id="jobPhone"
-                                      placeholder="Enter your contact number"
+                                      placeholder="Phone"
                                       pattern="^[0-9]{3,12}$"
                                       required
                                     />
+                                    <label>
+                                      Phone
+                                      <span>*</span>
+                                    </label>
                                     <div className="invalid-feedback">
                                       Please enter your phone number
                                     </div>
@@ -308,21 +304,21 @@ class jobDescription extends React.Component {
                                 </div>
 
                                 <div className="col-12">
-                                  <div className="form-group py-md-2 py-1">
-                                    <label htmlFor="resume">
-                                      Upload Resume
-                                      <span>*</span>
-                                    </label>
-
+                                  <div className="form-group py-md-2 py-1 floating-label">
                                     <input
                                       type="file"
                                       name="resume"
                                       id="resume"
+                                      placeholder="resume"
                                       className="form-control-file"
                                       aria-describedby="inputGroupFileAddon01"
                                       accept=".doc,.docx,.pdf"
                                       required
                                     />
+                                    <label htmlFor="resume">
+                                      Upload Resume
+                                      <span>*</span>
+                                    </label>
                                     <div className="invalid-feedback">
                                       Please upload your resume.
                                     </div>
@@ -330,18 +326,18 @@ class jobDescription extends React.Component {
                                 </div>
 
                                 <div className="col-12">
-                                  <div className="form-group">
-                                    <label htmlFor="message">
-                                      Subject
-                                      <span>*</span>
-                                    </label>
+                                  <div className="form-group floating-label">
                                     <textarea
                                       className="form-control"
                                       name="message"
                                       id="message"
-                                      placeholder="Your message here.."
+                                      placeholder="Message"
                                       required
                                     />
+                                    <label htmlFor="message">
+                                      Subject
+                                      <span>*</span>
+                                    </label>
                                     <div className="invalid-feedback">
                                       Please Write a message
                                     </div>
