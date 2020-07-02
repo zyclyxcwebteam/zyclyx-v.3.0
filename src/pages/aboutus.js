@@ -107,13 +107,13 @@ const aboutus = () => {
         </Container>
       </Container>
       {/* Mission and Vission */}
-      <Container fluid className="py-5 mission-outer">
+      <Container fluid className="mission-outer py-4">
         <Container className="py-5 mission-inner">
           <Row>
             <Col
               sm="12"
-              md="7"
-              className="d-flex align-items-center flex-column justify-content-center px-5"
+              md="8"
+              className="d-flex align-items-center flex-column px-5"
             >
               <h2 className="mission-title">
                 {showMission ? "Mission" : "Vision"}
@@ -150,7 +150,7 @@ const aboutus = () => {
                 </button>
               </div>
             </Col>
-            <Col sm="12" md="5" className="d-flex justify-content-center">
+            <Col sm="12" md="4" className="d-flex justify-content-center">
               <img
                 src={showMission ? MissionImage : VisionImage}
                 alt="mission"

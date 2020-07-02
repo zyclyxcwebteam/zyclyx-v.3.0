@@ -18,6 +18,10 @@
   transform: translateX(-50%);
   height: 400px;
 }
+.mission-links {
+  position: absolute;
+  bottom: 60px;
+}
 .mission-inner img {
   height: 400px;
 }
@@ -130,6 +134,9 @@
   outline: none;
   border: none;
   box-shadow: none;
+}
+.m-btn:focus {
+  outline: none;
 }
 /* .hero-banner img {
   min-width: 600px;
