@@ -28,9 +28,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* line-height: 2;
-  transition: all 0.2s ease-in; */
 }
 
 .bannerimage .row h1 {

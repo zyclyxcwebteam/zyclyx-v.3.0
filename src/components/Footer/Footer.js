@@ -24,7 +24,7 @@ const Footer = () => {
       </Container>
       <Container fluid className="pt-3">
         <Row>
-          <Col className="social-media px-0">
+          <Col sm="12" md="4" className="social-media px-0">
             <ul className="py-1">
               <li>
                 <a href="https://www.facebook.com/Zyclyx.IT" title="facebook">
@@ -51,12 +51,12 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col>
+          <Col sm="12" md="4">
             <p className="m-0 text-center">
               &copy;2018-2020 ZYCLYX. All rights reserved
             </p>
           </Col>
-          <Col className="privacy px-0">
+          <Col sm="12" md="4" className="privacy px-0">
             <ul className="py-1 ml-auto">
               <li>
                 <a href="/" title="Privacy">

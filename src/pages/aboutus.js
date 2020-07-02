@@ -7,6 +7,12 @@ import SectionTitle from "../components/SectionTitle/SectionTitle";
 import MissionImage from "../../static/images/mission.png";
 import VisionImage from "../../static/images/vision.png";
 import IconDeliver from "../../static/images/c-deliver.svg";
+import IconOwnership from "../../static/images/c-val-2.svg";
+import IconCommit from "../../static/images/c-val-3.svg";
+import IconBuild from "../../static/images/c-val-4.svg";
+import IconCreative from "../../static/images/c-val-5.svg";
+import IconCount from "../../static/images/c-val-6.svg";
+
 import AboutBanner from "../../static/images/about2.svg";
 import "../styles/aboutus.css";
 
@@ -50,8 +56,9 @@ const aboutus = () => {
             md="6"
             className="title-box d-flex flex-column justify-content-center align-items-center"
           >
-            <h2 className="banner-title">A Fast-Growing Technology Leader</h2>
-            <h2 className="text-white m-0 py-2">in</h2>
+            <h2 className="banner-title">
+              A Fast-Growing Technology Leader in
+            </h2>
             <h2 className="banner-title title-green">
               <RotatingText
                 items={[
@@ -167,13 +174,13 @@ const aboutus = () => {
               <CoreValueCard
                 title="Commit"
                 text="to evolve"
-                icon={IconDeliver}
+                icon={IconCommit}
                 left
               />
               <CoreValueCard
                 title="Embrace Creativity"
                 text="and innovation"
-                icon={IconDeliver}
+                icon={IconCreative}
                 left
               />
             </Col>
@@ -182,31 +189,24 @@ const aboutus = () => {
               className="d-flex justify-content-center align-items-center flex-column"
             >
               <h2 className="core-title">Core Values</h2>
-              <p className="core-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum efficitur orci vitae dapibus interdum. Curabitur quis
-                ipsum quis lorem cursus pretium. Etiam lobortis enim vel quam
-                placerat pellentesque. Vivamus in elementum felis. Suspendisse
-                rhoncus, arcu imperdiet
-              </p>
             </Col>
             <Col sm="4">
               <CoreValueCard
                 title="Take Ownership"
                 text="and drive change"
-                icon={IconDeliver}
+                icon={IconOwnership}
                 left={false}
               />
               <CoreValueCard
                 title="Build"
                 text="Positive Environment"
-                icon={IconDeliver}
+                icon={IconBuild}
                 left={false}
               />
               <CoreValueCard
                 title="Make it"
                 text="Count"
-                icon={IconDeliver}
+                icon={IconCount}
                 left={false}
               />
             </Col>
@@ -219,7 +219,7 @@ const aboutus = () => {
         <Row className="h-wrapper">
           <Col className="px-0 hw-card">
             <div className="h-card-content h-bottom">
-              <h4>STEP 1</h4>
+              <h4 className="text-center">STEP 1</h4>
               <p>
                 Strategize, document and decipher - goals, objectives,
                 information and financial forecasts for building the right
@@ -231,21 +231,19 @@ const aboutus = () => {
           <Col className="px-0 hw-card">
             <h3 className="h-title-green">EXECUTE</h3>
             <div className="h-card-content h-bottom">
-              <h4>STEP 2</h4>
+              <h4 className="text-center">STEP 2</h4>
               <p>
-                Strategize, document and decipher - goals, objectives,
-                information and financial forecasts for building the right
-                business plan.
+                Communicate, set goals, track, report, manage performance and
+                remunerate for the execution of a decision.
               </p>
             </div>
           </Col>
           <Col className="px-0 hw-card">
             <div className="h-card-content h-bottom">
-              <h4>STEP 3</h4>
+              <h4 className="text-center">STEP 3</h4>
               <p>
-                Strategize, document and decipher - goals, objectives,
-                information and financial forecasts for building the right
-                business plan.
+                Identification and elimination of discrepancie for improvement
+                of the organizations&apos;s process.
               </p>
             </div>
             <h3 className="h-title-dark">RECTIFY</h3>
@@ -253,21 +251,19 @@ const aboutus = () => {
           <Col className="px-0 hw-card">
             <h3 className="h-title-green">ANALYZE</h3>
             <div className="h-card-content h-bottom">
-              <h4>STEP 4</h4>
+              <h4 className="text-center">STEP 4</h4>
               <p>
-                Strategize, document and decipher - goals, objectives,
-                information and financial forecasts for building the right
-                business plan.
+                RECTIFY Interpret and comprehend the executed decision for
+                analysis of the collected data..
               </p>
             </div>
           </Col>
           <Col className="px-0 hw-card">
             <div className="h-card-content h-bottom">
-              <h4>STEP 5</h4>
+              <h4 className="text-center">STEP 5</h4>
               <p>
-                Strategize, document and decipher - goals, objectives,
-                information and financial forecasts for building the right
-                business plan.
+                After project completion, the client is called in to review the
+                final product awaiting their feedback on the same before launch.
               </p>
             </div>
             <h3 className="h-title-dark feedback">FEEDBACK</h3>
