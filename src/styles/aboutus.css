@@ -16,7 +16,7 @@
   top: -50px;
   left: 50%;
   transform: translateX(-50%);
-  height: 400px;
+  height: 425px;
 }
 .mission-links {
   position: absolute;
@@ -24,6 +24,8 @@
 }
 .mission-inner img {
   height: 400px;
+  padding: 10px;
+  background-color: #f9f9f9;
 }
 .mission-title {
   color: #00a14b;
@@ -137,6 +139,13 @@
 }
 .m-btn:focus {
   outline: none;
+}
+.m-img::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
 }
 /* .hero-banner img {
   min-width: 600px;

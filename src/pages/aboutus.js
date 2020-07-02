@@ -154,6 +154,7 @@ const aboutus = () => {
               <img
                 src={showMission ? MissionImage : VisionImage}
                 alt="mission"
+                className="m-img"
               />
             </Col>
           </Row>
