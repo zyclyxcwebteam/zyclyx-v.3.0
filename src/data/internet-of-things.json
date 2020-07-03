@@ -4,6 +4,8 @@
   "caption": "Transforming the world with smart connections",
   "overview": "IoT includes a sensor, electronics, or software linked to the internet that can be remotely accessed. Our team generates Uniques Identifiers (UIDs), which lets the devices communicate and thus allows them to move data over a network without human to human interaction. IoT systems provide us with the ability to be more effective with the way we do things, saving us time and resources. Smart devices/ appliances, smart cities, self-driving vehicles, farming and more are included.",
   "solTitle": "Stay ahead with smart solutions and new experiences",
+  "bannerImage": "./images/service-pages/iot.svg",
+  "solImage": "./images/service-pages/iot-sol.svg",
   "services": [
     {
       "title": "Performance & Maintenance solutions",

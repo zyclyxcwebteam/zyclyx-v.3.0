@@ -100,9 +100,9 @@ const Contact = () => {
                 </div>
               </Container>
             ) : (
-              <Container className="c-form-wrapper py-4">
+              <Container className="c-form-wrapper">
                 <div className="py-4">
-                  <h4 className="text-center c-info-title">
+                  <h4 className="text-center c-info-title mt-4 mb-0">
                     We are happy to assist
                     <br />
                     you with your queries

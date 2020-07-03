@@ -12,7 +12,6 @@ import {
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import CareerBanner from "../../static/images/careers.svg";
 import Layout from "../components/Layout/Layout";
-import SectionTitle from "../components/SectionTitle/SectionTitle";
 import Comejoin from "../../static/images/comejoin.svg";
 
 const JobCard = props => {
@@ -85,7 +84,9 @@ const careers = () => {
         <Container>
           <Row>
             <Col md="4" className="c-title-border">
-              <SectionTitle title="Come Join Us" />
+              <div className="py-5">
+                <h2 className="c-section-title">Come Join Us</h2>
+              </div>
               <div className="d-flex justify-content-center align-items-center">
                 <img src={Comejoin} alt="new age" className="mt-4 imgstyle" />
               </div>
@@ -180,7 +181,9 @@ const careers = () => {
 
       <Container fluid>
         <Container>
-          <SectionTitle title="Open Positions" />
+          <div className="py-5">
+            <h2 className="c-section-title">Open Positions</h2>
+          </div>
         </Container>
         <Container>
           <Row className="">

@@ -4,6 +4,8 @@
   "caption": "Providing advanced solutions to reach beyond basic protection",
   "overview": "Securing mobile endpoints (includes smartphones, tablets, and notebooks) has become a key requirement for most organizations. Our Mobile Endpoint Protection solutions provide comprehensive risk management across devices. The aim is to protect your data against applications, computers, and network-based threats while offering visibility and data leak control.",
   "solTitle": "Protects Endpoints on all your platforms",
+  "bannerImage": "../../static/images/service-pages/rpa.svg",
+  "solImage": "../../static/images/service-pages/rpa-sol.svg",
   "services": [
     {
       "title": "Endpoint Security",

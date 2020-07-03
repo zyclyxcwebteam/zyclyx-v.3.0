@@ -9,6 +9,22 @@
   font-weight: 600;
 }
 
+.c-section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.c-section-title::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 150px;
+  background-color: #fbbf12;
+  left: 2px;
+  bottom: -10px;
+}
+
 .join-us-wrapper {
   background: rgba(228, 230, 244, 0.1);
 }

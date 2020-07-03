@@ -4,6 +4,8 @@
   "caption": "Developing comprehensive Blockchain solutions for the world",
   "overview": "The technology functions as a digital ledger based on a P2P network that enables various users to have consistent transaction records, each of which is time-stamped and linked to the previous block. With every transaction collection added, the data becomes another link in the chain. It's favored because it's a write-once system, making any transaction a verifiable and auditable record. We propose that this be generated for Financial Services, Smart Land, Retails, etc.",
   "solTitle": "Adopt Blockchain and lead the way for a better tomorrow",
+  "bannerImage": "./images/service-pages/block-chain-sol.svg",
+  "solImage": "./images/service-pages/block-chain-sol.svg",
   "services": [
     {
       "title": "Tracking and Monitoring",

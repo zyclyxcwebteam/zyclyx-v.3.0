@@ -2,9 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
-// import RPABannerImage from "../images/rpa.svg";
-import RPABannerImage from "../../static/images/rpa.svg";
-// import SolutionImage from "../images/new-age.jpg";
+// import RPABannerImage from "../../static/images/rpa.svg";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import "../css/service.css";
 
@@ -20,10 +18,18 @@ const SolutionCard = ({ title, text }) => {
 const PageTemplate = props => {
   const { data } = props;
   const { dataJson } = data;
-  const { title, caption, overview, solTitle, services } = dataJson;
+  const {
+    title,
+    caption,
+    overview,
+    solTitle,
+    services,
+    bannerImage,
+    solImage,
+  } = dataJson;
   return (
     <Layout showBanner>
-      <HeroBanner title={title} image={RPABannerImage} />
+      <HeroBanner title={title} image={bannerImage} />
       {/* overview */}
       <Container fluid className="overview-wrapper py-5">
         <Container>
@@ -39,8 +45,12 @@ const PageTemplate = props => {
       {/* solutions cards */}
       <Container fluid className="solutions-wrapper py-5">
         <Row>
-          <Col sm="12" md="6" className="sol-image">
-            <img src={RPABannerImage} alt="new age" />
+          <Col
+            sm="12"
+            md="6"
+            className="sol-image d-flex justify-content-center align-items-center"
+          >
+            <img src={solImage} alt="new age" />
           </Col>
           <Col
             sm="12"
@@ -70,6 +80,8 @@ export const pageQuery = graphql`
       caption
       overview
       solTitle
+      bannerImage
+      solImage
       services {
         content
         title

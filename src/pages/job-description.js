@@ -217,7 +217,7 @@ class jobDescription extends React.Component {
                             >
                               <div className="row d-flex justify-content-center">
                                 <div className="col-md-6 col-12">
-                                  <div className="form-group floating-label">
+                                  <div className="form-group floating-label py-1">
                                     <input
                                       type="text"
                                       className="form-control py-md-4 py-3"
@@ -230,7 +230,7 @@ class jobDescription extends React.Component {
                                     />
                                     <label htmlFor="firstname">
                                       First Name
-                                      <span>*</span>
+                                      <span className="required">*</span>
                                     </label>
                                     <div className="invalid-feedback">
                                       Please enter firstname
@@ -239,7 +239,7 @@ class jobDescription extends React.Component {
                                 </div>
 
                                 <div className="col-md-6 col-12">
-                                  <div className="form-group floating-label">
+                                  <div className="form-group floating-label py-1">
                                     <input
                                       type="text"
                                       className="form-control py-md-4 py-3"
@@ -252,7 +252,7 @@ class jobDescription extends React.Component {
                                     />
                                     <label htmlFor="lastname">
                                       Last Name
-                                      <span>*</span>
+                                      <span className="required">*</span>
                                     </label>
                                     <div className="invalid-feedback">
                                       Please enter your lastname
@@ -261,7 +261,7 @@ class jobDescription extends React.Component {
                                 </div>
 
                                 <div className="col-12">
-                                  <div className="form-group floating-label">
+                                  <div className="form-group floating-label py-1">
                                     <input
                                       type="email"
                                       className="form-control py-md-4 py-3"
@@ -274,7 +274,7 @@ class jobDescription extends React.Component {
                                     />
                                     <label htmlFor="email">
                                       Email-ID
-                                      <span>*</span>
+                                      <span className="required">*</span>
                                     </label>
                                     <div className="invalid-feedback">
                                       Please enter a valid email
@@ -283,7 +283,7 @@ class jobDescription extends React.Component {
                                 </div>
 
                                 <div className="col-12">
-                                  <div className="form-group floating-label">
+                                  <div className="form-group floating-label py-1">
                                     <input
                                       type="text"
                                       className="form-control py-md-4 py-3"
@@ -295,7 +295,7 @@ class jobDescription extends React.Component {
                                     />
                                     <label>
                                       Phone
-                                      <span>*</span>
+                                      <span className="required">*</span>
                                     </label>
                                     <div className="invalid-feedback">
                                       Please enter your phone number
@@ -304,7 +304,14 @@ class jobDescription extends React.Component {
                                 </div>
 
                                 <div className="col-12">
-                                  <div className="form-group py-md-2 py-1 floating-label">
+                                  <div className="form-group py-md-2 py-1  py-5">
+                                    <label
+                                      htmlFor="resume"
+                                      className="resume-label"
+                                    >
+                                      Resume
+                                      <span className="required">*</span>
+                                    </label>
                                     <input
                                       type="file"
                                       name="resume"
@@ -315,10 +322,7 @@ class jobDescription extends React.Component {
                                       accept=".doc,.docx,.pdf"
                                       required
                                     />
-                                    <label htmlFor="resume">
-                                      Upload Resume
-                                      <span>*</span>
-                                    </label>
+
                                     <div className="invalid-feedback">
                                       Please upload your resume.
                                     </div>
@@ -326,7 +330,7 @@ class jobDescription extends React.Component {
                                 </div>
 
                                 <div className="col-12">
-                                  <div className="form-group floating-label">
+                                  <div className="form-group floating-label py-1">
                                     <textarea
                                       className="form-control"
                                       name="message"
@@ -336,7 +340,7 @@ class jobDescription extends React.Component {
                                     />
                                     <label htmlFor="message">
                                       Subject
-                                      <span>*</span>
+                                      <span className="required">*</span>
                                     </label>
                                     <div className="invalid-feedback">
                                       Please Write a message

@@ -151,9 +151,7 @@
     width: 30px;
     margin: 0 5px;
     text-align: center;
-
     color: #2db32d;
-
     background: #cce0d0;
     border-radius: 50%;
     display: flex;
@@ -224,7 +222,12 @@
 .required {
   color: #ff0000;
 }
-
 .floating-label label {
   color: #2db32d !important;
+}
+.form-control {
+  outline: none;
+}
+.form-control:focus {
+  box-shadow: none;
 }
