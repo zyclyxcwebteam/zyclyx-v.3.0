@@ -12,6 +12,13 @@
 }
 .banner-carousel .carousel-item {
   height: 90vh;
+  position: relative;
+}
+.home-banner-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .slide-1 {
   background-image: url("../../../static/images/home-banner/img-1.jpg");

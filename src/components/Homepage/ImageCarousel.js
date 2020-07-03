@@ -14,19 +14,19 @@ const ImageCarousel = () => {
     {
       src: image1,
       altText: "Slide 1",
-      caption: "Slide 1",
+      caption: "Rooted in knowledge built on trust",
       index: 1,
     },
     {
       src: image2,
       altText: "Slide 2",
-      caption: "Slide 2",
+      caption: "Taking technology forward with possibilities",
       index: 2,
     },
     {
       src: image3,
       altText: "Slide 3",
-      caption: "Slide 3",
+      caption: "Save time and money with business automation",
       index: 3,
     },
   ];
@@ -56,6 +56,7 @@ const ImageCarousel = () => {
         key={item.index}
         className={`slide-${item.index}`}
       >
+        <h1 className="home-banner-title">{item.caption}</h1>
         {/* <img src={item.src} alt={item.altText} className="banner-img" /> */}
       </CarouselItem>
     );
