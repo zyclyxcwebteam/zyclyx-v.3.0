@@ -4,8 +4,8 @@
   "caption": "Powered by Talent, Driven by User Experience",
   "overview": "The mobile application development process that we follow involves developing installable packages of software (code, plugins, properties, etc.), integrating backend services such as data access with an API, and testing the app on target devices. For instance, these applications can cater to various verticals, Finance, Travel, Social Networking, Hospitality, eCommerce, Foodservice, Entertainment and media industries, etc.",
   "solTitle": "We do more than develop. We craft amazing app experiences.",
-  "bannerImage": "../../static/images/service-pages/rpa.svg",
-  "solImage": "../../static/images/service-pages/rpa-sol.svg",
+  "bannerImage": ".images/service-pages/mobile.svg",
+  "solImage": "./images/service-pages/mobile.svg",
   "services": [
     {
       "title": "Native Applications:",
