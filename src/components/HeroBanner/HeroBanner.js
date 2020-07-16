@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "./HeroBanner.css";
 
-const HeroBanner = ({ title, image }) => {
+const HeroBanner = ({ title, imageClass }) => {
   return (
     <Container fluid className="hero-banner">
       <Row className="h-100">
@@ -16,9 +16,9 @@ const HeroBanner = ({ title, image }) => {
         <Col
           sm="12"
           md="6"
-          className="img-box d-flex justify-content-center align-items-center"
+          className="img-box d-flex justify-content-center align-items-center  p-3"
         >
-          <img src={image} alt={title} />
+          <div className={`banner-img ${imageClass}`} />
         </Col>
       </Row>
     </Container>

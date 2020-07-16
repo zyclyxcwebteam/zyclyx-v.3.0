@@ -1,11 +1,11 @@
 {
-  "title": "Blockchain",
-  "path": "blockchain",
+  "title": "Digital Marketing",
+  "path": "/digital-marketing",
   "caption": "Focused, bold ideas, executed for an evolving world",
   "overview": "In modern times, finding a connection with your target customers requires a right campaign. By implementing a digital marketing plan that can attract your audience on new-age platforms, we help you do just that. Our expert team focuses on increasing marketing efforts across digital platforms, such as search engines, social media, email campaigns, Google advertising, etc.",
   "solTitle": "Maximize your online exposure in the era of digitization",
-  "bannerImage": "./images/service-pages/digital-marketing.svg",
-  "solImage": "./images/service-pages/digital-marketing-sol.svg",
+  "bannerImage": "digital",
+  "solImage": "digital-sol",
   "services": [
     {
       "title": "Google Ads and Analytics",

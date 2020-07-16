@@ -29,7 +29,7 @@ const PageTemplate = props => {
   } = dataJson;
   return (
     <Layout showBanner>
-      <HeroBanner title={title} image={bannerImage} />
+      <HeroBanner title={title} imageClass={bannerImage} />
       {/* overview */}
       <Container fluid className="overview-wrapper py-5">
         <Container>
@@ -44,14 +44,12 @@ const PageTemplate = props => {
       </Container>
       {/* solutions cards */}
       <Container fluid className="solutions-wrapper py-5">
-        <Row>
+        <Row className="pl-5">
           <Col
             sm="12"
             md="6"
-            className="sol-image d-flex justify-content-center align-items-center"
-          >
-            <img src={solImage} alt="new age" />
-          </Col>
+            className={`d-flex justify-content-center align-items-center sol-img ${solImage}`}
+          />
           <Col
             sm="12"
             md="6"

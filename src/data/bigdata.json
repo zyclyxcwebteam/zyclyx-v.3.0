@@ -4,8 +4,8 @@
   "caption": "Delivering valuable insights to optimize operations",
   "overview": "It contains different categories of large and diverse sets of data which are classified as structured, semi-structured and unstructured respectively. Our team uses various sources to extract this data that may be of varying size like terabytes to zettabytes. The solutions are designed to not just fetch more data but to provide valuable insights through its analysis. Thus leading to improved strategic plans and decision making for your businesses. This can be used in different industries like Banking, Advertising, Media Planning and more.",
   "solTitle": "Converting raw data into actionable insights",
-  "bannerImage": "./images/service-pages/big-data.svg",
-  "solImage": "./images/service-pages/big-data-sol.svg",
+  "bannerImage": "bigdata",
+  "solImage": "bigdata-sol",
   "services": [
     {
       "title": "Analytics",

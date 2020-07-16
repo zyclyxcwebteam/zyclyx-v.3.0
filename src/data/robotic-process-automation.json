@@ -4,8 +4,8 @@
   "caption": "Automate your repetitive tasks to unleash the real growth potential",
   "overview": "Robotic Process Automation automates repetitive human tasks by developing an interface with current IT systems without any complex integrations. We assist you to minimize operating costs and optimize performance by innovating, inventing and automating high-quality business processes. This can be implemented across various verticals, such as Banking, Telecom, Customer Services, HR, Sales & Marketing and so.",
   "solTitle": "Automate processes for Better Efficiency & Reduced Cost",
-  "bannerImage": "./images/service-pages/rpa.svg",
-  "solImage": "./images/service-pages/rpa-sol.svg",
+  "bannerImage": "rpa",
+  "solImage": "rpa-sol",
   "services": [
     {
       "title": "Personalized Solutions",
