@@ -19,6 +19,8 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3rem;
 }
 .slide-1 {
   background-image: url("../../../static/images/home-banner/img-1.jpg");
