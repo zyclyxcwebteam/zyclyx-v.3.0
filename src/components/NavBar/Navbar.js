@@ -42,7 +42,7 @@ const Example = () => {
               <DropdownToggle nav caret>
                 Services
               </DropdownToggle>
-              <DropdownMenu className="w-100 py-3 px-5 mt-0 service-dropdown">
+              <DropdownMenu className="w-100 py-1 py-md-3 px-2 px-md-5 mt-0 service-dropdown">
                 <Row>
                   <Col sm="12" md="3" className="service-menu">
                     <h4 className="menu-title">New Age Technologies</h4>

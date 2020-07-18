@@ -7,7 +7,7 @@ const IndContent = [
   {
     title: "Industry Expertise",
     text:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "With our handy services related to banking and financial software, we provide complete solutions for business that aspire to increase the level of operational efficiency. Our solutions for banking and financial include Artificial Intelligence, Internet of Things, Blockchain, AR/VR and Bigdata Analytics applications",
   },
   {
     title: "Banking Industry",
@@ -39,7 +39,7 @@ const IndContent = [
 const IndustryCard = ({ title, cardImg, updateContent }) => {
   return (
     <div className={`i-card ${cardImg}`} onMouseEnter={updateContent}>
-      <h3 className="text-center card-title">{title}</h3>
+      <h3 className="text-center card-title d-md-block d-none">{title}</h3>
     </div>
   );
 };
@@ -72,8 +72,8 @@ const Industries = () => {
 
       {/* Industry Cards */}
       <Container className="ind-cards">
-        <Row>
-          <Col>
+        <Row className="justify-content-around">
+          <Col className="col-2">
             {/* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events */}
             <IndustryCard
               title="Banking"
@@ -81,28 +81,28 @@ const Industries = () => {
               updateContent={() => UpdateIndContent(1)}
             />
           </Col>
-          <Col>
+          <Col className="col-2">
             <IndustryCard
               title="Telecom"
               cardImg="t-card"
               updateContent={() => UpdateIndContent(2)}
             />
           </Col>
-          <Col>
+          <Col className="col-2">
             <IndustryCard
               title="Retail"
               cardImg="r-card"
               updateContent={() => UpdateIndContent(3)}
             />
           </Col>
-          <Col>
+          <Col className="col-2">
             <IndustryCard
               title="Healthcare"
               cardImg="h-card"
               updateContent={() => UpdateIndContent(4)}
             />
           </Col>
-          <Col>
+          <Col className="col-2">
             <IndustryCard
               title="Logistics"
               cardImg="l-card"

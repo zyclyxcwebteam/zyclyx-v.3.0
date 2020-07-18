@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
@@ -48,24 +49,30 @@ export default () => {
           </Container>
         </Container>
         <OurServices />
-        {/* Company stats */}
+
         <Industries />
-        <Container fluid className="stats-wrapper py-5">
-          <Container className="py-5">
+        <Container fluid className="stats-wrapper py-2 py-md-5">
+          <Container className=" py-2 py-md-5">
             <Row>
-              <Col>
-                <div>
+              <Col sm={12} md={4}>
+                <div className="d-flex justify-content-center flex-column align-items-center">
                   <h3 className="stat-title text-center">20+</h3>
                   <p className="stat-caption text-center">Clients Served</p>
                 </div>
               </Col>
-              <Col>
-                <h3 className="stat-title text-center">40+</h3>
-                <p className="stat-caption text-center">Projects Delivered</p>
+              <Col sm={12} md={4}>
+                <div className="d-flex justify-content-center flex-column align-items-center">
+                  <h3 className="stat-title text-center">40+</h3>
+                  <p className="stat-caption text-center">Projects Delivered</p>
+                </div>
               </Col>
-              <Col>
-                <h3 className="stat-title text-center">350+</h3>
-                <p className="stat-caption text-center">Processess Automated</p>
+              <Col sm={3} md={4}>
+                <div className="d-flex justify-content-center flex-column align-items-center">
+                  <h3 className="stat-title text-center">350+</h3>
+                  <p className="stat-caption text-center">
+                    Processess Automated
+                  </p>
+                </div>
               </Col>
             </Row>
           </Container>
@@ -73,12 +80,12 @@ export default () => {
         {/* Proof of Concept */}
         <Container fluid className="py-5 poc-wrapper">
           <Container>
-            <h2 className="text-center poc-title">
+            <h2 className="text-md-center text-left poc-title">
               Fostering your trust in us with
               <br />
               <span className="poc-title-bg">Free Proof of Concept</span>
             </h2>
-            <p className="text-center py-4">
+            <p className="text-justify py-md-4 py-2">
               We believe in developing a trusting partnership with our clients
               by offering free proof of concept as part of our value added
               services. With this we demonstrate our work potential by creating

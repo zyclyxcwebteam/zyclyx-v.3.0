@@ -4,7 +4,6 @@ import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
-import ContactBanner from "../../static/images/contact.svg";
 import "../styles/contactus.css";
 
 const Contact = () => {
@@ -14,7 +13,7 @@ const Contact = () => {
     <Layout showBanner={false}>
       <HeroBanner
         title="We are happy to assist you with your queries"
-        image={ContactBanner}
+        imageClass="contact"
       />
 
       <Container fluid>
@@ -236,7 +235,7 @@ const Contact = () => {
                 overflow: "hidden",
                 maxWidth: "100%",
                 width: "100%",
-                height: "70vh",
+                height: "80vh",
               }}
             >
               <div

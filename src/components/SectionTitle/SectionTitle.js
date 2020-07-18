@@ -3,7 +3,7 @@ import "./SectionTitle.css";
 
 const SectionTitle = ({ title, color }) => {
   return (
-    <div className="py-5">
+    <div className="py-md-5 py-2">
       <h2 className={`section-title ${color}`}>{title}</h2>
     </div>
   );

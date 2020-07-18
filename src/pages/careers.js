@@ -10,14 +10,18 @@ import {
   faUserAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
-import CareerBanner from "../../static/images/careers.svg";
 import Layout from "../components/Layout/Layout";
 import Comejoin from "../../static/images/comejoin.svg";
 
 const JobCard = props => {
   const { active, title, location, id } = props;
   return (
-    <Col md="6" sm="12" className={`py-4 job-card ${active && "active"}`}>
+    <Col
+      md="6"
+      sm="12"
+      className={`py-4 job-card ${active && "active"}`}
+      key={id}
+    >
       <h2 className="text-center job-title">{title}</h2>
       <h5 className="text-center job-location">{location}</h5>
       <div className="job-info d-flex justify-content-center py-3">
@@ -69,8 +73,8 @@ const careers = () => {
 
   return (
     <Layout showBanner>
-      <HeroBanner title="Build your future with us" image={CareerBanner} />
-      <Container fluid className="c-overview-wrapper py-5">
+      <HeroBanner title="Build your future with us" imageClass="career" />
+      <Container fluid className="c-overview-wrapper py-3 py-md-5">
         <Container>
           <h3 className="c-overview-text mb-0">
             If you have a desire to excel, we have the potential to help you
@@ -80,11 +84,11 @@ const careers = () => {
         </Container>
       </Container>
 
-      <Container fluid className="join-us-wrapper py-5">
+      <Container fluid className="join-us-wrapper py-md-5 py-3">
         <Container>
           <Row>
             <Col md="4" className="c-title-border">
-              <div className="py-5">
+              <div className="py-md-5 py-3">
                 <h2 className="c-section-title">Come Join Us</h2>
               </div>
               <div className="d-flex justify-content-center align-items-center">
@@ -92,7 +96,8 @@ const careers = () => {
               </div>
             </Col>
             <Col
-              md="8"
+              md={8}
+              sm={12}
               className="d-flex justify-content-center align-items-center"
             >
               <ul className="join-us-points">
@@ -193,6 +198,7 @@ const careers = () => {
                   title={opening.title}
                   location={opening.location}
                   id={opening.id}
+                  key={opening.id}
                 />
               );
             })}

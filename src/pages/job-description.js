@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
-import JobBanner from "../../static/images/job-details.svg";
 
 import "../css/job-description.css";
 
@@ -49,7 +48,6 @@ class jobDescription extends React.Component {
     this.handleResClick = this.handleResClick.bind(this);
     this.handleFormClick = this.handleFormClick.bind(this);
     this.handlechange = this.handlechange.bind(this);
-
     this.closebtnClick = this.closebtnClick.bind(this);
   }
 
@@ -116,7 +114,7 @@ class jobDescription extends React.Component {
       <Layout showBanner>
         <HeroBanner
           title={jobData && this.state.jobData.title}
-          image={JobBanner}
+          imageClass="job-description"
         />
         <Container fluid>
           <Row className="d-flex job-container">
@@ -169,7 +167,7 @@ class jobDescription extends React.Component {
                 )}
               </div>
             </Col>
-            <Col md="9" className="job-content-wrapper pl-5">
+            <Col md="9" className="job-content-wrapper pl-md-5 pl-3">
               {showReq ? (
                 <>
                   <div className="py-4">

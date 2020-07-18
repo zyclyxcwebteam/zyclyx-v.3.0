@@ -31,14 +31,32 @@
 .banner-img,
 .sol-img {
   background-size: contain;
-  background-position: center center;
   background-repeat: no-repeat;
   height: 80vh;
+  background-position: center;
 }
+/* ==== Inner page banners ==== */
+.contact {
+  background-image: url("/images/contact.svg");
+}
+
+.career {
+  background-image: url("/images/careers.svg");
+}
+
+.job-description {
+  background-image: url("/images/job-details.svg");
+}
+
+.about {
+  background-image: url("/images/about2.svg");
+}
+/* ==== service details page banners ==== */
 
 /* 1. Robotic Process Automation */
 .rpa {
-  background-image: url("/images/service-pages/rpa.svg");
+  /* background-image: url("/images/service-pages/rpa.svg"); */
+  background-image: url("/images/service-pages/8.png");
 }
 .rpa-sol {
   background-image: url("/images/service-pages/rpa-sol.svg");
@@ -46,10 +64,12 @@
 
 /* 2. Artificial Intelligence */
 .ai {
-  background-image: url("/images/service-pages/ai.svg");
+  /* background-image: url("/images/service-pages/ai.svg"); */
+  background-image: url("/images/service-pages/16.png");
 }
 .ai-sol {
   background-image: url("/images/service-pages/ai-sol.svg");
+  background-image: url("/images/service-pages/15.png");
 }
 
 /* 3. Optical Character Recognition */
@@ -62,14 +82,16 @@
 
 /* 4. Blockchain */
 .blockchain {
-  background-image: url("/images/service-pages/blockchain.svg");
+  /* background-image: url("/images/service-pages/blockchain.svg"); */
+  background-image: url("/images/service-pages/17.png");
 }
 .blockchain-sol {
   background-image: url("/images/service-pages/block-chain-sol.svg");
 }
 /* 5. Internet of things */
 .iot {
-  background-image: url("/images/service-pages/iot.svg");
+  /* background-image: url("/images/service-pages/iot.svg"); */
+  background-image: url("/images/service-pages/7.png");
 }
 .iot-sol {
   background-image: url("/images/service-pages/iot-sol.svg");
@@ -83,21 +105,24 @@
 }
 /* 7. Network Security */
 .network {
-  background-image: url("/images/service-pages/network-sec.svg");
+  /* background-image: url("/images/service-pages/network-sec.svg"); */
+  background-image: url("/images/service-pages/10.png");
 }
 .network-sol {
   background-image: url("/images/service-pages/network-sol.jpg");
 }
 /* 8. Cyber Security */
 .cyber {
-  background-image: url("/images/service-pages/cyber-security.svg");
+  /* background-image: url("/images/service-pages/cyber-security.svg"); */
+  background-image: url("/images/service-pages/4.png");
 }
 .cyber-sol {
   background-image: url("/images/service-pages/cyber-security-sol.svg");
 }
 /* 9. application and data security */
 .data {
-  background-image: url("/images/service-pages/data-protection.svg");
+  /* background-image: url("/images/service-pages/data-protection.svg"); */
+  background-image: url("/images/service-pages/1.png");
 }
 .data-sol {
   background-image: url("/images/service-pages/app-security-sol.jpg");
@@ -105,21 +130,24 @@
 
 /* 10. governance and compliance */
 .compliance {
-  background-image: url("/images/service-pages/governance.svg");
+  /* background-image: url("/images/service-pages/governance.svg"); */
+  background-image: url("/images/service-pages/6.png");
 }
 .compliance-sol {
   background-image: url("/images/service-pages/compliance-sol.jpg");
 }
 /* 11. endpoint and mobile security */
 .endpoint {
-  background-image: url("/images/service-pages/end-point.svg");
+  /* background-image: url("/images/service-pages/end-point.svg"); */
+  background-image: url("/images/service-pages/2.png");
 }
 .endpoint-sol {
   background-image: url("/images/service-pages/end-point-sol.jpg");
 }
 /* 12. Identity and Access Management */
 .iam {
-  background-image: url("/images/service-pages/iam.svg");
+  /* background-image: url("/images/service-pages/iam.svg"); */
+  background-image: url("/images/service-pages/3.png");
 }
 .iam-sol {
   background-image: url("/images/service-pages/iam-sol.jpg");
@@ -129,11 +157,13 @@
   background-image: url("/images/service-pages/web.svg");
 }
 .software-sol {
-  background-image: url("/images/service-pages/software-development-sol.svg");
+  /* background-image: url("/images/service-pages/software-development-sol.svg"); */
+  background-image: url("/images/service-pages/14.png");
 }
 /* 14. Mobile app development */
 .mobile {
-  background-image: url("/images/service-pages/mobile.svg");
+  /* background-image: url("/images/service-pages/mobile.svg"); */
+  background-image: url("/images/service-pages/5.png");
 }
 .mobile-sol {
   background-image: url("/images/service-pages/mobile-sol.jpg");
@@ -150,12 +180,14 @@
   background-image: url("/images/service-pages/digital-marketing.svg");
 }
 .digital-sol {
-  background-image: url("/images/service-pages/digital-marketing-sol.svg");
+  /* background-image: url("/images/service-pages/digital-marketing-sol.svg"); */
+  background-image: url("/images/service-pages/20.jpg");
 }
 
 /* 17. Outsourcing */
 .outsource {
-  background-image: url("/images/service-pages/outsource.svg");
+  /* background-image: url("/images/service-pages/outsource.svg"); */
+  background-image: url("/images/service-pages/12.png");
 }
 .outsource-sol {
   background-image: url("/images/service-pages/outsource-sol.jpg");
@@ -171,7 +203,8 @@
 
 /* 19. System Infra */
 .infra {
-  background-image: url("/images/service-pages/infra.svg");
+  /* background-image: url("/images/service-pages/infra.svg"); */
+  background-image: url("/images/service-pages/18.png");
 }
 .infra-sol {
   background-image: url("/images/service-pages/infra-sol.jpg");
@@ -179,14 +212,16 @@
 
 /* 20. End user computing */
 .enduser {
-  background-image: url("/images/service-pages/end-user.svg");
+  /* background-image: url("/images/service-pages/end-user.svg"); */
+  background-image: url("/images/service-pages/11.png");
 }
 .enduser-sol {
   background-image: url("/images/service-pages/enduser-sol.jpg");
 }
 /* 21. Data Visualization */
 .datavis {
-  background-image: url("/images/service-pages/vis.svg");
+  /* background-image: url("/images/service-pages/vis.svg"); */
+  background-image: url("/images/service-pages/13.png");
 }
 .datavis-sol {
   background-image: url("/images/service-pages/vis2.svg");
@@ -194,8 +229,15 @@
 
 /* 22. Predictive Analysis */
 .predictive {
-  background-image: url("/images/service-pages/pa.svg");
+  /* background-image: url("/images/service-pages/pa.svg"); */
+  background-image: url("/images/service-pages/19.png");
 }
 .predictive-sol {
   background-image: url("/images/service-pages/pa-sol.jpg");
+}
+
+@media (max-width: 576px) {
+  .banner-img {
+    background-position: unset !important;
+  }
 }

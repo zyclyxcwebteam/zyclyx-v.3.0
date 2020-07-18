@@ -12,19 +12,17 @@ import IconCommit from "../../static/images/c-val-3.svg";
 import IconBuild from "../../static/images/c-val-4.svg";
 import IconCreative from "../../static/images/c-val-5.svg";
 import IconCount from "../../static/images/c-val-6.svg";
-
-import AboutBanner from "../../static/images/about2.svg";
 import "../styles/aboutus.css";
 
 // Core Values card
 const CoreValueCard = ({ title, text, icon, left }) => {
   return left ? (
     <Row className="c-card">
-      <Col sm="8" className="d-flex flex-column justify-content-center px-0">
+      <Col className="col-8 d-flex flex-column justify-content-center align-items-sm-center px-0">
         <h3 className="c-title text-right">{title}</h3>
         <p className="c-text text-right mb-0">{text}</p>
       </Col>
-      <Col sm="4" className="d-flex justify-content-center align-items-center">
+      <Col className="col-4 d-flex justify-content-center align-items-center">
         <div className="c-icon">
           <img src={icon} alt={title} />
         </div>
@@ -32,12 +30,12 @@ const CoreValueCard = ({ title, text, icon, left }) => {
     </Row>
   ) : (
     <Row className="c-card">
-      <Col sm="4" className="d-flex justify-content-center align-items-center">
+      <Col className="col-4 d-flex justify-content-center align-items-center">
         <div className="c-icon">
           <img src={icon} alt={title} />
         </div>
       </Col>
-      <Col sm="8" className="d-flex flex-column justify-content-center px-0">
+      <Col className="col-8 d-flex flex-column justify-content-center px-0">
         <h3 className="c-title text-left">{title}</h3>
         <p className="c-text mb-0 text-left">{text}</p>
       </Col>
@@ -77,12 +75,12 @@ const aboutus = () => {
             md="6"
             className="img-box d-flex justify-content-center align-items-center"
           >
-            <img src={AboutBanner} alt="zyclyx" />
+            <div className="banner-img about-banner" />
           </Col>
         </Row>
       </Container>
-      <Container fluid className="py-5 overview-wrapper">
-        <Container className="py-4">
+      <Container fluid className="py-md-5 py-3 overview-wrapper">
+        <Container className="py-md-4 py-2">
           <p>
             ZYCLYX is the world&apos;s leading automated IT solution provider
             with a diverse range of solutions aimed to enhance your operating
@@ -107,18 +105,18 @@ const aboutus = () => {
         </Container>
       </Container>
       {/* Mission and Vission */}
-      <Container fluid className="mission-outer py-4">
-        <Container className="py-5 mission-inner">
+      <Container fluid className="mission-outer py-md-4 py-2 px-md-3 px-0">
+        <Container className="py-md-5 py-3 mission-inner">
           <Row>
             <Col
               sm="12"
               md="8"
-              className="d-flex align-items-center flex-column px-5"
+              className="d-flex align-items-center flex-column px-md-5 px-2"
             >
               <h2 className="mission-title">
                 {showMission ? "Mission" : "Vision"}
               </h2>
-              <p className="px-5 py-3 text-center mission-text">
+              <p className="px-md-5 px-3 py-md-3 py-2 text-center mission-text">
                 {showMission
                   ? `To offer custom solutions to Clients using unique combination of
                 data science, amazing design philosophy, software engineering,
@@ -150,7 +148,11 @@ const aboutus = () => {
                 </button>
               </div>
             </Col>
-            <Col sm="12" md="4" className="d-flex justify-content-center">
+            <Col
+              sm="12"
+              md="4"
+              className="justify-content-center d-none d-md-flex"
+            >
               <img
                 src={showMission ? MissionImage : VisionImage}
                 alt="mission"
@@ -165,7 +167,7 @@ const aboutus = () => {
       <Container fluid className="py-3 core-values">
         <Container className="py-3">
           <Row>
-            <Col sm="4">
+            <Col sm={12} md={4} className="order-2 order-md-1 px-md-3 px-0">
               <CoreValueCard
                 title="Deliver"
                 text="amazing service"
@@ -186,12 +188,13 @@ const aboutus = () => {
               />
             </Col>
             <Col
-              sm="4"
-              className="d-flex justify-content-center align-items-center flex-column"
+              sm={12}
+              md={4}
+              className="d-flex justify-content-center align-items-center flex-column order-1 order-md-2"
             >
               <h2 className="core-title">Core Values</h2>
             </Col>
-            <Col sm="4">
+            <Col sm={12} md={4} className="order-3 px-md-3 px-0">
               <CoreValueCard
                 title="Take Ownership"
                 text="and drive change"
@@ -218,8 +221,8 @@ const aboutus = () => {
         <SectionTitle title="How we do it" />
 
         <Row className="h-wrapper">
-          <Col className="px-0 hw-card">
-            <div className="h-card-content h-bottom">
+          <Col className="px-0 hw-card col-12 col-md-2 d-flex flex-column">
+            <div className="h-card-content h-bottom order-2 order-md-1">
               <h4 className="text-center">STEP 1</h4>
               <p>
                 Strategize, document and decipher - goals, objectives,
@@ -227,10 +230,12 @@ const aboutus = () => {
                 business plan.
               </p>
             </div>
-            <h3 className="h-title-dark plan">PLAN</h3>
+            <h3 className="h-title-dark plan order-1 order-md-2 mb-0 mb-md-2">
+              PLAN
+            </h3>
           </Col>
-          <Col className="px-0 hw-card">
-            <h3 className="h-title-green">EXECUTE</h3>
+          <Col className="px-0 hw-card col-12 col-md-2 my-2 my-md-0">
+            <h3 className="h-title-green mb-0 mb-md-2">EXECUTE</h3>
             <div className="h-card-content h-bottom">
               <h4 className="text-center">STEP 2</h4>
               <p>
@@ -239,18 +244,20 @@ const aboutus = () => {
               </p>
             </div>
           </Col>
-          <Col className="px-0 hw-card">
-            <div className="h-card-content h-bottom">
+          <Col className="px-0 hw-card col-12 col-md-2 d-flex flex-column mb-2 mb-md-0">
+            <div className="h-card-content h-bottom order-2 order-md-1">
               <h4 className="text-center">STEP 3</h4>
               <p>
                 Identification and elimination of discrepancie for improvement
                 of the organizations&apos;s process.
               </p>
             </div>
-            <h3 className="h-title-dark">RECTIFY</h3>
+            <h3 className="h-title-dark mb-0 mb-md-2 order-1 order-md-2">
+              RECTIFY
+            </h3>
           </Col>
-          <Col className="px-0 hw-card">
-            <h3 className="h-title-green">ANALYZE</h3>
+          <Col className="px-0 hw-card col-12 col-md-2 mb-2 mb-md-0">
+            <h3 className="h-title-green mb-0 mb-md-2">ANALYZE</h3>
             <div className="h-card-content h-bottom">
               <h4 className="text-center">STEP 4</h4>
               <p>
@@ -259,15 +266,17 @@ const aboutus = () => {
               </p>
             </div>
           </Col>
-          <Col className="px-0 hw-card">
-            <div className="h-card-content h-bottom">
+          <Col className="px-0 hw-card col-12 col-md-2 d-flex flex-column">
+            <div className="h-card-content h-bottom order-2 order-md-1">
               <h4 className="text-center">STEP 5</h4>
               <p>
                 After project completion, the client is called in to review the
                 final product awaiting their feedback on the same before launch.
               </p>
             </div>
-            <h3 className="h-title-dark feedback">FEEDBACK</h3>
+            <h3 className="h-title-dark feedback mb-0 mb-md-2 order-1 order-md-2">
+              FEEDBACK
+            </h3>
           </Col>
         </Row>
       </Container>

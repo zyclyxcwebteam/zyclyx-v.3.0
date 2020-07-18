@@ -49,8 +49,17 @@
   text-decoration: none;
   font-weight: 500;
   color: #f0f1f9;
-  background: hsl(222, 50%, 20%);
+  background: rgb(25, 41, 77);
 }
 .button:focus {
   outline: none;
+}
+.contact-banner img {
+  max-width: 100%;
+}
+@media (max-width: 576px) {
+  .contact-b-title {
+    text-align: center;
+    font-size: 2rem;
+  }
 }

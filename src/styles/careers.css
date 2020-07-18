@@ -167,3 +167,14 @@
 .job-card:hover .button {
   background-color: #243867;
 }
+@media (max-width: 576px) {
+  .c-overview-text {
+    font-size: 1rem;
+  }
+  .join-us-points {
+    padding-left: 0;
+  }
+  .job-card {
+    margin: 0.5rem 0;
+  }
+}

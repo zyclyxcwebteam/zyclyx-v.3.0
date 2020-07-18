@@ -18,7 +18,7 @@ const Footer = () => {
           </li>
           <li>
             <FontAwesomeIcon icon="map-marker-alt" />
-            <a href="/">Zyclyx is here</a>
+            <a href="/">Visit us</a>
           </li>
         </ul>
       </Container>

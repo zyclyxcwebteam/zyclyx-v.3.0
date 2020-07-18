@@ -7,16 +7,26 @@ import MapImage from "../../../static/images/c-map.svg";
 
 const ContactBanner = () => {
   return (
-    <Container fluid className="contact-banner py-5">
+    <Container fluid className="contact-banner py-3 py-md-5">
       <Row>
-        <Col className="d-flex justify-content-center flex-column align-items-center">
-          <h2 className="contact-b-title py-2">Get in touch with us</h2>
-          <Link to="/contactus" className="button d-flex align-items-center">
-            Let&apos;s Connect
-            <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
-          </Link>
+        <Col
+          sm={12}
+          md={6}
+          className="d-flex justify-content-center flex-row flex-md-column align-items-center"
+        >
+          <div className="d-flex flex-column align-items-center">
+            <h2 className="contact-b-title py-2">Get in touch with us</h2>
+            <Link to="/contactus" className="button d-flex align-items-center">
+              Let&apos;s Connect
+              <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
+            </Link>
+          </div>
         </Col>
-        <Col className="d-flex justify-content-center">
+        <Col
+          sm={12}
+          md={6}
+          className="d-flex justify-content-center py-3 py-md-0"
+        >
           <img src={MapImage} alt="world map" />
         </Col>
       </Row>

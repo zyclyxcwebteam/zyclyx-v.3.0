@@ -38,3 +38,27 @@
   list-style-type: none;
   margin: 0.5rem;
 }
+
+@media (max-width: 576px) {
+  .navbar-nav {
+    align-items: flex-start;
+  }
+  .nav-item {
+    padding: 0.5rem;
+  }
+  .navbar-nav .position-static {
+    margin-left: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .navbar-nav .position-static .nav-link {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+}
+.navbar-toggler {
+  background-image: url("/images/menu.svg");
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+}

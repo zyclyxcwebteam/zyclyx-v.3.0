@@ -17,3 +17,8 @@
 .section-title.green {
   color: #00a14b;
 }
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}

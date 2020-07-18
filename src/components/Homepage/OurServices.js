@@ -88,18 +88,18 @@ const OurServices = () => {
       >
         <Row>
           {item.imgLeft && (
-            <Col className="service-img">
+            <Col md={6} sm={12} className="service-img d-md-block d-none">
               <img src={item.src} alt="new age" />
             </Col>
           )}
-          <Col className="p-5">
-            <div className="py-5">
+          <Col md={6} sm={12} className="p-1 p-md-5">
+            <div className="py-md-5 p-1">
               <h2 className="service-title text-center">
                 <span>{item.captionOne}</span>
                 <br />
                 {item.captionTwo}
               </h2>
-              <p className="px-5">{item.serviceText}</p>
+              <p className="px-md-5 px-2">{item.serviceText}</p>
               <p className="text-center">
                 <Link to={item.linkTo} className="text-center">
                   Read More
@@ -108,7 +108,7 @@ const OurServices = () => {
             </div>
           </Col>
           {!item.imgLeft && (
-            <Col className="service-img">
+            <Col sm={12} md={6} className="service-img d-md-block d-none">
               <img src={item.src} alt="new age" />
             </Col>
           )}

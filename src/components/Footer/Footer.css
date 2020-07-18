@@ -78,3 +78,44 @@
   transform: translateX(-50%);
   top: -40px;
 }
+
+@media (max-width: 576px) {
+  .footer {
+    padding-top: 0.2rem !important;
+  }
+  .footer-contact {
+    padding-top: 0.5rem !important;
+  }
+  .footer .contact-links {
+    flex-direction: column;
+    position: static;
+    transform: unset;
+    top: unset;
+    left: unset;
+  }
+  .footer .contact-links li {
+    margin-top: 0.8rem;
+  }
+  .footer .social-media ul {
+    border-radius: unset;
+    max-width: 100%;
+    justify-content: center;
+    margin: 0.8rem 0;
+  }
+  .footer .social-media ul li {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    font-size: 1.5rem;
+  }
+  .footer .privacy ul {
+    background-color: unset;
+    border-radius: unset;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto !important;
+  }
+  .footer .privacy ul li {
+    margin: 0 0.5rem;
+  }
+}

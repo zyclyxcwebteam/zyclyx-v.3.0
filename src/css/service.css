@@ -27,3 +27,19 @@
 .sol-image img {
   max-width: 750px;
 }
+
+@media (max-width: 576px) {
+  .overview-title {
+    font-size: 1.5rem;
+  }
+  .overview-wrapper p {
+    text-align: justify;
+    font-size: 1rem;
+  }
+  .solutions-title-text {
+    font-size: 1.5rem;
+  }
+  .sol-img {
+    height: 40vh;
+  }
+}

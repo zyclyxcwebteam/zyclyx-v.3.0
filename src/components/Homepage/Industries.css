@@ -92,3 +92,9 @@
   color: #ffffff;
   font-size: 1.2rem;
 }
+@media (max-width: 576px) {
+  .i-card {
+    height: 45px;
+    width: 45px;
+  }
+}

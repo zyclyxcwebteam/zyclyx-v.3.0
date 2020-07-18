@@ -1,3 +1,10 @@
+.about-banner {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 80vh;
+  background-position: center;
+  background-image: url("/images/about2.svg");
+}
 .overview-wrapper {
   background-color: #f8fbff;
 }
@@ -105,7 +112,7 @@
 }
 .h-card-content {
   position: absolute;
-  min-height: 204px;
+  min-height: 252px;
 }
 .h-top {
   bottom: 70px;
@@ -170,4 +177,47 @@
 }
 .title-green {
   color: #00a14b !important;
+}
+
+@media (max-width: 576px) {
+  .mission-inner {
+    position: static;
+    top: unset;
+    left: unset;
+    transform: unset;
+    height: 100%;
+  }
+  .mission-links {
+    position: static;
+  }
+  .mission-outer {
+    height: auto;
+  }
+  .mission-outer {
+    margin: 0.5rem 0;
+  }
+  .c-icon {
+    height: 60px;
+    width: 60px;
+    padding: 2.5rem;
+  }
+  .c-title {
+    font-size: 1.4rem;
+  }
+  .h-card-content {
+    position: static;
+  }
+  .hw-card {
+    position: static;
+  }
+  .h-wrapper {
+    height: auto;
+    padding-top: 1.5rem;
+  }
+  .h-title-dark.plan {
+    border-radius: unset;
+  }
+  .h-title-dark.feedback {
+    border-radius: unset;
+  }
 }
