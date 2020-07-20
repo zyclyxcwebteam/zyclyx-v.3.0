@@ -42,4 +42,7 @@
   .sol-img {
     height: 40vh;
   }
+  .sol-cards h3 {
+    font-size: 1.5rem;
+  }
 }

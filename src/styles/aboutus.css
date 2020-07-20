@@ -220,4 +220,8 @@
   .h-title-dark.feedback {
     border-radius: unset;
   }
+  .h-card-content {
+    height: 150px !important;
+    min-height: 150px;
+  }
 }

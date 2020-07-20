@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../components/Layout/Layout";
@@ -8,7 +9,19 @@ import "../styles/contactus.css";
 
 const Contact = () => {
   const [showContactInfo, setShowContactInfo] = useState(true);
+  const [success, setSuccess] = useState(false);
 
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = (data, event) => {
+    console.log(data);
+    setSuccess(true);
+    event.target.reset();
+  };
+
+  function resetForm() {
+    setShowContactInfo(true);
+    setSuccess(false);
+  }
   return (
     <Layout showBanner={false}>
       <HeroBanner
@@ -113,15 +126,24 @@ const Contact = () => {
                   className="btn form-close"
                   id="contactBtn"
                   onClick={() => {
-                    return setShowContactInfo(true);
+                    return resetForm();
                   }}
                 >
                   <span id="btnText">
                     <FontAwesomeIcon icon="times" />
                   </span>
                 </button>
-
-                <form id="contactForm" className="needs-validation" noValidate>
+                {success && (
+                  <div className="success-msg">
+                    <h4 className="text-center">
+                      Thank you for contacting us!
+                    </h4>
+                    <p className="text-center">
+                      We will get in touch with you soon
+                    </p>
+                  </div>
+                )}
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="row py-md-2 d-flex justify-content-center">
                     <div className="col-md-7 col-12">
                       <div className="form-group floating-label">
@@ -129,20 +151,16 @@ const Contact = () => {
                           type="text"
                           className="form-control"
                           name="firstname"
-                          id="username"
-                          pattern="[a-zA-Z\s]{2,30}"
-                          maxLength="30"
                           placeholder="Full Name"
-                          autoComplete="off"
-                          required
+                          ref={register({ required: true })}
                         />
+                        {errors.firstname && (
+                          <span className="err-msg">*Fullname is required</span>
+                        )}
                         <label htmlFor="username">
                           Full Name
                           <span className="required">*</span>
                         </label>
-                        <div className="invalid-feedback">
-                          Please enter valid name
-                        </div>
                       </div>
                     </div>
                     <div className="col-md-7 col-12">
@@ -153,17 +171,16 @@ const Contact = () => {
                           name="email"
                           autoComplete="off"
                           placeholder="Email"
-                          id="email"
                           pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-                          required
+                          ref={register({ required: true })}
                         />
+                        {errors.email && (
+                          <span className="err-msg">*Email is required</span>
+                        )}
                         <label htmlFor="email">
                           Email
                           <span className="required">*</span>
                         </label>
-                        <div className="invalid-feedback">
-                          Please enter valid email
-                        </div>
                       </div>
                     </div>
                     <div className="col-md-7 col-12">
@@ -172,20 +189,20 @@ const Contact = () => {
                           type="tel"
                           className="form-control"
                           name="phone"
-                          id="phone"
                           pattern="^[0-9]{3,12}$"
-                          maxLength="16"
                           autoComplete="off"
-                          required
                           placeholder="Phone"
+                          ref={register({ required: true, max: 16 })}
                         />
+                        {errors.phone && (
+                          <span className="err-msg">
+                            *Phone number is required
+                          </span>
+                        )}
                         <label htmlFor="phone" id="phoneLabel">
                           Phone
                           <span className="required">*</span>
                         </label>
-                        <div className="invalid-feedback" id="phoneInvalid">
-                          Please enter valid phone number
-                        </div>
                       </div>
                     </div>
                     <div className="col-md-7 col-12">
@@ -193,26 +210,26 @@ const Contact = () => {
                         <textarea
                           className="form-control pt-3 pb-4"
                           name="message"
-                          id="message"
-                          maxLength="300"
                           placeholder="Message"
-                          required
+                          ref={register({ required: true, max: 300 })}
                         />
+                        {errors.message && (
+                          <span className="err-msg">*Message is required</span>
+                        )}
                         <label htmlFor="message">
                           Message
                           <span className="required">*</span>
                         </label>
-                        <div className="invalid-feedback">
-                          Please write a message
-                        </div>
                       </div>
                     </div>
                     <div className="col-12" />
                     <button
-                      type="button"
-                      className="button d-flex align-items-center btn-style my-4 req1"
+                      type="submit"
+                      className="button d-flex align-items-center btn-style my-4"
                     >
-                      Send Message
+                      <span id="btnText" className="mr-3">
+                        Message Us
+                      </span>
                       <FontAwesomeIcon
                         icon="arrow-right"
                         className="btn-icon"

@@ -22,8 +22,6 @@
   margin: 0 5px;
   text-align: center;
   color: #2db32d;
-
-  background: #cce0d0;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -84,10 +82,7 @@
     width: 20px;
     margin: 0 5px;
     text-align: center;
-
     color: #2db32d;
-
-    background: #cce0d0;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -219,7 +214,8 @@
   margin-left: 0.4rem;
   padding: 0 0.4rem;
 }
-.required {
+.required,
+.err-msg {
   color: #ff0000;
 }
 .floating-label label {
@@ -231,7 +227,12 @@
 .form-control:focus {
   box-shadow: none;
 }
-
+.success-msg {
+  background-color: #2a942a;
+  padding: 0.2rem;
+  margin: 0.5rem 0;
+  color: #f1f2f2;
+}
 @media (max-width: 576px) {
   .c-info-title {
     font-size: 1.2rem;

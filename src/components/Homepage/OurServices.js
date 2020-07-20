@@ -28,7 +28,7 @@ const items = [
   {
     src: RPABG,
     serviceText:
-      "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
+      "Robotic Process Automation automates repetitive human tasks by developing an interface with current IT systems without any complex integrations. We assist you to minimize operating costs and optimize performance by innovating, inventing and automating high-quality business processes.",
     captionOne: "Improve business efficiency with",
     captionTwo: "Robotic Process Automation",
     imgLeft: false,
@@ -38,7 +38,7 @@ const items = [
   {
     src: OCRBG,
     serviceText:
-      "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
+      "The OCR technology converts virtually any kind of documents, such as scanned paper documents, PDF files, or images captured by a digital camera into machine-readable text data which is editable and searchable. It saves you a lot of time and effort when creating, processing, and repurposing various documents.",
     captionOne: "Adopt smart solutions with",
     captionTwo: "Optical Character Recognition",
     imgLeft: true,
@@ -48,7 +48,7 @@ const items = [
   {
     src: NetworkBG,
     serviceText:
-      "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
+      "When you have to work in a world of devious cybercriminals, it’s important to ensure that your network and data are safe. We at ZYCLYX use a combination of effective hardware and software solutions to protect you from multiple layers of intrusions and breaches.",
     captionOne: "Protect your Data with",
     captionTwo: "Network Security",
     imgLeft: false,
