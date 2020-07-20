@@ -77,13 +77,13 @@
   background-image: url("/images/service-pages/ocr.svg");
 }
 .ocr-sol {
-  background-image: url("/images/service-pages/ocr-sol.jpg");
+  background-image: url("/images/service-pages/ocr-sol.png");
 }
 
 /* 4. Blockchain */
 .blockchain {
   /* background-image: url("/images/service-pages/blockchain.svg"); */
-  background-image: url("/images/service-pages/17.png");
+  background-image: url("/images/service-pages/9.png");
 }
 .blockchain-sol {
   background-image: url("/images/service-pages/block-chain-sol.svg");
@@ -166,7 +166,7 @@
   background-image: url("/images/service-pages/5.png");
 }
 .mobile-sol {
-  background-image: url("/images/service-pages/mobile-sol.jpg");
+  background-image: url("/images/service-pages/mobile-sol.png");
 }
 /* 15. Web development */
 .web {

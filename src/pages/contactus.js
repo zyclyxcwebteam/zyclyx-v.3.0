@@ -13,7 +13,6 @@ const Contact = () => {
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
-    console.log(data);
     setSuccess(true);
     event.target.reset();
   };
