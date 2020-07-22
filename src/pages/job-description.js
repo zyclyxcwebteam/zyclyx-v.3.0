@@ -286,7 +286,7 @@ class jobDescription extends React.Component {
                                 </div>
 
                                 <div className="col-12">
-                                  <div className="form-group py-1  py-md-5">
+                                  <div className="form-group py-1  py-md-3">
                                     <label
                                       htmlFor="resume"
                                       className="resume-label"
