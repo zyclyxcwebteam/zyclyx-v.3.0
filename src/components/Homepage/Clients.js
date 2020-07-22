@@ -2,10 +2,11 @@ import React from "react";
 // import { useStaticQuery, graphql } from "gatsby";
 // import Img from "gatsby-image";
 import Slider from "react-slick";
-import albilad from "../../../static/images/clients/albilad.png";
-import alinma from "../../../static/images/clients/alinma.png";
-import bayancb from "../../../static/images/clients/bayancb.png";
-import elm from "../../../static/images/clients/elm.png";
+import albilad from "../../../static/images/clients/1.jpg";
+import alinma from "../../../static/images/clients/5.jpg";
+import bayancb from "../../../static/images/clients/3.jpg";
+import elm from "../../../static/images/clients/6.jpg";
+import stcs from "../../../static/images/clients/9.png";
 
 const settings = {
   dots: true,
@@ -57,6 +58,9 @@ const Clients = () => {
         </div>
         <div>
           <img src={elm} alt="" className="client" />
+        </div>
+        <div>
+          <img src={stcs} alt="" className="client" />
         </div>
       </Slider>
     </>

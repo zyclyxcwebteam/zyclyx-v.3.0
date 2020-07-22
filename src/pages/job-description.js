@@ -210,7 +210,7 @@ class jobDescription extends React.Component {
                           <div className="col-md-6 col-12">
                             <form
                               id="jobApplication"
-                              className="app-form needs-validation"
+                              className="app-form"
                               noValidate
                             >
                               <div className="row d-flex justify-content-center">
@@ -218,9 +218,8 @@ class jobDescription extends React.Component {
                                   <div className="form-group floating-label py-1">
                                     <input
                                       type="text"
-                                      className="form-control py-md-4 py-3"
+                                      className="form-control py-4"
                                       name="firstname"
-                                      id="firstname"
                                       pattern="[a-zA-Z\s]{2,30}"
                                       placeholder="Firstname"
                                       autoComplete="off"
@@ -230,9 +229,6 @@ class jobDescription extends React.Component {
                                       First Name
                                       <span className="required">*</span>
                                     </label>
-                                    <div className="invalid-feedback">
-                                      Please enter firstname
-                                    </div>
                                   </div>
                                 </div>
 
@@ -240,10 +236,9 @@ class jobDescription extends React.Component {
                                   <div className="form-group floating-label py-1">
                                     <input
                                       type="text"
-                                      className="form-control py-md-4 py-3"
+                                      className="form-control py-4"
                                       name="lastname"
                                       pattern="[a-zA-Z\s]{2,30}"
-                                      id="lastname"
                                       placeholder="Lastname"
                                       autoComplete="off"
                                       required
@@ -252,9 +247,6 @@ class jobDescription extends React.Component {
                                       Last Name
                                       <span className="required">*</span>
                                     </label>
-                                    <div className="invalid-feedback">
-                                      Please enter your lastname
-                                    </div>
                                   </div>
                                 </div>
 
@@ -262,11 +254,10 @@ class jobDescription extends React.Component {
                                   <div className="form-group floating-label py-1">
                                     <input
                                       type="email"
-                                      className="form-control py-md-4 py-3"
+                                      className="form-control py-4"
                                       name="email"
                                       autoComplete="off"
                                       placeholder="email"
-                                      id="email"
                                       pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                                       required
                                     />
@@ -274,9 +265,6 @@ class jobDescription extends React.Component {
                                       Email-ID
                                       <span className="required">*</span>
                                     </label>
-                                    <div className="invalid-feedback">
-                                      Please enter a valid email
-                                    </div>
                                   </div>
                                 </div>
 
@@ -284,9 +272,8 @@ class jobDescription extends React.Component {
                                   <div className="form-group floating-label py-1">
                                     <input
                                       type="text"
-                                      className="form-control py-md-4 py-3"
+                                      className="form-control py-4"
                                       name="phone"
-                                      id="jobPhone"
                                       placeholder="Phone"
                                       pattern="^[0-9]{3,12}$"
                                       required
@@ -295,14 +282,11 @@ class jobDescription extends React.Component {
                                       Phone
                                       <span className="required">*</span>
                                     </label>
-                                    <div className="invalid-feedback">
-                                      Please enter your phone number
-                                    </div>
                                   </div>
                                 </div>
 
                                 <div className="col-12">
-                                  <div className="form-group py-md-2 py-1  py-5">
+                                  <div className="form-group py-1  py-md-5">
                                     <label
                                       htmlFor="resume"
                                       className="resume-label"
@@ -340,9 +324,6 @@ class jobDescription extends React.Component {
                                       Subject
                                       <span className="required">*</span>
                                     </label>
-                                    <div className="invalid-feedback">
-                                      Please Write a message
-                                    </div>
                                   </div>
                                 </div>
 

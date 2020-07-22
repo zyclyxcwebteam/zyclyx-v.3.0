@@ -1,8 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import Blueprism from "../../../static/images/clients/blue.png";
-import UIpath from "../../../static/images/clients/uipath.png";
-import Automation from "../../../static/images/clients/automation.jpg";
+import Blueprism from "../../../static/images/clients/4.jpg";
+import UIpath from "../../../static/images/clients/7.jpg";
+import Automation from "../../../static/images/clients/2.jpg";
+import Microsoft from "../../../static/images/clients/8.png";
 
 const settings = {
   dots: true,
@@ -53,7 +54,7 @@ const Partners = () => {
           <img src={Automation} alt="" className="client" />
         </div>
         <div>
-          <img src={UIpath} alt="" className="client" />
+          <img src={Microsoft} alt="" className="client" />
         </div>
       </Slider>
     </>

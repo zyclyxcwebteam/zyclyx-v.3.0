@@ -92,14 +92,14 @@ const Industries = () => {
             <IndustryCard
               title="Retail"
               cardImg="r-card"
-              updateContent={() => UpdateIndContent(3)}
+              updateContent={() => UpdateIndContent(4)}
             />
           </Col>
           <Col className="col-2">
             <IndustryCard
               title="Healthcare"
               cardImg="h-card"
-              updateContent={() => UpdateIndContent(4)}
+              updateContent={() => UpdateIndContent(3)}
             />
           </Col>
           <Col className="col-2">

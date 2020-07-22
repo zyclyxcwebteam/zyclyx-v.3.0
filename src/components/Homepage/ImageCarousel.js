@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Carousel, CarouselItem, CarouselIndicators } from "reactstrap";
 import "./ImageCarousel.css";
-import image1 from "../../../static/images/home-banner/img-1.jpg";
-import image2 from "../../../static/images/home-banner/img-2.jpg";
-import image3 from "../../../static/images/home-banner/img-3.jpg";
 
 // data.allFile.edges.node.childImageSharp.fluid
 const ImageCarousel = () => {
@@ -12,21 +9,18 @@ const ImageCarousel = () => {
 
   const captions = [
     {
-      src: image1,
       altText: "Slide 1",
       caption1: "Rooted in knowledge",
       caption2: "built on trust",
       index: 1,
     },
     {
-      src: image2,
       altText: "Slide 2",
       caption1: "Taking technology forward",
       caption2: "with possibilities",
       index: 2,
     },
     {
-      src: image3,
       altText: "Slide 3",
       caption1: "Save time and money with",
       caption2: "business automation",

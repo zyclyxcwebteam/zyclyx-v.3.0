@@ -68,7 +68,6 @@
   background-image: url("/images/service-pages/16.png");
 }
 .ai-sol {
-  background-image: url("/images/service-pages/ai-sol.svg");
   background-image: url("/images/service-pages/15.png");
 }
 
@@ -83,7 +82,7 @@
 /* 4. Blockchain */
 .blockchain {
   /* background-image: url("/images/service-pages/blockchain.svg"); */
-  background-image: url("/images/service-pages/9.png");
+  background-image: url("/images/service-pages/blockchain.svg");
 }
 .blockchain-sol {
   background-image: url("/images/service-pages/block-chain-sol.svg");
@@ -170,7 +169,7 @@
 }
 /* 15. Web development */
 .web {
-  background-image: url("/images/service-pages/webdev.svg");
+  background-image: url("/images/service-pages/21.png");
 }
 .web-sol {
   background-image: url("/images/service-pages/software-development.svg");
@@ -195,7 +194,7 @@
 
 /* 18. Data Center */
 .datacenter {
-  background-image: url("/images/service-pages/data-center.svg");
+  background-image: url("/images/service-pages/22.png");
 }
 .datacenter-sol {
   background-image: url("/images/service-pages/data-center-sol.svg");
@@ -207,7 +206,7 @@
   background-image: url("/images/service-pages/18.png");
 }
 .infra-sol {
-  background-image: url("/images/service-pages/infra-sol.jpg");
+  background-image: url("/images/service-pages/infra-sol.png");
 }
 
 /* 20. End user computing */

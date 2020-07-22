@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import fetch from "isomorphic-fetch";
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../components/Layout/Layout";
@@ -13,8 +14,39 @@ const Contact = () => {
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
-    setSuccess(true);
     event.target.reset();
+    const payload = {
+      fullname: data.fullname,
+      email: data.email,
+      phone: data.phone,
+      date: new Date(),
+      message: data.message,
+      countryCode: "+91",
+      website: "zyclyx",
+    };
+
+    fetch("https://zyclyx-backend-api.herokuapp.com/business-enquiries", {
+      method: "post",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then(res => res.json())
+      .then(() => {
+        setSuccess(true);
+        fetch("https://zyclyx-email-sender.herokuapp.com/contact", {
+          method: "post",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        })
+          .then(res => {
+            return res.json();
+          })
+          .then(() => {});
+      });
   };
 
   function resetForm() {
@@ -149,7 +181,7 @@ const Contact = () => {
                         <input
                           type="text"
                           className="form-control"
-                          name="firstname"
+                          name="fullname"
                           placeholder="Full Name"
                           ref={register({ required: true })}
                         />

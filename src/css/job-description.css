@@ -99,7 +99,7 @@
 .floating-label textarea:not(:placeholder-shown) + label {
   background-image: linear-gradient(
     to top,
-    rgba(29, 51, 91, 0.02) 50%,
+    rgba(29, 51, 91, 0) 50%,
     transparent,
     transparent,
     transparent 100%

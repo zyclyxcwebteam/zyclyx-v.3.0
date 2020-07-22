@@ -61,15 +61,17 @@ const JobCard = props => {
 
 const careers = () => {
   const [openings, setOpenings] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     fetch("https://agile-plateau-09650.herokuapp.com/jobopenings")
       .then(response => {
         return response.json();
       })
       .then(jsonData => {
+        setLoading(false);
         setOpenings(jsonData);
       });
-  });
+  }, [openings]);
 
   return (
     <Layout showBanner>
@@ -191,18 +193,27 @@ const careers = () => {
           </div>
         </Container>
         <Container>
-          <Row className="">
-            {openings.map(opening => {
-              return (
-                <JobCard
-                  title={opening.title}
-                  location={opening.location}
-                  id={opening.id}
-                  key={opening.id}
-                />
-              );
-            })}
-          </Row>
+          {loading ? (
+            <div className="d-flex justify-content-center">
+              <div className="spinner-border text-success" role="status">
+                <span className="sr-only">Loading...</span>
+              </div>
+            </div>
+          ) : (
+            <Row className="">
+              {openings.length !== 0 &&
+                openings.map(opening => {
+                  return (
+                    <JobCard
+                      title={opening.title}
+                      location={opening.location}
+                      id={opening.id}
+                      key={opening.id}
+                    />
+                  );
+                })}
+            </Row>
+          )}
         </Container>
       </Container>
       {/* Spacer */}

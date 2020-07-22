@@ -177,4 +177,7 @@
   .job-card {
     margin: 0.5rem 0;
   }
+  .job-title {
+    font-size: 1.5rem;
+  }
 }
