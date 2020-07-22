@@ -31,44 +31,49 @@ class chatbot extends Component {
   }
 
   handleSubmit(event) {
-    this.setState({
-      loading: true,
-      messege: [...this.state.messege, { user: this.state.userinput, bot: "" }],
-    });
-
     event.preventDefault();
-    fetch("https://stark-crag-70246.herokuapp.com/session")
-      .then(session => {
-        return session.json();
-      })
-      .then(data => {
-        this.setState({ id: data.session });
-
-        fetch("https://stark-crag-70246.herokuapp.com/zyclyx", {
-          method: "post",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify({
-            text: this.state.userinput,
-            session_id: this.state.id,
-          }),
-        })
-          .then(response => {
-            return response.json();
-          })
-          .then(botReply => {
-            this.setState({
-              messege: [
-                ...this.state.messege,
-                { user: "", bot: botReply[0].text },
-              ],
-            });
-          })
-          .then(() => {
-            this.setState({ userinput: "", loading: false });
-          });
+    if (this.state.userinput !== "") {
+      this.setState({
+        loading: true,
+        messege: [
+          ...this.state.messege,
+          { user: this.state.userinput, bot: "" },
+        ],
       });
+
+      fetch("https://stark-crag-70246.herokuapp.com/session")
+        .then(session => {
+          return session.json();
+        })
+        .then(data => {
+          this.setState({ id: data.session });
+
+          fetch("https://stark-crag-70246.herokuapp.com/zyclyx", {
+            method: "post",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify({
+              text: this.state.userinput,
+              session_id: this.state.id,
+            }),
+          })
+            .then(response => {
+              return response.json();
+            })
+            .then(botReply => {
+              this.setState({
+                messege: [
+                  ...this.state.messege,
+                  { user: "", bot: botReply[0].text },
+                ],
+              });
+            })
+            .then(() => {
+              this.setState({ userinput: "", loading: false });
+            });
+        });
+    }
   }
 
   render() {
