@@ -15,11 +15,6 @@
 .form-close-btn:hover {
   background: #00a14b;
 }
-.svgicon {
-  color: #fbbf12;
-}
-
-/* new styles */
 
 .c-arrow-circle {
   height: 40px;
@@ -36,7 +31,7 @@
   font-size: 1rem;
 }
 .job-container {
-  background-color: rgba(29, 51, 91, 0.03);
+  background-color: hsl(119 39% 90% / 1);
 }
 .job-content-wrapper {
   background-color: #fff;

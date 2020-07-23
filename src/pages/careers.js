@@ -47,7 +47,7 @@ const JobCard = props => {
       </div>
       <p className="d-flex justify-content-center py-3 m-0">
         <Link
-          to="/job-description/"
+          to="/job-details/"
           state={{ id }}
           className="button d-flex align-items-center"
         >
