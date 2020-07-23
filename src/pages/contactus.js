@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import "../styles/contactus.css";
+import "../css/form-floating-label.css";
 
 const Contact = () => {
   const [showContactInfo, setShowContactInfo] = useState(true);
@@ -174,10 +175,13 @@ const Contact = () => {
                     </p>
                   </div>
                 )}
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  className="floating-label-form c-form"
+                >
                   <div className="row py-md-2 d-flex justify-content-center">
                     <div className="col-md-7 col-12">
-                      <div className="form-group floating-label">
+                      <div className="form-group floating-label py-1">
                         <input
                           type="text"
                           className="form-control"
@@ -195,7 +199,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="col-md-7 col-12">
-                      <div className="form-group floating-label">
+                      <div className="form-group floating-label py-1">
                         <input
                           type="email"
                           className="form-control"
@@ -215,7 +219,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="col-md-7 col-12">
-                      <div className="form-group floating-label">
+                      <div className="form-group floating-label py-1">
                         <input
                           type="tel"
                           className="form-control"
@@ -237,7 +241,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="col-md-7 col-12">
-                      <div className="form-group floating-label">
+                      <div className="form-group floating-label py-1">
                         <textarea
                           className="form-control pt-3 pb-4"
                           name="message"
