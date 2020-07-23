@@ -1,0 +1,65 @@
+.floating-label-form .form-control {
+  background-color: rgba(0, 161, 75, 0.1);
+  padding: 1.7rem 1rem;
+  border: 1px solid rgba(0, 161, 75, 0.5);
+}
+.floating-label-form input {
+  outline: none;
+}
+.floating-label-form input:focus {
+  outline: none;
+}
+/*  */
+
+.floating-label {
+  position: relative !important;
+}
+
+.floating-label label {
+  left: 8px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.floating-label input:not(:placeholder-shown),
+.floating-label textarea:not(:placeholder-shown) {
+  border: 1px solid #00a14b;
+}
+
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+  background-image: linear-gradient(
+    to top,
+    rgb(233 246 236) 34%,
+    #fff,
+    #fff,
+    #fff 100%
+  );
+  transform: translate(0, -35%) !important;
+  opacity: 1 !important;
+  color: #333333;
+  margin: 0;
+  margin-left: 0.4rem;
+  padding: 0 0.4rem;
+}
+.required {
+  color: #ff0000;
+}
+
+.floating-label label {
+  color: #2db32d !important;
+}
+
+.c-form .floating-label input:not(:placeholder-shown) + label,
+.c-form .floating-label textarea:not(:placeholder-shown) + label {
+  background-image: linear-gradient(
+    to top,
+    rgb(220 234 225) 34%,
+    #f1f2f2,
+    #f1f2f2,
+    #f1f2f2 100%
+  );
+  transform: translate(0, -50%) !important;
+}

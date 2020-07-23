@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
 import { Container, Row, Col } from "reactstrap";
 import fetch from "isomorphic-fetch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import "../css/job-description.css";
+import "../css/form-floating-label.css";
 
 // Job Requirement/Responsibility point
 
@@ -26,6 +26,8 @@ const Requirement = props => {
 const jobDescription = props => {
   const [jobDetails, setJobDetails] = useState(null);
   const [resumeFile, setResumeFile] = useState(null);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [submintForm, setSubmitForm] = useState(false);
   const [display, setDisplay] = useState({
     showReq: true,
     showRes: false,
@@ -51,12 +53,7 @@ const jobDescription = props => {
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
-    event.target.reset();
-    const notify = () => {
-      toast.success("Application submitted successfully !", {
-        position: toast.POSITION.TOP_CENTER,
-      });
-    };
+    setSubmitForm(true);
     const payload = {
       firstname: data.firstname,
       lastname: data.lastname,
@@ -75,10 +72,15 @@ const jobDescription = props => {
       body: JSON.stringify(payload),
     })
       .then(response => {
+        setShowSuccess(true);
+        setTimeout(() => {
+          setShowSuccess(false);
+        }, 4000);
+        setSubmitForm(false);
+        event.target.reset();
         return response.json();
       })
       .then(jsondata => {
-        notify();
         // upload file
         // eslint-disable-next-line no-undef
         const fileData = new FormData();
@@ -176,7 +178,6 @@ const jobDescription = props => {
           </Col>
 
           <Col md="9" className="job-content-wrapper pl-md-5 pl-3">
-            <ToastContainer autoClose={4000} />
             {display.showReq ? (
               <>
                 <div className="py-4">
@@ -203,7 +204,7 @@ const jobDescription = props => {
 
             {display.showForm ? (
               <>
-                <div className="app-form py-5">
+                <div className="z-form py-5">
                   <button
                     type="button"
                     className="form-close-btn"
@@ -226,13 +227,16 @@ const jobDescription = props => {
                       </h3>
                       <div className="row mx-auto d-flex justify-content-center">
                         <div className="col-xl-6 col-lg-10 col-md-8 col-12">
-                          <form onSubmit={handleSubmit(onSubmit)}>
+                          <form
+                            onSubmit={handleSubmit(onSubmit)}
+                            className="floating-label-form"
+                          >
                             <div className="row d-flex justify-content-center">
                               <div className="col-md-6 col-12">
                                 <div className="form-group floating-label py-1">
                                   <input
                                     type="text"
-                                    className="form-control py-4"
+                                    className="form-control"
                                     name="firstname"
                                     pattern="[a-zA-Z\s]{2,30}"
                                     placeholder="Firstname"
@@ -255,7 +259,7 @@ const jobDescription = props => {
                                 <div className="form-group floating-label py-1">
                                   <input
                                     type="text"
-                                    className="form-control py-4"
+                                    className="form-control"
                                     name="lastname"
                                     pattern="[a-zA-Z\s]{2,30}"
                                     placeholder="Lastname"
@@ -278,7 +282,7 @@ const jobDescription = props => {
                                 <div className="form-group floating-label py-1">
                                   <input
                                     type="email"
-                                    className="form-control py-4"
+                                    className="form-control"
                                     name="email"
                                     autoComplete="off"
                                     placeholder="email"
@@ -301,7 +305,7 @@ const jobDescription = props => {
                                 <div className="form-group floating-label py-1">
                                   <input
                                     type="text"
-                                    className="form-control py-4"
+                                    className="form-control"
                                     name="phone"
                                     placeholder="Phone"
                                     pattern="^[0-9]{3,12}$"
@@ -320,7 +324,7 @@ const jobDescription = props => {
                               </div>
 
                               <div className="col-12">
-                                <div className="form-group py-1  py-md-3">
+                                <div className="form-group py-1  py-md-2">
                                   <label
                                     htmlFor="resume"
                                     className="resume-label"
@@ -371,8 +375,24 @@ const jobDescription = props => {
                                 <button
                                   type="submit"
                                   className="button d-flex align-items-center btn-style my-4 req1"
+                                  disabled={submintForm}
                                 >
-                                  Apply Now
+                                  {submintForm ? (
+                                    <>
+                                      Loading
+                                      <div
+                                        className="spinner-border spinner-border-sm ml-3 text-warning"
+                                        role="status"
+                                      >
+                                        <span className="sr-only">
+                                          Loading...
+                                        </span>
+                                      </div>
+                                    </>
+                                  ) : (
+                                    "Apply Now"
+                                  )}
+
                                   <FontAwesomeIcon
                                     icon="arrow-right"
                                     className="btn-icon"
@@ -381,6 +401,12 @@ const jobDescription = props => {
                               </div>
                             </div>
                           </form>
+                          {showSuccess ? (
+                            <div className="success-wrapper py-2 my-2 d-flex flex-column align-items-center">
+                              <h3>Application received successfully</h3>
+                              <p> We will contact you with next steps</p>
+                            </div>
+                          ) : null}
                         </div>
                       </div>
                     </div>
