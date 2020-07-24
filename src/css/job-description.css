@@ -3,7 +3,7 @@
 }
 .form-close-btn {
   position: absolute;
-  right: -15px;
+  right: 0px;
   top: 10px;
   font-weight: 600;
   font-size: 1.2rem;
@@ -13,7 +13,8 @@
   padding: 10px 25px;
 }
 .form-close-btn:hover {
-  background: #00a14b;
+  background: rgba(0, 161, 75, 0.8);
+  color: #ff0000;
 }
 
 .c-arrow-circle {
