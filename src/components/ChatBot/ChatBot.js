@@ -10,9 +10,10 @@ import "./ChatBot.css";
 class chatbot extends Component {
   constructor(props) {
     super(props);
+    this.textInput = React.createRef();
     this.state = {
+      sessionID: null,
       messege: [],
-      id: "",
       userinput: "",
       showChat: false,
       loading: false,
@@ -20,6 +21,43 @@ class chatbot extends Component {
     this.handlechange = this.handlechange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.showChatWindow = this.showChatWindow.bind(this);
+    this.defaultMsg =
+      "Can you reword your statement? I'm not understanding. For your further convenience contact +91 40 2354 9363";
+  }
+
+  componentDidMount() {
+    this.getNewSession();
+    this.setState({
+      messege: [
+        ...this.state.messege,
+        {
+          user: "",
+          bot: {
+            text: "Hey there, I am Zybot. Ask me anything I'll try to answer",
+            description: null,
+            options: null,
+          },
+        },
+      ],
+    });
+  }
+
+  getNewSession() {
+    if (this.state.sessionID === null)
+      fetch("https://stark-crag-70246.herokuapp.com/session")
+        .then(session => {
+          this.setState({ loading: true });
+          return session.json();
+        })
+        .then(data => {
+          this.setState({ sessionID: data.session });
+        })
+        .then(() => {
+          this.setState({ loading: false });
+          setTimeout(() => {
+            this.setState({ sessionID: null });
+          }, 300000);
+        });
   }
 
   handlechange(event) {
@@ -31,47 +69,81 @@ class chatbot extends Component {
   }
 
   handleSubmit(event) {
+    if (this.state.sessionID === null) {
+      this.getNewSession();
+    }
     event.preventDefault();
     if (this.state.userinput !== "") {
       this.setState({
         loading: true,
         messege: [
           ...this.state.messege,
-          { user: this.state.userinput, bot: "" },
+          { user: this.state.userinput, bot: { text: "" } },
         ],
       });
-
-      fetch("https://stark-crag-70246.herokuapp.com/session")
-        .then(session => {
-          return session.json();
+      fetch("https://stark-crag-70246.herokuapp.com/zyclyx", {
+        method: "post",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          text: this.state.userinput,
+          session_id: this.state.sessionID,
+        }),
+      })
+        .then(response => {
+          return response.json();
         })
-        .then(data => {
-          this.setState({ id: data.session });
-
-          fetch("https://stark-crag-70246.herokuapp.com/zyclyx", {
-            method: "post",
-            headers: {
-              "Content-type": "application/json",
-            },
-            body: JSON.stringify({
-              text: this.state.userinput,
-              session_id: this.state.id,
-            }),
-          })
-            .then(response => {
-              return response.json();
-            })
-            .then(botReply => {
-              this.setState({
-                messege: [
-                  ...this.state.messege,
-                  { user: "", bot: botReply[0].text },
-                ],
-              });
-            })
-            .then(() => {
-              this.setState({ userinput: "", loading: false });
+        .then(botReply => {
+          if (botReply.length !== 0 && botReply[0].response_type === "text") {
+            this.setState({
+              messege: [
+                ...this.state.messege,
+                {
+                  user: "",
+                  bot: {
+                    text: botReply[0].text,
+                    description: null,
+                    options: null,
+                  },
+                },
+              ],
             });
+          }
+          if (botReply.length !== 0 && botReply[0].response_type === "option") {
+            this.setState({
+              messege: [
+                ...this.state.messege,
+                {
+                  user: "",
+                  bot: {
+                    text: botReply[0].title,
+                    description: botReply[0].description,
+                    options: botReply[0].options,
+                  },
+                },
+              ],
+            });
+          }
+          if (botReply.length === 0) {
+            this.setState({
+              messege: [
+                ...this.state.messege,
+                {
+                  user: "",
+                  bot: {
+                    text: this.defaultMsg,
+                    description: null,
+                    options: null,
+                  },
+                },
+              ],
+            });
+          }
+        })
+        .then(() => {
+          this.setState({ userinput: "", loading: false });
+          this.textInput.current.focus();
         });
     }
   }
@@ -106,24 +178,33 @@ class chatbot extends Component {
                   {this.state.messege.length !== 0 &&
                     this.state.messege.map(response => {
                       return (
-                        <>
-                          <div>
-                            {response.user !== "" ? (
-                              <div className="message parker">
-                                {response.user}
-                              </div>
-                            ) : (
-                              <></>
-                            )}
-                            {response.bot !== "" ? (
-                              <div className="message stark">
-                                {response.bot}
-                              </div>
-                            ) : (
-                              <></>
-                            )}
-                          </div>
-                        </>
+                        <div>
+                          {response.user !== "" ? (
+                            <div className="message parker">
+                              {response.user}
+                            </div>
+                          ) : (
+                            <></>
+                          )}
+                          {response.bot.text !== "" ? (
+                            <div className="message stark">
+                              {response.bot.text}
+                              <p>
+                                {response.bot.description
+                                  ? response.bot.description
+                                  : null}
+                              </p>
+                              <p>
+                                {response.bot.options &&
+                                  response.bot.options.map(
+                                    item => `${item.label}, `
+                                  )}
+                              </p>
+                            </div>
+                          ) : (
+                            <></>
+                          )}
+                        </div>
                       );
                     })}
                 </div>
@@ -141,9 +222,15 @@ class chatbot extends Component {
                       name="userinput"
                       value={this.state.userinput}
                       onChange={this.handlechange}
+                      disabled={this.state.loading}
+                      ref={this.textInput}
                     />
                   </div>
-                  <button type="submit" className="send-chat px-3">
+                  <button
+                    type="submit"
+                    className="send-chat px-3"
+                    disabled={this.state.loading}
+                  >
                     {this.state.loading ? (
                       <div
                         className="spinner-border text-success"
