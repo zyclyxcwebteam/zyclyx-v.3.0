@@ -153,7 +153,7 @@
 }
 /* 13. software development */
 .software {
-  background-image: url("/images/service-pages/14.svg");
+  background-image: url("/images/service-pages/14.png");
 }
 .software-sol {
   /* background-image: url("/images/service-pages/software-development-sol.svg"); */
@@ -189,7 +189,7 @@
   background-image: url("/images/service-pages/12.png");
 }
 .outsource-sol {
-  background-image: url("/images/service-pages/outsource-sol.jpg");
+  background-image: url("/images/service-pages/12-sol.jpg");
 }
 
 /* 18. Data Center */
@@ -197,7 +197,7 @@
   background-image: url("/images/service-pages/22.png");
 }
 .datacenter-sol {
-  background-image: url("/images/service-pages/12-sol.svg");
+  background-image: url("/images/service-pages/22-sol.svg");
 }
 
 /* 19. System Infra */
