@@ -189,7 +189,7 @@ const Contact = () => {
                           placeholder="Full Name"
                           ref={register({ required: true })}
                         />
-                        {errors.firstname && (
+                        {errors.fullname && (
                           <span className="err-msg">*Fullname is required</span>
                         )}
                         <label htmlFor="username">
