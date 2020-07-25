@@ -12,10 +12,11 @@ import "../css/form-floating-label.css";
 const Contact = () => {
   const [showContactInfo, setShowContactInfo] = useState(true);
   const [success, setSuccess] = useState(false);
+  const [submintForm, setSubmitForm] = useState(false);
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
-    event.target.reset();
+    setSubmitForm(true);
     const payload = {
       fullname: data.fullname,
       email: data.email,
@@ -33,9 +34,16 @@ const Contact = () => {
       },
       body: JSON.stringify(payload),
     })
-      .then(res => res.json())
+      .then(res => {
+        return res.json();
+      })
       .then(() => {
         setSuccess(true);
+        event.target.reset();
+        setTimeout(() => {
+          setSuccess(false);
+        }, 6000);
+        setSubmitForm(false);
         fetch("https://zyclyx-email-sender.herokuapp.com/contact", {
           method: "post",
           headers: {
@@ -129,7 +137,7 @@ const Contact = () => {
                 </Row>
                 <div className="d-flex justify-content-center py-4">
                   <button
-                    type="submit"
+                    type="button"
                     className=" button d-flex align-items-center"
                     id="contactBtn"
                     onClick={() => {
@@ -261,10 +269,21 @@ const Contact = () => {
                     <button
                       type="submit"
                       className="button d-flex align-items-center btn-style my-4"
+                      disabled={submintForm}
                     >
-                      <span id="btnText" className="mr-3">
-                        Message Us
-                      </span>
+                      {submintForm ? (
+                        <>
+                          Loading..
+                          <div
+                            className="spinner-border spinner-border-sm ml-3 text-warning"
+                            role="status"
+                          >
+                            <span className="sr-only">Loading...</span>
+                          </div>
+                        </>
+                      ) : (
+                        "Message us"
+                      )}
                       <FontAwesomeIcon
                         icon="arrow-right"
                         className="btn-icon"
