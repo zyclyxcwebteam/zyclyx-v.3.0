@@ -24,6 +24,7 @@
 }
 .welcome-text {
   font-size: 1.2rem;
+  text-align: justify;
 }
 .newage {
   max-width: 775px;
