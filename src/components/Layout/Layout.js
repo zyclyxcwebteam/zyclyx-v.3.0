@@ -13,6 +13,7 @@ import {
   faEnvelope,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
+import SEO from "../SEO/seo";
 import Navbar from "../NavBar/Navbar";
 import ContactBanner from "../ContactBanner/ContactBanner";
 import Footer from "../Footer/Footer";
@@ -36,9 +37,10 @@ library.add(
 );
 
 const layout = props => {
-  const { children, showBanner } = props;
+  const { children, showBanner, title, description } = props;
   return (
     <>
+      <SEO title={title} description={description} />
       <Navbar />
       {children}
       {showBanner && <ContactBanner />}

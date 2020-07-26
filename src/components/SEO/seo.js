@@ -1,14 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-const SEO = ({ description, lang, meta, title }) => {
+const SEO = ({ description, title }) => {
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: "en",
       }}
       title={title}
-      titleTemplate={`%s | ${title}`}
+      titleTemplate="%s | ZYCLYX"
       meta={[
         {
           name: `description`,
@@ -42,7 +42,7 @@ const SEO = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: description,
         },
-      ].concat(meta)}
+      ]}
     />
   );
 };

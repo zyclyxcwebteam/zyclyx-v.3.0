@@ -17,7 +17,7 @@ const PageTemplate = props => {
     solImage,
   } = dataJson;
   return (
-    <Layout showBanner>
+    <Layout showBanner title={title} description={caption}>
       <Container fluid className="hero-banner">
         <Row className="h-100">
           <Col
