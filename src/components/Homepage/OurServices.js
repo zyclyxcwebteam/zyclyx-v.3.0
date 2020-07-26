@@ -8,6 +8,7 @@ import {
   CarouselItem,
   CarouselIndicators,
 } from "reactstrap";
+import "./OurServices.css";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import NewAgeBG from "../../../static/images/services/new-age.jpg";
 import NetworkBG from "../../../static/images/services/security.jpg";
@@ -101,7 +102,7 @@ const OurServices = () => {
               </h2>
               <p className="px-md-5 px-2">{item.serviceText}</p>
               <p className="text-center">
-                <Link to={item.linkTo} className="text-center">
+                <Link to={item.linkTo} className="service-link text-center">
                   Read More
                 </Link>
               </p>
