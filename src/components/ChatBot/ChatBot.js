@@ -228,6 +228,7 @@ class chatbot extends Component {
                   </div>
                   <button
                     type="submit"
+                    aria-label="send message"
                     className="send-chat px-3"
                     disabled={this.state.loading}
                   >
