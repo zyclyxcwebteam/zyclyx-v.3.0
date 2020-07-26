@@ -100,7 +100,11 @@ const jobDescription = props => {
   };
 
   return (
-    <Layout showBanner>
+    <Layout
+      showBanner
+      title="Job Opportunities with ZYCLYX"
+      description={(jobDetails && jobDetails.title) || "job openings in Zyclyx"}
+    >
       <HeroBanner
         title={jobDetails && jobDetails.title}
         imageClass="job-description"

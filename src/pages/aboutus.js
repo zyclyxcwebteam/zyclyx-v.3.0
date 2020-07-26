@@ -46,7 +46,11 @@ const CoreValueCard = ({ title, text, icon, left }) => {
 const aboutus = () => {
   const [showMission, setShowMission] = useState(true);
   return (
-    <Layout showBanner>
+    <Layout
+      showBanner
+      title="About us - ZYCLYX"
+      description="A Fast-Growing Technology Leader in Artificial Intelligence,automation,bigdata"
+    >
       <Container fluid className="hero-banner">
         <Row className="h-100">
           <Col

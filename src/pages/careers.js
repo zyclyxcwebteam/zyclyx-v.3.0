@@ -74,7 +74,12 @@ const careers = () => {
   }, [openings]);
 
   return (
-    <Layout showBanner>
+    <Layout
+      showBanner
+      title="Career Opportunities at ZYCLYX"
+      description="In ZYCLYX, we empower employees to explore their talents
+    and abilities in tandem with their careers"
+    >
       <HeroBanner title="Build your future with us" imageClass="career" />
       <Container fluid className="c-overview-wrapper py-3 py-md-5">
         <Container>

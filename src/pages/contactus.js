@@ -63,7 +63,11 @@ const Contact = () => {
     setSuccess(false);
   }
   return (
-    <Layout showBanner={false}>
+    <Layout
+      showBanner={false}
+      title="Contact us - ZYCLYX"
+      description="We are happy to assist you with your queries"
+    >
       <HeroBanner
         title="We are happy to assist you with your queries"
         imageClass="contact"

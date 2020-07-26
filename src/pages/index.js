@@ -17,22 +17,22 @@ export default () => {
   const [showClients, setShowClients] = useState(true);
   return (
     <>
-      <Layout showBanner>
+      <Layout
+        showBanner
+        title="Zyclyx consulting services PVT.Ltd"
+        description="providing IT services"
+      >
         <ImageCarousel />
         <Container fluid className="overview py-5">
           <Container>
             <Row>
-              <Col
-                md="3"
-                sm="12"
-                className="d-flex align-items-center text-center"
-              >
+              <Col className="col-lg-3 col-12 d-flex justify-content-center align-items-center text-center">
                 <div>
-                  <h5 className="welcome-title">Welcome to</h5>
-                  <h2 className="brand">ZYCLYX</h2>
+                  <h2 className="text-center welcome-title">Welcome to</h2>
+                  <h2 className="text-center brand">ZYCLYX</h2>
                 </div>
               </Col>
-              <Col md="9" sm="12" className="d-flex align-items-center">
+              <Col className="col-lg-9 col-12 d-flex align-items-center">
                 <p className="mb-0 welcome-text">
                   A global automation technology provider leading the industry
                   with innovative ideas. With our agile collaborative approach
@@ -122,7 +122,7 @@ export default () => {
                     </Row>
                   </Col>
                   <Col md="4" sm="4" className="p-0">
-                    <Row>
+                    <Row className="mx-auto">
                       <Col sm="3" className="p-0">
                         <h1 className="poc-letter">C</h1>
                       </Col>
