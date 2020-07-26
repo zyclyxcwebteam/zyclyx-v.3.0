@@ -12,7 +12,7 @@ import IconCommit from "../../static/images/c-val-3.svg";
 import IconBuild from "../../static/images/c-val-4.svg";
 import IconCreative from "../../static/images/c-val-5.svg";
 import IconCount from "../../static/images/c-val-6.svg";
-import "../styles/aboutus.css";
+import "../css/aboutus.css";
 
 // Core Values card
 const CoreValueCard = ({ title, text, icon, left }) => {

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import fetch from "isomorphic-fetch";
 import { Container, Row, Col } from "reactstrap";
-import "../styles/careers.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
@@ -12,6 +11,7 @@ import {
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import Layout from "../components/Layout/Layout";
 import Comejoin from "../../static/images/comejoin.svg";
+import "../css/careers.css";
 
 const JobCard = props => {
   const { active, title, location, id } = props;

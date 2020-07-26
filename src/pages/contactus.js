@@ -6,7 +6,7 @@ import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
-import "../styles/contactus.css";
+import "../css/contactus.css";
 import "../css/form-floating-label.css";
 
 const Contact = () => {
