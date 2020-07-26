@@ -99,10 +99,10 @@ export default () => {
                   <Col md="4" sm="4" className="p-0 d-flex">
                     <Row className="mx-auto">
                       <Col sm="3" className="p-0">
-                        <h2 className="poc-letter">F</h2>
+                        <h1 className="poc-letter">F</h1>
                       </Col>
                       <Col sm="8" className="poc-content p-0">
-                        <h3>Forecast</h3>
+                        <h2>Forecast</h2>
                         <p>
                           Act as a tool to forecast the feasibility of the
                           projects.
@@ -116,7 +116,7 @@ export default () => {
                         <h1 className="poc-letter">R</h1>
                       </Col>
                       <Col sm="8" className="poc-content p-0">
-                        <h3>Report</h3>
+                        <h2>Report</h2>
                         <p>Provides a complete report on project evaluation</p>
                       </Col>
                     </Row>
@@ -127,7 +127,7 @@ export default () => {
                         <h1 className="poc-letter">C</h1>
                       </Col>
                       <Col sm="8" className="p-0 poc-content">
-                        <h3>Cost Effective</h3>
+                        <h2>Cost Effective</h2>
                         <p>Saves your businesses time and money</p>
                       </Col>
                     </Row>

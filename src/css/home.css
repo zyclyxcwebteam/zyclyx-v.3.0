@@ -13,6 +13,7 @@
 @font-face {
   font-family: "NeuropoliticalRg-Regular";
   src: url("../fonts/NeuropoliticalRg-Regular.ttf");
+  font-display: swap;
 }
 .welcome-title {
   color: #00a14b;

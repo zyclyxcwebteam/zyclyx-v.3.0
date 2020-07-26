@@ -103,7 +103,7 @@ const OurServices = () => {
               <p className="px-md-5 px-2">{item.serviceText}</p>
               <p className="text-center">
                 <Link to={item.linkTo} className="service-link text-center">
-                  Read More
+                  Discover More
                 </Link>
               </p>
             </div>

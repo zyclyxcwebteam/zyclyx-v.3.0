@@ -155,6 +155,7 @@ class chatbot extends Component {
         <button
           type="button"
           className=" chatbtn px-2 py-2"
+          aria-label="chatbot"
           onClick={this.showChatWindow}
         >
           <FontAwesomeIcon icon={["fab", "rocketchat"]} />
