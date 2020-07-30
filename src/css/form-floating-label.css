@@ -79,3 +79,10 @@
 .react-tel-input .selected-flag .arrow {
   top: -50%;
 }
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: #dceae1;
+}
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background-color: #dceae1;
+}

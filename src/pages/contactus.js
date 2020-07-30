@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import fetch from "isomorphic-fetch";
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import "../css/contactus.css";
@@ -13,7 +15,14 @@ const Contact = () => {
   const [showContactInfo, setShowContactInfo] = useState(true);
   const [success, setSuccess] = useState(false);
   const [submintForm, setSubmitForm] = useState(false);
+  // const [phone, setPhone] = useState(null);
 
+  // const handlePhone = e => {
+  //   console.log(e);
+  // };
+  const handleOnChange = (value, data, event, formattedValue) => {
+    console.log(value, data, event, formattedValue);
+  };
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
     setSubmitForm(true);
@@ -232,6 +241,22 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="col-md-7 col-12">
+                      {/* <div className="form-group floating-label py-1"> */}
+                      <PhoneInput
+                        inputProps={{
+                          name: "phone",
+                          required: true,
+                          autoFocus: true,
+                        }}
+                        inputClass="form-control"
+                        containerClass="form-group floating-label"
+                        country="in"
+                        onChange={handleOnChange}
+                        placeholder="Phone"
+                        ref={register({ required: true, max: 16 })}
+                      />
+                    </div>
+                    {/* <div className="col-md-7 col-12">
                       <div className="form-group floating-label py-1">
                         <input
                           type="tel"
@@ -252,7 +277,7 @@ const Contact = () => {
                           <span className="required">*</span>
                         </label>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="col-md-7 col-12">
                       <div className="form-group floating-label py-1">
                         <textarea
