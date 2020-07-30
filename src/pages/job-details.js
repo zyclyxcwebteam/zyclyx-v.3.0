@@ -102,6 +102,7 @@ const jobDescription = props => {
   return (
     <Layout
       showBanner
+      active="career"
       title="Job Opportunities with ZYCLYX"
       description={(jobDetails && jobDetails.title) || "job openings in Zyclyx"}
     >

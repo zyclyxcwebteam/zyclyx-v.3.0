@@ -17,9 +17,9 @@ import {
 import Logo from "../../../static/images/logo-white.png";
 import "./Navbar.css";
 
-const Example = () => {
+const Header = props => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { active } = props;
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -32,14 +32,25 @@ const Example = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <Link to="/">Home</Link>
+              <Link to="/" className={`${active === "home" ? "active" : null}`}>
+                Home
+              </Link>
             </NavItem>
             <NavItem>
-              <Link to="/aboutus">About Us</Link>
+              <Link
+                to="/aboutus"
+                className={`${active === "about" ? "active" : null}`}
+              >
+                About Us
+              </Link>
             </NavItem>
 
             <UncontrolledDropdown nav inNavbar className="position-static">
-              <DropdownToggle nav caret>
+              <DropdownToggle
+                nav
+                caret
+                className={`${active === "service" ? "active" : null}`}
+              >
                 Services
               </DropdownToggle>
               <DropdownMenu className="w-100 py-1 py-md-3 px-2 px-md-5 mt-0 service-dropdown">
@@ -165,10 +176,20 @@ const Example = () => {
             </UncontrolledDropdown>
 
             <NavItem>
-              <Link to="/careers">Careers</Link>
+              <Link
+                to="/careers"
+                className={`${active === "career" ? "active" : null}`}
+              >
+                Careers
+              </Link>
             </NavItem>
             <NavItem>
-              <Link to="/contactus">Contact Us</Link>
+              <Link
+                to="/contactus"
+                className={`${active === "contact" ? "active" : null}`}
+              >
+                Contact Us
+              </Link>
             </NavItem>
           </Nav>
         </Collapse>
@@ -177,4 +198,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default Header;

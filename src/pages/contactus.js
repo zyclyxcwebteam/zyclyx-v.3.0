@@ -65,6 +65,7 @@ const Contact = () => {
   return (
     <Layout
       showBanner={false}
+      active="contact"
       title="Contact us - ZYCLYX"
       description="We are happy to assist you with your queries"
     >

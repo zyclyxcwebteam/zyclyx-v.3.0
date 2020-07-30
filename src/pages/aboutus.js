@@ -48,6 +48,7 @@ const aboutus = () => {
   return (
     <Layout
       showBanner
+      active="about"
       title="About us - ZYCLYX"
       description="A Fast-Growing Technology Leader in Artificial Intelligence,automation,bigdata"
     >

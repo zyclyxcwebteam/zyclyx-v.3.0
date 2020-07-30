@@ -18,6 +18,7 @@ export default () => {
     <>
       <Layout
         showBanner
+        active="home"
         title="Zyclyx consulting services PVT.Ltd"
         description="providing IT services"
       >

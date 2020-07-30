@@ -62,3 +62,8 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.nav-item .active {
+  color: #fbbf12;
+  font-weight: 500;
+}
