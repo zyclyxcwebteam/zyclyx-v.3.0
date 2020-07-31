@@ -15,13 +15,13 @@ const Contact = () => {
   const [showContactInfo, setShowContactInfo] = useState(true);
   const [success, setSuccess] = useState(false);
   const [submintForm, setSubmitForm] = useState(false);
-  // const [phone, setPhone] = useState(null);
+  const [phone, setPhone] = useState(null);
 
   // const handlePhone = e => {
   //   console.log(e);
   // };
-  const handleOnChange = (value, data, event, formattedValue) => {
-    console.log(value, data, event, formattedValue);
+  const handleOnChange = (_value, _data, _event, formattedValue) => {
+    setPhone({ phone: formattedValue, code: _data.dialCode });
   };
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
@@ -29,10 +29,10 @@ const Contact = () => {
     const payload = {
       fullname: data.fullname,
       email: data.email,
-      phone: data.phone,
+      phone: phone.phone,
       date: new Date(),
       message: data.message,
-      countryCode: "+91",
+      countryCode: phone.code,
       website: "zyclyx",
     };
 
