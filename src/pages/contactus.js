@@ -17,8 +17,11 @@ const Contact = () => {
   const [submintForm, setSubmitForm] = useState(false);
   const [phone, setPhone] = useState(null);
 
-  const handleOnChange = (_value, _data, _event, formattedValue) => {
-    setPhone({ phone: formattedValue, code: _data.dialCode });
+  const handleOnChange = (_value, _data) => {
+    setPhone({
+      phone: _value.slice(_data.dialCode.length),
+      code: _data.dialCode,
+    });
   };
 
   const { register, handleSubmit, errors } = useForm();
