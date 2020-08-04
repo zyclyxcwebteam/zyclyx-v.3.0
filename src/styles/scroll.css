@@ -1,0 +1,52 @@
+.header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+  color: thistle;
+}
+.header h1 {
+  font-size: 4rem;
+}
+.scroll {
+  height: 300vh;
+  display: flex;
+}
+.scroll-title {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  /* margin: 0 !important; */
+}
+.scroll-pages {
+  width: 50%;
+}
+.scroll-pages div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.scroll-pages div > p {
+  width: 80%;
+  font-size: 18px;
+  line-height: 30px;
+}
+.scroll-pages div:nth-child(1) {
+  background-color: teal;
+}
+.scroll-pages div:nth-child(2) {
+  background-color: tomato;
+}
+.scroll-pages div:nth-child(3) {
+  background-color: violet;
+}
+.footer {
+  height: 100vh;
+  background-color: yellowgreen;
+}
