@@ -17,9 +17,6 @@ const Contact = () => {
   const [submintForm, setSubmitForm] = useState(false);
   const [phone, setPhone] = useState(null);
 
-  // const handlePhone = e => {
-  //   console.log(e);
-  // };
   const handleOnChange = (_value, _data, _event, formattedValue) => {
     setPhone({ phone: formattedValue, code: _data.dialCode });
   };

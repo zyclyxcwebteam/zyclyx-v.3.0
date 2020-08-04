@@ -234,8 +234,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  background-color: rgba(249, 249, 249, 1);
-  color: #2a942a;
+  background-color: rgba(42, 148, 42, 0.8);
+  color: #f4f4f4;
   padding: 1rem 0.2rem;
   margin: 0.5rem 0;
   height: 250px;
