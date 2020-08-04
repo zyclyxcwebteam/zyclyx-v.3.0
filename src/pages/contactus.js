@@ -13,7 +13,7 @@ import "../css/form-floating-label.css";
 
 const Contact = () => {
   const [showContactInfo, setShowContactInfo] = useState(true);
-  const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState(true);
   const [submintForm, setSubmitForm] = useState(false);
   const [phone, setPhone] = useState(null);
 
@@ -50,6 +50,7 @@ const Contact = () => {
       .then(() => {
         setSuccess(true);
         event.target.reset();
+        setPhone({ phone: null });
         setTimeout(() => {
           setSuccess(false);
         }, 6000);
