@@ -23,6 +23,7 @@ const Contact = () => {
   const handleOnChange = (_value, _data, _event, formattedValue) => {
     setPhone({ phone: formattedValue, code: _data.dialCode });
   };
+
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
     setSubmitForm(true);
@@ -253,7 +254,6 @@ const Contact = () => {
                         country="in"
                         onChange={handleOnChange}
                         placeholder="Phone"
-                        ref={register({ required: true, max: 16 })}
                       />
                     </div>
                     {/* <div className="col-md-7 col-12">
