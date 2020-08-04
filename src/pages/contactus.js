@@ -13,7 +13,7 @@ import "../css/form-floating-label.css";
 
 const Contact = () => {
   const [showContactInfo, setShowContactInfo] = useState(true);
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState(false);
   const [submintForm, setSubmitForm] = useState(false);
   const [phone, setPhone] = useState(null);
 
