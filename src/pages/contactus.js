@@ -45,10 +45,10 @@ const Contact = () => {
       body: JSON.stringify(payload),
     })
       .then(res => {
+        setSuccess(true);
         return res.json();
       })
       .then(() => {
-        setSuccess(true);
         event.target.reset();
         setPhone({ phone: null });
         setTimeout(() => {
