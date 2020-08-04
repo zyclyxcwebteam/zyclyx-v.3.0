@@ -6,6 +6,8 @@
   "solTitle": "Securing your most valuable assets ",
   "bannerImage": "data",
   "solImage": "data-sol",
+  "scroll": true,
+  "duration": 60,
   "services": [
     {
       "title": "Source Code Review",

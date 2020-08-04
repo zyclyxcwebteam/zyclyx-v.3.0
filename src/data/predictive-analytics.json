@@ -6,6 +6,8 @@
   "solTitle": "Get smart insights that shape your Future",
   "bannerImage": "predictive",
   "solImage": "predictive-sol",
+  "scroll": true,
+  "duration": 30,
   "services": [
     {
       "title": "Data Fetching",

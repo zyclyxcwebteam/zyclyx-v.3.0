@@ -6,6 +6,8 @@
   "solTitle": "Improve reputation by adhering to compliance requirements",
   "bannerImage": "compliance",
   "solImage": "compliance-sol",
+  "scroll": true,
+  "duration": 60,
   "services": [
     {
       "title": "SOC Automation",

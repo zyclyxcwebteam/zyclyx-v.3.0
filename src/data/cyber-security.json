@@ -6,6 +6,8 @@
   "solTitle": "Making the Internet a safer place",
   "bannerImage": "cyber",
   "solImage": "cyber-sol",
+  "scroll": true,
+  "duration": 25,
   "services": [
     {
       "title": "Web Protection",

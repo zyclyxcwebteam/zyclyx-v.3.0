@@ -6,6 +6,7 @@
   "solTitle": "Impactful solutions that drive meaningful change ",
   "bannerImage": "web",
   "solImage": "web-sol",
+  "scroll": false,
   "services": [
     {
       "title": "Digital Assistance",

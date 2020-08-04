@@ -6,6 +6,8 @@
   "solTitle": "For the next generation of big businesses",
   "bannerImage": "iam",
   "solImage": "iam-sol",
+  "scroll": true,
+  "duration": 60,
   "services": [
     {
       "title": "Single Sign-On",

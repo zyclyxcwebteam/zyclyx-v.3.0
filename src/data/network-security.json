@@ -6,6 +6,8 @@
   "solTitle": "Secure solutions to level up your network safety",
   "bannerImage": "network",
   "solImage": "network-sol",
+  "scroll": true,
+  "duration": 55,
   "services": [
     {
       "title": " Unified Threat Management (UTM)",

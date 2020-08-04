@@ -1,8 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Container, Row, Col } from "reactstrap";
+import { Controller, Scene } from "react-scrollmagic";
 import Layout from "../components/Layout/Layout";
 import "../css/service.css";
+import "../styles/scroll.css";
 
 const PageTemplate = props => {
   const { data } = props;
@@ -15,6 +17,8 @@ const PageTemplate = props => {
     services,
     bannerImage,
     solImage,
+    scroll,
+    duration,
   } = dataJson;
   return (
     <Layout showBanner title={title} description={caption} active="service">
@@ -49,28 +53,56 @@ const PageTemplate = props => {
         <h3 className="solutions-title-text text-center">{solTitle}</h3>
       </Container>
       {/* solutions cards */}
+
       <Container fluid className="solutions-wrapper py-3 py-md-5">
-        <Row className="px-3 pl-md-5">
-          <Col
-            sm="12"
-            md="6"
-            className={`d-flex justify-content-center align-items-center sol-img ${solImage}`}
-          />
-          <Col
-            sm="12"
-            md="6"
-            className="sol-cards d-flex align-items-center justify-content-center flex-column px-2 px-md-5"
-          >
-            {services.map(service => {
-              return (
-                <div className="py-3" key={service.title}>
-                  <h3 className="py-2">{service.title}</h3>
-                  <p>{service.content}</p>
-                </div>
-              );
-            })}
-          </Col>
-        </Row>
+        {scroll ? (
+          <section className="scroll">
+            <Controller>
+              <Scene
+                duration={`${duration}%`}
+                triggerElement=".solutions-wrapper"
+                triggerHook="0"
+                pin
+              >
+                <div
+                  className={`scroll-title d-flex justify-content-center sol-img ${solImage}`}
+                />
+              </Scene>
+              <div className="scroll-pages sol-cards d-flex align-items-center flex-column px-2 px-md-5">
+                {services.map(service => {
+                  return (
+                    <div className="py-3" key={service.title}>
+                      <h3 className="py-2">{service.title}</h3>
+                      <p>{service.content}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </Controller>
+          </section>
+        ) : (
+          <Row className="px-3 pl-md-5">
+            <Col
+              sm="12"
+              md="6"
+              className={`d-flex justify-content-center sol-img ${solImage}`}
+            />
+            <Col
+              sm="12"
+              md="6"
+              className="sol-cards d-flex align-items-center justify-content-center flex-column px-2 px-md-5"
+            >
+              {services.map(service => {
+                return (
+                  <div className="py-3" key={service.title}>
+                    <h3 className="py-2">{service.title}</h3>
+                    <p>{service.content}</p>
+                  </div>
+                );
+              })}
+            </Col>
+          </Row>
+        )}
       </Container>
     </Layout>
   );
@@ -89,6 +121,8 @@ export const pageQuery = graphql`
       solTitle
       bannerImage
       solImage
+      scroll
+      duration
       services {
         content
         title

@@ -6,6 +6,7 @@
   "solTitle": "Converting raw data into actionable insights",
   "bannerImage": "bigdata",
   "solImage": "bigdata-sol",
+  "scroll": false,
   "services": [
     {
       "title": "Analytics",

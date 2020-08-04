@@ -6,6 +6,7 @@
   "solTitle": "Adopt Blockchain and lead the way for a better tomorrow",
   "bannerImage": "blockchain",
   "solImage": "blockchain-sol",
+  "scroll": false,
   "services": [
     {
       "title": "Tracking and Monitoring",

@@ -6,6 +6,8 @@
   "solTitle": "Maximize your online exposure in the era of digitization",
   "bannerImage": "digital",
   "solImage": "digital-sol",
+  "scroll": true,
+  "duration": 60,
   "services": [
     {
       "title": "Google Ads and Analytics",

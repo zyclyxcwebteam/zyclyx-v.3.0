@@ -6,6 +6,8 @@
   "solTitle": "Protects Endpoints on all your platforms",
   "bannerImage": "endpoint",
   "solImage": "endpoint-sol",
+  "scroll": true,
+  "duration": 60,
   "services": [
     {
       "title": "Endpoint Security",

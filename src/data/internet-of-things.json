@@ -6,6 +6,7 @@
   "solTitle": "Stay ahead with smart solutions and new experiences",
   "bannerImage": "iot",
   "solImage": "iot-sol",
+  "scroll": false,
   "services": [
     {
       "title": "Performance & Maintenance solutions",

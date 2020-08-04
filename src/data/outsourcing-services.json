@@ -6,6 +6,8 @@
   "solTitle": "Connecting you with the right resource",
   "bannerImage": "outsource",
   "solImage": "outsource-sol",
+  "scroll": true,
+  "duration": 20,
   "services": [
     {
       "title": "Managed Services Model",

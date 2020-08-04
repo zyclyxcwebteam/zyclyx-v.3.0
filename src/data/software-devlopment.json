@@ -6,6 +6,7 @@
   "solTitle": "Unleash the true potential of your business",
   "bannerImage": "software",
   "solImage": "software-sol",
+  "scroll": false,
   "services": [
     {
       "title": "Solutions Provided",

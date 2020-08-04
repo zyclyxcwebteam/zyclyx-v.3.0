@@ -6,6 +6,7 @@
   "solTitle": "We do more than develop. We craft amazing app experiences.",
   "bannerImage": "mobile",
   "solImage": "mobile-sol",
+  "scroll": false,
   "services": [
     {
       "title": "Native Applications:",
