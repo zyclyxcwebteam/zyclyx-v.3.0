@@ -4,7 +4,6 @@ import { Container, Row, Col } from "reactstrap";
 import { Controller, Scene } from "react-scrollmagic";
 import Layout from "../components/Layout/Layout";
 import "../css/service.css";
-import "../styles/scroll.css";
 
 const PageTemplate = props => {
   const { data } = props;
@@ -56,7 +55,7 @@ const PageTemplate = props => {
 
       <Container fluid className="solutions-wrapper py-3 py-md-5">
         {scroll ? (
-          <section className="scroll">
+          <Row className="px-3 pl-md-5 scroll">
             <Controller>
               <Scene
                 duration={`${duration}%`}
@@ -64,11 +63,17 @@ const PageTemplate = props => {
                 triggerHook="0"
                 pin
               >
-                <div
+                <Col
+                  sm="12"
+                  md="6"
                   className={`scroll-title d-flex justify-content-center sol-img ${solImage}`}
                 />
               </Scene>
-              <div className="scroll-pages sol-cards d-flex align-items-center flex-column px-2 px-md-5">
+              <Col
+                sm="12"
+                md="6"
+                className="scroll-pages sol-cards d-flex align-items-center justify-content-center flex-column px-2 px-md-5"
+              >
                 {services.map(service => {
                   return (
                     <div className="py-3" key={service.title}>
@@ -77,9 +82,9 @@ const PageTemplate = props => {
                     </div>
                   );
                 })}
-              </div>
+              </Col>
             </Controller>
-          </section>
+          </Row>
         ) : (
           <Row className="px-3 pl-md-5">
             <Col
