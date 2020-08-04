@@ -63,9 +63,7 @@ const PageTemplate = props => {
                 triggerHook="0"
                 pin
               >
-                <Col
-                  sm="12"
-                  md="6"
+                <div
                   className={`scroll-title d-flex justify-content-center sol-img ${solImage}`}
                 />
               </Scene>
