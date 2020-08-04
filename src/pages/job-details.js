@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { Container, Row, Col } from "reactstrap";
 import fetch from "isomorphic-fetch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import "../css/job-description.css";
@@ -34,7 +36,14 @@ const jobDescription = props => {
     showForm: false,
     formBtn: true,
   });
+  const [phone, setPhone] = useState(null);
 
+  const handleOnChange = (_value, _data) => {
+    setPhone({
+      phone: _value.slice(_data.dialCode.length),
+      code: _data.dialCode,
+    });
+  };
   const handleFileUpload = event => {
     setResumeFile(event.target.files[0]);
   };
@@ -58,11 +67,11 @@ const jobDescription = props => {
       firstname: data.firstname,
       lastname: data.lastname,
       email: data.email,
-      phone: data.phone,
+      phone: phone.phone,
       subject: data.message,
       position: jobDetails.title,
       website: "zyclyx",
-      country_code: "+91",
+      country_code: phone.code,
       date: new Date(),
     };
 
@@ -305,8 +314,22 @@ const jobDescription = props => {
                                   </label>
                                 </div>
                               </div>
-
                               <div className="col-12">
+                                {/* <div className="form-group floating-label py-1"> */}
+                                <PhoneInput
+                                  inputProps={{
+                                    name: "phone",
+                                    required: true,
+                                    autoFocus: true,
+                                  }}
+                                  inputClass="form-control"
+                                  containerClass="form-group floating-label"
+                                  country="in"
+                                  onChange={handleOnChange}
+                                  placeholder="Phone"
+                                />
+                              </div>
+                              {/* <div className="col-12">
                                 <div className="form-group floating-label py-1">
                                   <input
                                     type="text"
@@ -326,7 +349,7 @@ const jobDescription = props => {
                                     <span className="required">*</span>
                                   </label>
                                 </div>
-                              </div>
+                              </div> */}
 
                               <div className="col-12">
                                 <div className="form-group py-1  py-md-2">
