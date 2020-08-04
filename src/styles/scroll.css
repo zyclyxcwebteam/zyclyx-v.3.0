@@ -1,4 +1,4 @@
-.header {
+.scroll-header {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -6,7 +6,7 @@
   background-color: teal;
   color: thistle;
 }
-.header h1 {
+.scroll-header h1 {
   font-size: 4rem;
 }
 .scroll {
@@ -45,8 +45,4 @@
 }
 .scroll-pages div:nth-child(3) {
   background-color: violet;
-}
-.footer {
-  height: 100vh;
-  background-color: yellowgreen;
 }

@@ -5,7 +5,7 @@ import "../styles/scroll.css";
 const SplitScreen = () => {
   return (
     <>
-      <div className="header">
+      <div className="scroll-header">
         <h1>Robotic Process Automation</h1>
       </div>
 
@@ -47,7 +47,7 @@ const SplitScreen = () => {
           </div>
         </Controller>
       </section>
-      <footer className="footer" />
+      <footer className="foo" />
     </>
   );
 };
