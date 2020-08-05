@@ -299,7 +299,7 @@ const jobDescription = props => {
                                     className="form-control"
                                     name="email"
                                     autoComplete="off"
-                                    placeholder="email"
+                                    placeholder="Email"
                                     pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                                     ref={register({ required: true })}
                                   />
