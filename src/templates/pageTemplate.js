@@ -59,8 +59,8 @@ const PageTemplate = props => {
                 <p className="staff-o-text text-justify pl-md-3">
                   Our team of recruiters has expertise working across many
                   industry specializations and job areas. Some of these include
-                  Engineering, Accounting, Finance, Back-office operations, and
-                  other Professionals.
+                  Engineering, Accounting, Finance, FMCG, Manufacturing,
+                  Back-office operations, and other Professionals.
                 </p>
               </Col>
             </Row>
