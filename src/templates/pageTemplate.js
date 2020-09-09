@@ -35,7 +35,7 @@ const PageTemplate = props => {
             md="6"
             className="img-box d-flex justify-content-center align-items-md-center  p-3"
           >
-            <div className={`banner-img ${bannerImage}`} />
+            <div className={`px-3 banner-img ${bannerImage}`} />
           </Col>
         </Row>
       </Container>
@@ -43,20 +43,20 @@ const PageTemplate = props => {
       <Container fluid className="overview-wrapper py-2 py-md-5">
         <Container>
           <h3 className="overview-title text-center py-2 py-md-4">{caption}</h3>
-          <p className="overview-text">{overview}</p>
+          <p className="overview-text text-justify">{overview}</p>
           {title === "Staffing Solutions" && (
-            <Row className="py-3">
+            <Row className="py-md-2">
               <Col sm="12" md="6">
-                <h4 className="staff-o-title">IT Staffing</h4>
-                <p className="staff-o-text">
+                <h4 className="staff-o-title text-center">IT Staffing</h4>
+                <p className="staff-o-text text-justify pr-md-3">
                   Fulfilling your business technology needs with people who make
                   technology possible. We provide skilled candidates across a
                   wide range of technologies.
                 </p>
               </Col>
               <Col sm="12" md="6">
-                <h4 className="staff-o-title">Non IT Staffing</h4>
-                <p className="staff-o-text">
+                <h4 className="staff-o-title text-center">Non IT Staffing</h4>
+                <p className="staff-o-text text-justify pl-md-3">
                   Our team of recruiters has expertise working across many
                   industry specializations and job areas. Some of these include
                   Engineering, Accounting, Finance, Back-office operations, and
@@ -77,28 +77,28 @@ const PageTemplate = props => {
             We have designed different models to cater to your varied staffing
             needs. Go ahead and pick what suits you the best!
           </p>
-          <Row className="py-5">
-            <Col sm="12" md="4" className="px-3">
-              <h4 className="staff-m-title">Contract Staffing</h4>
-              <p className="mt-3 text-justify staff-m-text">
+          <Row className="py-4">
+            <Col sm="12" md="4">
+              <h4 className="staff-m-title text-center">Contract Staffing</h4>
+              <p className="mt-3 text-justify staff-m-text pr-md-4">
                 Opt for this model to build your staff strength with ease,
                 depending on your workload or projects, and reduce
                 employee-related costs. Pick from our vast talent pool of
                 skilled and experienced professionals.
               </p>
             </Col>
-            <Col sm="12" md="4" className="px-3">
-              <h4 className="staff-m-title">Contract to Hire</h4>
-              <p className="mt-3 text-justify staff-m-text">
+            <Col sm="12" md="4">
+              <h4 className="staff-m-title text-center">Contract to Hire</h4>
+              <p className="mt-3 text-justify staff-m-text px-md-2">
                 This model offers the best and risk-free way to hire the right
                 talent for your organization. It allows you to assess the
                 temporary employees and gives room to evaluate their skills on
                 the job before you hire them permanently.
               </p>
             </Col>
-            <Col sm="12" md="4" className="px-3">
-              <h4 className="staff-m-title">Direct Hire</h4>
-              <p className="mt-3 text-justify staff-m-text">
+            <Col sm="12" md="4">
+              <h4 className="staff-m-title text-center">Direct Hire</h4>
+              <p className="mt-3 text-justify staff-m-text pl-md-4">
                 Our experienced team of recruiters work to streamline the hiring
                 process. They search for the right candidate and screen them for
                 you, allowing you to pick from the best.
