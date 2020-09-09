@@ -71,7 +71,7 @@ const PageTemplate = props => {
       {title === "Staffing Solutions" && (
         <Container className="py-4">
           <h2 className="text-center py-3 overview-title">
-            Our Staffing Modals
+            Our Staffing Models
           </h2>
           <p className="text-center">
             We have designed different models to cater to your varied staffing
