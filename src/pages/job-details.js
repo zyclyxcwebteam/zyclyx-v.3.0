@@ -385,16 +385,19 @@ const jobDescription = props => {
                                     className="form-control"
                                     name="message"
                                     placeholder="Message"
-                                    ref={register({ required: true, max: 300 })}
+                                    ref={register({
+                                      required: false,
+                                      max: 300,
+                                    })}
                                   />
-                                  {errors.message && (
+                                  {/* {errors.message && (
                                     <span className="err-msg">
                                       *Please enter message
                                     </span>
-                                  )}
+                                  )} */}
                                   <label htmlFor="message">
-                                    Subject
-                                    <span className="required">*</span>
+                                    Message
+                                    {/* <span className="required">*</span> */}
                                   </label>
                                 </div>
                               </div>
