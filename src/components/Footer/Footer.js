@@ -10,15 +10,17 @@ const Footer = () => {
         <ul className="contact-links">
           <li>
             <FontAwesomeIcon icon="phone-alt" />
-            <a href="/">(+91) 40 23549363</a>
+            <a href="tel:+91 40 23549363">(+91) 40 23549363</a>
           </li>
           <li>
             <FontAwesomeIcon icon="at" />
-            <a href="/">info@zyclyx.com</a>
+            <a href="mailto:info@zyclyx.com">info@zyclyx.com</a>
           </li>
           <li>
             <FontAwesomeIcon icon="map-marker-alt" />
-            <a href="/">Visit us</a>
+            <a href="https://www.google.com/maps/place/ZYCLYX+CONSULTING+SERVICES+PVT.LTD/@17.424933,78.438608,17z/data=!4m5!3m4!1s0x0:0xa07cad29e31d4876!8m2!3d17.4249331!4d78.4386078?hl=en-US">
+              Visit us
+            </a>
           </li>
         </ul>
       </Container>
