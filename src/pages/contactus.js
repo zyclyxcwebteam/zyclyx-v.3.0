@@ -204,7 +204,7 @@ const Contact = () => {
                   className="floating-label-form c-form"
                 >
                   <div className="row py-md-2 d-flex justify-content-center">
-                    <div className="col-md-7 col-12">
+                    <div className="col-lg-7 col-12">
                       <div className="form-group floating-label py-1">
                         <input
                           type="text"
@@ -222,7 +222,7 @@ const Contact = () => {
                         </label>
                       </div>
                     </div>
-                    <div className="col-md-7 col-12">
+                    <div className="col-lg-7 col-12">
                       <div className="form-group floating-label py-1">
                         <input
                           type="email"
@@ -242,7 +242,7 @@ const Contact = () => {
                         </label>
                       </div>
                     </div>
-                    <div className="col-md-7 col-12">
+                    <div className="col-lg-7 col-12">
                       {/* <div className="form-group floating-label py-1"> */}
                       <PhoneInput
                         inputProps={{
@@ -279,7 +279,7 @@ const Contact = () => {
                         </label>
                       </div>
                     </div> */}
-                    <div className="col-md-7 col-12">
+                    <div className="col-lg-7 col-12">
                       <div className="form-group floating-label py-1">
                         <textarea
                           className="form-control pt-3 pb-4"
