@@ -6,24 +6,20 @@
   "solTitle": "Helping you find the right candidate",
   "bannerImage": "staffing",
   "solImage": "staffing-sol",
-  "scroll": true,
+  "scroll": false,
   "duration": 20,
   "services": [
     {
-      "title": "Managed Services Model",
-      "content": "Our outsourcing process can be applied to the Managed Services Model, wherein we take control of all or part of the IT systems and agree in terms of scope and pricing tied service levels by signing the Service Level Agreement. We will manage full services by integrating our tools, systems, and processes if required."
+      "title": "Vast Network",
+      "content": "Our team's broad expertise in various industries' staffing solutions ensures that you get to choose from a large selection of candidates. Their vast networking capabilities can source talent globally."
     },
     {
-      "title": "Co-Managed Services",
-      "content": "This service model is to fill the skills gaps in your organization, instead of recruiting people for those skills you can outsource it to us. Co-Managed services is a business relationship between your internal IT team and ZYCLYX IT engineers/ specialists where you pick as per your requirement."
+      "title": "Cost Effective",
+      "content": "Outsource your staffing needs to save some big bucks in terms of costs involved in hiring an in-house recruitment team. Join hands with our expert team and quickly fill in your resource requirement with our quality candidates."
     },
     {
-      "title": "Staff Augmentation Services",
-      "content": "Our highly trained and accredited specialists act as an extension of your IT department operating directly under your direction and supervision. Services covered are Enterprise Application, Operating Systems, Network Administrators and more. Our experts help to develop, manage, maintain and support your applications and systems."
-    },
-    {
-      "title": "Application Development Outsourcing",
-      "content": "The purpose of this model is to utilize our resources proficient development and customization skills to provide you with software or products for web, mobile and desktop platforms. We offer broad expertise and a global customer base across multiple verticals."
+      "title": "Quick Turnaround Time",
+      "content": "Our end-to-end staffing expertise accelerates the hiring process, assuring you the right fit for your organization with our process execution."
     }
   ]
 }

@@ -44,38 +44,61 @@ const PageTemplate = props => {
         <Container>
           <h3 className="overview-title text-center py-2 py-md-4">{caption}</h3>
           <p className="overview-text">{overview}</p>
+          {title === "Staffing Solutions" && (
+            <Row className="py-3">
+              <Col sm="12" md="6">
+                <h4 className="staff-o-title">IT Staffing</h4>
+                <p className="staff-o-text">
+                  Fulfilling your business technology needs with people who make
+                  technology possible. We provide skilled candidates across a
+                  wide range of technologies.
+                </p>
+              </Col>
+              <Col sm="12" md="6">
+                <h4 className="staff-o-title">Non IT Staffing</h4>
+                <p className="staff-o-text">
+                  Our team of recruiters has expertise working across many
+                  industry specializations and job areas. Some of these include
+                  Engineering, Accounting, Finance, Back-office operations, and
+                  other Professionals.
+                </p>
+              </Col>
+            </Row>
+          )}
         </Container>
       </Container>
       {/* ADDITIONAL SECTION FOR STAFFING SOLUTIONS */}
       {title === "Staffing Solutions" && (
         <Container className="py-4">
-          <h2 className="text-center py-3">Contract Staffing Modals</h2>
+          <h2 className="text-center py-3 overview-title">
+            Contract Staffing Modals
+          </h2>
           <p className="text-center">
             We have designed different models to cater to your varied staffing
             needs. Go ahead and pick what suits you the best!
           </p>
           <Row className="py-5">
-            <Col sm="12" md="4">
-              <h4>Contract Staffing</h4>
-              <p className="mt-3">
+            <Col sm="12" md="4" className="px-3">
+              <h4 className="staff-m-title">Contract Staffing</h4>
+              <p className="mt-3 text-justify staff-m-text">
                 Opt for this model to build your staff strength with ease,
                 depending on your workload or projects, and reduce
                 employee-related costs. Pick from our vast talent pool of
-                skilled and experienced professionals
+                skilled and experienced professionals.
               </p>
             </Col>
-            <Col sm="12" md="4">
-              <h4>Contract to Hire</h4>
-              <p className="mt-3">
+            <Col sm="12" md="4" className="px-3">
+              <h4 className="staff-m-title">Contract to Hire</h4>
+              <p className="mt-3 text-justify staff-m-text">
                 This model offers the best and risk-free way to hire the right
                 talent for your organization. It allows you to assess the
                 temporary employees and gives room to evaluate their skills on
                 the job before you hire them permanently.
               </p>
             </Col>
-            <Col sm="12" md="4">
-              <h4>Direct Hire</h4>
-              <p className="mt-3">
+            <Col sm="12" md="4" className="px-3">
+              <h4 className="staff-m-title">Direct Hire</h4>
+              <p className="mt-3 text-justify staff-m-text">
                 Our experienced team of recruiters work to streamline the hiring
                 process. They search for the right candidate and screen them for
                 you, allowing you to pick from the best.

@@ -63,6 +63,20 @@
 .scroll-pages {
   width: 50%;
 }
+.staff-o-title {
+  color: #30b454;
+  font-weight: 600;
+}
+.staff-o-text {
+  font-size: 1rem !important;
+}
+.staff-m-title {
+  color: #111b33;
+  font-weight: 600;
+}
+.staff-m-text {
+  color: #555555;
+}
 @media (max-width: 576px) {
   .scroll {
     flex-direction: column;
