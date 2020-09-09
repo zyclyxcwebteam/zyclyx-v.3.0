@@ -46,6 +46,44 @@ const PageTemplate = props => {
           <p className="overview-text">{overview}</p>
         </Container>
       </Container>
+      {/* ADDITIONAL SECTION FOR STAFFING SOLUTIONS */}
+      {title === "Staffing Solutions" && (
+        <Container className="py-4">
+          <h2 className="text-center py-3">Contract Staffing Modals</h2>
+          <p className="text-center">
+            We have designed different models to cater to your varied staffing
+            needs. Go ahead and pick what suits you the best!
+          </p>
+          <Row className="py-5">
+            <Col sm="12" md="4">
+              <h4>Contract Staffing</h4>
+              <p className="mt-3">
+                Opt for this model to build your staff strength with ease,
+                depending on your workload or projects, and reduce
+                employee-related costs. Pick from our vast talent pool of
+                skilled and experienced professionals
+              </p>
+            </Col>
+            <Col sm="12" md="4">
+              <h4>Contract to Hire</h4>
+              <p className="mt-3">
+                This model offers the best and risk-free way to hire the right
+                talent for your organization. It allows you to assess the
+                temporary employees and gives room to evaluate their skills on
+                the job before you hire them permanently.
+              </p>
+            </Col>
+            <Col sm="12" md="4">
+              <h4>Direct Hire</h4>
+              <p className="mt-3">
+                Our experienced team of recruiters work to streamline the hiring
+                process. They search for the right candidate and screen them for
+                you, allowing you to pick from the best.
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      )}
 
       {/* solutions title */}
       <Container fluid className="py-2 py-md-5 solutions-title">

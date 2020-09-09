@@ -140,6 +140,9 @@ const Header = props => {
                       <li>
                         <Link to="/outsourcing-services">Outsourcing</Link>
                       </li>
+                      <li>
+                        <Link to="/staffing-solutions">Staffing Solutions</Link>
+                      </li>
                     </ul>
                   </Col>
                   <Col sm="12" md="3" className="service-menu">

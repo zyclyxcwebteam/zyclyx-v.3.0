@@ -271,3 +271,9 @@
 .predictive-sol {
   background-image: url("/images/service-pages/19-sol.jpg");
 }
+.staffing {
+  background-image: url("/images/service-pages/staff.svg");
+}
+.staffing-sol {
+  background-image: url("/images/service-pages/staff-sol.svg");
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Staffing Solutions",
+  "path": "staffing-solutions",
+  "caption": "Finding the perfect fit for your needs",
+  "overview": "We work towards hiring more efficiently to deliver fast results by managing the end-to-end recruitment process. Our team has catered to the needs of a wide array of clients, from start-ups to large conglomerates. We are the staffing partner for various industries. Let’s team up to find you the best talent in the market while you focus on running your business.",
+  "solTitle": "Helping you find the right candidate",
+  "bannerImage": "staffing",
+  "solImage": "staffing-sol",
+  "scroll": true,
+  "duration": 20,
+  "services": [
+    {
+      "title": "Managed Services Model",
+      "content": "Our outsourcing process can be applied to the Managed Services Model, wherein we take control of all or part of the IT systems and agree in terms of scope and pricing tied service levels by signing the Service Level Agreement. We will manage full services by integrating our tools, systems, and processes if required."
+    },
+    {
+      "title": "Co-Managed Services",
+      "content": "This service model is to fill the skills gaps in your organization, instead of recruiting people for those skills you can outsource it to us. Co-Managed services is a business relationship between your internal IT team and ZYCLYX IT engineers/ specialists where you pick as per your requirement."
+    },
+    {
+      "title": "Staff Augmentation Services",
+      "content": "Our highly trained and accredited specialists act as an extension of your IT department operating directly under your direction and supervision. Services covered are Enterprise Application, Operating Systems, Network Administrators and more. Our experts help to develop, manage, maintain and support your applications and systems."
+    },
+    {
+      "title": "Application Development Outsourcing",
+      "content": "The purpose of this model is to utilize our resources proficient development and customization skills to provide you with software or products for web, mobile and desktop platforms. We offer broad expertise and a global customer base across multiple verticals."
+    }
+  ]
+}
