@@ -14,7 +14,7 @@ import Comejoin from "../../static/images/comejoin.svg";
 import "../css/careers.css";
 
 const JobCard = props => {
-  const { active, title, location, id } = props;
+  const { active, title, location, id, experience } = props;
   return (
     <Col
       md="6"
@@ -31,7 +31,7 @@ const JobCard = props => {
           </div>
           <div>
             <p className="m-0 info-title">Experience</p>
-            <p className="m-0 info-text">2-3 Years</p>
+            <p className="m-0 info-text">{experience}</p>
           </div>
         </div>
 
@@ -63,7 +63,8 @@ const careers = () => {
   const [openings, setOpenings] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("https://agile-plateau-09650.herokuapp.com/jobopenings")
+    // fetch("https://agile-plateau-09650.herokuapp.com/jobopenings")
+    fetch("https://admin-zyclyx.herokuapp.com/job-openings")
       .then(response => {
         return response.json();
       })
@@ -211,10 +212,11 @@ const careers = () => {
                 openings.map(opening => {
                   return (
                     <JobCard
-                      title={opening.title}
-                      location={opening.location}
+                      title={opening.Title}
+                      location={opening.Location}
                       id={opening.id}
                       key={opening.id}
+                      experience={opening.Experience}
                     />
                   );
                 })}
