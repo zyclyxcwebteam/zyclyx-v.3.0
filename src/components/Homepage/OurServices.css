@@ -50,6 +50,7 @@
 .service-slider {
   position: relative;
   height: 95vh;
+  margin-bottom: 3rem;
 }
 .service-item {
   height: 72vh;
