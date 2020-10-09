@@ -37,10 +37,10 @@ library.add(
 );
 
 const layout = props => {
-  const { children, showBanner, title, description, active } = props;
+  const { children, showBanner, title, description, keywords, active } = props;
   return (
     <>
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} keywords={keywords} />
       <Navbar active={active} />
       {children}
       {showBanner && <ContactBanner />}

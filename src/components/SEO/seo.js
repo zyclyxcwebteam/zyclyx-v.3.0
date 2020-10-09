@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-const SEO = ({ description, title }) => {
+const SEO = ({ description, title, keywords }) => {
   return (
     <Helmet
       htmlAttributes={{
@@ -13,6 +13,10 @@ const SEO = ({ description, title }) => {
         {
           name: `description`,
           content: description,
+        },
+        {
+          name: `keywords`,
+          content: keywords,
         },
         {
           property: `og:title`,
@@ -41,6 +45,10 @@ const SEO = ({ description, title }) => {
         {
           name: `twitter:description`,
           content: description,
+        },
+        {
+          name: "google-site-verification",
+          content: "google8234ea290c7b1d82.html",
         },
       ]}
     />
