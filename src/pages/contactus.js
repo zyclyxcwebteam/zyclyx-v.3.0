@@ -110,8 +110,8 @@ const Contact = () => {
                         </p>
                         <h4 className="contact-title mt-md-3">USA</h4>
                         <p>
-                          2150 North First Street 4th Floor San Jose, California
-                          95131, United States
+                          2150 North First Street, 4th Floor San Jose,
+                          California 95131, United States
                         </p>
                       </Col>
                     </Row>
