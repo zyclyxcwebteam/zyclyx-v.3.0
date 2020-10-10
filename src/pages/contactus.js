@@ -95,7 +95,7 @@ const Contact = () => {
                   <Col md="7" sm="12">
                     <Row>
                       <Col sm="3">
-                        <p className="icons mt-4">
+                        <p className="icons">
                           <FontAwesomeIcon
                             icon="map-marked-alt"
                             className="contact-icon"
@@ -103,15 +103,31 @@ const Contact = () => {
                         </p>
                       </Col>
                       <Col sm="9">
-                        <h4 className="contact-title">INDIA</h4>
+                        <h4 className="contact-title mt-md-3">INDIA</h4>
                         <p className="contact-text">
                           3rd Floor, Pearl Enclave, Green Valley Road No-5,
                           Banjara Hills, Hyderabad, Telangana 500034
                         </p>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                <Row className="d-flex justify-content-center align-items-center py-3">
+                  <Col md="7" sm="12">
+                    <Row>
+                      <Col sm="3">
+                        <p className="icons">
+                          <FontAwesomeIcon
+                            icon="map-marked-alt"
+                            className="contact-icon"
+                          />
+                        </p>
+                      </Col>
+                      <Col sm="9">
                         <h4 className="contact-title mt-md-3">USA</h4>
                         <p>
                           2150 North First Street, 4th Floor San Jose,
-                          California 95131, United States
+                          California-95131, United States
                         </p>
                       </Col>
                     </Row>
