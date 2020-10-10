@@ -1,13 +1,15 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import fetch from "isomorphic-fetch";
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
+import PhoneInput, { formatPhoneNumberIntl } from "react-phone-number-input";
+// import PhoneInput from "react-phone-input-2";
+// import "react-phone-input-2/lib/style.css";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
+import "react-phone-number-input/style.css";
 import "../css/contactus.css";
 import "../css/form-floating-label.css";
 
@@ -15,29 +17,35 @@ const Contact = () => {
   const [showContactInfo, setShowContactInfo] = useState(true);
   const [success, setSuccess] = useState(false);
   const [submintForm, setSubmitForm] = useState(false);
-  const [phone, setPhone] = useState(null);
+  const [country, setCountry] = useState("");
+  const [value, setValue] = useState();
 
-  const handleOnChange = (_value, _data) => {
-    setPhone({
-      phone: _value.slice(_data.dialCode.length),
-      code: _data.dialCode,
-    });
-  };
+  useEffect(() => {
+    fetch(
+      "https://api.ipgeolocation.io/ipgeo?apiKey=16c06a48afce45e5a1c1427e1c4b628f"
+    )
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        setCountry(data.country_code2);
+      });
+  }, []);
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
     setSubmitForm(true);
     const payload = {
-      fullname: data.fullname,
-      email: data.email,
-      phone: phone.phone,
-      date: new Date(),
-      message: data.message,
-      countryCode: phone.code,
-      website: "zyclyx",
+      Full_Name: data.fullname,
+      Email: data.email,
+      Phone: formatPhoneNumberIntl(value),
+      Date: new Date(),
+      Message: data.message,
+      Website: "ZYCLYX",
     };
 
-    fetch("https://zyclyx-backend-api.herokuapp.com/business-enquiries", {
+    fetch("https://admin-zyclyx.herokuapp.com/business-enquiries", {
+      // fetch("http://localhost:1337/business-enquiries", {
       method: "post",
       headers: {
         "Content-type": "application/json",
@@ -50,22 +58,11 @@ const Contact = () => {
       })
       .then(() => {
         event.target.reset();
-        setPhone({ phone: null });
+        setValue("");
         setTimeout(() => {
           setSuccess(false);
-        }, 6000);
+        }, 5000);
         setSubmitForm(false);
-        fetch("https://zyclyx-email-sender.herokuapp.com/contact", {
-          method: "post",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        })
-          .then(res => {
-            return res.json();
-          })
-          .then(() => {});
       });
   };
 
@@ -106,10 +103,15 @@ const Contact = () => {
                         </p>
                       </Col>
                       <Col sm="9">
-                        <h4 className="contact-title">OFFICE</h4>
+                        <h4 className="contact-title">India</h4>
                         <p className="contact-text">
                           3rd Floor, Pearl Enclave, Green Valley Road No-5,
                           Banjara Hills, Hyderabad, Telangana 500034
+                        </p>
+                        <h4 className="contact-title">USA</h4>
+                        <p>
+                          2150 North First Street 4th Floor San Jose, California
+                          95131, United States
                         </p>
                       </Col>
                     </Row>
@@ -243,18 +245,13 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="col-lg-7 col-12">
-                      {/* <div className="form-group floating-label py-1"> */}
                       <PhoneInput
-                        inputProps={{
-                          name: "phone",
-                          required: true,
-                          autoFocus: true,
-                        }}
-                        inputClass="form-control"
-                        containerClass="form-group floating-label"
-                        country="in"
-                        onChange={handleOnChange}
                         placeholder="Phone"
+                        className="form-group floating-label py-1"
+                        value={value}
+                        onChange={setValue}
+                        defaultCountry={country}
+                        required
                       />
                     </div>
                     {/* <div className="col-md-7 col-12">

@@ -4,12 +4,15 @@ import { useForm } from "react-hook-form";
 import { Container, Row, Col } from "reactstrap";
 import fetch from "isomorphic-fetch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
+import PhoneInput, {
+  formatPhoneNumberIntl,
+  parsePhoneNumber,
+} from "react-phone-number-input";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import "../css/job-description.css";
 import "../css/form-floating-label.css";
+import "react-phone-number-input/style.css";
 
 // Job Requirement/Responsibility point
 
@@ -36,14 +39,21 @@ const jobDescription = props => {
     showForm: false,
     formBtn: true,
   });
-  const [phone, setPhone] = useState(null);
+  const [value, setValue] = useState();
+  const [country, setCountry] = useState("");
 
-  const handleOnChange = (_value, _data) => {
-    setPhone({
-      phone: _value.slice(_data.dialCode.length),
-      code: _data.dialCode,
-    });
-  };
+  useEffect(() => {
+    fetch(
+      "https://api.ipgeolocation.io/ipgeo?apiKey=16c06a48afce45e5a1c1427e1c4b628f"
+    )
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        setCountry(data.country_code2);
+      });
+  }, []);
+
   const handleFileUpload = event => {
     setResumeFile(event.target.files[0]);
   };
@@ -65,19 +75,20 @@ const jobDescription = props => {
   const onSubmit = (data, event) => {
     setSubmitForm(true);
     const payload = {
-      firstname: data.firstname,
-      lastname: data.lastname,
-      email: data.email,
-      phone: phone.phone,
-      subject: data.message,
-      position: jobDetails.Title,
-      website: "zyclyx",
-      country_code: phone.code,
-      date: new Date(),
+      Firstname: data.firstname,
+      Lastname: data.lastname,
+      Email: data.email,
+      Phone: formatPhoneNumberIntl(value),
+      Message: data.message,
+      Position: jobDetails.Title,
+      Website: "zyclyx",
+      Country_Code: parsePhoneNumber(value)
+        ? parsePhoneNumber(value).country
+        : "",
+      Date: new Date(),
     };
-
     // store form data in db
-    fetch("https://zyclyx-backend-api.herokuapp.com/job-applications/", {
+    fetch("https://admin-zyclyx.herokuapp.com/job-applications/", {
       method: "post",
       body: JSON.stringify(payload),
     })
@@ -96,10 +107,10 @@ const jobDescription = props => {
         const fileData = new FormData();
         fileData.append("files", resumeFile);
         fileData.append("refId", jsondata.id);
-        fileData.append("field", "resume");
+        fileData.append("field", "Resume");
         fileData.append("ref", "job-applications");
 
-        fetch("https://zyclyx-backend-api.herokuapp.com/upload/", {
+        fetch("https://admin-zyclyx.herokuapp.com/upload/", {
           method: "post",
           body: fileData,
         }).then(res => {
@@ -324,41 +335,15 @@ const jobDescription = props => {
                                 </div>
                               </div>
                               <div className="col-12">
-                                {/* <div className="form-group floating-label py-1"> */}
                                 <PhoneInput
-                                  inputProps={{
-                                    name: "phone",
-                                    required: true,
-                                    autoFocus: true,
-                                  }}
-                                  inputClass="form-control"
-                                  containerClass="form-group floating-label"
-                                  country="in"
-                                  onChange={handleOnChange}
                                   placeholder="Phone"
+                                  className="form-group floating-label py-1"
+                                  value={value}
+                                  onChange={setValue}
+                                  defaultCountry={country}
+                                  required
                                 />
                               </div>
-                              {/* <div className="col-12">
-                                <div className="form-group floating-label py-1">
-                                  <input
-                                    type="text"
-                                    className="form-control"
-                                    name="phone"
-                                    placeholder="Phone"
-                                    pattern="^[0-9]{3,12}$"
-                                    ref={register({ required: true })}
-                                  />
-                                  {errors.phone && (
-                                    <span className="err-msg">
-                                      *Please enter phone
-                                    </span>
-                                  )}
-                                  <label>
-                                    Phone
-                                    <span className="required">*</span>
-                                  </label>
-                                </div>
-                              </div> */}
 
                               <div className="col-12">
                                 <div className="form-group py-1  py-md-2">
