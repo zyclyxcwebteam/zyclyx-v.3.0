@@ -103,12 +103,12 @@ const Contact = () => {
                         </p>
                       </Col>
                       <Col sm="9">
-                        <h4 className="contact-title">India</h4>
+                        <h4 className="contact-title">INDIA</h4>
                         <p className="contact-text">
                           3rd Floor, Pearl Enclave, Green Valley Road No-5,
                           Banjara Hills, Hyderabad, Telangana 500034
                         </p>
-                        <h4 className="contact-title">USA</h4>
+                        <h4 className="contact-title mt-md-3">USA</h4>
                         <p>
                           2150 North First Street 4th Floor San Jose, California
                           95131, United States
