@@ -18,13 +18,14 @@ const PageTemplate = props => {
     solImage,
     scroll,
     duration,
+    metaTitle,
     metaDescription,
     metaKeywords,
   } = dataJson;
   return (
     <Layout
       showBanner
-      title={title}
+      title={metaTitle}
       description={metaDescription}
       keywords={metaKeywords}
       active="service"
@@ -195,6 +196,7 @@ export const pageQuery = graphql`
       solImage
       scroll
       duration
+      metaTitle
       metaDescription
       metaKeywords
       services {
