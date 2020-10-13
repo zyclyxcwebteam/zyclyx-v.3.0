@@ -6,8 +6,20 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    siteUrl: `https://zyclyx.com/`,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://zyclyx.com/`,
+        sitemap: `https://zyclyx.com/sitemap.xml`,
+        policy: [{ userAgent: `*`, allow: `/` }],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
