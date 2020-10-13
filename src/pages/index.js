@@ -19,8 +19,9 @@ export default () => {
       <Layout
         showBanner
         active="home"
-        title="Zyclyx consulting services PVT.Ltd"
-        description="providing IT services"
+        title="Providing IT Services in India & USA - RPA, AI, OCR & Digital Marketing | ZYCLYX"
+        description="A global automation technology provider leading the industry
+        with innovative ideas."
       >
         <ImageCarousel />
         <Container fluid className="overview py-5">

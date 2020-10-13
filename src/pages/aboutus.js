@@ -49,7 +49,7 @@ const aboutus = () => {
     <Layout
       showBanner
       active="about"
-      title="About us - ZYCLYX"
+      title="About Us | Best IT Service Provider Company in India & USA"
       description="A Fast-Growing Technology Leader in Artificial Intelligence,automation,bigdata"
     >
       <Container fluid className="hero-banner">

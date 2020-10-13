@@ -78,7 +78,7 @@ const careers = () => {
     <Layout
       showBanner
       active="career"
-      title="Career Opportunities at ZYCLYX"
+      title="Career Opportunities"
       description="In ZYCLYX, we empower employees to explore their talents
     and abilities in tandem with their careers"
     >
