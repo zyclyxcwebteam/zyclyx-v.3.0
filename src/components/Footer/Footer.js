@@ -29,17 +29,29 @@ const Footer = () => {
           <Col sm="12" md="4" className="social-media px-0">
             <ul className="py-1">
               <li>
-                <a href="https://www.facebook.com/Zyclyx.IT" title="facebook">
+                <a
+                  href="https://www.facebook.com/Zyclyx.IT"
+                  title="facebook"
+                  target="__blank"
+                >
                   <FontAwesomeIcon icon={["fab", "facebook"]} />
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/zyclyx_it" title="instagram">
+                <a
+                  href="https://www.instagram.com/zyclyx_it"
+                  title="instagram"
+                  target="__blank"
+                >
                   <FontAwesomeIcon icon={["fab", "instagram"]} />
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/Zyclyx_IT" title="twitter">
+                <a
+                  href="https://twitter.com/Zyclyx_IT"
+                  title="twitter"
+                  target="__blank"
+                >
                   <FontAwesomeIcon icon={["fab", "twitter"]} />
                 </a>
               </li>
@@ -47,6 +59,7 @@ const Footer = () => {
                 <a
                   href="https://www.linkedin.com/company/zyclyx-consulting-pvt-ltd"
                   title="Linkedin"
+                  target="__blank"
                 >
                   <FontAwesomeIcon icon={["fab", "linkedin"]} />
                 </a>
@@ -61,17 +74,17 @@ const Footer = () => {
           <Col sm="12" md="4" className="privacy px-0">
             <ul className="py-1 ml-auto">
               <li>
-                <a href="/" title="Privacy">
+                <a href="/privacy-policy" title="Privacy">
                   Privacy
                 </a>
               </li>
               <li>
-                <a href="/" title="Terms">
+                <a href="/terms-conditions" title="Terms">
                   Terms
                 </a>
               </li>
               <li>
-                <a href="/" title="sitemap">
+                <a href="/sitemap" title="sitemap">
                   Sitemap
                 </a>
               </li>
