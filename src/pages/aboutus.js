@@ -59,10 +59,10 @@ const aboutus = () => {
             md="6"
             className="title-box d-flex flex-column justify-content-center align-items-center"
           >
-            <h2 className="banner-title">
+            <h1 className="banner-title">
               A Fast-Growing Technology Leader in
-            </h2>
-            <h2 className="banner-title title-green">
+            </h1>
+            <h1 className="banner-title title-green">
               <RotatingText
                 items={[
                   "Artificial Intelligence",
@@ -73,7 +73,7 @@ const aboutus = () => {
                   "Internet of Things",
                 ]}
               />
-            </h2>
+            </h1>
           </Col>
           <Col
             sm="12"

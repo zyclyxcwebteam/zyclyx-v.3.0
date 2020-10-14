@@ -11,7 +11,7 @@ const HeroBanner = ({ title, imageClass }) => {
           md="6"
           className="title-box d-flex flex-column justify-content-center align-items-center"
         >
-          <h2 className="banner-title">{title}</h2>
+          <h1 className="banner-title">{title}</h1>
         </Col>
         <Col
           sm="12"
