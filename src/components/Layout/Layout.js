@@ -17,7 +17,7 @@ import SEO from "../SEO/seo";
 import Navbar from "../NavBar/Navbar";
 import ContactBanner from "../ContactBanner/ContactBanner";
 import Footer from "../Footer/Footer";
-import ChatBot from "../ChatBot/ChatBot";
+// import ChatBot from "../ChatBot/ChatBot";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Layout.css";
 
@@ -45,7 +45,7 @@ const layout = props => {
       {children}
       {showBanner && <ContactBanner />}
       <Footer />
-      <ChatBot />
+      {/* <ChatBot /> */}
     </>
   );
 };
