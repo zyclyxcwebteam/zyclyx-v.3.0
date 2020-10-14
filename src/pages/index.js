@@ -20,8 +20,8 @@ export default () => {
         showBanner
         active="home"
         title="Providing IT Services in India & USA - RPA, AI, OCR & Digital Marketing | ZYCLYX"
-        description="A global automation technology provider leading the industry
-        with innovative ideas."
+        description="ZYCLYX is a purpose-driven organization that promises phenomenal Artificial Intelligence, Robotic Process Automation, Staffing Solutions, Web App Development, Digital Marketing Services and IT services in India and USA"
+        keywords="Zyclyx, Zyclyx services, AI Services, RPA Services, IT Services, Staffing Solutions, Digital Marketing, Web App Development, India, USA"
       >
         <ImageCarousel />
         <Container fluid className="overview py-5">
