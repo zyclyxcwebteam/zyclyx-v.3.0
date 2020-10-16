@@ -15,7 +15,9 @@ const ContactBanner = () => {
           className="d-flex justify-content-center flex-row flex-md-column align-items-center"
         >
           <div className="d-flex flex-column align-items-center">
-            <h2 className="contact-b-title py-2">Get in touch with us</h2>
+            <h2 className="section-title green-text py-2">
+              Get in touch with us
+            </h2>
             <Link to="/contactus" className="button d-flex align-items-center">
               Let&apos;s Connect
               <FontAwesomeIcon icon="arrow-right" className="btn-icon" />

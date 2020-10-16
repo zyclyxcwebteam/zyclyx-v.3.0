@@ -21,11 +21,6 @@
 }
 .brand {
   font-family: "NeuropoliticalRg-Regular", sans-serif;
-  font-size: 3rem;
-}
-.welcome-text {
-  font-size: 1.2rem;
-  text-align: justify;
 }
 
 .poc-wrapper {
@@ -51,31 +46,7 @@
   color: #c5c5c591;
   font-family: "Roboto", sans-serif;
 }
-/* our services slider */
-.service-img img {
-  height: 500px;
-  width: 750px;
-}
-.service-title {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #00a14b;
-}
-.service-title span {
-  font-size: 2rem;
-  font-weight: 500;
-}
-.s-banner-indicators li {
-  height: 15px;
-  width: 15px;
-  margin: 0 0.5rem;
-  background-color: #00a14b;
-  border-radius: 50%;
-  bottom: -30px;
-}
-.s-banner-indicators {
-  bottom: -55px;
-}
+
 /* company stats */
 .stat-title {
   font-size: 4rem;
@@ -97,12 +68,6 @@
 }
 
 @media (max-width: 576px) {
-  .welcome-title {
-    font-size: 1.5rem;
-  }
-  .brand {
-    font-size: 2.5rem;
-  }
   .poc-title {
     font-size: 1.3rem;
   }
@@ -118,15 +83,7 @@
   .stat-caption {
     font-size: 1rem;
   }
-  .service-title {
-    font-size: 2rem;
-  }
-  .service-title span {
-    font-size: 1.5rem;
-  }
-  .service-slider {
-    height: 85vh;
-  }
+
   .slick-arrow {
     display: none !important;
   }

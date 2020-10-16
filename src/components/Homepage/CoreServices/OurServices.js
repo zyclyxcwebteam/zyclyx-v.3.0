@@ -8,16 +8,13 @@ import {
   CarouselItem,
   CarouselIndicators,
 } from "reactstrap";
+import ImageFluid from "../../Image/ImageFluid";
 import "./OurServices.css";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import NewAgeBG from "../../../static/images/services/new-age.jpg";
-import NetworkBG from "../../../static/images/services/security.jpg";
-import RPABG from "../../../static/images/services/rpa.jpg";
-import OCRBG from "../../../static/images/services/ocr.jpg";
+import SectionTitle from "../../SectionTitle/SectionTitle";
 
 const items = [
   {
-    src: NewAgeBG,
+    imageFileName: "new-age.jpg",
     serviceText:
       "Artificial intelligence is a branch that allows creating smart machines based on the principle of human intelligence. Our team of AI experts works on machines to help them mimic and execute tasks, from the simplest to complex. It aims to include learning, reasoning, and perception.",
     captionOne: "Building future with",
@@ -27,17 +24,17 @@ const items = [
     linkTo: "/artificial-intelligence",
   },
   {
-    src: RPABG,
+    imageFileName: "rpa.jpg",
     serviceText:
       "Robotic Process Automation automates repetitive human tasks by developing an interface with current IT systems without any complex integrations. We assist you to minimize operating costs and optimize performance by innovating, inventing and automating high-quality business processes.",
     captionOne: "Improve business efficiency with",
     captionTwo: "Robotic Process Automation",
-    imgLeft: false,
+    imgLeft: true,
     key: 2,
     linkTo: "/robotic-process-automation",
   },
   {
-    src: OCRBG,
+    imageFileName: "ocr.jpg",
     serviceText:
       "The OCR technology converts virtually any kind of documents, such as scanned paper documents, PDF files, or images captured by a digital camera into machine-readable text data which is editable and searchable. It saves you a lot of time and effort when creating, processing, and repurposing various documents.",
     captionOne: "Adopt smart solutions with",
@@ -47,12 +44,12 @@ const items = [
     linkTo: "/optical-character-recognition",
   },
   {
-    src: NetworkBG,
+    imageFileName: "security.jpg",
     serviceText:
       "When you have to work in a world of devious cybercriminals, it’s important to ensure that your network and data are safe. We at ZYCLYX use a combination of effective hardware and software solutions to protect you from multiple layers of intrusions and breaches.",
     captionOne: "Protect your Data with",
     captionTwo: "Network Security",
-    imgLeft: false,
+    imgLeft: true,
     key: 4,
     linkTo: "/network-security",
   },
@@ -84,23 +81,27 @@ const OurServices = () => {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
+        key={item.captionTwo}
         className="service-item"
       >
         <Row>
           {item.imgLeft && (
-            <Col md={6} sm={12} className="service-img d-md-block d-none">
-              <img src={item.src} alt="new age" />
+            <Col lg={6} sm={12} className="service-img">
+              <ImageFluid
+                fileName={item.imageFileName}
+                altText={item.captionTwo}
+              />
             </Col>
           )}
-          <Col md={6} sm={12} className="p-1 p-md-5">
-            <div className="py-md-5 p-1">
-              <h2 className="service-title text-center">
-                <span>{item.captionOne}</span>
-                <br />
-                {item.captionTwo}
+          <Col lg={6} sm={12} className="p-1 p-md-3">
+            <div className="py-md-3 p-1">
+              <h2 className="section-title-sm text-center py-2">
+                <span className="text-content green-text text-center d-block">
+                  {item.captionOne}
+                </span>
+                <strong>{item.captionTwo}</strong>
               </h2>
-              <p className="px-md-5 px-2">{item.serviceText}</p>
+              <p className="px-md-4 px-2 text-content">{item.serviceText}</p>
               <p className="text-center">
                 <Link to={item.linkTo} className="service-link text-center">
                   Discover More
@@ -108,21 +109,29 @@ const OurServices = () => {
               </p>
             </div>
           </Col>
-          {!item.imgLeft && (
-            <Col sm={12} md={6} className="service-img d-md-block d-none">
-              <img src={item.src} alt="new age" />
+          {/* {!item.imgLeft && (
+            <Col sm={12} lg={6} className="service-img">
+              <ImageFluid
+                fileName={item.imageFileName}
+                altText={item.captionTwo}
+              />
             </Col>
-          )}
+          )} */}
         </Row>
       </CarouselItem>
     );
   });
   return (
-    <Container fluid className="service-slider">
+    <Container fluid className="service-slider py-2">
       <Container>
         <SectionTitle title="Core Services" />
       </Container>
-      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+      <Carousel
+        activeIndex={activeIndex}
+        next={next}
+        previous={previous}
+        className="pb-5"
+      >
         <CarouselIndicators
           items={items}
           activeIndex={activeIndex}

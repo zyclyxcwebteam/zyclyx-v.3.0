@@ -13,6 +13,8 @@
 .banner-carousel .carousel-item {
   height: 90vh;
   position: relative;
+  background-color: #111b33;
+  background-blend-mode: soft-light;
 }
 .home-banner-title {
   position: absolute;
@@ -21,6 +23,8 @@
   transform: translate(-10%, -50%);
   color: #fff;
   font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.6;
 }
 .slide-1 {
   background-image: url("../../../static/images/home-banner/img1.jpg");

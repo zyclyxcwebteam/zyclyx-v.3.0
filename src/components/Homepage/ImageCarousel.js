@@ -10,20 +10,20 @@ const ImageCarousel = () => {
   const captions = [
     {
       altText: "Slide 1",
-      caption1: "Rooted in knowledge",
-      caption2: "built on trust",
+      caption1: "Rooted in Knowledge",
+      caption2: "Built on Trust",
       index: 1,
     },
     {
       altText: "Slide 2",
-      caption1: "Taking technology forward",
-      caption2: "with possibilities",
+      caption1: "Taking Technology Forward",
+      caption2: "with Possibilities",
       index: 2,
     },
     {
       altText: "Slide 3",
-      caption1: "Save time and money with",
-      caption2: "business automation",
+      caption1: "Save Time and Money with",
+      caption2: "Business Automation",
       index: 3,
     },
   ];
@@ -53,9 +53,8 @@ const ImageCarousel = () => {
         key={item.index}
         className={`slide-${item.index}`}
       >
-        <h1 className="home-banner-title">
-          <span>{item.caption1}</span>
-          <br />
+        <h1 className="home-banner-title section-title text-center">
+          <span className="section-title-sm d-block">{item.caption1}</span>
           <span>{item.caption2}</span>
         </h1>
       </CarouselItem>

@@ -5,7 +5,7 @@ import Layout from "../components/Layout/Layout";
 import Clients from "../components/Homepage/Clients";
 import Partners from "../components/Homepage/Partners";
 import ImageCarousel from "../components/Homepage/ImageCarousel";
-import OurServices from "../components/Homepage/OurServices";
+import OurServices from "../components/Homepage/CoreServices/OurServices";
 import Industries from "../components/Homepage/Industries/Industries";
 import "../css/home.css";
 import "../components/Homepage/Clients.css";
@@ -24,17 +24,21 @@ export default () => {
         keywords="Zyclyx, Zyclyx services, AI Services, RPA Services, IT Services, Staffing Solutions, Digital Marketing, Web App Development, India, USA"
       >
         <ImageCarousel />
-        <Container fluid className="overview py-5">
+        <Container fluid className="overview py-md-5 py-3">
           <Container>
             <Row>
               <Col className="col-lg-3 col-12 d-flex justify-content-center align-items-center text-center">
                 <div>
-                  <h2 className="text-center welcome-title">Welcome to</h2>
-                  <h2 className="text-center brand">ZYCLYX</h2>
+                  <h2 className="text-center  section-title">
+                    <span className="d-block text-center text-content green-text">
+                      Welcome to
+                    </span>
+                    <span className="brand">ZYCLYX</span>
+                  </h2>
                 </div>
               </Col>
               <Col className="col-lg-9 col-12 d-flex align-items-center">
-                <p className="mb-0 welcome-text">
+                <p className="mb-0 text-content">
                   A global automation technology provider leading the industry
                   with innovative ideas. With our agile collaborative approach
                   our team strives to provide custom solutions. These solutions
@@ -79,14 +83,15 @@ export default () => {
           </Container>
         </Container>
         {/* Proof of Concept */}
-        <Container fluid className="py-5 poc-wrapper">
+        <Container fluid className="py-md-5 py-3 poc-wrapper">
           <Container>
-            <h2 className="text-md-center text-left poc-title">
-              Fostering your trust in us with
-              <br />
-              <span className="poc-title-bg">Free Proof of Concept</span>
+            <h2 className="text-center section-title py-2">
+              <span className="text-center text-content green-text d-block">
+                Fostering your trust in us with
+              </span>
+              <span>Free Proof of Concept</span>
             </h2>
-            <p className="text-justify py-md-4 py-2">
+            <p className="text-content mb-0">
               We believe in developing a trusting partnership with our clients
               by offering free proof of concept as part of our value added
               services. With this we demonstrate our work potential by creating
@@ -96,15 +101,15 @@ export default () => {
             </p>
             <Row>
               <Col sm="12" className="mx-auto">
-                <Row className="py-4 mx-auto proof-row">
+                <Row className="py-md-4 py-2 mx-auto proof-row">
                   <Col md="4" sm="4" className="p-0 d-flex">
                     <Row className="mx-auto">
                       <Col sm="3" className="p-0">
-                        <h1 className="poc-letter">F</h1>
+                        <h2 className="poc-letter">F</h2>
                       </Col>
                       <Col sm="8" className="poc-content p-0">
-                        <h2>Forecast</h2>
-                        <p>
+                        <h3>Forecast</h3>
+                        <p className="mb-0">
                           Act as a tool to forecast the feasibility of the
                           projects.
                         </p>
@@ -114,22 +119,26 @@ export default () => {
                   <Col md="4" sm="4" className="p-0">
                     <Row className="mx-auto">
                       <Col sm="3" className="p-0">
-                        <h1 className="poc-letter">R</h1>
+                        <h2 className="poc-letter">R</h2>
                       </Col>
                       <Col sm="8" className="poc-content p-0">
-                        <h2>Report</h2>
-                        <p>Provides a complete report on project evaluation</p>
+                        <h3>Report</h3>
+                        <p className="mb-0">
+                          Provides a complete report on project evaluation
+                        </p>
                       </Col>
                     </Row>
                   </Col>
                   <Col md="4" sm="4" className="p-0">
                     <Row className="mx-auto">
                       <Col sm="3" className="p-0">
-                        <h1 className="poc-letter">C</h1>
+                        <h2 className="poc-letter">C</h2>
                       </Col>
                       <Col sm="8" className="p-0 poc-content">
-                        <h2>Cost Effective</h2>
-                        <p>Saves your businesses time and money</p>
+                        <h3>Cost Effective</h3>
+                        <p className="mb-0">
+                          Saves your businesses time and money
+                        </p>
                       </Col>
                     </Row>
                   </Col>
@@ -143,7 +152,9 @@ export default () => {
           <div className="title-buttons d-flex justify-content-center align-items-center pb-5">
             <button
               type="button"
-              className={`t-btn btn-left ${!showClients && "t-btn-active"}`}
+              className={`t-btn section-title-sm btn-left ${
+                !showClients && "t-btn-active"
+              }`}
               onClick={() => setShowClients(!showClients)}
               disabled={!showClients}
             >
@@ -151,7 +162,9 @@ export default () => {
             </button>
             <button
               type="button"
-              className={`t-btn ${showClients && "t-btn-active"}`}
+              className={`t-btn section-title-sm ${
+                showClients && "t-btn-active"
+              }`}
               disabled={showClients}
               onClick={() => setShowClients(!showClients)}
             >
