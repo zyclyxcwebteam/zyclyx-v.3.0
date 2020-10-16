@@ -10,3 +10,16 @@ h5,
 h6 {
   font-family: "Maven Pro", sans-serif;
 }
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 600;   
+}
+.section-title.green-title {
+  color: #00a14b;
+}
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}

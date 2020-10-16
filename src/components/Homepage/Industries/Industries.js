@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
-import SectioTitle from "../SectionTitle/SectionTitle";
 import "./Industries.css";
 
 const IndContent = [
@@ -48,33 +47,27 @@ const Industries = () => {
   const [indCard, updateIndCard] = useState({
     title: IndContent[0].title,
     text: IndContent[0].text,
-    indBG: "ind-1",
   });
 
   function UpdateIndContent(index) {
     updateIndCard({
       title: IndContent[index].title,
       text: IndContent[index].text,
-      indBG: `ind-${index}`,
     });
   }
   return (
-    <Container fluid className={`py-2 px-0 industry-wrapper ${indCard.indBG}`}>
-      {/* title */}
-      <Container>
-        <SectioTitle title={indCard.title} color="green" />
+    <Container fluid className="py-md-5 py-2 px-0 industry-wrapper">
+      <Container className="py-md-4 py-2">
+        <h2 className="section-title green-title py-2 mb-2">{indCard.title}</h2>
         <Row>
-          <Col sm={12} md={8}>
-            <p className="ind-content pr-5">{indCard.text}</p>
+          <Col>
+            <p className="ind-content py-md-4 py-2 px-2">{indCard.text}</p>
           </Col>
         </Row>
       </Container>
-      {/* industry text */}
-
-      {/* Industry Cards */}
-      <Container className="ind-cards">
+      <Container className="ind-cards pb-md-4 pb-2">
         <Row className="justify-content-around">
-          <Col className="col-2">
+          <Col className="col-2 px-0">
             {/* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events */}
             <IndustryCard
               title="Banking"
@@ -82,28 +75,28 @@ const Industries = () => {
               updateContent={() => UpdateIndContent(1)}
             />
           </Col>
-          <Col className="col-2">
+          <Col className="col-2 px-0">
             <IndustryCard
               title="Telecom"
               cardImg="t-card"
               updateContent={() => UpdateIndContent(2)}
             />
           </Col>
-          <Col className="col-2">
+          <Col className="col-2 px-0">
             <IndustryCard
               title="Retail"
               cardImg="r-card"
               updateContent={() => UpdateIndContent(3)}
             />
           </Col>
-          <Col className="col-2">
+          <Col className="col-2 px-0">
             <IndustryCard
               title="Healthcare"
               cardImg="h-card"
               updateContent={() => UpdateIndContent(4)}
             />
           </Col>
-          <Col className="col-2">
+          <Col className="col-2 px-0">
             <IndustryCard
               title="Logistics"
               cardImg="l-card"

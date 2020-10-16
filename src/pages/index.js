@@ -6,7 +6,7 @@ import Clients from "../components/Homepage/Clients";
 import Partners from "../components/Homepage/Partners";
 import ImageCarousel from "../components/Homepage/ImageCarousel";
 import OurServices from "../components/Homepage/OurServices";
-import Industries from "../components/Homepage/Industries";
+import Industries from "../components/Homepage/Industries/Industries";
 import "../css/home.css";
 import "../components/Homepage/Clients.css";
 import "slick-carousel/slick/slick.css";

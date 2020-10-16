@@ -1,0 +1,79 @@
+ 
+.industry-wrapper {   
+  background-color: #111b33;
+}
+ 
+.i-card {
+ height: 200px;
+ background-color: hsl(222, 50%, 15%);
+  border-radius: 1rem; 
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1rem;
+  color: #ffffff;
+  transition: all 0.2s ease-in;
+  position: relative;   
+}
+.i-card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(17, 27, 51,0.6);
+  z-index: 1;
+  border-radius: 1rem;
+}
+.i-card:hover {
+  transform: translateY(-10px);
+}
+.card-title {
+  z-index: 2;
+  color:#ffffff;
+}
+.b-card {
+  background-image: url('../../../../static/images/industries/banking.png');
+  background-size: cover;
+}
+.h-card {
+  background-image: url("../../../../static/images/industries/healthcare.png");
+  background-size: cover;
+}
+.r-card {
+  background-image: url("../../../../static/images/industries/retail.png");
+  background-size: cover;
+}
+.t-card {
+  background-image: url("../../../../static/images/industries/telecom.png");
+  background-size: cover;
+}
+.l-card {
+  background-image: url("../../../../static/images/industries/logistics.png");
+  background-size: cover;
+}
+ 
+.ind-content {
+  color:hsl(222, 50%, 85%);
+  font-size: 1.4rem;
+  min-height: 180px;
+}
+
+@media (max-width: 992px) {
+  .i-card {
+    height: 150px;     
+  }
+}
+@media (max-width: 762px) {
+  .i-card {
+    height: 100px;     
+  }
+}
+@media (max-width: 586px) {
+  .i-card {
+    height: 50px;
+    width: 50px;
+  }
+}
