@@ -38,8 +38,14 @@ const IndContent = [
 
 const IndustryCard = ({ title, cardImg, updateContent }) => {
   return (
-    <div className={`i-card ${cardImg}`} onMouseEnter={updateContent}>
-      <h3 className="text-center card-title d-md-block d-none">{title}</h3>
+    <div
+      className={`d-flex align-items-center align-items-md-end i-card ${cardImg}`}
+      onMouseEnter={updateContent}
+    >
+      <h3 className="text-center card-title mb-0">
+        <span className="d-none d-md-block">{title}</span>
+        <span className="d-block d-md-none">{title[0]}</span>
+      </h3>
     </div>
   );
 };

@@ -74,6 +74,10 @@
 @media (max-width: 586px) {
   .i-card {
     height: 50px;
-    width: 50px;
+    padding-bottom: 0;    
   }
+  .card-title{
+    font-weight: 700;
+    font-size: 2rem;
+  } 
 }
