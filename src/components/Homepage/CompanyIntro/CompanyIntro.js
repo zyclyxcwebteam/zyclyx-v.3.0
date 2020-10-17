@@ -18,7 +18,7 @@ const CompanyIntro = () => {
             </div>
           </Col>
           <Col className="col-lg-9 col-12 d-flex align-items-center">
-            <p className="mb-0 text-content grey-text">
+            <p className="mb-0 text-content grey-text text-justify">
               A global automation technology provider leading the industry with
               innovative ideas. With our agile collaborative approach our team
               strives to provide custom solutions. These solutions together with

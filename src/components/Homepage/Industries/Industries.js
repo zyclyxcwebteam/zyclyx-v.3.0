@@ -67,7 +67,7 @@ const Industries = () => {
         <h2 className="section-title green-text py-2">{indCard.title}</h2>
         <Row>
           <Col>
-            <p className="ind-content text-content py-md-4 py-2 px-2">
+            <p className="ind-content text-content text-justify py-md-4 py-2 px-2">
               {indCard.text}
             </p>
           </Col>

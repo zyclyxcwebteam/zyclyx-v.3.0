@@ -12,7 +12,7 @@ const ProofOfConcept = () => {
           </span>
           <span>Free Proof of Concept</span>
         </h2>
-        <p className="text-content mb-0 grey-text">
+        <p className="text-content mb-0 grey-text text-justify">
           We believe in developing a trusting partnership with our clients by
           offering free proof of concept as part of our value added services.
           With this we demonstrate our work potential by creating an advanced
