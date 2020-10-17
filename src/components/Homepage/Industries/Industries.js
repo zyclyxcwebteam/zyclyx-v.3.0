@@ -64,7 +64,7 @@ const Industries = () => {
   return (
     <Container fluid className="py-md-5 py-2 px-0 industry-wrapper">
       <Container className="py-md-4 py-2">
-        <h2 className="section-title green-title py-2">{indCard.title}</h2>
+        <h2 className="section-title green-text py-2">{indCard.title}</h2>
         <Row>
           <Col>
             <p className="ind-content text-content py-md-4 py-2 px-2">

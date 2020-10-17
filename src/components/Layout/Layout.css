@@ -10,19 +10,41 @@ h5,
 h6 {
   font-family: "Maven Pro", sans-serif;
 }
-
+@font-face {
+  font-family: "NeuropoliticalRg-Regular";
+  src: url("../../fonts/NeuropoliticalRg-Regular.ttf");
+  font-display: swap;
+}
 .section-title {
   font-weight: 600;
 }
-.section-title.green-title {
-  color: #00a14b;
+.banner-title {
+  font-weight: 600;
+  text-align: center;
 }
 .green-text {
   color: #00a14b;
 }
+.light-text {
+  color: #f9f9f9;
+}
+.grey-text {
+  color: #4d5053;
+}
+.dark-text {
+  color: #111b33;
+}
 .text-content {
   font-size: 1.2rem;
-  text-align: justify;
+}
+.home-banner {
+  height: 90vh;
+  width: 100%;
+  max-width: 99vw;
+}
+.banner-img {
+  max-height: 90vh;
+  width: 100%;
 }
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -37,6 +59,9 @@ h6 {
   .text-content {
     font-size: 1rem;
   }
+  .banner-title {
+    font-size: 1.5rem;
+  }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -45,6 +70,9 @@ h6 {
   }
   .section-title-sm {
     font-size: 1.3rem;
+  }
+  .banner-title {
+    font-size: 2rem;
   }
 }
 
@@ -56,12 +84,18 @@ h6 {
   .section-title-sm {
     font-size: 1.5rem;
   }
+  .banner-title {
+    font-size: 2.5rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .section-title {
     font-size: 2.5rem;
+  }
+  .banner-title {
+    font-size: 3rem;
   }
 }
 
@@ -72,5 +106,8 @@ h6 {
   }
   .section-title-sm {
     font-size: 2.5rem;
+  }
+  .banner-title {
+    font-size: 3.2rem;
   }
 }

@@ -59,7 +59,7 @@ const aboutus = () => {
             md="6"
             className="title-box d-flex flex-column justify-content-center align-items-center"
           >
-            <h1 className="banner-title">
+            <h1 className="banner-title light-text">
               A Fast-Growing Technology Leader in
             </h1>
             <h1 className="banner-title title-green">

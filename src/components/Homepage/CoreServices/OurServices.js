@@ -101,7 +101,9 @@ const OurServices = () => {
                 </span>
                 <strong>{item.captionTwo}</strong>
               </h2>
-              <p className="px-md-4 px-2 text-content">{item.serviceText}</p>
+              <p className="px-md-4 px-2 text-content grey-text">
+                {item.serviceText}
+              </p>
               <p className="text-center">
                 <Link to={item.linkTo} className="service-link text-center">
                   Discover More

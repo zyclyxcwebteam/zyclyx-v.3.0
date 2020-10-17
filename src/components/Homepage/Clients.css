@@ -3,6 +3,10 @@
   padding: 3rem 0;
   height: 250px;
 }
+.client {
+  max-height: 70px;
+}
+
 .slick-slide {
   display: flex;
   justify-content: center;
@@ -48,8 +52,5 @@
 @media (max-width: 576px) {
   .t-btn {
     font-size: 1rem;
-  }
-  .client {
-    max-height: 50px;
   }
 }

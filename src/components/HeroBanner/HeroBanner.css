@@ -7,21 +7,16 @@
 .sol-img-wrapper {
   height: 90vh;
 }
-.banner-title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  text-align: center;
-  color: #ffffff;
-}
 
+/* banner images */
 /* banner images */
 .banner-img,
 .sol-img {
   background-size: contain;
   background-repeat: no-repeat;
+  height: 80vh;
   background-position: center;
 }
-
 @media (max-width: 576px) {
   .hero-banner .title-box {
     height: 30vh;

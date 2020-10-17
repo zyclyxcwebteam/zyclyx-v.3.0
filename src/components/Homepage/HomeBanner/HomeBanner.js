@@ -1,30 +1,39 @@
 import React, { useState } from "react";
-import { Carousel, CarouselItem, CarouselIndicators } from "reactstrap";
-import "./ImageCarousel.css";
+import {
+  Carousel,
+  CarouselItem,
+  CarouselIndicators,
+  Row,
+  Col,
+} from "reactstrap";
+import ImageFluid from "../../Image/ImageFluid";
+import "./HomeBanner.css";
 
-// data.allFile.edges.node.childImageSharp.fluid
 const ImageCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
   const captions = [
     {
-      altText: "Slide 1",
+      altText: "built on trust",
       caption1: "Rooted in Knowledge",
       caption2: "Built on Trust",
       index: 1,
+      imageFileName: "banner11.png",
     },
     {
-      altText: "Slide 2",
+      altText: "taking technology forward",
       caption1: "Taking Technology Forward",
       caption2: "with Possibilities",
       index: 2,
+      imageFileName: "banner22.png",
     },
     {
-      altText: "Slide 3",
+      altText: "business automation",
       caption1: "Save Time and Money with",
       caption2: "Business Automation",
       index: 3,
+      imageFileName: "banner33.png",
     },
   ];
 
@@ -45,18 +54,36 @@ const ImageCarousel = () => {
     setActiveIndex(newIndex);
   };
 
-  const slides = captions.map(item => {
+  const slides = captions.map(caption => {
     return (
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.index}
-        className={`slide-${item.index}`}
+        key={caption.index}
+        className={`slide-${caption.index}`}
       >
-        <h1 className="home-banner-title section-title text-center">
-          <span className="section-title-sm d-block">{item.caption1}</span>
-          <span>{item.caption2}</span>
-        </h1>
+        <Row className="home-banner d-flex align-items-center justify-content-center">
+          <Col
+            sm="12"
+            lg="6"
+            className="d-flex align-items-center justify-content-center"
+          >
+            <h1 className="banner-title text-center light-text py-4 mb-0 py-lg-1">
+              {caption.caption1}
+              <span className="d-block">{caption.caption2}</span>
+            </h1>
+          </Col>
+          <Col
+            sm="12"
+            lg="6"
+            className="align-items-center justify-content-center"
+          >
+            <ImageFluid
+              fileName={caption.imageFileName}
+              altText={caption.altText}
+            />
+          </Col>
+        </Row>
       </CarouselItem>
     );
   });
