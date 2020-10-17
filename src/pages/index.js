@@ -101,7 +101,7 @@ export default () => {
             </p>
             <Row>
               <Col sm="12" className="mx-auto">
-                <Row className="py-md-4 py-2 mx-auto proof-row">
+                <Row className="py-md-4 py-2 mx-auto">
                   <Col md="4" sm="4" className="p-0 d-flex">
                     <Row className="mx-auto">
                       <Col sm="3" className="p-0">
@@ -116,7 +116,7 @@ export default () => {
                       </Col>
                     </Row>
                   </Col>
-                  <Col md="4" sm="4" className="p-0">
+                  <Col md="4" sm="4" className="p-0 d-flex">
                     <Row className="mx-auto">
                       <Col sm="3" className="p-0">
                         <h2 className="poc-letter">R</h2>
@@ -129,7 +129,7 @@ export default () => {
                       </Col>
                     </Row>
                   </Col>
-                  <Col md="4" sm="4" className="p-0">
+                  <Col md="4" sm="4" className="p-0 d-flex">
                     <Row className="mx-auto">
                       <Col sm="3" className="p-0">
                         <h2 className="poc-letter">C</h2>
