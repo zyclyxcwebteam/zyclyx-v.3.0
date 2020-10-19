@@ -86,21 +86,21 @@ const aboutus = () => {
       </Container>
       <Container fluid className="py-md-5 py-3 overview-wrapper">
         <Container className="py-md-4 py-2">
-          <p>
+          <p className="text-content grey-text">
             ZYCLYX is the world&apos;s leading automated IT solution provider
             with a diverse range of solutions aimed to enhance your operating
             performance. Our expertise includes Robotic Process Automation, AI,
             OCR, Network Security, Cyber Security, Outsourcing, and other
             services.
           </p>
-          <p>
+          <p className="text-content grey-text">
             In 2018, we were established to share our innovative solutions and
             core technology expertise to optimize the customer experience. The
             team at ZYCLYX provides efficient integrated systems after
             meticulous evaluation of risks and opportunities which address both
             short and long term challenges.
           </p>
-          <p>
+          <p className="text-content grey-text">
             In collaboration with internationally recognized IT solution
             providers, we have catered to some of the leading brands in
             industries like Banking, Finance, Telecom, and more. We provide
