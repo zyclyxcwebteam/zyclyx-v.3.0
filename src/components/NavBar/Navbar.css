@@ -39,7 +39,7 @@
   margin: 0.5rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .navbar-nav {
     align-items: flex-start;
   }

@@ -47,9 +47,8 @@ h6 {
   width: 100%;
 }
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-}
-@media (min-width: 375px) and (max-width: 576.98px) {
+
+@media (max-width: 576.98px) {
   .section-title {
     font-size: 1.3rem;
   }
