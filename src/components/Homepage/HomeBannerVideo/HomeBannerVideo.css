@@ -3,23 +3,28 @@
   position: relative;
   min-height: 92vh;
 }
-
+.home-inner {
+  width: 100%;
+}
 .home-banner .title-container {
   display: none;
 }
 .home-banner .t-active {
   display: block;
-  animation: fade-title 0.5s ease-in;
+  animation: fade-title 0.8s ease-in;
 }
 
 @keyframes fade-title {
-  from {
+  0% {
     transform: translateY(100px);
     opacity: 0;
   }
-  to {
-    transform: translateY(0px);
+  75% {
+    transform: translateY(-10px);
     opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 .home-banner .title-container.active {
