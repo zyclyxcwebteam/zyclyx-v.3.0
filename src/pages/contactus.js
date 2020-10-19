@@ -85,7 +85,7 @@ const Contact = () => {
       <Container fluid>
         <Row>
           <Col
-            md="6"
+            lg="6"
             sm="12"
             className="c-wrapper-left address-wrapper d-flex align-items-center"
           >
@@ -341,7 +341,7 @@ const Contact = () => {
 
           <Col
             sm="12"
-            md="6"
+            lg="6"
             className="c-wrapper-right google-map-wrapper p-0"
           >
             <div
