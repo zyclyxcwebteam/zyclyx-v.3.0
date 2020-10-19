@@ -179,7 +179,8 @@
   color: #00a14b !important;
 }
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) { */
+@media (max-width: 767.98px) {
   .mission-inner {
     position: static;
     top: unset;
@@ -204,6 +205,8 @@
   .c-title {
     font-size: 1.4rem;
   }
+}
+@media (max-width: 991px) {
   .h-card-content {
     position: static;
   }

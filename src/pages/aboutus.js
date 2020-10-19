@@ -3,7 +3,6 @@ import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import RotatingText from "react-rotating-text";
 import Layout from "../components/Layout/Layout";
-import SectionTitle from "../components/SectionTitle/SectionTitle";
 import MissionImage from "../../static/images/mission.png";
 import VisionImage from "../../static/images/vision.png";
 import IconDeliver from "../../static/images/c-deliver.svg";
@@ -223,11 +222,11 @@ const aboutus = () => {
         </Container>
       </Container>
       <Container className="py-5">
-        <SectionTitle title="How we do it" />
+        <h2 className="section-title py-2">How We Do It</h2>
 
         <Row className="h-wrapper">
-          <Col className="px-0 hw-card col-12 col-md-2 d-flex flex-column">
-            <div className="h-card-content h-bottom order-2 order-md-1">
+          <Col className="px-0 hw-card col-12 col-lg-2 d-flex flex-column my-2 my-lg-0">
+            <div className="h-card-content h-bottom order-2 order-lg-1">
               <h4 className="text-center">STEP 1</h4>
               <p>
                 Strategize, document and decipher - goals, objectives,
@@ -235,12 +234,12 @@ const aboutus = () => {
                 business plan.
               </p>
             </div>
-            <h3 className="h-title-dark plan order-1 order-md-2 mb-0 mb-md-2">
+            <h3 className="h-title-dark plan order-1 order-lg-2 mb-0 mb-lg-2">
               PLAN
             </h3>
           </Col>
-          <Col className="px-0 hw-card col-12 col-md-2 my-2 my-md-0">
-            <h3 className="h-title-green mb-0 mb-md-2">EXECUTE</h3>
+          <Col className="px-0 hw-card col-12 col-lg-2 my-2 my-lg-0">
+            <h3 className="h-title-green mb-0 mb-lg-2">EXECUTE</h3>
             <div className="h-card-content h-bottom">
               <h4 className="text-center">STEP 2</h4>
               <p>
@@ -249,20 +248,20 @@ const aboutus = () => {
               </p>
             </div>
           </Col>
-          <Col className="px-0 hw-card col-12 col-md-2 d-flex flex-column mb-2 mb-md-0">
-            <div className="h-card-content h-bottom order-2 order-md-1">
+          <Col className="px-0 hw-card col-12  col-lg-2 d-flex flex-column my-2 my-lg-0">
+            <div className="h-card-content h-bottom order-2 order-lg-1">
               <h4 className="text-center">STEP 3</h4>
               <p>
                 Identification and elimination of discrepancie for improvement
                 of the organizations&apos;s process.
               </p>
             </div>
-            <h3 className="h-title-dark mb-0 mb-md-2 order-1 order-md-2">
+            <h3 className="h-title-dark mb-0 mb-lg-2 order-1 order-lg-2">
               RECTIFY
             </h3>
           </Col>
-          <Col className="px-0 hw-card col-12 col-md-2 mb-2 mb-md-0">
-            <h3 className="h-title-green mb-0 mb-md-2">ANALYZE</h3>
+          <Col className="px-0 hw-card col-12 col-lg-2 my-lg-0 my-2">
+            <h3 className="h-title-green mb-0 mb-lg-2">ANALYZE</h3>
             <div className="h-card-content h-bottom">
               <h4 className="text-center">STEP 4</h4>
               <p>
@@ -271,15 +270,15 @@ const aboutus = () => {
               </p>
             </div>
           </Col>
-          <Col className="px-0 hw-card col-12 col-md-2 d-flex flex-column">
-            <div className="h-card-content h-bottom order-2 order-md-1">
+          <Col className="px-0 hw-card col-12 col-lg-2 d-flex my-2 my-lg-0 flex-column">
+            <div className="h-card-content h-bottom order-2 order-lg-1">
               <h4 className="text-center">STEP 5</h4>
               <p>
                 After project completion, the client is called in to review the
                 final product awaiting their feedback on the same before launch.
               </p>
             </div>
-            <h3 className="h-title-dark feedback mb-0 mb-md-2 order-1 order-md-2">
+            <h3 className="h-title-dark feedback mb-0 mb-lg-2 order-1 order-lg-2">
               FEEDBACK
             </h3>
           </Col>
