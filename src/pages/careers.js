@@ -87,9 +87,12 @@ const careers = () => {
         <Container>
           <h3 className="c-overview-text mb-0">
             If you have a desire to excel, we have the potential to help you
-            prosper. In ZYCLYX, we empower employees to explore their talents
-            and abilities in tandem with their careers.
+            prosper.
           </h3>
+          <p className="text-content">
+            In ZYCLYX, we empower employees to explore their talents and
+            abilities in tandem with their careers.
+          </p>
         </Container>
       </Container>
 
