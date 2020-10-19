@@ -24,7 +24,7 @@ const ProofOfConcept = () => {
           <Col lg="4" className="p-0 d-flex align-items-center">
             <h2 className="poc-letter">F</h2>
             <div>
-              <h3>Forecast</h3>
+              <h3 className="section-title-sm">Forecast</h3>
               <p className="mb-0 text-content grey-text pb-3 pb-md-1">
                 Act as a tool to forecast the feasibility of the projects.
               </p>
@@ -33,7 +33,7 @@ const ProofOfConcept = () => {
           <Col lg="4" className="p-0 d-flex align-items-center">
             <h2 className="poc-letter">R</h2>
             <div>
-              <h3>Report</h3>
+              <h3 className="section-title-sm">Report</h3>
               <p className="mb-0 text-content grey-text pb-3 pb-md-1">
                 Provides a complete report on project evaluation.
               </p>
@@ -42,7 +42,7 @@ const ProofOfConcept = () => {
           <Col lg="4" className="p-0 d-flex align-items-center">
             <h2 className="poc-letter">C</h2>
             <div>
-              <h3>Cost Effective</h3>
+              <h3 className="section-title-sm">Cost Effective</h3>
               <p className="mb-0 text-content grey-text pb-3 pb-md-1">
                 Saves your businesses time and money.
               </p>
