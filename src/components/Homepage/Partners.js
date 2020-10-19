@@ -7,6 +7,7 @@ import Microsoft from "../../../static/images/clients/8.png";
 
 const settings = {
   dots: true,
+  arrows: false,
   infinite: true,
   speed: 500,
   slidesToShow: 3,
