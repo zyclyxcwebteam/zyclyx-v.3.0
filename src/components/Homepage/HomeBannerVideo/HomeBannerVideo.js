@@ -4,7 +4,14 @@ import "./HomeBannerVideo.css";
 
 const HomeBannerVideo = () => {
   // const [title, setTitle] = useState(captions[0]);
+  const videoURL = [
+    "https://res.cloudinary.com/zyclyxweb/video/upload/v1603096683/zyclyx_bg_green.mp4",
+    "https://res.cloudinary.com/zyclyxweb/video/upload/v1603091244/zyclyx_video_bg.mp4",
+    "https://res.cloudinary.com/zyclyxweb/video/upload/v1603115747/zyclyx_bg_blue.mp4",
+  ];
   const [index, setIndex] = useState(0);
+  const [videoIndex, setVideoIndex] = useState(0);
+  const [video, setVideoURL] = useState(videoURL[0]);
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -15,6 +22,17 @@ const HomeBannerVideo = () => {
     } else if (index === 3) {
       // Loop
       setIndex(0);
+    }
+
+    if (videoIndex < 3) {
+      setTimeout(() => {
+        setVideoURL(videoURL[videoIndex + 1]);
+        setVideoIndex(videoIndex + 1);
+      }, 20000);
+    } else if (videoIndex === 3) {
+      // Loop
+      setVideoURL(videoURL[0]);
+      setVideoIndex(0);
     }
   });
   return (
@@ -48,13 +66,7 @@ const HomeBannerVideo = () => {
       </div>
 
       <div className="home-video">
-        <video
-          src="https://res.cloudinary.com/zyclyxweb/video/upload/v1603096683/zyclyx_bg_green.mp4"
-          id="bannerVideo"
-          autoPlay
-          muted
-          loop
-        />
+        <video src={video} id="bannerVideo" autoPlay muted loop />
       </div>
     </section>
   );
