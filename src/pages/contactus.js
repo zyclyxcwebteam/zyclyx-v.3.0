@@ -94,7 +94,7 @@ const Contact = () => {
                 <Row className="d-flex justify-content-center align-items-center py-3">
                   <Col md="8" sm="12">
                     <Row>
-                      <Col sm="3">
+                      <Col sm="3" className="py-3 py-md-1">
                         <p className="icons">
                           <FontAwesomeIcon
                             icon="map-marked-alt"
@@ -115,7 +115,7 @@ const Contact = () => {
                 <Row className="d-flex justify-content-center align-items-center py-3">
                   <Col md="8" sm="12">
                     <Row>
-                      <Col sm="3">
+                      <Col sm="3" className="py-3 py-md-1">
                         <p className="icons">
                           <FontAwesomeIcon
                             icon="map-marked-alt"
@@ -125,7 +125,7 @@ const Contact = () => {
                       </Col>
                       <Col sm="9">
                         <h4 className="contact-title mt-md-2">USA</h4>
-                        <address>
+                        <address className="contact-text">
                           2150 North First Street, 4th Floor, San Jose,
                           California-95131, United States.
                         </address>
@@ -136,7 +136,7 @@ const Contact = () => {
                 <Row className="d-flex justify-content-center align-items-center py-3">
                   <Col sm="12" md="8">
                     <Row>
-                      <Col sm="3">
+                      <Col sm="3" className="py-3 py-md-1">
                         <p className="icons">
                           <FontAwesomeIcon
                             icon="phone"
@@ -154,7 +154,7 @@ const Contact = () => {
                 <Row className="d-flex justify-content-center align-items-center py-3">
                   <Col sm="12" md="8">
                     <Row>
-                      <Col sm="3">
+                      <Col sm="3" className="py-3 py-md-1">
                         <p className="icons">
                           <FontAwesomeIcon
                             icon="envelope"
