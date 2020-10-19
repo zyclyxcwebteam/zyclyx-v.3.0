@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/Layout/Layout";
-import HomeBanner from "../components/Homepage/HomeBanner/HomeBanner";
+// import HomeBanner from "../components/Homepage/HomeBanner/HomeBanner";
+import HomeBannerVideo from "../components/Homepage/HomeBannerVideo/HomeBannerVideo";
 import CompanyIntro from "../components/Homepage/CompanyIntro/CompanyIntro";
 import OurServices from "../components/Homepage/CoreServices/OurServices";
 import Industries from "../components/Homepage/Industries/Industries";
@@ -28,7 +29,8 @@ const HomePage = () => {
         description="ZYCLYX is a purpose-driven organization that promises phenomenal Artificial Intelligence, Robotic Process Automation, Staffing Solutions, Web App Development, Digital Marketing Services and IT services in India and USA"
         keywords="Zyclyx, Zyclyx services, AI Services, RPA Services, IT Services, Staffing Solutions, Digital Marketing, Web App Development, India, USA"
       >
-        <HomeBanner />
+        {/* <HomeBanner /> */}
+        <HomeBannerVideo />
         <CompanyIntro />
         <OurServices />
         <Industries />

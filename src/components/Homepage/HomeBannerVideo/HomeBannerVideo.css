@@ -1,0 +1,46 @@
+.home-banner {
+  background-color: rgba(17, 27, 51, 0.5);
+  position: relative;
+  min-height: 100vh;
+}
+
+.home-banner .title-container {
+  display: none;
+}
+.home-banner .t-active {
+  display: block;
+  animation: fade-title 0.5s ease-in;
+}
+
+@keyframes fade-title {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.home-banner .title-container.active {
+  display: block;
+}
+/* 
+.home-banner .bg-video {
+  width: 95%;
+  mix-blend-mode: lighten;
+  position: relative;
+  z-index: 1;
+} */
+
+.home-video video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background-size: cover;
+}
