@@ -5,8 +5,6 @@ import fetch from "isomorphic-fetch";
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PhoneInput, { formatPhoneNumberIntl } from "react-phone-number-input";
-// import PhoneInput from "react-phone-input-2";
-// import "react-phone-input-2/lib/style.css";
 import Layout from "../components/Layout/Layout";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
 import "react-phone-number-input/style.css";
@@ -30,7 +28,7 @@ const Contact = () => {
       .then(data => {
         setCountry(data.country_code2);
       });
-  }, []);
+  }, [success]);
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
@@ -44,8 +42,8 @@ const Contact = () => {
       Website: "ZYCLYX",
     };
 
+    // fetch("http://localhost:1337/business-enquiries", {
     fetch("https://admin-zyclyx.herokuapp.com/business-enquiries", {
-      // fetch("http://localhost:1337/business-enquiries", {
       method: "post",
       headers: {
         "Content-type": "application/json",
