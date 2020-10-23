@@ -49,13 +49,13 @@ const Clients = () => {
       {/*  eslint-disable-next-line react/jsx-props-no-spreading */}
       <Slider {...settings}>
         <div>
-          <img src={bayancb} alt="" className="client" />
+          <img src={bayancb} alt="bayan cb" className="client" />
         </div>
         <div>
-          <img src={elm} alt="" className="client" />
+          <img src={elm} alt="elm" className="client" />
         </div>
         <div>
-          <img src={stcs} alt="" className="client" />
+          <img src={stcs} alt="STCS" className="client" />
         </div>
       </Slider>
     </>
