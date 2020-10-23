@@ -45,7 +45,7 @@ const HomeBannerVideo = () => {
 
       <div className="home-video">
         <video
-          src="https://res.cloudinary.com/zyclyxweb/video/upload/v1603173272/zyclyx_bg_video_ureqii.mp4"
+          src="https://res.cloudinary.com/zyclyxweb/video/upload/v1603286493/zyclyx_bg_sm_fyhfjp.mp4"
           id="bannerVideo"
           autoPlay
           muted
