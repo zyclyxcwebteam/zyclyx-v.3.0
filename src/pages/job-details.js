@@ -41,7 +41,8 @@ const jobDescription = props => {
   });
   const [value, setValue] = useState();
   const [country, setCountry] = useState("");
-
+  const { location } = props;
+  const { id } = location.state;
   useEffect(() => {
     fetch(
       "https://api.ipgeolocation.io/ipgeo?apiKey=16c06a48afce45e5a1c1427e1c4b628f"
@@ -52,16 +53,13 @@ const jobDescription = props => {
       .then(data => {
         setCountry(data.country_code2);
       });
-  }, []);
+  }, [showSuccess]);
 
   const handleFileUpload = event => {
     setResumeFile(event.target.files[0]);
   };
   // get job details from DB and store it in state
   useEffect(() => {
-    const { location } = props;
-    const { id } = location.state;
-    // fetch(`https://agile-plateau-09650.herokuapp.com/jobopenings/${id}`)
     fetch(`https://admin-zyclyx.herokuapp.com/job-openings/${id}`)
       .then(response => {
         return response.json();
@@ -69,7 +67,7 @@ const jobDescription = props => {
       .then(data => {
         setJobDetails(data);
       });
-  }, [jobDetails]);
+  }, [showSuccess]);
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
@@ -87,37 +85,25 @@ const jobDescription = props => {
         : "",
       Date: new Date(),
     };
+
+    // eslint-disable-next-line no-undef
+    const formData = new FormData();
+    formData.append("files.Resume", resumeFile, resumeFile.name);
+    formData.append("data", JSON.stringify(payload));
     // store form data in db
     fetch("https://admin-zyclyx.herokuapp.com/job-applications/", {
       method: "post",
-      body: JSON.stringify(payload),
-    })
-      .then(response => {
-        setShowSuccess(true);
-        setTimeout(() => {
-          setShowSuccess(false);
-        }, 4000);
-        setSubmitForm(false);
-        event.target.reset();
-        return response.json();
-      })
-      .then(jsondata => {
-        // upload file
-        // eslint-disable-next-line no-undef
-        const fileData = new FormData();
-        fileData.append("files", resumeFile);
-        fileData.append("refId", jsondata.id);
-        fileData.append("field", "Resume");
-        fileData.append("ref", "job-applications");
-
-        fetch("https://admin-zyclyx.herokuapp.com/upload/", {
-          method: "post",
-          body: fileData,
-        }).then(res => {
-          return res;
-        });
-      })
-      .catch(() => {});
+      body: formData,
+    }).then(response => {
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 4000);
+      setSubmitForm(false);
+      event.target.reset();
+      setValue("");
+      return response.json();
+    });
   };
 
   return (
