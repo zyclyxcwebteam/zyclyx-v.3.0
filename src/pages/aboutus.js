@@ -159,7 +159,7 @@ const aboutus = () => {
             >
               <img
                 src={showMission ? MissionImage : VisionImage}
-                alt="mission"
+                alt={showMission ? "our mission" : "our vision"}
                 className="m-img"
               />
             </Col>
