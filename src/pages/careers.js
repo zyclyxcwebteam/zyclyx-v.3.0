@@ -62,6 +62,8 @@ const JobCard = props => {
 const careers = () => {
   const [openings, setOpenings] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [noReRender] = useState(false);
+  // setRendering()
   useEffect(() => {
     // fetch("https://agile-plateau-09650.herokuapp.com/jobopenings")
     fetch("https://admin-zyclyx.herokuapp.com/job-openings?Status=open")
@@ -72,7 +74,7 @@ const careers = () => {
         setLoading(false);
         setOpenings(jsonData);
       });
-  }, [openings]);
+  }, [noReRender]);
 
   return (
     <Layout
