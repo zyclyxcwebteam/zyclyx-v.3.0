@@ -43,8 +43,7 @@ const jobDescription = props => {
   });
   const [value, setValue] = useState();
   const [country, setCountry] = useState("");
-  const { location } = props;
-  const { id } = location.state;
+
   useEffect(() => {
     fetch(
       "https://api.ipgeolocation.io/ipgeo?apiKey=16c06a48afce45e5a1c1427e1c4b628f"
@@ -65,6 +64,8 @@ const jobDescription = props => {
   };
   // get job details from DB and store it in state
   useEffect(() => {
+    const { location } = props;
+    const { id } = location.state;
     fetch(`https://admin-zyclyx.herokuapp.com/job-openings/${id}`)
       .then(response => {
         return response.json();
