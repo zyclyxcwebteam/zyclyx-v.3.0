@@ -31,8 +31,10 @@ const Requirement = props => {
 const jobDescription = props => {
   const [jobDetails, setJobDetails] = useState(null);
   const [resumeFile, setResumeFile] = useState(null);
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [submintForm, setSubmitForm] = useState(false);
+  const [formHasSuccess, setFormHasSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [formHasError, setFormHasError] = useState(false);
+  const [reRender] = useState(false);
   const [display, setDisplay] = useState({
     showReq: true,
     showRes: false,
@@ -48,12 +50,15 @@ const jobDescription = props => {
       "https://api.ipgeolocation.io/ipgeo?apiKey=16c06a48afce45e5a1c1427e1c4b628f"
     )
       .then(res => {
+        if (!res.ok) {
+          throw Error(res.statusText);
+        }
         return res.json();
       })
       .then(data => {
         setCountry(data.country_code2);
       });
-  }, [showSuccess]);
+  }, [reRender]);
 
   const handleFileUpload = event => {
     setResumeFile(event.target.files[0]);
@@ -67,11 +72,11 @@ const jobDescription = props => {
       .then(data => {
         setJobDetails(data);
       });
-  }, [showSuccess]);
+  }, [reRender]);
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
-    setSubmitForm(true);
+    setIsLoading(true);
     const payload = {
       Firstname: data.firstname,
       Lastname: data.lastname,
@@ -94,16 +99,32 @@ const jobDescription = props => {
     fetch("https://admin-zyclyx.herokuapp.com/job-applications/", {
       method: "post",
       body: formData,
-    }).then(response => {
-      setShowSuccess(true);
-      setTimeout(() => {
-        setShowSuccess(false);
-      }, 4000);
-      setSubmitForm(false);
-      event.target.reset();
-      setValue("");
-      return response.json();
-    });
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+        return response.json();
+      })
+      .then(() => {
+        setFormHasSuccess(true);
+        setTimeout(() => {
+          setFormHasSuccess(false);
+        }, 4000);
+        setFormHasError(false);
+        setIsLoading(false);
+        event.target.reset();
+        setValue("");
+      })
+      .catch(error => {
+        if (error) {
+          setIsLoading(false);
+          setFormHasError(true);
+          setTimeout(() => {
+            setFormHasError(false);
+          }, 3000);
+        }
+      });
   };
 
   return (
@@ -245,6 +266,7 @@ const jobDescription = props => {
                       <h3 className="py-md-4 py-2 title-3 title-dark text-center">
                         Application Form
                       </h3>
+
                       <div className="row mx-auto d-flex justify-content-center">
                         <div className="col-xl-6 col-lg-10 col-md-8 col-12">
                           <form
@@ -381,16 +403,21 @@ const jobDescription = props => {
                                   </label>
                                 </div>
                               </div>
-
+                              {formHasError && (
+                                <p className="text-center text-danger py-3">
+                                  Something Went wrong, Please try after some
+                                  time
+                                </p>
+                              )}
                               <div className="col-12 order-md-1 order-sm-0 mx-auto d-flex justify-content-center">
                                 <button
                                   type="submit"
                                   className="button d-flex align-items-center btn-style my-4 req1"
-                                  disabled={submintForm}
+                                  disabled={isLoading}
                                 >
-                                  {submintForm ? (
+                                  {isLoading ? (
                                     <>
-                                      Loading
+                                      Sending ...
                                       <div
                                         className="spinner-border spinner-border-sm ml-3 text-warning"
                                         role="status"
@@ -412,7 +439,7 @@ const jobDescription = props => {
                               </div>
                             </div>
                           </form>
-                          {showSuccess ? (
+                          {formHasSuccess ? (
                             <div className="success-wrapper py-2 my-2 d-flex flex-column align-items-center">
                               <h3>Application received successfully</h3>
                               <p> We will contact you with next steps</p>

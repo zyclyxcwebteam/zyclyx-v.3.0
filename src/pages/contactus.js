@@ -17,6 +17,7 @@ const Contact = () => {
   const [submintForm, setSubmitForm] = useState(false);
   const [country, setCountry] = useState("");
   const [value, setValue] = useState();
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -51,16 +52,27 @@ const Contact = () => {
       body: JSON.stringify(payload),
     })
       .then(res => {
+        if (!res.ok) {
+          throw Error(res.statusText);
+        }
         setSuccess(true);
         return res.json();
       })
       .then(() => {
         event.target.reset();
         setValue("");
+        setHasError(false);
         setTimeout(() => {
           setSuccess(false);
         }, 5000);
         setSubmitForm(false);
+      })
+      .catch(error => {
+        if (error) {
+          setSuccess(false);
+          setSubmitForm(false);
+          setHasError(true);
+        }
       });
   };
 
@@ -215,6 +227,11 @@ const Contact = () => {
                     </p>
                   </div>
                 )}
+                {hasError && (
+                  <p className="text-center text-danger py-3">
+                    Something Went wrong, Please try after some time
+                  </p>
+                )}
                 <form
                   onSubmit={handleSubmit(onSubmit)}
                   className="floating-label-form c-form"
@@ -268,28 +285,6 @@ const Contact = () => {
                         required
                       />
                     </div>
-                    {/* <div className="col-md-7 col-12">
-                      <div className="form-group floating-label py-1">
-                        <input
-                          type="tel"
-                          className="form-control"
-                          name="phone"
-                          pattern="^[0-9]{3,12}$"
-                          autoComplete="off"
-                          placeholder="Phone"
-                          ref={register({ required: true, max: 16 })}
-                        />
-                        {errors.phone && (
-                          <span className="err-msg">
-                            *Phone number is required
-                          </span>
-                        )}
-                        <label htmlFor="phone" id="phoneLabel">
-                          Phone
-                          <span className="required">*</span>
-                        </label>
-                      </div>
-                    </div> */}
                     <div className="col-lg-7 col-12">
                       <div className="form-group floating-label py-1">
                         <textarea
@@ -315,7 +310,7 @@ const Contact = () => {
                     >
                       {submintForm ? (
                         <>
-                          Loading..
+                          Sending ..
                           <div
                             className="spinner-border spinner-border-sm ml-3 text-warning"
                             role="status"
