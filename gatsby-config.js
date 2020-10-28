@@ -89,5 +89,13 @@ module.exports = {
         head: true,
       },
     },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: process.env.API_URL || `http://localhost:1337`,
+        queryLimit: 1000,
+        contentTypes: [`blog-posts`],
+      },
+    },
   ],
 };
