@@ -11,8 +11,7 @@ const BlogArticle = props => {
     const { location } = props;
     const { id } = location.state;
     console.log(id);
-    // fetch(`https://admin-zyclyx.herokuapp.com/job-openings/${id}`)
-    fetch(`http://localhost:1337/blog-posts/${id}`)
+    fetch(`https://admin-zyclyx.herokuapp.com/blog-posts/${id}`)
       .then(response => {
         if (!response.ok) {
           throw Error(response.statusText);
