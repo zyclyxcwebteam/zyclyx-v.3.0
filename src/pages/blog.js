@@ -64,7 +64,6 @@ const blog = () => {
   //     });
   // }, [reRender]);
 
-  //  console.log(blogPosts);
   return (
     <>
       <StaticQuery
