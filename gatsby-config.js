@@ -95,7 +95,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.API_URL || `http://localhost:1337`,
+        apiURL: "https://admin-zyclyx.herokuapp.com/",
         queryLimit: 1000,
         contentTypes: [`blog-posts`],
       },
