@@ -68,10 +68,16 @@ const jobDescription = props => {
     const { id } = location.state;
     fetch(`https://admin-zyclyx.herokuapp.com/job-openings/${id}`)
       .then(response => {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
         return response.json();
       })
       .then(data => {
         setJobDetails(data);
+      })
+      .catch(error => {
+        console.log(error);
       });
   }, [reRender]);
 

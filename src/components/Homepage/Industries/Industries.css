@@ -29,7 +29,7 @@
 .i-card:hover {
   transform: translateY(-10px);
 }
-.card-title {
+.ind-card-title {
   z-index: 2;
   color: #ffffff;
 }
