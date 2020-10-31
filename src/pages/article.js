@@ -10,7 +10,7 @@ const BlogArticle = props => {
   useEffect(() => {
     const { location } = props;
     const { id } = location.state;
-    console.log(id);
+    //    Fetch article content form DB
     fetch(`https://admin-zyclyx.herokuapp.com/blog-posts/${id}`)
       .then(response => {
         if (!response.ok) {
