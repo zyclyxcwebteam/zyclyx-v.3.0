@@ -28,7 +28,12 @@ const BlogArticle = props => {
       });
   }, [reRender]);
   return (
-    <Layout active="blog" title="" description="">
+    <Layout
+      active="blog"
+      title="Discover the Role of AI in Customer Experience"
+      description="Explore the role of AI in customer experience. Discover how to improve the marketing personalization and enhance your customer service using A"
+      keywords="ai customer experience examples, ai customer engagement, customer experience implementations of artificial intelligence, ai customer service, customer analytics artificial intelligence, improve customer experience with artificial intelligence, artificial intelligence personalization"
+    >
       <div className="container-fluid blog-posts-container blog-article d-flex align-items-center">
         <div className="container">
           {!isFetching ? (

@@ -75,7 +75,10 @@ const blog = () => {
   console.log(blogPosts);
 
   return (
-    <Layout title="" description="">
+    <Layout
+      title="ZYCLYX Blogs"
+      description="Checkout ZYCLYX blogs related to our services."
+    >
       <div className="container-fluid  blog-posts-container py-4">
         <div className="container pt-5">
           <h2 className="section-title">Latest from our Blog</h2>
