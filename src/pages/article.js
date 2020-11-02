@@ -6,6 +6,7 @@ import Layout from "../components/Layout/Layout";
 
 const BlogArticle = props => {
   const [article, setArticle] = useState(null);
+  const [isFetching, setFetching] = useState(true);
   const [reRender] = useState(false);
   useEffect(() => {
     const { location } = props;
@@ -20,6 +21,7 @@ const BlogArticle = props => {
       })
       .then(data => {
         setArticle(data);
+        setFetching(false);
       })
       .catch(error => {
         console.log(error);
@@ -27,13 +29,13 @@ const BlogArticle = props => {
   }, [reRender]);
   return (
     <Layout active="blog" title="" description="">
-      <div className="container-fluid blog-posts-container blog-article">
+      <div className="container-fluid blog-posts-container blog-article d-flex align-items-center">
         <div className="container">
-          {article && (
+          {!isFetching ? (
             <>
               <h1 className="text-center py-5">{article.Title}</h1>
               <img
-                src={article.Image.url}
+                src={article.Image.formats.large.url}
                 alt={article.Title}
                 className="w-100"
               />
@@ -41,10 +43,16 @@ const BlogArticle = props => {
                 <ReactMarkdown source={article.Content} />
                 <p className="text-muted ml-auto">
                   <span className="mr-2">Published on</span>
-                  <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+                  <Moment format="MM/DD/YYYY">{article.Published_at}</Moment>
                 </p>
               </div>
             </>
+          ) : (
+            <div className="d-flex justify-content-center align-items-center h-100">
+              <div className="spinner-border text-success mt-5" role="status">
+                <span className="sr-only">Loading...</span>
+              </div>
+            </div>
           )}
         </div>
       </div>
