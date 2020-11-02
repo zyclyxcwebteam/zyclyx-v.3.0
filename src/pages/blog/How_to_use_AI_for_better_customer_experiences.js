@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import fetch from "isomorphic-fetch";
-import Layout from "../components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 
 const BlogArticle = () => {
   const [article, setArticle] = useState(null);

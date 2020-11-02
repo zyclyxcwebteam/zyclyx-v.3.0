@@ -13,7 +13,7 @@ const BlogCard = ({ article }) => {
   //  const slug = Title.split(" ").join("_");
   return (
     <Link
-      to="/How_to_use_AI_for_better_customer_experiences"
+      to="/blog/How_to_use_AI_for_better_customer_experiences"
       state={{ id }}
       className="blog-card-link"
     >
