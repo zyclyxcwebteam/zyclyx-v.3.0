@@ -106,7 +106,12 @@ const careers = () => {
                 <h2 className="c-section-title">Come Join Us</h2>
               </div>
               <div className="d-flex justify-content-center align-items-center">
-                <img src={Comejoin} alt="new age" className="mt-4 imgstyle" />
+                <img
+                  src={Comejoin}
+                  alt="new age"
+                  title="Join ZYCLYX Family"
+                  className="mt-4 imgstyle"
+                />
               </div>
             </Col>
             <Col

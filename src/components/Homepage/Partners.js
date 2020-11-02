@@ -46,16 +46,31 @@ const Partners = () => {
       {/*  eslint-disable-next-line react/jsx-props-no-spreading */}
       <Slider {...settings}>
         <div>
-          <img src={Blueprism} alt="Blueprism" className="client" />
+          <img
+            src={Blueprism}
+            alt="Blueprism"
+            title="Blueprism"
+            className="client"
+          />
         </div>
         <div>
-          <img src={UIpath} alt="UI Path" className="client" />
+          <img src={UIpath} alt="UI Path" title="UI Path" className="client" />
         </div>
         <div>
-          <img src={Automation} alt="Automation" className="client" />
+          <img
+            src={Automation}
+            alt="Automation"
+            title="Automation Anywhere"
+            className="client"
+          />
         </div>
         <div>
-          <img src={Microsoft} alt="Microsoft" className="client" />
+          <img
+            src={Microsoft}
+            alt="Microsoft"
+            title="Micorsoft"
+            className="client"
+          />
         </div>
       </Slider>
     </>

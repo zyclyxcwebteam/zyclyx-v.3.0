@@ -23,7 +23,7 @@ const CoreValueCard = ({ title, text, icon, left }) => {
       </Col>
       <Col className="col-4 d-flex justify-content-center align-items-center">
         <div className="c-icon">
-          <img src={icon} alt={title} />
+          <img src={icon} alt={title} title={title} />
         </div>
       </Col>
     </Row>
@@ -31,7 +31,7 @@ const CoreValueCard = ({ title, text, icon, left }) => {
     <Row className="c-card">
       <Col className="col-4 d-flex justify-content-center align-items-center">
         <div className="c-icon">
-          <img src={icon} alt={title} />
+          <img src={icon} alt={title} title={title} />
         </div>
       </Col>
       <Col className="col-8 d-flex flex-column justify-content-center px-0">
@@ -89,8 +89,8 @@ const aboutus = () => {
             ZYCLYX is the world&apos;s leading automated IT solution provider
             with a diverse range of solutions aimed to enhance your operating
             performance. Our expertise includes Robotic Process Automation, AI,
-            OCR, Network Security, Cyber Security, Outsourcing, and other
-            services.
+            OCR, Network Security, Cyber Security, Manpower Services, US
+            Staffing, Domestic Hiring and other services.
           </p>
           <p className="text-content grey-text">
             In 2018, we were established to share our innovative solutions and
@@ -160,6 +160,7 @@ const aboutus = () => {
               <img
                 src={showMission ? MissionImage : VisionImage}
                 alt={showMission ? "our mission" : "our vision"}
+                title={showMission ? "our mission" : "our vision"}
                 className="m-img"
               />
             </Col>

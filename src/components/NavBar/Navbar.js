@@ -24,7 +24,7 @@ const Header = props => {
   return (
     <Navbar expand="md">
       <NavbarBrand href="/">
-        <img src={Logo} alt="ZYCLYX" className="logo" />
+        <img src={Logo} alt="ZYCLYX" title="ZYCLYX" className="logo" />
       </NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>

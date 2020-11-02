@@ -90,6 +90,7 @@ const OurServices = () => {
               <ImageFluid
                 fileName={item.imageFileName}
                 altText={item.captionTwo}
+                title={item.captionTwo}
               />
             </Col>
           )}

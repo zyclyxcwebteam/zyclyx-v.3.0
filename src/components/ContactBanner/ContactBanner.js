@@ -29,7 +29,7 @@ const ContactBanner = () => {
           md={6}
           className="d-flex justify-content-center py-3 py-md-0"
         >
-          <img src={MapImage} alt="contact us" />
+          <img src={MapImage} alt="contact us" title="Contact us" />
         </Col>
       </Row>
     </Container>

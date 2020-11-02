@@ -157,6 +157,9 @@ const Contact = () => {
                       <Col sm="9">
                         <h4 className="contact-title mt-md-2">CONTACT</h4>
                         <p className="contact-text">(+91) 40 2354 9363</p>
+                        <p className="contact-text pt-2">
+                          (+1) 2134604609 (Ext: 103)
+                        </p>
                       </Col>
                     </Row>
                   </Col>

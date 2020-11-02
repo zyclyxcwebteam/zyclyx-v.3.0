@@ -5,7 +5,7 @@ import Layout from "../components/Layout/Layout";
 // import HomeBanner from "../components/Homepage/HomeBanner/HomeBanner";
 import HomeBannerVideo from "../components/Homepage/HomeBannerVideo/HomeBannerVideo";
 import CompanyIntro from "../components/Homepage/CompanyIntro/CompanyIntro";
-import OurServices from "../components/Homepage/CoreServices/OurServices";
+import CoreServices from "../components/Homepage/CoreServices/OurServices";
 import Industries from "../components/Homepage/Industries/Industries";
 import CompanyStats from "../components/Homepage/CompanyStats/CompanyStats";
 import ProofOfConcept from "../components/Homepage/ProofOfConcept/ProofOfConcept";
@@ -32,7 +32,7 @@ const HomePage = () => {
         {/* <HomeBanner /> */}
         <HomeBannerVideo />
         <CompanyIntro />
-        <OurServices />
+        <CoreServices />
         <Industries />
         <CompanyStats />
         <ProofOfConcept />
