@@ -9,19 +9,19 @@ import "../css/blog.css";
 
 const BlogCard = ({ article }) => {
   const { id } = article;
-  const { Title } = article;
-  const slug = Title.split(" ").join("_");
+  //  const { Title } = article;
+  //  const slug = Title.split(" ").join("_");
   return (
     <Link
-      to={`/article?title=${slug}`}
+      to="/How_to_use_AI_for_better_customer_experiences"
       state={{ id }}
       className="blog-card-link"
     >
       <Card>
         <img
           src={article.Image.formats.small.url}
-          alt={article.title}
-          title="article.title"
+          alt={article.Title}
+          title={article.Title}
         />
         <CardBody>
           <h1 className="blog-card-title text-center">{article.Title}</h1>
