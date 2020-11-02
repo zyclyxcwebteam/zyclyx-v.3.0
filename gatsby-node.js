@@ -26,7 +26,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.allDataJson.edges.forEach(({ node }) => {
     createPage({
-      path: `services/${node.path}`,
+      path: node.path,
       component: pageTemplate,
       context: {
         slug: node.path,
