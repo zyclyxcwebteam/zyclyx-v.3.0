@@ -54,30 +54,28 @@ const Header = props => {
                   <h4 className="menu-title">New Age Technologies</h4>
                   <ul>
                     <li>
-                      <Link to="services/robotic-process-automation">
+                      <Link to="/robotic-process-automation">
                         Robotic Process Automation
                       </Link>
                     </li>
                     <li>
-                      <Link to="services/artificial-intelligence">
+                      <Link to="/artificial-intelligence">
                         Artificial Intelligence
                       </Link>
                     </li>
                     <li>
-                      <Link to="services/optical-character-recognition">
+                      <Link to="/optical-character-recognition">
                         Optical Character Recognition
                       </Link>
                     </li>
                     <li>
-                      <Link to="services/blockchain">Blockchain</Link>
+                      <Link to="/blockchain">Blockchain</Link>
                     </li>
                     <li>
-                      <Link to="services/internet-of-things">
-                        Internet of Things
-                      </Link>
+                      <Link to="/internet-of-things">Internet of Things</Link>
                     </li>
                     <li>
-                      <Link to="services/bigdata">Big Data</Link>
+                      <Link to="/bigdata">Big Data</Link>
                     </li>
                   </ul>
                 </Col>
@@ -85,30 +83,28 @@ const Header = props => {
                   <h4 className="menu-title">Security Services</h4>
                   <ul>
                     <li>
-                      <Link to="services/network-security">
-                        Network Security
-                      </Link>
+                      <Link to="/network-security">Network Security</Link>
                     </li>
                     <li>
-                      <Link to="services/cyber-security">Cyber Security</Link>
+                      <Link to="/cyber-security">Cyber Security</Link>
                     </li>
                     <li>
-                      <Link to="services/application-data-security">
+                      <Link to="/application-data-security">
                         Application & Data Security
                       </Link>
                     </li>
                     <li>
-                      <Link to="services/governance-and-compliance">
+                      <Link to="/governance-and-compliance">
                         Governance & Compliance
                       </Link>
                     </li>
                     <li>
-                      <Link to="services/endpoint-mobile-security">
+                      <Link to="/endpoint-mobile-security">
                         Endpoint & Mobile Security
                       </Link>
                     </li>
                     <li>
-                      <Link to="services/identity-access-management">
+                      <Link to="/identity-access-management">
                         Identity & Access Management
                       </Link>
                     </li>
@@ -118,35 +114,29 @@ const Header = props => {
                   <h4 className="menu-title">Application Development</h4>
                   <ul>
                     <li>
-                      <Link to="services/software-development">
+                      <Link to="/software-development">
                         Software Development
                       </Link>
                     </li>
                     <li>
-                      <Link to="services/mobile-app-development">
+                      <Link to="/mobile-app-development">
                         Mobile App Development
                       </Link>
                     </li>
                     <li>
-                      <Link to="services/web-development">Web Development</Link>
+                      <Link to="/web-development">Web Development</Link>
                     </li>
                     <li>
-                      <Link to="services/digital-marketing">
-                        Digital Marketing
-                      </Link>
+                      <Link to="/digital-marketing">Digital Marketing</Link>
                     </li>
                   </ul>
                   <h4 className="menu-title">Management Services</h4>
                   <ul>
                     <li>
-                      <Link to="services/outsourcing-services">
-                        Outsourcing
-                      </Link>
+                      <Link to="/outsourcing-services">Outsourcing</Link>
                     </li>
                     <li>
-                      <Link to="services/staffing-solutions">
-                        Staffing Solutions
-                      </Link>
+                      <Link to="/staffing-solutions">Staffing Solutions</Link>
                     </li>
                   </ul>
                 </Col>
@@ -154,30 +144,26 @@ const Header = props => {
                   <h4 className="menu-title">Infrastructure Services</h4>
                   <ul>
                     <li>
-                      <Link to="services/datacenter-services">
+                      <Link to="/datacenter-services">
                         Data Center Services
                       </Link>
                     </li>
                     <li>
-                      <Link to="services/system-infrastructure">
+                      <Link to="/system-infrastructure">
                         System Infra Services
                       </Link>
                     </li>
                     <li>
-                      <Link to="services/end-user-computing">
-                        End User Computing
-                      </Link>
+                      <Link to="/end-user-computing">End User Computing</Link>
                     </li>
                   </ul>
                   <h4 className="menu-title">BI Solutions</h4>
                   <ul>
                     <li>
-                      <Link to="services/data-visualization">
-                        Data Visualization
-                      </Link>
+                      <Link to="/data-visualization">Data Visualization</Link>
                     </li>
                     <li>
-                      <Link to="services/predictive-analytics">
+                      <Link to="/predictive-analytics">
                         Predictive Analytics
                       </Link>
                     </li>
