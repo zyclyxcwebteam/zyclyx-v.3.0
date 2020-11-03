@@ -9,7 +9,7 @@ const ImageFluid = ({ fileName, altText, title }) => {
         allImageSharp {
           edges {
             node {
-              fluid(maxWidth: 650) {
+              fluid(maxWidth: 650, maxHeight: 390) {
                 ...GatsbyImageSharpFluid
               }
             }
