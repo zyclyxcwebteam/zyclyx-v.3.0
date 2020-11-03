@@ -44,13 +44,23 @@ const items = [
     linkTo: "/optical-character-recognition",
   },
   {
+    imageFileName: "staffing.jpg",
+    serviceText:
+      "We work towards hiring more efficiently to deliver fast results by managing the end-to-end recruitment process. Our team has catered to the needs of a wide array of clients, from start-ups to large conglomerates.",
+    captionOne: "Get the right resource with",
+    captionTwo: "STAFFING SOLUTIONS",
+    imgLeft: true,
+    key: 4,
+    linkTo: "/staffing-solutions",
+  },
+  {
     imageFileName: "security.jpg",
     serviceText:
       "When you have to work in a world of devious cybercriminals, it’s important to ensure that your network and data are safe. We at ZYCLYX use a combination of effective hardware and software solutions to protect you from multiple layers of intrusions and breaches.",
     captionOne: "Protect your Data with",
     captionTwo: "Network Security",
     imgLeft: true,
-    key: 4,
+    key: 5,
     linkTo: "/network-security",
   },
 ];
