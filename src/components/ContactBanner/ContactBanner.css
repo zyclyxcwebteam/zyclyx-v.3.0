@@ -57,6 +57,24 @@
 .contact-banner img {
   max-width: 100%;
 }
+.button-light {
+  background-color: #eea21d;
+  color: #111b33;
+  border-bottom: 2px solid #026a9f;
+  font-weight: 600;
+}
+.button-light.button::before {
+  background-color: hsl(222deg 50% 13% / 43%);
+}
+.button-light svg {
+  color: #fff;
+}
+.button-light:hover {
+  font-weight: 600;
+  background-color: hsl(38, 86%, 45%);
+  color: #111b33;
+  border-bottom: 2px solid #026a9f;
+}
 @media (max-width: 576px) {
   .contact-b-title {
     text-align: center;

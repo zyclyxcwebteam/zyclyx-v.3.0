@@ -90,6 +90,7 @@ const Contact = () => {
       <HeroBanner
         title="We are happy to assist you with your queries"
         imageClass="contact"
+        showLink
       />
 
       <Container fluid>

@@ -1,6 +1,7 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Slider from "react-slick";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col } from "reactstrap";
 import { Controller, Scene } from "react-scrollmagic";
 import Layout from "../components/Layout/Layout";
@@ -81,6 +82,15 @@ const PageTemplate = props => {
             className="title-box d-flex flex-column justify-content-center align-items-center"
           >
             <h1 className="banner-title text-light">{title}</h1>
+            <div className="py-3">
+              <Link
+                to="/contactus"
+                className="button button-light d-flex align-items-center"
+              >
+                Enquire Now
+                <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
+              </Link>
+            </div>
           </Col>
           <Col
             sm="12"
