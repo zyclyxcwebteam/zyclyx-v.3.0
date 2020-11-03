@@ -48,7 +48,7 @@ const items = [
     serviceText:
       "We work towards hiring more efficiently to deliver fast results by managing the end-to-end recruitment process. Our team has catered to the needs of a wide array of clients, from start-ups to large conglomerates.",
     captionOne: "Get the right resource with",
-    captionTwo: "STAFFING SOLUTIONS",
+    captionTwo: "Staffing Solutions",
     imgLeft: true,
     key: 4,
     linkTo: "/staffing-solutions",
