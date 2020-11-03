@@ -281,7 +281,7 @@ const Contact = () => {
                     </div>
                     <div className="col-lg-7 col-12">
                       <PhoneInput
-                        placeholder="Phone"
+                        placeholder="Work Phone"
                         className="form-group floating-label py-1"
                         value={value}
                         onChange={setValue}
@@ -291,17 +291,75 @@ const Contact = () => {
                     </div>
                     <div className="col-lg-7 col-12">
                       <div className="form-group floating-label py-1">
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="company"
+                          placeholder="Company"
+                          ref={register({ required: true })}
+                        />
+                        {errors.company && (
+                          <span className="err-msg">
+                            *Company name is required
+                          </span>
+                        )}
+                        <label htmlFor="company">
+                          Company
+                          <span className="required">*</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div className="col-lg-7 col-12">
+                      <div className="form-group floating-label py-1">
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="country"
+                          placeholder="Country"
+                          ref={register({ required: true })}
+                        />
+                        {errors.country && (
+                          <span className="err-msg">*Country is required</span>
+                        )}
+                        <label htmlFor="country">
+                          Country
+                          <span className="required">*</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div className="col-lg-7 col-12">
+                      <div className="form-group floating-label py-1">
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="interest"
+                          placeholder="Intrested In"
+                          ref={register({ required: true })}
+                        />
+                        {errors.interest && (
+                          <span className="err-msg">
+                            *Interested In is required
+                          </span>
+                        )}
+                        <label htmlFor="interest">
+                          Interested In
+                          <span className="required">*</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div className="col-lg-7 col-12">
+                      <div className="form-group floating-label py-1">
                         <textarea
                           className="form-control pt-3 pb-4"
                           name="message"
-                          placeholder="Message"
+                          placeholder="Description"
                           ref={register({ required: true, max: 300 })}
                         />
                         {errors.message && (
                           <span className="err-msg">*Message is required</span>
                         )}
                         <label htmlFor="message">
-                          Message
+                          Description
                           <span className="required">*</span>
                         </label>
                       </div>
@@ -347,7 +405,7 @@ const Contact = () => {
                 overflow: "hidden",
                 maxWidth: "100%",
                 width: "100%",
-                height: "80vh",
+                height: "100vh",
               }}
             >
               <div
