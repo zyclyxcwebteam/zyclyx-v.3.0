@@ -35,6 +35,8 @@ const BlogArticle = () => {
       title="Discover the Role of AI in Customer Experience"
       description="Explore the role of AI in customer experience. Discover how to improve the marketing personalization and enhance your customer service using A"
       keywords="ai customer experience examples, ai customer engagement, customer experience implementations of artificial intelligence, ai customer service, customer analytics artificial intelligence, improve customer experience with artificial intelligence, artificial intelligence personalization"
+      image={article.Image.formats.small.url}
+      url="https://zyclyx.com/blog/How_to_use_AI_for_better_customer_experiences/"
     >
       <div className="container-fluid blog-posts-container blog-article d-flex align-items-center">
         <div className="container">
