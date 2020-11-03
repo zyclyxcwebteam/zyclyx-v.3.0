@@ -1,5 +1,5 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
+import React, { useState } from "react";
+import { graphql } from "gatsby";
 import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col } from "reactstrap";
@@ -52,6 +52,8 @@ const settings = {
 const PageTemplate = props => {
   const { data } = props;
   const { dataJson } = data;
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
   const {
     title,
     caption,
@@ -73,6 +75,8 @@ const PageTemplate = props => {
       description={metaDescription}
       keywords={metaKeywords}
       active="service"
+      toggle={toggle}
+      modal={modal}
     >
       <Container fluid className="hero-banner">
         <Row className="h-100">
@@ -83,13 +87,23 @@ const PageTemplate = props => {
           >
             <h1 className="banner-title text-light">{title}</h1>
             <div className="py-3">
-              <Link
+              {/* <Link
                 to="/contactus"
                 className="button button-light d-flex align-items-center"
               >
                 Enquire Now
                 <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
-              </Link>
+              </Link> */}
+              <div className="py-3">
+                <button
+                  type="button"
+                  className="button button-light d-flex align-items-center"
+                  onClick={toggle}
+                >
+                  Enquire Now
+                  <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
+                </button>
+              </div>
             </div>
           </Col>
           <Col

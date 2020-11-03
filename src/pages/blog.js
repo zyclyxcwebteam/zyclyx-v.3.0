@@ -53,6 +53,9 @@ const blog = () => {
   const [isFetching, setFetching] = useState(true);
   const [blogPosts, setBlogPosts] = useState(null);
   const [reRender] = useState(false);
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
+
   useEffect(() => {
     fetch(`https://admin-zyclyx.herokuapp.com/blog-posts`)
       // fetch(`http://localhost:1337/blog-posts/`)
@@ -78,6 +81,8 @@ const blog = () => {
     <Layout
       title="ZYCLYX Blogs"
       description="Checkout ZYCLYX blogs related to our services."
+      modal={modal}
+      toggle={toggle}
     >
       <div className="container-fluid  blog-posts-container py-4">
         <div className="container pt-5">

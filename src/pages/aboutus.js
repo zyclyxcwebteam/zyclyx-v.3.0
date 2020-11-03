@@ -44,12 +44,16 @@ const CoreValueCard = ({ title, text, icon, left }) => {
 
 const aboutus = () => {
   const [showMission, setShowMission] = useState(true);
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
   return (
     <Layout
       showBanner
       active="about"
       title="About Us | Best IT Service Provider Company in India & USA"
       description="A Fast-Growing Technology Leader in Artificial Intelligence,automation,bigdata"
+      modal={modal}
+      toggle={toggle}
     >
       <Container fluid className="hero-banner">
         <Row className="h-100">
@@ -73,6 +77,16 @@ const aboutus = () => {
                 ]}
               />
             </h1>
+            <div className="py-3">
+              <button
+                type="button"
+                className="button button-light d-flex align-items-center"
+                onClick={toggle}
+              >
+                Enquire Now
+                <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
+              </button>
+            </div>
           </Col>
           <Col
             sm="12"

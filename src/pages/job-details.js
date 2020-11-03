@@ -43,6 +43,8 @@ const jobDescription = props => {
   });
   const [value, setValue] = useState();
   const [country, setCountry] = useState("");
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
 
   useEffect(() => {
     fetch(
@@ -140,10 +142,13 @@ const jobDescription = props => {
       active="career"
       title="Job Opportunities with ZYCLYX"
       description={(jobDetails && jobDetails.Title) || "job openings in Zyclyx"}
+      modal={modal}
+      toggle={toggle}
     >
       <HeroBanner
         title={jobDetails && jobDetails.Title}
         imageClass="job-description"
+        toggle={toggle}
       />
       <Container fluid>
         <Row className="d-flex job-container">

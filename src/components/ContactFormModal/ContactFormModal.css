@@ -1,0 +1,9 @@
+.full-width-modal {
+  width: 100vw;
+  min-height: 90vh;
+}
+.modal-header h5 {
+  text-align: center;
+  font-weight: 600;
+  color: #00a14b;
+}

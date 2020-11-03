@@ -13,10 +13,13 @@ import {
   faEnvelope,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
+
 import SEO from "../SEO/seo";
 import Navbar from "../NavBar/Navbar";
 import ContactBanner from "../ContactBanner/ContactBanner";
 import Footer from "../Footer/Footer";
+
+import ContactFormModal from "../ContactFormModal/ContactFormModal";
 // import ChatBot from "../ChatBot/ChatBot";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Layout.css";
@@ -46,7 +49,10 @@ const layout = props => {
     image,
     url,
     active,
+    modal,
+    toggle,
   } = props;
+
   return (
     <>
       <SEO
@@ -58,8 +64,13 @@ const layout = props => {
       />
       <Navbar active={active} />
       {children}
-      {showBanner && <ContactBanner />}
+      {showBanner && <ContactBanner toggle={toggle} />}
       <Footer />
+      <ContactFormModal
+        buttonLabel="Enquire Now"
+        modal={modal}
+        toggle={toggle}
+      />
       {/* <ChatBot /> */}
     </>
   );

@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col } from "reactstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./HeroBanner.css";
 
-const HeroBanner = ({ title, imageClass, showLink }) => {
+const HeroBanner = ({ title, imageClass, showLink, toggle }) => {
   return (
     <Container fluid className="hero-banner">
       <Row className="h-100">
@@ -16,13 +15,14 @@ const HeroBanner = ({ title, imageClass, showLink }) => {
           <h1 className="banner-title light-text">{title}</h1>
           {!showLink && (
             <div className="py-3">
-              <Link
-                to="/contactus"
+              <button
+                type="button"
                 className="button button-light d-flex align-items-center"
+                onClick={toggle}
               >
                 Enquire Now
                 <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
-              </Link>
+              </button>
             </div>
           )}
         </Col>

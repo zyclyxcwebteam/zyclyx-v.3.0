@@ -63,9 +63,10 @@ const careers = () => {
   const [openings, setOpenings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [noReRender] = useState(false);
-  // setRendering()
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
+
   useEffect(() => {
-    // fetch("https://agile-plateau-09650.herokuapp.com/jobopenings")
     fetch("https://admin-zyclyx.herokuapp.com/job-openings?Status=open")
       .then(response => {
         return response.json();
@@ -83,8 +84,14 @@ const careers = () => {
       title="Career Opportunities"
       description="In ZYCLYX, we empower employees to explore their talents
     and abilities in tandem with their careers"
+      modal={modal}
+      toggle={toggle}
     >
-      <HeroBanner title="Build your future with us" imageClass="career" />
+      <HeroBanner
+        title="Build your future with us"
+        imageClass="career"
+        toggle={toggle}
+      />
       <Container fluid className="c-overview-wrapper py-3 py-md-5">
         <Container>
           <h3 className="c-overview-text mb-0">

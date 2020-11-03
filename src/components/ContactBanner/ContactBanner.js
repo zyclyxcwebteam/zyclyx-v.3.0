@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./ContactBanner.css";
 import MapImage from "../../../static/images/c-map.svg";
 
-const ContactBanner = () => {
+const ContactBanner = props => {
+  const { toggle } = props;
   return (
     <Container fluid className="contact-banner py-3 py-md-5">
       <Row>
@@ -18,10 +18,14 @@ const ContactBanner = () => {
             <h2 className="section-title green-text py-2">
               Get in touch with us
             </h2>
-            <Link to="/contactus" className="button d-flex align-items-center">
+            <button
+              type="button"
+              className="button d-flex align-items-center btn-style"
+              onClick={toggle}
+            >
               Let&apos;s Connect
               <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
-            </Link>
+            </button>
           </div>
         </Col>
         <Col

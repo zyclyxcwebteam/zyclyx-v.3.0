@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container } from "reactstrap";
 import Layout from "../components/Layout/Layout";
-// import HomeBanner from "../components/Homepage/HomeBanner/HomeBanner";
 import HomeBannerVideo from "../components/Homepage/HomeBannerVideo/HomeBannerVideo";
 import CompanyIntro from "../components/Homepage/CompanyIntro/CompanyIntro";
 import CoreServices from "../components/Homepage/CoreServices/OurServices";
@@ -20,6 +19,8 @@ import "slick-carousel/slick/slick-theme.css";
  */
 const HomePage = () => {
   const [showClients, setShowClients] = useState(true);
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
   return (
     <>
       <Layout
@@ -28,6 +29,8 @@ const HomePage = () => {
         title="Providing IT Services in India & USA"
         description="ZYCLYX is a purpose-driven organization that promises phenomenal Artificial Intelligence, Robotic Process Automation, Staffing Solutions, Web App Development, Digital Marketing Services and IT services in India and USA"
         keywords="Zyclyx, Zyclyx services, AI Services, RPA Services, IT Services, Staffing Solutions, Digital Marketing, Web App Development, India, USA"
+        modal={modal}
+        toggle={toggle}
       >
         {/* <HomeBanner /> */}
         <HomeBannerVideo />
