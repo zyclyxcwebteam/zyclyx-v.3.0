@@ -41,6 +41,9 @@ const Contact = () => {
       Date: new Date(),
       Message: data.message,
       Website: "ZYCLYX",
+      Company: data.company,
+      Country: data.country,
+      Interested: data.interest,
     };
 
     // fetch("http://localhost:1337/business-enquiries", {
