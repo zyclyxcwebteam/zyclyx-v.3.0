@@ -6,7 +6,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer py-3">
-      <Container fluid className="footer-contact pt-4">
+      {/* <Container fluid className="footer-contact pt-4">
         <ul className="contact-links">
           <li>
             <FontAwesomeIcon icon="phone-alt" />
@@ -23,10 +23,10 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-      </Container>
+      </Container> */}
       <Container fluid className="pt-3">
         <Row>
-          <Col sm="12" md="4" className="social-media px-0">
+          <Col sm="12" md="3" className="social-media px-0">
             <ul className="py-1">
               <li>
                 <a
@@ -66,12 +66,33 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col sm="12" md="4">
-            <p className="m-0 text-center">
-              &copy;2020 ZYCLYX. All rights reserved
-            </p>
+          <Col sm="12" md="3">
+            <ul className="">
+              <li>
+                <FontAwesomeIcon icon="phone-alt" />
+                <a className="ml-3 text-white" href="tel:+91 40 23549363">
+                  (+91) 40 23549363
+                </a>
+              </li>
+              <li className="py-2">
+                <FontAwesomeIcon icon="phone-alt" />
+                <a className="ml-3 text-white" href="tel:+91 40 23549363">
+                  (+1) 2134604609 (Ext: 103)
+                </a>
+              </li>
+            </ul>
           </Col>
-          <Col sm="12" md="4" className="privacy px-0">
+          <Col sm="12" md="3">
+            <ul className="">
+              <li>
+                <FontAwesomeIcon icon="at" />
+                <a className="ml-3 text-white" href="mailto:info@zyclyx.com">
+                  info@zyclyx.com
+                </a>
+              </li>
+            </ul>
+          </Col>
+          <Col sm="12" md="3" className="privacy px-0">
             <ul className="py-1 ml-auto">
               <li>
                 <a href="/privacy-policy" title="Privacy">
@@ -89,6 +110,11 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+          </Col>
+          <Col sm="12">
+            <p className="m-0 text-center text-muted">
+              &copy;2020 ZYCLYX. All rights reserved
+            </p>
           </Col>
         </Row>
       </Container>
