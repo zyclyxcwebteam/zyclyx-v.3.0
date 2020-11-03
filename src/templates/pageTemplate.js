@@ -1,9 +1,52 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Slider from "react-slick";
 import { Container, Row, Col } from "reactstrap";
 import { Controller, Scene } from "react-scrollmagic";
 import Layout from "../components/Layout/Layout";
 import "../css/service.css";
+
+import Butler from "../../static/images/clients/butler-dbd.jpg";
+import Calyx from "../../static/images/clients/calyx.jpg";
+import Endepth from "../../static/images/clients/endepth.jpg";
+import Hcl from "../../static/images/clients/hcl.jpg";
+import Hexaware from "../../static/images/clients/hexaware.jpg";
+import Veripark from "../../static/images/clients/veripark.jpg";
+
+const settings = {
+  dots: true,
+  arrows: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
 const PageTemplate = props => {
   const { data } = props;
@@ -177,6 +220,56 @@ const PageTemplate = props => {
           </Row>
         )}
       </Container>
+
+      {/* ADDITIONAL SECTION FOR STAFFING SOLUTIONS */}
+      {title === "Staffing Solutions" && (
+        <Container className="clients">
+          <h2 className="section-title-sm text-center green-text py-3">
+            Our Clients
+          </h2>
+          {/*  eslint-disable-next-line react/jsx-props-no-spreading */}
+          <Slider {...settings}>
+            <div>
+              <img
+                src={Butler}
+                alt="butler-dbd"
+                title="Butler dbd"
+                className="client"
+              />
+            </div>
+            <div>
+              <img src={Calyx} alt="Calyx" title="Calyx" className="client" />
+            </div>
+            <div>
+              <img
+                src={Endepth}
+                alt="Endepth"
+                title="Endepth"
+                className="client"
+              />
+            </div>
+            <div>
+              <img src={Hcl} alt="HCL" title="HCL" className="client" />
+            </div>
+            <div>
+              <img
+                src={Hexaware}
+                alt="Hexaware"
+                title="Hexaware"
+                className="client"
+              />
+            </div>
+            <div>
+              <img
+                src={Veripark}
+                alt="Veripark"
+                title="Veripark"
+                className="client"
+              />
+            </div>
+          </Slider>
+        </Container>
+      )}
     </Layout>
   );
 };
