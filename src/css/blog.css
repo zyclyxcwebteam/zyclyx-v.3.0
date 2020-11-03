@@ -52,7 +52,7 @@
 .blog-article blockquote p {
   display: inline;
 }
-.blog-article img {
+.blog-article p > img {
   float: right;
   shape-outside: circle(60%);
   margin: 1rem;
