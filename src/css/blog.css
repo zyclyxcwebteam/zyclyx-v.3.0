@@ -56,4 +56,5 @@
   float: right;
   shape-outside: circle(60%);
   margin: 1rem;
+  max-width: 100%;
 }

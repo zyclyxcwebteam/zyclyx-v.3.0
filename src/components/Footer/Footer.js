@@ -5,27 +5,9 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer py-3">
-      {/* <Container fluid className="footer-contact pt-4">
-        <ul className="contact-links">
-          <li>
-            <FontAwesomeIcon icon="phone-alt" />
-            <a href="tel:+91 40 23549363">(+91) 40 23549363</a>
-          </li>
-          <li>
-            <FontAwesomeIcon icon="at" />
-            <a href="mailto:info@zyclyx.com">info@zyclyx.com</a>
-          </li>
-          <li>
-            <FontAwesomeIcon icon="map-marker-alt" />
-            <a href="https://www.google.com/maps/place/ZYCLYX+CONSULTING+SERVICES+PVT.LTD/@17.424933,78.438608,17z/data=!4m5!3m4!1s0x0:0xa07cad29e31d4876!8m2!3d17.4249331!4d78.4386078?hl=en-US">
-              Visit us
-            </a>
-          </li>
-        </ul>
-      </Container> */}
-      <Container fluid className="pt-3">
-        <Row>
+    <footer className="footer py-4">
+      <Container fluid>
+        <Row className="d-flex align-items-center py-2">
           <Col sm="12" md="3" className="social-media px-0">
             <ul className="py-1">
               <li>
@@ -66,27 +48,42 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col sm="12" md="3">
-            <ul className="">
-              <li>
-                <FontAwesomeIcon icon="phone-alt" />
-                <a className="ml-3 text-white" href="tel:+91 40 23549363">
+          <Col sm="12" md="3" className="pl-xl-5 mt-md-0 mt-3">
+            <h4 className="green-text">
+              <FontAwesomeIcon icon="phone-alt" className="mr-2" />
+              Contact Us
+            </h4>
+            <ul className="contact-links">
+              <li className="py-1">
+                <FontAwesomeIcon icon="angle-right" className="green-text" />
+                <a className="ml-3" href="tel:+91 40 23549363">
                   (+91) 40 23549363
                 </a>
               </li>
-              <li className="py-2">
-                <FontAwesomeIcon icon="phone-alt" />
-                <a className="ml-3 text-white" href="tel:+91 40 23549363">
+              <li className="py-1">
+                <FontAwesomeIcon icon="angle-right" className="green-text" />
+                <a className="ml-3" href="tel:+91 733 755 7310">
+                  (+91) 733 755 7310
+                </a>
+              </li>
+
+              <li className="py-1">
+                <FontAwesomeIcon icon="angle-right" className="green-text" />
+                <a className="ml-3" href="tel:+1 2134604609">
                   (+1) 2134604609 (Ext: 103)
                 </a>
               </li>
             </ul>
           </Col>
-          <Col sm="12" md="3">
-            <ul className="">
-              <li>
-                <FontAwesomeIcon icon="at" />
-                <a className="ml-3 text-white" href="mailto:info@zyclyx.com">
+          <Col sm="12" md="3" className="align-self-start pl-xl-5 mt-md-0 mt-3">
+            <h4 className="green-text">
+              <FontAwesomeIcon icon="envelope" className="mr-2" />
+              Email
+            </h4>
+            <ul className="contact-links">
+              <li className="py-1">
+                <FontAwesomeIcon icon="angle-right" className="green-text" />
+                <a className="ml-3" href="mailto:info@zyclyx.com">
                   info@zyclyx.com
                 </a>
               </li>
@@ -111,12 +108,11 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col sm="12">
-            <p className="m-0 text-center text-muted">
-              &copy;2020 ZYCLYX. All rights reserved
-            </p>
-          </Col>
         </Row>
+
+        <p className="m-0 copy-right text-center text-muted">
+          &copy;2020 ZYCLYX. All rights reserved
+        </p>
       </Container>
     </footer>
   );

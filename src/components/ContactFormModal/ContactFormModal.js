@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PhoneInput, { formatPhoneNumberIntl } from "react-phone-number-input";
 import "./ContactFormModal.css";
 import "react-phone-number-input/style.css";
-import "../../css/contactus.css";
 import "../../css/form-floating-label.css";
+// import "../../css/contactus.css";
 
 const ContactFormModal = props => {
   const { modal, toggle } = props;
@@ -19,6 +19,9 @@ const ContactFormModal = props => {
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
+    // Get country code from IP Address for Phone number input filed
+    // *
+
     fetch(
       "https://api.ipgeolocation.io/ipgeo?apiKey=16c06a48afce45e5a1c1427e1c4b628f"
     )
@@ -28,7 +31,7 @@ const ContactFormModal = props => {
       .then(data => {
         setCountry(data.country_code2);
       });
-  }, [success]);
+  }, []);
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data, event) => {
@@ -45,7 +48,7 @@ const ContactFormModal = props => {
       Interested: data.interest,
     };
 
-    // fetch("http://localhost:1337/business-enquiries", {
+    // Submit form data
     fetch("https://admin-zyclyx.herokuapp.com/business-enquiries", {
       method: "post",
       headers: {
@@ -86,9 +89,7 @@ const ContactFormModal = props => {
         className="full-width-modal"
         contentClassName="full-width-modal"
       >
-        <ModalHeader toggle={toggle} className="text-center">
-          We are happy to assist you with your queries
-        </ModalHeader>
+        <ModalHeader toggle={toggle}>We are happy to assist you</ModalHeader>
         <ModalBody>
           <Container className="c-form-wrapper">
             {success && (
@@ -119,7 +120,9 @@ const ContactFormModal = props => {
                       ref={register({ required: true })}
                     />
                     {errors.fullname && (
-                      <span className="err-msg">*Fullname is required</span>
+                      <span className="err-msg">
+                        * Please enter your full name
+                      </span>
                     )}
                     <label htmlFor="username">
                       Full Name
@@ -139,7 +142,7 @@ const ContactFormModal = props => {
                       ref={register({ required: true })}
                     />
                     {errors.email && (
-                      <span className="err-msg">*Email is required</span>
+                      <span className="err-msg">* Please enter your email</span>
                     )}
                     <label htmlFor="email">
                       Email
@@ -167,7 +170,9 @@ const ContactFormModal = props => {
                       ref={register({ required: true })}
                     />
                     {errors.company && (
-                      <span className="err-msg">*Company name is required</span>
+                      <span className="err-msg">
+                        * Please enter your company name
+                      </span>
                     )}
                     <label htmlFor="company">
                       Company
@@ -185,7 +190,9 @@ const ContactFormModal = props => {
                       ref={register({ required: true })}
                     />
                     {errors.country && (
-                      <span className="err-msg">*Country is required</span>
+                      <span className="err-msg">
+                        * Please enter country name
+                      </span>
                     )}
                     <label htmlFor="country">
                       Country
@@ -195,20 +202,84 @@ const ContactFormModal = props => {
                 </div>
                 <div className="col-lg-10 col-12">
                   <div className="form-group floating-label py-1">
-                    <input
-                      type="text"
+                    <select
                       className="form-control"
                       name="interest"
                       placeholder="Intrested In"
                       ref={register({ required: true })}
-                    />
+                    >
+                      <option selected disabled className="bg-light" value="">
+                        I am intrested in
+                      </option>
+                      <option value="Robotic Process Automation">
+                        Robotic Process Automation
+                      </option>
+                      <option value="Artificial Intelligence">
+                        Artificial Intelligence
+                      </option>
+                      <option value="Optical Character Recognition">
+                        Optical Character Recognition
+                      </option>
+                      <option value="Blockchain">Blockchain</option>
+                      <option value="Internet of Things">
+                        Internet of Things
+                      </option>
+                      <option value="Big Data">Big Data</option>
+                      <option value="Network Security">Network Security</option>
+                      <option value="Cyber Security">Cyber Security</option>
+                      <option value="Application & Data Security">
+                        Application & Data Security
+                      </option>
+                      <option value="Governance & Compliance">
+                        Governance & Compliance
+                      </option>
+                      <option value="Endpoint & Mobile Security">
+                        Endpoint & Mobile Security
+                      </option>
+                      <option value="Identity & Access Management">
+                        Identity & Access Management
+                      </option>
+                      <option value="Software Development">
+                        Software Development
+                      </option>
+                      <option value="Mobile App Development">
+                        Mobile App Development
+                      </option>
+                      <option value="Web Development">Web Development</option>
+                      <option value="Digital Marketing">
+                        Digital Marketing
+                      </option>
+                      <option value="Outsourcing">Outsourcing</option>
+                      <option value="Staffing Solutions">
+                        Staffing Solutions
+                      </option>
+                      <option value="Data Center Services">
+                        Data Center Services
+                      </option>
+                      <option value="System Infra Services">
+                        System Infra Services
+                      </option>
+                      <option value="End User Computing">
+                        End User Computing
+                      </option>
+                      <option value="Data Visualization">
+                        Data Visualization
+                      </option>
+                      <option value="Predictive Analytics">
+                        Predictive Analytics
+                      </option>
+                      <option value="Career Opportunities">
+                        Career Opportunities
+                      </option>
+                      <option value="Other">Other</option>
+                    </select>
                     {errors.interest && (
                       <span className="err-msg">
-                        *Interested In is required
+                        * Please select your Interest
                       </span>
                     )}
                     <label htmlFor="interest">
-                      Interested In
+                      Interested in
                       <span className="required">*</span>
                     </label>
                   </div>
@@ -222,7 +293,9 @@ const ContactFormModal = props => {
                       ref={register({ required: true, max: 300 })}
                     />
                     {errors.message && (
-                      <span className="err-msg">*Message is required</span>
+                      <span className="err-msg">
+                        * Please describe your query
+                      </span>
                     )}
                     <label htmlFor="message">
                       Description
