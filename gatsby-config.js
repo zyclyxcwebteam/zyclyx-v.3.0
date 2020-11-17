@@ -92,13 +92,13 @@ module.exports = {
         head: true,
       },
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: "https://admin-zyclyx.herokuapp.com",
-        queryLimit: 1000,
-        contentTypes: [`blog-posts`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: {
+    //     apiURL: "https://admin-zyclyx.herokuapp.com",
+    //     queryLimit: 1000,
+    //     contentTypes: [`blog-posts`],
+    //   },
+    // },
   ],
 };
