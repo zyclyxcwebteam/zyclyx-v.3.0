@@ -58,3 +58,11 @@
   margin: 1rem;
   max-width: 100%;
 }
+
+@media (max-width: 767px) {
+  .blog-article p > img {
+    float: none;
+    shape-outside: none;
+    margin: 0.1rem;
+  }
+}

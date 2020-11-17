@@ -22,6 +22,7 @@ const BlogCard = ({ article }) => {
           src={article.Image.formats.small.url}
           alt={article.Title}
           title={article.Title}
+          className="w-100"
         />
         <CardBody>
           <h1 className="blog-card-title text-center">{article.Title}</h1>

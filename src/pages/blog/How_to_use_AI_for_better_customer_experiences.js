@@ -42,7 +42,9 @@ const BlogArticle = () => {
         <div className="container">
           {!isFetching ? (
             <>
-              <h1 className="text-center py-5">{article.Title}</h1>
+              <h1 className="text-center py-5 section-title">
+                {article.Title}
+              </h1>
               <img
                 src={article.Image.formats.large.url}
                 alt={article.Title}
