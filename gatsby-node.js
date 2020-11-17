@@ -33,4 +33,32 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }, // additional data can be passed via context
     });
   });
+  const blogArticles = await graphql(`
+    {
+      allStrapiBlogPosts {
+        edges {
+          node {
+            Title
+          }
+        }
+      }
+    }
+  `);
+
+  const blogArticleTemplate = path.resolve(`src/templates/blogArticle.js`);
+
+  if (blogArticles.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
+
+  blogArticles.data.allStrapiBlogPosts.edges.forEach(({ node }) => {
+    createPage({
+      path: `blog/${node.Title.split(" ").join("_")}`,
+      component: blogArticleTemplate,
+      context: {
+        slug: node.Title.split(" ").join("_"),
+      }, // additional data can be passed via context
+    });
+  });
 };
