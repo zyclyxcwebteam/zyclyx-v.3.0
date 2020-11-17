@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 /**
  * Configure your Gatsby site with this file.
  *
@@ -69,18 +70,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Maven Pro`,
-            variants: [`400`, `500`, `600`, `700`],
-          },
-          {
-            family: `Roboto`,
-            variants: [`400`, `500`],
-          },
-        ],
+        fonts: [`Maven Pro\:400,500,600,700`, `Roboto\:400,500`],
+        display: "swap",
       },
     },
     {
