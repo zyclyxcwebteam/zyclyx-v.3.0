@@ -58,6 +58,10 @@ const SEO = ({ description, title, keywords, image, url }) => {
           name: "google-site-verification",
           content: "google8234ea290c7b1d82.html",
         },
+        {
+          name: "msvalidate.01",
+          content: "3383FA1564B9F2FA1625887CF8AC82D5",
+        },
       ]}
     />
   );
