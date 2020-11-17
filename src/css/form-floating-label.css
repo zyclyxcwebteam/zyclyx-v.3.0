@@ -18,7 +18,8 @@
   border-radius: 0.5rem;
 }
 
-.floating-label {
+.floating-label,
+.phone-label label {
   position: relative !important;
 }
 .form-control {
@@ -27,7 +28,8 @@
 .form-control:focus {
   box-shadow: none;
 }
-.floating-label label {
+.floating-label label,
+.phone-label label {
   left: 8px;
   position: absolute;
   top: 0;
@@ -43,7 +45,8 @@
 
 .floating-label input:not(:placeholder-shown) + label,
 .floating-label textarea:not(:placeholder-shown) + label,
-.floating-label select:not(:placeholder-shown) + label {
+.floating-label select:not(:empty) + label,
+.phone-label .floating-label input:not(:placeholder-shown) + .phone-label {
   /* background-image: linear-gradient(
     to top,
     rgb(233 246 236) 34%,
@@ -70,19 +73,20 @@
 .err-msg {
   color: #ff0000;
 }
-.floating-label label {
+.floating-label label,
+.phone-label label {
   color: #2db32d !important;
 }
 
-.c-form .floating-label input:not(:placeholder-shown) + label,
+/* .c-form .floating-label input:not(:placeholder-shown) + label,
 .c-form .floating-label textarea:not(:placeholder-shown) + label {
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
     to top,
     rgb(220 234 225) 34%,
     #f1f2f2,
     #f1f2f2,
     #f1f2f2 100%
-  ); */
+  );
   background-image: linear-gradient(
     to top,
     rgb(233 246 236) 20%,
@@ -91,7 +95,7 @@
     #ffffff 100%
   );
   transform: translate(0, -50%) !important;
-}
+} */
 
 /* phone input */
 .PhoneInputInput {

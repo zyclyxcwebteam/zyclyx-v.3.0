@@ -20,8 +20,6 @@ const ContactFormModal = props => {
 
   useEffect(() => {
     // Get country code from IP Address for Phone number input filed
-    // *
-
     fetch(
       "https://api.ipgeolocation.io/ipgeo?apiKey=16c06a48afce45e5a1c1427e1c4b628f"
     )
@@ -150,15 +148,20 @@ const ContactFormModal = props => {
                     </label>
                   </div>
                 </div>
-                <div className="col-lg-10 col-12">
+                <div className="col-lg-10 col-12 phone-label">
                   <PhoneInput
                     placeholder="Work Phone"
-                    className="form-group floating-label py-1"
+                    className="form-group floating-label  py-1"
                     value={value}
                     onChange={setValue}
                     defaultCountry={country}
+                    label="Phone"
                     required
                   />
+                  {/* <label htmlFor="phone">
+                    Phone
+                    <span className="required">*</span>
+                  </label> */}
                 </div>
                 <div className="col-lg-10 col-12">
                   <div className="form-group floating-label py-1">

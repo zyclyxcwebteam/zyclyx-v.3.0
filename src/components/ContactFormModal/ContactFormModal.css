@@ -34,3 +34,7 @@
   border-radius: 0.5rem;
   z-index: 1000;
 }
+.PhoneInputCountrySelectArrow {
+  border-bottom: 2px solid #111b33 !important;
+  border-right: 2px solid #111b33 !important;
+}
