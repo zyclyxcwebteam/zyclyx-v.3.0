@@ -34,32 +34,33 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  // const blogArticles = await graphql(`
-  //   {
-  //     allStrapiBlogPosts {
-  //       edges {
-  //         node {
-  //           Title
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
+  const blogArticles = await graphql(`
+    {
+      allStrapiBlogPosts {
+        edges {
+          node {
+            strapiId
+            Title
+          }
+        }
+      }
+    }
+  `);
 
-  // const blogArticleTemplate = path.resolve(`src/templates/blogArticle.js`);
+  const blogArticleTemplate = path.resolve(`src/templates/blogArticle.js`);
 
-  // if (blogArticles.errors) {
-  //   reporter.panicOnBuild(`Error while running GraphQL query.`);
-  //   return;
-  // }
+  if (blogArticles.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
 
-  // blogArticles.data.allStrapiBlogPosts.edges.forEach(({ node }) => {
-  //   createPage({
-  //     path: `blog/${node.Title.split(" ").join("_")}`,
-  //     component: blogArticleTemplate,
-  //     context: {
-  //       slug: node.Title.split(" ").join("_"),
-  //     },
-  //   });
-  // });
+  blogArticles.data.allStrapiBlogPosts.edges.forEach(({ node }) => {
+    createPage({
+      path: `blog/${node.Title.split(" ").join("_")}`,
+      component: blogArticleTemplate,
+      context: {
+        slug: node.strapiId,
+      },
+    });
+  });
 };
