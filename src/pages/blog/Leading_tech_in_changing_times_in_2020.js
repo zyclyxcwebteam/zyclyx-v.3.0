@@ -30,7 +30,7 @@ const BlogArticle = () => {
     <Layout
       active="blog"
       title="Leading tech in changing times in 2020"
-      description="Explore the role of AI in customer experience. Discover how to improve the marketing personalization and enhance your customer service using A"
+      description="Exploring the digital transformation during Covid-19 in new age technologies."
       keywords="zylclyx, zyclyx blogs,  digital transformation during Covid-19, robotic  process automation, big data, new age technologies, AI"
       image="https://res.cloudinary.com/zyclyxweb/image/upload/v1605764005/small_Leading_tech_in_changing_times_in_2020_76957236bc.jpg"
       url="https://zyclyx.com/blog/Leading_tech_in_changing_times_in_2020/"
