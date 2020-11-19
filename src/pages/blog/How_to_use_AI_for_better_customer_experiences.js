@@ -55,7 +55,7 @@ const BlogArticle = () => {
                 <ReactMarkdown source={article.Content} />
                 <p className="text-muted ml-auto">
                   <span className="mr-2">Published on</span>
-                  <Moment format="MM/DD/YYYY">{article.Published_at}</Moment>
+                  <Moment format="MMMM DD YYYY">{article.Published_at}</Moment>
                 </p>
               </div>
             </>
