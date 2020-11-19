@@ -15,6 +15,10 @@
 .blog-card-link:hover .blog-card-title {
   text-decoration: underline;
 }
+.blog-card-link img {
+  max-height: 230px;
+  min-height: 230px;
+}
 .blog-card-title {
   color: #111b33;
   font-size: 1.5rem;
@@ -57,6 +61,7 @@
   shape-outside: circle(60%);
   margin: 1rem;
   max-width: 100%;
+  margin-top: -80px;
 }
 
 @media (max-width: 767px) {
@@ -64,5 +69,6 @@
     float: none;
     shape-outside: none;
     margin: 0.1rem;
+    margin-top: 0.1rem;
   }
 }

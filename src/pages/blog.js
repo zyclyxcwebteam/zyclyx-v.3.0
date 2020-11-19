@@ -1,58 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "gatsby";
-// import Img from "gatsby-image";
-// import Moment from "react-moment";
 import fetch from "isomorphic-fetch";
-import { Card, CardBody } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 import Layout from "../components/Layout/Layout";
+import BlogCard from "../components/Blog/BlogCard";
 import "../css/blog.css";
-
-const BlogCard = ({ article }) => {
-  const { id } = article;
-  //  const { Title } = article;
-  //  const slug = Title.split(" ").join("_");
-  return (
-    <Link
-      to="/blog/How_to_use_AI_for_better_customer_experiences"
-      state={{ id }}
-      className="blog-card-link"
-    >
-      <Card>
-        <img
-          src={article.Image.formats.small.url}
-          alt={article.Title}
-          title={article.Title}
-          className="w-100"
-        />
-        <CardBody>
-          <h1 className="blog-card-title text-center">{article.Title}</h1>
-        </CardBody>
-      </Card>
-    </Link>
-  );
-};
-
-const ArticlesComponent = ({ articles }) => {
-  // const leftArticlesCount = Math.ceil(articles.length / 5);
-  // const leftArticles = articles.slice(0, leftArticlesCount);
-  // const rightArticles = articles.slice(leftArticlesCount, articles.length);
-
-  return (
-    <div className="row">
-      {articles.map(article => {
-        return (
-          <div className="col-12 my-3 my-lg-1" key={`article__${article.id}`}>
-            <BlogCard article={article} />
-          </div>
-        );
-      })}
-    </div>
-  );
-};
 
 const blog = () => {
   const [isFetching, setFetching] = useState(true);
-  const [blogPosts, setBlogPosts] = useState(null);
+  const [blogPosts, setBlogPosts] = useState([]);
   const [reRender] = useState(false);
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
@@ -76,8 +31,6 @@ const blog = () => {
       });
   }, [reRender]);
 
-  console.log(blogPosts);
-
   return (
     <Layout
       title="ZYCLYX Blogs"
@@ -90,9 +43,18 @@ const blog = () => {
           <h2 className="section-title">Latest from our Blog</h2>
         </div>
         {!isFetching ? (
-          <div className="container py-3 my-3 d-flex align-items-center">
-            <ArticlesComponent articles={blogPosts} />
-          </div>
+          <Container className="py-3 my-3">
+            <Row className="d-flex justify-content-around">
+              {blogPosts.length !== 0 &&
+                blogPosts.map((item, index) => {
+                  return (
+                    <Col md={6} lg={5}>
+                      <BlogCard index={index} blogItem={item} />
+                    </Col>
+                  );
+                })}
+            </Row>
+          </Container>
         ) : (
           <div className="d-flex justify-content-center align-items-center h-100">
             <div className="spinner-border text-success mt-5" role="status">
