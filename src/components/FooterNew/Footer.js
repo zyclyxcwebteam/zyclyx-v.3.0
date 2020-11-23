@@ -27,7 +27,7 @@ const Footer = () => {
   const { register, handleSubmit, errors } = useForm();
   const [formSubmitting, setFormSubmitting] = useState(false);
 
-  const SubmitEmailSubscription = data => {
+  const SubmitEmailSubscription = (data, event) => {
     setFormSubmitting(true);
     // store form data in db
     const payload = {
@@ -46,6 +46,7 @@ const Footer = () => {
           throw Error(response.statusText);
         }
         setFormSubmitting(false);
+        event.target.reset();
         return response.json();
       })
       .then(resJSON => {
@@ -122,7 +123,7 @@ const Footer = () => {
                   )}
                   <InputGroupAddon addonType="append">
                     <Button type="submit" color="success">
-                      {!formSubmitting ? "Subscribe" : "Sending .. "}
+                      {formSubmitting ? "Sending .. " : "subscribe"}
                     </Button>
                   </InputGroupAddon>
                 </InputGroup>
