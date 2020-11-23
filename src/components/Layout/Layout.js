@@ -13,13 +13,15 @@ import {
   faEnvelope,
   faPaperPlane,
   faAngleRight,
+  faPhoneSquareAlt,
+  faMobileAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 import SEO from "../SEO/seo";
 import Navbar from "../NavBar/Navbar";
 import ContactBanner from "../ContactBanner/ContactBanner";
-import Footer from "../Footer/Footer";
-
+// import Footer from "../Footer/Footer";
+import Footer from "../FooterNew/Footer";
 import ContactFormModal from "../ContactFormModal/ContactFormModal";
 // import ChatBot from "../ChatBot/ChatBot";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -38,7 +40,9 @@ library.add(
   faEnvelope,
   faRocketchat,
   faPaperPlane,
-  faAngleRight
+  faAngleRight,
+  faPhoneSquareAlt,
+  faMobileAlt
 );
 
 const layout = props => {
