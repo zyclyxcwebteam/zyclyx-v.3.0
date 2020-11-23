@@ -254,15 +254,7 @@ const PageTemplate = props => {
           {/*  eslint-disable-next-line react/jsx-props-no-spreading */}
           <Slider {...settings}>
             <div>
-              <img
-                src={Butler}
-                alt="butler-dbd"
-                title="Butler dbd"
-                className="client"
-              />
-            </div>
-            <div>
-              <img src={Calyx} alt="Calyx" title="Calyx" className="client" />
+              <img src={Hcl} alt="HCL" title="HCL" className="client" />
             </div>
             <div>
               <img
@@ -273,8 +265,17 @@ const PageTemplate = props => {
               />
             </div>
             <div>
-              <img src={Hcl} alt="HCL" title="HCL" className="client" />
+              <img src={Calyx} alt="Calyx" title="Calyx" className="client" />
             </div>
+            <div>
+              <img
+                src={Butler}
+                alt="butler-dbd"
+                title="Butler dbd"
+                className="client"
+              />
+            </div>
+
             <div>
               <img
                 src={Hexaware}
