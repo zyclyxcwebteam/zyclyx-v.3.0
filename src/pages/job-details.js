@@ -76,6 +76,7 @@ const jobDescription = props => {
         return response.json();
       })
       .then(data => {
+        console.log(data);
         setJobDetails(data);
       })
       .catch(error => {
@@ -228,6 +229,8 @@ const jobDescription = props => {
                 <div className="py-4">
                   <h3 className="py-3">Requirements</h3>
                   {jobDetails &&
+                    jobDetails.Requirements &&
+                    jobDetails.Requirements.length !== 0 &&
                     jobDetails.Requirements.split("\n").map(data => {
                       return (
                         data !== "" && (
@@ -244,6 +247,8 @@ const jobDescription = props => {
                 <div className="py-4">
                   <h3 className="py-3">Responsibilities</h3>
                   {jobDetails &&
+                    jobDetails.Responsibilities &&
+                    jobDetails.Responsibilities.length !== 0 &&
                     jobDetails.Responsibilities.split("\n").map(data => {
                       return (
                         data !== "" && (
