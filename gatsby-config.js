@@ -90,7 +90,7 @@ module.exports = {
       options: {
         apiURL: "https://admin-zyclyx.herokuapp.com",
         queryLimit: 1000,
-        contentTypes: [`blog-posts`],
+        contentTypes: [`blog-posts`, `job-openings`],
       },
     },
   ],
