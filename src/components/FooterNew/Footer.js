@@ -63,7 +63,7 @@ const Footer = () => {
         <Container fluid className="p-3">
           <Row>
             <Col lg={4}>
-              <p className="h6 text-white">India Office</p>
+              <p className="h5 text-white">INDIA Office</p>
               <address>
                 3rd Floor, Pearl Enclave, Green Valley Road No-5, Banjara Hills,
                 Hyderabad, Telangana 500034, India.
@@ -76,7 +76,9 @@ const Footer = () => {
                       className="text-success"
                     />
                   </span>
-                  (+91) 40 2354 9363
+                  <a className="text-reset" href="tel:+91 40 23549363">
+                    (+91) 40 23549363
+                  </a>
                 </p>
                 <p className="mb-md-0">
                   <span className="mr-2">
@@ -85,12 +87,14 @@ const Footer = () => {
                       className="text-success"
                     />
                   </span>
-                  (+91) 733 755 7310
+                  <a className="text-reset" href="tel:+91 733 755 7310">
+                    (+91) 733 755 7310
+                  </a>
                 </p>
               </div>
             </Col>
             <Col lg={4} className="mt-3 mt-lg-1">
-              <p className="h6 text-white">USA Office</p>
+              <p className="h5 text-white">USA Office</p>
               <address>
                 2150 North First Street, 4th Floor, San Jose, California-95131,
                 United States.
@@ -104,11 +108,17 @@ const Footer = () => {
                       className="text-success"
                     />
                   </span>
-                  (+1) 2134604609 (Ext: 103)
+                  <a className="text-reset" href="tel:+1 2134604609">
+                    (+1) 2134604609 (Ext: 103)
+                  </a>
                 </p>
               </div>
             </Col>
-            <Col lg={4} className="d-flex align-items-center">
+            <Col
+              lg={4}
+              className="d-flex flex-column align-items-center justify-content-center"
+            >
+              <p className="h6 text-white">Get notified about new updates</p>
               <form onSubmit={handleSubmit(SubmitEmailSubscription)}>
                 <InputGroup>
                   <Input
