@@ -33,7 +33,7 @@ const blog = () => {
           <Layout>
             <Container fluid className="blog-posts-container py-4">
               <Container className="py-4">
-                <h2 className="section-title">Latest from our Blog</h2>
+                <h1 className="section-title">Latest from our Blog</h1>
               </Container>
               <Container className="py-3 my-3">
                 <Row className="d-flex justify-content-around">
