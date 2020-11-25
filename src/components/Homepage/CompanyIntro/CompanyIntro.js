@@ -9,12 +9,12 @@ const CompanyIntro = () => {
         <Row>
           <Col className="col-lg-3 col-12 d-flex justify-content-center align-items-center text-center">
             <div>
-              <h2 className="text-center  section-title">
+              <h1 className="text-center  section-title">
                 <span className="d-block text-center text-content green-text">
                   Welcome to
                 </span>
                 <span className="brand">ZYCLYX</span>
-              </h2>
+              </h1>
             </div>
           </Col>
           <Col className="col-lg-9 col-12 d-flex align-items-center">
