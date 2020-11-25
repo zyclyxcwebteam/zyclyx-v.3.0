@@ -38,7 +38,7 @@ const BlogArticle = ({ data }) => {
               <ReactMarkdown source={strapiBlogPosts.Content} />
               <p className="text-muted ml-auto">
                 <span className="mr-2">Published on</span>
-                <Moment format="MM/DD/YYYY">
+                <Moment format="MMMM DD YYYY">
                   {strapiBlogPosts.Published_at}
                 </Moment>
               </p>
