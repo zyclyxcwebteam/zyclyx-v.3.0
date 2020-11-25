@@ -18,27 +18,27 @@ const HomeBannerVideo = () => {
       <div className="home-titles">
         <div className="hero-carousel">
           <div className={`title-container ${index === 0 && "t-active"}`}>
-            <h1 className="banner-title light-text text-center">
+            <p className="banner-title light-text text-center">
               Rooted in Knowledge
               <br />
               Built on Trust
-            </h1>
+            </p>
           </div>
 
           <div className={`title-container ${index === 1 && "t-active"}`}>
-            <h1 className="banner-title light-text text-center">
+            <p className="banner-title light-text text-center">
               Taking Technology Forward
               <br />
               with Possibilities
-            </h1>
+            </p>
           </div>
 
           <div className={`title-container ${index === 2 && "t-active"}`}>
-            <h1 className="banner-title light-text text-center">
+            <p className="banner-title light-text text-center">
               Save Time and Money with
               <br />
               Business Automation
-            </h1>
+            </p>
           </div>
         </div>
       </div>
