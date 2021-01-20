@@ -59,7 +59,7 @@ const Footer = () => {
   };
   return (
     <Container fluid className="px-0">
-      <footer className="zyx-footer-module px-5">
+      <footer className="zyx-footer-module px-lg-5 px-md-3 px-2 py-md-5 py-3">
         <Container fluid className="p-3">
           <Row>
             <Col lg={4}>
@@ -128,15 +128,15 @@ const Footer = () => {
                     className="subscribe-input border border-success"
                     innerRef={register({ required: true })}
                   />
-                  {errors.Subscriber_Email && (
-                    <span className="err-msg">* Please enter your email</span>
-                  )}
                   <InputGroupAddon addonType="append">
                     <Button type="submit" color="success">
                       {formSubmitting ? "Sending .. " : "subscribe"}
                     </Button>
                   </InputGroupAddon>
                 </InputGroup>
+                {errors.Subscriber_Email && (
+                  <p className="err-msg">* Please enter your email</p>
+                )}
               </form>
             </Col>
           </Row>
