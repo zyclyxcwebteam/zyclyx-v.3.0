@@ -118,7 +118,7 @@ const PageTemplate = props => {
       {/* overview */}
       <Container fluid className="overview-wrapper py-2 py-md-5">
         <Container>
-          <h3 className="overview-title text-center py-2 py-md-4">{caption}</h3>
+          <h2 className="overview-title text-center py-2 py-md-4">{caption}</h2>
           <p className="overview-text text-justify">{overview}</p>
           {title === "Staffing Solutions" && (
             <Row className="py-md-2">
