@@ -1,7 +1,9 @@
 .home-banner {
   position: relative;
   min-height: 92vh;
-  background-color: rgba(17, 27, 51, 0.5);
+  /* background-color: rgba(17, 27, 51, 0.5); */
+  background-image: url('/images/home_bg_img.jpg');
+  background-size: cover;
 }
 .home-inner {
   width: 100%;
@@ -38,7 +40,9 @@
   position: relative;
   z-index: 1;
 } */
-
+.home-titles{
+  z-index: 99;
+}
 .home-video video {
   position: absolute;
   right: 0;
@@ -47,6 +51,6 @@
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -100;
+  /* z-index: -100; */
   background-size: cover;
 }

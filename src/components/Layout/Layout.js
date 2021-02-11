@@ -1,5 +1,6 @@
 import React from "react";
-import { library } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { fab, faRocketchat } from "@fortawesome/free-brands-svg-icons";
 import {
   faAt,
@@ -27,6 +28,7 @@ import ContactFormModal from "../ContactFormModal/ContactFormModal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Layout.css";
 
+config.autoAddCss = false;
 library.add(
   fab,
   faAt,

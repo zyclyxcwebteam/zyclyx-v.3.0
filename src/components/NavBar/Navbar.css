@@ -3,6 +3,7 @@
 }
 .navbar {
   background-color: #111b33;
+  z-index: 99;
 }
 .nav-item > a {
   padding: 1rem;
