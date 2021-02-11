@@ -151,7 +151,9 @@ const Footer = () => {
                     className="text-success mr-2"
                   />
                 </span>
-                info@zyclyx.com
+                <a href="mailto:info@zyclyx.com" className="text-success">
+                  info@zyclyx.com
+                </a>
               </p>
             </Col>
             <Col lg={4} className="order-lg-2 order-3">
