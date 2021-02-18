@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col } from "reactstrap";
-import { Controller, Scene } from "react-scrollmagic";
+// import { Controller, Scene } from "react-scrollmagic";
 import Layout from "../components/Layout/Layout";
 import "../css/service.css";
 
@@ -61,12 +61,10 @@ const PageTemplate = props => {
     solTitle,
     services,
     bannerImage,
-    solImage,
-    scroll,
-    duration,
     metaTitle,
     metaDescription,
     metaKeywords,
+    solImage,
   } = dataJson;
   return (
     <Layout
@@ -87,13 +85,6 @@ const PageTemplate = props => {
           >
             <h1 className="banner-title text-light">{title}</h1>
             <div className="py-3">
-              {/* <Link
-                to="/contactus"
-                className="button button-light d-flex align-items-center"
-              >
-                Enquire Now
-                <FontAwesomeIcon icon="arrow-right" className="btn-icon" />
-              </Link> */}
               <div className="py-3">
                 <button
                   type="button"
@@ -191,7 +182,7 @@ const PageTemplate = props => {
       {/* solutions cards */}
 
       <Container fluid className="solutions-wrapper py-3 py-md-5">
-        {scroll ? (
+        {/* {scroll ? (
           <Row className="px-3 pl-md-5 scroll">
             <Controller>
               <Scene
@@ -220,29 +211,34 @@ const PageTemplate = props => {
               </Col>
             </Controller>
           </Row>
-        ) : (
-          <Row className="px-3 pl-md-5">
-            <Col
-              sm="12"
-              md="6"
-              className={`d-flex justify-content-center sol-img ${solImage}`}
+        ) : ( */}
+        <Row className="px-3 pl-md-5">
+          <Col className="col-md-6">
+            <img
+              className="sticky-top pt-4 w-100"
+              // src="https://images.unsplash.com/photo-1612831200752-a70d1d1bb83b?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+
+              src={`./images/service-pages/${solImage}`}
+              alt=""
             />
-            <Col
-              sm="12"
-              md="6"
-              className="sol-cards d-flex align-items-center justify-content-center flex-column px-2 px-md-5"
-            >
-              {services.map(service => {
-                return (
-                  <div className="py-3" key={service.title}>
-                    <h3 className="py-2">{service.title}</h3>
-                    <p>{service.content}</p>
-                  </div>
-                );
-              })}
-            </Col>
-          </Row>
-        )}
+          </Col>
+
+          <Col
+            sm="12"
+            md="6"
+            className="sol-cards d-flex align-items-center justify-content-center flex-column px-2 px-md-5"
+          >
+            {services.map(service => {
+              return (
+                <div className="py-3" key={service.title}>
+                  <h3 className="py-2">{service.title}</h3>
+                  <p>{service.content}</p>
+                </div>
+              );
+            })}
+          </Col>
+        </Row>
+        {/* )} */}
       </Container>
 
       {/* ADDITIONAL SECTION FOR STAFFING SOLUTIONS */}
