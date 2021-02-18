@@ -94,11 +94,6 @@ const Header = props => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/governance-and-compliance">
-                        Governance & Compliance
-                      </Link>
-                    </li>
-                    <li>
                       <Link to="/endpoint-mobile-security">
                         Endpoint & Mobile Security
                       </Link>

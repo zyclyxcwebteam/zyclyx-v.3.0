@@ -10,31 +10,23 @@
   "bannerImage": "iam",
   "solImage": "iam-sol",
   "scroll": true,
-  "duration": 60,
+  "duration": 25,
   "services": [
     {
       "title": "Single Sign-On",
       "content": "The team at ZYCLYX works to simplify your login issues with SSO, thus eliminating the need to remember login credentials for each application. It provides a single set of login credentials designed to grant access to all applications which have been integrated with SSO portal."
     },
     {
-      "title": "Privileged IAM",
+      "title": "Privileged Identity and Access Management",
       "content": "It involves the integrations of a transparent and unified platform that aligns with the business objective of your organizational strategy. We aim to manage, control, protect and monitor all privileged accounts along with the admin access for a more secure and compliant experience."
-    },
+    }, 
     {
-      "title": "Security Directory",
-      "content": "We have designed a standard-based identity platform that helps to simplify identity and directory management. This leads to enhanced user experience while decreasing fragmentation and deployment complexity."
-    },
-    {
-      "title": "Integrated IAM",
+      "title": "Integrated Identity and Access Management",
       "content": "There are multiple benefits associated with this like the ease of - modification, provision, and deprovision of user identities. Along with this it also allows you to control user access to network resources from a central console."
     },
     {
       "title": "Multi-Factor Authentication",
       "content": "We develop multiple secure layers that guarantee protection from Cyber-criminals. There are various factors required for the authentication of users at different levels."
-    },
-    {
-      "title": "DNS Security",
-      "content": "Our DNS security solutions are aimed to increase your protection against malicious attacks with a set of extensions. Any organization must secure the DNS as it generates a host of IP addresses."
     }
   ]
 }
