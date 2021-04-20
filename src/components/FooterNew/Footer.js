@@ -59,11 +59,11 @@ const Footer = () => {
   };
   return (
     <Container fluid className="px-0">
-      <footer className="zyx-footer-module px-lg-5 px-md-3 px-2 py-md-5 py-3">
-        <Container fluid className="p-3">
+      <footer className=" zyx-footer-module px-lg-5 px-md-3 px-2 py-md-5 py-3">
+        <Container className="p-3">
           <Row>
-            <Col lg={4}>
-              <p className="h5 text-white">INDIA Office</p>
+            <Col lg={6}>
+              <p className="h5 text-white">Office Address</p>
               <address>
                 3rd Floor, Pearl Enclave, Green Valley Road No-5, Banjara Hills,
                 Hyderabad, Telangana 500034, India.
@@ -93,7 +93,7 @@ const Footer = () => {
                 </p>
               </div>
             </Col>
-            <Col lg={4} className="mt-3 mt-lg-1">
+            {/* <Col lg={4} className="mt-3 mt-lg-1">
               <p className="h5 text-white">USA Office</p>
               <address>
                 2150 North First Street, 4th Floor, San Jose, California-95131,
@@ -113,12 +113,11 @@ const Footer = () => {
                   </a>
                 </p>
               </div>
-            </Col>
-            <Col
-              lg={4}
-              className="d-flex flex-column align-items-center justify-content-center"
-            >
-              <p className="h6 text-white">Get notified about new updates</p>
+            </Col> */}
+            <Col lg={6} className="d-flex flex-column px-lg-5 py-3 py-lg-0">
+              <p className="h6 text-white text-left">
+                Get notified about new updates
+              </p>
               <form onSubmit={handleSubmit(SubmitEmailSubscription)}>
                 <InputGroup>
                   <Input
@@ -141,7 +140,7 @@ const Footer = () => {
             </Col>
           </Row>
         </Container>
-        <Container fluid className="py-3 px-md-3 px-2 border-top footer-bottom">
+        <Container className="py-3 px-md-3 px-2 border-top footer-bottom">
           <Row>
             <Col lg={4} className="order-0">
               <p className="mb-0 text-success text-center text-lg-left py-1 py-lg-2">
