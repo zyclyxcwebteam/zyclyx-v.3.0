@@ -61,9 +61,9 @@ const Footer = () => {
     <Container fluid className="px-0">
       <footer className="zyx-footer-module px-lg-5 px-md-3 px-2 py-md-5 py-3">
         <Container fluid className="p-3">
-          <Row>
+          <Row className="mx-auto d-flex justify-content-center">
             <Col lg={4}>
-              <p className="h5 text-white">INDIA Office</p>
+              <p className="h5 text-white">Office Address</p>
               <address>
                 3rd Floor, Pearl Enclave, Green Valley Road No-5, Banjara Hills,
                 Hyderabad, Telangana 500034, India.
@@ -93,7 +93,7 @@ const Footer = () => {
                 </p>
               </div>
             </Col>
-            <Col lg={4} className="mt-3 mt-lg-1">
+            {/* <Col lg={4} className="mt-3 mt-lg-1">
               <p className="h5 text-white">USA Office</p>
               <address>
                 2150 North First Street, 4th Floor, San Jose, California-95131,
@@ -113,12 +113,14 @@ const Footer = () => {
                   </a>
                 </p>
               </div>
-            </Col>
+            </Col> */}
             <Col
-              lg={4}
+              lg={5}
               className="d-flex flex-column align-items-center justify-content-center"
             >
-              <p className="h6 text-white">Get notified about new updates</p>
+              <p className="h6 text-white text-left">
+                Get notified about new updates
+              </p>
               <form onSubmit={handleSubmit(SubmitEmailSubscription)}>
                 <InputGroup>
                   <Input

@@ -46,7 +46,7 @@ const Contact = () => {
                       </p>
                     </Col>
                     <Col sm="9">
-                      <h4 className="contact-title mt-md-2">INDIA</h4>
+                      <h4 className="contact-title mt-md-2">OFFICE ADDRESS</h4>
                       <address className="contact-text">
                         3rd Floor, Pearl Enclave, Green Valley Road No-5,
                         Banjara Hills, Hyderabad, Telangana 500034, India.
@@ -55,7 +55,7 @@ const Contact = () => {
                   </Row>
                 </Col>
               </Row>
-              <Row className="d-flex justify-content-center align-items-center py-3">
+              {/* <Row className="d-flex justify-content-center align-items-center py-3">
                 <Col md="8" sm="12">
                   <Row>
                     <Col sm="3" className="py-3 py-md-1">
@@ -75,7 +75,7 @@ const Contact = () => {
                     </Col>
                   </Row>
                 </Col>
-              </Row>
+              </Row> */}
               <Row className="d-flex justify-content-center align-items-center py-3">
                 <Col sm="12" md="8">
                   <Row>
@@ -91,9 +91,9 @@ const Contact = () => {
                       <h4 className="contact-title mt-md-2">CONTACT</h4>
                       <p className="contact-text">(+91) 40 2354 9363</p>
                       <p className="contact-text pt-2">(+91) 733 755 7310</p>
-                      <p className="contact-text pt-2">
+                      {/* <p className="contact-text pt-2">
                         (+1) 2134604609 (Ext: 103)
-                      </p>
+                      </p> */}
                     </Col>
                   </Row>
                 </Col>
