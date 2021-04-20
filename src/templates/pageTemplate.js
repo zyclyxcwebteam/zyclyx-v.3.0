@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
-import Slider from "react-slick";
+import Img from "gatsby-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col } from "reactstrap";
-// import { Controller, Scene } from "react-scrollmagic";
 import Layout from "../components/Layout/Layout";
+import ClientsSlider from "../components/ClientsSlider/ClientsSlider";
 import "../css/service.css";
 
 import Butler from "../../static/images/clients/butler-dbd.jpg";
@@ -14,44 +14,42 @@ import Hcl from "../../static/images/clients/hcl.jpg";
 import Hexaware from "../../static/images/clients/hexaware.jpg";
 import Veripark from "../../static/images/clients/veripark.jpg";
 
-const settings = {
-  dots: true,
-  arrows: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
+const oursourcingClientLogos = [
+  { title: "Butler", src: Butler },
+  { title: "Calyx", src: Calyx },
+  { title: "Endepth", src: Endepth },
+  { title: "Hcl", src: Hcl },
+  { title: "Hexaware", src: Hexaware },
+  { title: "Veripark", src: Veripark },
+];
+
+const ServiceImage = ({
+  fileName,
+  altText,
+  title,
+  allImageSharp,
+  isSticky,
+}) => {
+  const img = allImageSharp.edges.find(imgFile => {
+    return imgFile.node.fluid.src.includes(fileName);
+  });
+
+  if (!img) {
+    return null;
+  }
+  return (
+    <Img
+      fluid={img.node.fluid}
+      alt={altText}
+      title={title}
+      className={`w-100 ${isSticky && "sticky-service-img"}`}
+    />
+  );
 };
 
 const PageTemplate = props => {
   const { data } = props;
-  const { dataJson } = data;
+  const { dataJson, allImageSharp } = data;
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
   const {
@@ -61,11 +59,12 @@ const PageTemplate = props => {
     solTitle,
     services,
     bannerImage,
+    solImage,
     metaTitle,
     metaDescription,
     metaKeywords,
-    solImage,
   } = dataJson;
+
   return (
     <Layout
       showBanner
@@ -182,45 +181,21 @@ const PageTemplate = props => {
       {/* solutions cards */}
 
       <Container fluid className="solutions-wrapper py-3 py-md-5">
-        {/* {scroll ? (
-          <Row className="px-3 pl-md-5 scroll">
-            <Controller>
-              <Scene
-                duration={`${duration}%`}
-                triggerElement=".solutions-wrapper"
-                triggerHook="0"
-                pin
-              >
-                <div
-                  className={`scroll-title d-flex justify-content-center sol-img ${solImage}`}
-                />
-              </Scene>
-              <Col
-                sm="12"
-                md="6"
-                className="scroll-pages sol-cards d-flex align-items-center justify-content-center flex-column px-2 px-md-5"
-              >
-                {services.map(service => {
-                  return (
-                    <div className="py-3" key={service.title}>
-                      <h3 className="py-2">{service.title}</h3>
-                      <p>{service.content}</p>
-                    </div>
-                  );
-                })}
-              </Col>
-            </Controller>
-          </Row>
-        ) : ( */}
         <Row className="px-3 pl-md-5">
           <Col className="col-md-6">
-            <img
-              className="sticky-top pt-4 w-100"
-              // src="https://images.unsplash.com/photo-1612831200752-a70d1d1bb83b?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-
-              src={`./images/service-pages/${solImage}`}
-              alt=""
+            <ServiceImage
+              allImageSharp={allImageSharp}
+              fileName={solImage}
+              altText={title}
+              title={title}
+              isSticky
             />
+            {/* <img
+              className="sticky-top pt-4 w-100"
+              src="https://images.unsplash.com/photo-1612831200752-a70d1d1bb83b?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+              // src="./images/service-pages/1.png"
+              alt=""
+            /> */}
           </Col>
 
           <Col
@@ -238,7 +213,6 @@ const PageTemplate = props => {
             })}
           </Col>
         </Row>
-        {/* )} */}
       </Container>
 
       {/* ADDITIONAL SECTION FOR STAFFING SOLUTIONS */}
@@ -247,48 +221,7 @@ const PageTemplate = props => {
           <h2 className="section-title-sm text-center green-text py-3">
             Our Clients
           </h2>
-          {/*  eslint-disable-next-line react/jsx-props-no-spreading */}
-          <Slider {...settings}>
-            <div>
-              <img src={Hcl} alt="HCL" title="HCL" className="client" />
-            </div>
-            <div>
-              <img
-                src={Endepth}
-                alt="Endepth"
-                title="Endepth"
-                className="client"
-              />
-            </div>
-            <div>
-              <img src={Calyx} alt="Calyx" title="Calyx" className="client" />
-            </div>
-            <div>
-              <img
-                src={Butler}
-                alt="butler-dbd"
-                title="Butler dbd"
-                className="client"
-              />
-            </div>
-
-            <div>
-              <img
-                src={Hexaware}
-                alt="Hexaware"
-                title="Hexaware"
-                className="client"
-              />
-            </div>
-            <div>
-              <img
-                src={Veripark}
-                alt="Veripark"
-                title="Veripark"
-                className="client"
-              />
-            </div>
-          </Slider>
+          <ClientsSlider sliderImages={oursourcingClientLogos} />
         </Container>
       )}
     </Layout>
@@ -316,6 +249,15 @@ export const pageQuery = graphql`
       services {
         content
         title
+      }
+    }
+    allImageSharp {
+      edges {
+        node {
+          fluid(maxWidth: 600, maxHeight: 450) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
     }
   }

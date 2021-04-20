@@ -8,7 +8,7 @@
   "overview": "The mobile application development process that we follow involves developing installable packages of software (code, plugins, properties, etc.), integrating backend services such as data access with an API, and testing the app on target devices. For instance, these applications can cater to various verticals, Finance, Travel, Social Networking, Hospitality, eCommerce, Foodservice, Entertainment and media industries, etc.",
   "solTitle": "We do more than develop. We craft amazing app experiences.",
   "bannerImage": "mobile",
-  "solImage": "mobile-sol",
+  "solImage": "mobile-sol.png",
   "scroll": false,
   "services": [
     {

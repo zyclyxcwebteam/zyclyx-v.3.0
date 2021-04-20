@@ -76,12 +76,9 @@ const jobDescription = props => {
         return response.json();
       })
       .then(data => {
-        console.log(data);
         setJobDetails(data);
       })
-      .catch(error => {
-        console.log(error);
-      });
+      .catch(() => {});
   }, [reRender]);
 
   const { register, handleSubmit, errors } = useForm();

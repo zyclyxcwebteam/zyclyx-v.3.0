@@ -1,3 +1,8 @@
+.sticky-service-img{
+  position:sticky !important;
+  top: 50px;
+
+}
 .overview-title {
   color: #1a8637;
   font-size: 2rem;
