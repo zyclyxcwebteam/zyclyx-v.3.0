@@ -49,12 +49,9 @@ const Footer = () => {
         event.target.reset();
         return response.json();
       })
-      .then(resJSON => {
-        console.log(resJSON);
-      })
-      .catch(error => {
+      .then(() => {})
+      .catch(() => {
         setFormSubmitting(false);
-        console.log(error);
       });
   };
   return (
