@@ -4,6 +4,7 @@
 .navbar {
   background-color: #111b33;
   z-index: 99;
+  border-bottom: 1px solid hsl(222, 50%, 16%)
 }
 .nav-item > a {
   padding: 1rem;
