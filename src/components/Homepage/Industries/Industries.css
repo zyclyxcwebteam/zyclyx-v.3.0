@@ -13,6 +13,7 @@
   color: #ffffff;
   transition: all 0.2s ease-in;
   position: relative;
+  cursor: pointer;
 }
 .i-card::before {
   position: absolute;
