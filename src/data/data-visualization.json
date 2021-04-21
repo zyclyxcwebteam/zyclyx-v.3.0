@@ -8,7 +8,7 @@
   "overview": "This service is dedicated to visual representation of the data in the form of graphs, charts or other graphic representations. It enables users to view, search and understand the trends of Business Intelligence. We do the research of logical correlations of units, inclinations, behaviors, and trends, depending on the reason for which it is being done. Aside from data scientists and researchers, data visualization is often used in Accounting, Marketing, Engineering, etc",
   "solTitle": "Develop visualization solutions from scratch",
   "bannerImage": "datavis",
-  "solImage": "datavis-sol",
+  "solImage": "datavis-sol.png",
   "scroll": false,
   "services": [
     {
