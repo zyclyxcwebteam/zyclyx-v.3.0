@@ -14,7 +14,7 @@ import Hcl from "../../static/images/clients/hcl.jpg";
 import Hexaware from "../../static/images/clients/hexaware.jpg";
 import Veripark from "../../static/images/clients/veripark.jpg";
 
-const oursourcingClientLogos = [
+const outsourcingClientLogos = [
   { title: "Butler", src: Butler },
   { title: "Calyx", src: Calyx },
   { title: "Endepth", src: Endepth },
@@ -190,12 +190,6 @@ const PageTemplate = props => {
               title={title}
               isSticky
             />
-            {/* <img
-              className="sticky-top pt-4 w-100"
-              src="https://images.unsplash.com/photo-1612831200752-a70d1d1bb83b?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-              // src="./images/service-pages/1.png"
-              alt=""
-            /> */}
           </Col>
 
           <Col
@@ -221,7 +215,7 @@ const PageTemplate = props => {
           <h2 className="section-title-sm text-center green-text py-3">
             Our Clients
           </h2>
-          <ClientsSlider sliderImages={oursourcingClientLogos} />
+          <ClientsSlider sliderImages={outsourcingClientLogos} />
         </Container>
       )}
     </Layout>
@@ -254,7 +248,7 @@ export const pageQuery = graphql`
     allImageSharp {
       edges {
         node {
-          fluid(maxWidth: 600, maxHeight: 450) {
+          fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
