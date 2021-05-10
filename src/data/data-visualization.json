@@ -13,15 +13,18 @@
   "services": [
     {
       "title": "Custom Solutions",
-      "content": " In order to identify the problem areas, we commence the process by assessing your business needs. On understanding, we create visualization solutions that are personalized to effectively solve your problems."
+      "content": " In order to identify the problem areas, we commence the process by assessing your business needs. On understanding, we create visualization solutions that are personalized to effectively solve your problems.",
+      "points":[]
     },
     {
       "title": "Training",
-      "content": "We offer the end-users with initial training to have an understanding of the capabilities of the tool and its various applications, even if such solutions can seem simple to use."
+      "content": "We offer the end-users with initial training to have an understanding of the capabilities of the tool and its various applications, even if such solutions can seem simple to use.",
+      "points":[]
     },
     {
       "title": "Support",
-      "content": "We offer support and maintenance services which include performance improvement,, development to improve the current system, and migration from one analytical framework to another."
+      "content": "We offer support and maintenance services which include performance improvement, development to improve the current system, and migration from one analytical framework to another.",
+      "points":[]
     }
   ]
 }

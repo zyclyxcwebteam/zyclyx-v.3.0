@@ -13,15 +13,18 @@
   "services": [
     {
       "title": "Performance & Maintenance solutions",
-      "content": "Through the use of Predictive Analytics, the Solution Analysts at ZYCLYX have helped many global enterprises avoid system failures. This has helped companies dramatically to drive down costs and increase competitive efficiency."
+      "content": "Through the use of Predictive Analytics, the Solution Analysts at ZYCLYX have helped many global enterprises avoid system failures. This has helped companies dramatically to drive down costs and increase competitive efficiency.",
+      "points":[]
     },
     {
       "title": "Custom Solutions",
-      "content": "It's unlikely to provide pre-made IoT solutions as the businesses start embracing digital transformation. Here's where we come in to help the companies build solutions customized to their needs."
+      "content": "It's unlikely to provide pre-made IoT solutions as the businesses start embracing digital transformation. Here's where we come in to help the companies build solutions customized to their needs.",
+      "points":[]
     },
     {
       "title": "Systems Integrator Services",
-      "content": "In the expectation of a long-term collaboration, we provide system integrator services such as business and design consultancy, sensor development, software integration, project management, and maintenance."
+      "content": "In the expectation of a long-term collaboration, we provide system integrator services such as business and design consultancy, sensor development, software integration, project management, and maintenance.",
+      "points":[]
     }
   ]
 }

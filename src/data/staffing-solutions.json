@@ -14,15 +14,18 @@
   "services": [
     {
       "title": "Vast Network",
-      "content": "Our team's broad expertise in various industries' staffing solutions ensures that you get to choose from a large selection of candidates. Their vast networking capabilities can source talent globally."
+      "content": "Our team's broad expertise in various industries' staffing solutions ensures that you get to choose from a large selection of candidates. Their vast networking capabilities can source talent globally.",
+      "points":[]
     },
     {
       "title": "Cost Effective",
-      "content": "Outsource your staffing needs to save some big bucks in terms of costs involved in hiring an in-house recruitment team. Join hands with our expert team and quickly fill in your resource requirement with our quality candidates."
+      "content": "Outsource your staffing needs to save some big bucks in terms of costs involved in hiring an in-house recruitment team. Join hands with our expert team and quickly fill in your resource requirement with our quality candidates.",
+      "points":[]
     },
     {
       "title": "Quick Turnaround Time",
-      "content": "Our end-to-end staffing expertise accelerates the hiring process, assuring you the right fit for your organization with our process execution."
+      "content": "Our end-to-end staffing expertise accelerates the hiring process, assuring you the right fit for your organization with our process execution.",
+      "points":[]
     }
   ]
 }

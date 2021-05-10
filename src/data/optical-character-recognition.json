@@ -13,19 +13,23 @@
   "services": [
     {
       "title": "Auto Document Classification",
-      "content": "Our OCR Technology utilizes Artificial Intelligence (AI) to “read” documents like a human, to identify and classify the document into specific types and extract key data. These systems efficiently convert content from various sources into standard data types."
+      "content": "Our OCR Technology utilizes Artificial Intelligence (AI) to “read” documents like a human, to identify and classify the document into specific types and extract key data. These systems efficiently convert content from various sources into standard data types.",
+      "points":[]
     },
     {
       "title": "Auto Data Capture",
-      "content": "This allows users to identify and extract data from forms and documents by detecting characters and fields on forms. With our expertise, you can now quickly and accurately process the documents."
+      "content": "This allows users to identify and extract data from forms and documents by detecting characters and fields on forms. With our expertise, you can now quickly and accurately process the documents.",
+      "points":[]
     },
     {
       "title": "Template Data Capture",
-      "content": " The solution is designed to ensure data capture solutions with the capability to classify and recognize documents with different layouts at the same accuracy rates as that of structured forms."
+      "content": " The solution is designed to ensure data capture solutions with the capability to classify and recognize documents with different layouts at the same accuracy rates as that of structured forms.",
+      "points":[]
     },
     {
       "title": "Intelligent Data Capture (IDC)",
-      "content": " Using our IDC solutions you get advanced AI capabilities like Machine Learning and NLP which allow scanning through documents to detect, analyze, and classify tables. This data is stored in a digital format for future business use. "
+      "content": " Using our IDC solutions you get advanced AI capabilities like Machine Learning and NLP which allow scanning through documents to detect, analyze, and classify tables. This data is stored in a digital format for future business use. ",
+      "points":[]
     }
   ]
 }

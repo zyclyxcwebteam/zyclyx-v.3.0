@@ -13,15 +13,18 @@
   "services": [
     {
       "title": "Managed Services",
-      "content": "Our team of experts offers end-to-end managed services to help accelerate your business growth and maximize IT returns. We are here to protect you against any business failures."
+      "content": "Our team of experts offers end-to-end managed services to help accelerate your business growth and maximize IT returns. We are here to protect you against any business failures.",
+      "points":[]
     },
     {
       "title": " Hosting Services",
-      "content": "We will provide you with the basic operational environment and power supply for your data center services."
+      "content": "We will provide you with the basic operational environment and power supply for your data center services.",
+      "points":[]
     },
     {
       "title": "Migration Services",
-      "content": "We understand that Migrations can be a tedious task, so our team of professionals does their best to ensure every detail is looked into for smooth process transition and the most efficient use of resources. The goal is to eliminate any problems that may crop up."
+      "content": "We understand that Migrations can be a tedious task, so our team of professionals does their best to ensure every detail is looked into for smooth process transition and the most efficient use of resources. The goal is to eliminate any problems that may crop up.",
+      "points":[]
     }
   ]
 }

@@ -201,7 +201,16 @@ const PageTemplate = props => {
               return (
                 <div className="py-3" key={service.title}>
                   <h3 className="py-2">{service.title}</h3>
-                  <p>{service.content}</p>
+                  <p className="service-sol-text">{service.content}</p>
+                  {service.points.lenght !== 0 &&
+                    service.points.map((point, index) => {
+                      return (
+                        <p className="px-3 py-2">
+                          <span className="bullet mr-2">{index + 1}</span>
+                          <span className="ml-2 service-sol-text">{point}</span>
+                        </p>
+                      );
+                    })}
                 </div>
               );
             })}
@@ -243,6 +252,7 @@ export const pageQuery = graphql`
       services {
         content
         title
+        points
       }
     }
     allImageSharp {

@@ -13,15 +13,18 @@
   "services": [
     {
       "title": "Digital Bots",
-      "content": "Our highly advanced digital bots powered by AI are designed to understand and perceive human behavior, resulting in robust support and enriching client experiences."
+      "content": "Our highly advanced digital bots powered by AI are designed to understand and perceive human behavior, resulting in robust support and enriching client experiences.",
+      "points":[]
     },
     {
       "title": "Business Analytics",
-      "content": "We customize AI solutions to analyze the business and make accurate and precise decisions based on predictive and accurate algorithmic data."
+      "content": "We customize AI solutions to analyze the business and make accurate and precise decisions based on predictive and accurate algorithmic data.",
+      "points":[]
     },
     {
       "title": "Virtualization",
-      "content": "We build secure information virtualization systems with the power of AI technology, which leads to dependable databases for taking the right business decisions."
+      "content": "We build secure information virtualization systems with the power of AI technology, which leads to dependable databases for taking the right business decisions.",
+      "points":[]
     }
   ]
 }

@@ -5,19 +5,23 @@
   "metaDescription": "ZYCLYX is the most trusted best mobile app development company in India. We have expertise in building quality android apps, iOS apps, IoT mobile apps development company.",
   "metaKeywords": "Mobile Application Development Company, Mobile Apps Development Services, App Development Company India, Android app development,",
   "caption": "Powered by Talent, Driven by User Experience",
-  "overview": "The mobile application development process that we follow involves developing installable packages of software (code, plugins, properties, etc.), integrating backend services such as data access with an API, and testing the app on target devices. For instance, these applications can cater to various verticals, Finance, Travel, Social Networking, Hospitality, eCommerce, Foodservice, Entertainment and media industries, etc.",
+  "overview": "As an end-to-end mobile app development company, our focus is to design and engineer mobile-first businesses that drive growth and bring more customers. Our passionate team of app developers creates innovative solutions and awesome cross-platform apps. Each one custom made for you, your challenge, and your users. We work to ensure your app doesn’t get lost in the pool of generic apps released every day. Capturing your space in the competitive market by adopting the right technology and approach.",
   "solTitle": "We do more than develop. We craft amazing app experiences.",
   "bannerImage": "mobile",
   "solImage": "mobile-sol.png",
   "scroll": false,
   "services": [
     {
-      "title": "Native Applications:",
-      "content": "With Native apps, the possibilities are limitless, they can be configured specifically for the operating system of the user and are often favored for their high performance, responsiveness, accessibility, aspect ratios and more. We've built applications for consumers from various sectors and catered to specific needs."
-    },
-    {
-      "title": "Hybrid Applications",
-      "content": "Whether one opts for React Native or Flutter technology, the demand for Hybrid apps is constantly growing due to shorter development time, cost-effectiveness and more. To exploit its ability in the true essence, our team guarantees top quality services. We have a team of experienced developers to fulfill your Hybrid App requirements. "
-    }
+      "title": "Solutions Provided",
+      "content": "From analysis to design, and concept to development, we provide full-cycle mobile app development services. Our services involve a rapid wire frame and prototyping process that considers installable packages of software, integration scope, and optimization or scale-up needs. Top-notch UI and UX is used for the mobile apps delivered across different platforms.",
+      "points":[
+        "Android App Development",
+        "iOS App development",
+        "Hybrid App Development",
+        "QA and Testing",
+        "Consulting and Business Analysis",
+        "Support and Maintenance"
+      ]
+    }     
   ]
 }

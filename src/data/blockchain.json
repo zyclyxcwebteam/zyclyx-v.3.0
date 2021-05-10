@@ -13,19 +13,23 @@
   "services": [
     {
       "title": "Tracking and Monitoring",
-      "content": "We build blockchain applications to assist you in real-time monitoring by keeping track of any services or tasks."
+      "content": "We build blockchain applications to assist you in real-time monitoring by keeping track of any services or tasks.",
+      "points":[]
     },
     {
       "title": "Prompt Provisions",
-      "content": " In order to prevent any problems, we take complete responsibility for installing, deploying and maintaining a blockchain infrastructure."
+      "content": " In order to prevent any problems, we take complete responsibility for installing, deploying and maintaining a blockchain infrastructure.",
+      "points":[]
     },
     {
       "title": "Backend Services",
-      "content": "We recognize that every organization has specific requirements for backend services. This is why we are working on providing innovative technologies and combining them with specific services."
+      "content": "We recognize that every organization has specific requirements for backend services. This is why we are working on providing innovative technologies and combining them with specific services.",
+      "points":[]
     },
     {
       "title": "Smart Contracts",
-      "content": "Smart Contracts are important when incorporating business logic into the blockchain solutions. This is why our team ensures the integration takes place before deployment."
+      "content": "Smart Contracts are important when incorporating business logic into the blockchain solutions. This is why our team ensures the integration takes place before deployment.",
+      "points":[]
     }
   ]
 }
